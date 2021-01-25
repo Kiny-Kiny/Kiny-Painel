@@ -60,17 +60,17 @@ def consulta(cpf):
     if nova=='s' or nova=='sim':
       tipos()
     else:
-      print(f'\n{C}Me acompanhe no Github: {G}https://github.com/Kiny-Kiny{C}')
-      exit()
+      quit()
   except(AttributeError):
     print(f'{R}CPF Gerado nao existe{C}')
     print(f'{R}Pressione enter para retornar{C}')
     lo = input("===>")
     tipos()
 
-def cnpj():
+def consultacnpj():
     global requests
-    
+    import requests, os, time, base64, json, re
+    from requests import get
     os.system("clear")
     print("\033[32m######\033[m")
     print("\033[32m#KINY#\033[m")
@@ -86,11 +86,79 @@ def cnpj():
         print("Telefone: {}".format(cnpj_data['telefone']))
         print("Email: {}".format(cnpj_data['email']))
         print("Situação: {}".format(cnpj_data['situacao']))
+        print("Logradouro: {}".format(cnpj_data['logradouro']))
+        print("Numero: {}".format(cnpj_data['numero']))
+        print("Porte: {}".format(cnpj_data['porte']))
+        print("Natureza: {}".format(cnpj_data['natureza_juridica']))
+        print("Data de abertura: {}".format(cnpj_data['abertura']))
+        print("Tipo: {}".format(cnpj_data['tipo']))
+        print("UF: {}".format(cnpj_data['uf']))
+        print("Capital: {}".format(cnpj_data['capital_social']))
     else:
         print('{}: CNPJ INVALIDO.'.format(cnpj_input))
-        print("\nDESEJA CONSULTAR UM NOVO CNPJ? \n{1}Sim\n{2}Nao\n")
+    del requests
+    print("\nDESEJA CONSULTAR UM NOVO CNPJ? \n{1}Sim\n{2}Nao\n")
 
     lo = input('===> ')
     if lo == '1' or lo == '01':
-        cnpj()
-    cnpj()
+        consultacnpj()
+    else:
+        quit()
+
+def bank():
+            global requests
+            import requests, os, time, base64, json, re
+            from requests import get
+            os.system("clear")
+            os.system("figlet KINY")
+            print("DIGITE O CODIGO BANCARIO")
+            bank_input = input("\033[32m=====> \033[m")
+            
+            requests = requests.get('https://brasilapi.com.br/api/banks/v1/{}'.format(bank_input))
+            
+            bank_data = requests.json()
+            
+            if 'message' not in bank_data:
+            	os.system('clear')
+            	os.system("figlet KINY")
+            	print("Código bancário: {}".format(bank_data['code']))
+            	print("Nome: {}".format(bank_data['name']))
+            	print("Nome completo: {}".format(bank_data['fullName']))
+            	print("ISPB: {}".format(bank_data['ispb']))
+            	
+            else:
+            	os.system("clear")
+            	print('{}: Código bancário inválido.'.format(bank_input))
+            del requests	
+            print("\nDESEJA CONSULTAR UM NOVO CODIGO BANCARIO? \n{1}Sim\n{2}Nao\n")
+            
+            kc = input("===> ")
+            
+            if kc == '01' or kc == '1':
+            	bank()
+            else:
+                os.system("clear")
+                quit()
+
+def quit():
+        os.system("clear")
+        print("\033[32m Arrivederci\033[m")
+        exit()
+
+def geradorcnpj():
+    global requests
+    global cnpj_input
+    import requests, os, time, base64, json, re
+    from requests import get
+    os.system("clear")
+    os.system("figlet KINY")
+    print(f'{C}[{G}*{C}] Gerando CNPJ...')
+    time.sleep(1)
+    cnpj=requests.request('GET','http://geradorapp.com/api/v1/cpf/generate?token=f01e0024a26baef3cc53a2ac208dd141').json()
+    cnpj2=cnpj['data']['number_formatted']
+    cnpj=cnpj['data']['number']
+    print(f'{C}[{Y}i{C}] O CNPJ gerado foi: {B}'+cnpj2)
+    time.sleep(1)
+    print(f'{C}[{G}*{C}] Consultando CNPJ gerado...')
+    cnpj_input = cnpj
+    consultacnpj()

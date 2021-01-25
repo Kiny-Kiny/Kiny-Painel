@@ -31,11 +31,15 @@ def menu():
     print("\033[32m{4} CONSULTA DE CNPJ\033[m")
     print("\033[32m{5} CONSULTA BANCARIA\033[m")
     print("\033[32m{6} CONSULTA CPF\033[m")
+    print("\033[32m{7} GERAR CNPJ\033[m")
     print()
     print("\033[32m{99} Update && Upgrade\033[m")
     print("\033[32m{00} EXIT\033[m")
     op = input("\033[32m===>\033[m ").strip()
     
+    if op == '7' or op == '07':
+        api.geradorcnpj()
+
     if op == '6' or op == '06':
         
         def tipos():
@@ -67,42 +71,7 @@ def menu():
             api.consulta(cpf)
         tipos()
     if op == '5' or op == '05':
-        def bank():
-            global requests
-            os.system("clear")
-            os.system("figlet KINY")
-            print("DIGITE O CODIGO BANCARIO")
-            bank_input = input("\033[32m=====> \033[m")
-            
-            requests = requests.get('https://brasilapi.com.br/api/banks/v1/{}'.format(bank_input))
-            
-            bank_data = requests.json()
-            
-            if 'message' not in bank_data:
-            	os.system('clear')
-            	os.system("figlet KINY")
-            	print("Código bancário: {}".format(bank_data['code']))
-            	print("Nome: {}".format(bank_data['name']))
-            	print("Nome completo: {}".format(bank_data['fullName']))
-            	print("ISPB: {}".format(bank_data['ispb']))
-            	
-            else:
-            	os.system("clear")
-            	print('{}: Código bancário inválido.'.format(bank_input))
-            	
-            print("\nDESEJA CONSULTAR UM NOVO CODIGO BANCARIO? \n{1}Sim\n{2}Nao\n")
-            
-            kc = input("===> ")
-            
-            if kc == '01' or kc == '1':
-            	bank()
-            else:
-            	menu()
-            	
-        bank()   
-                  
-
-
+        api.bank()
     if op == '1' or op == '01':
         def main():
             os.system("clear")
@@ -224,7 +193,7 @@ def menu():
 
         ip()
     if op == '4' or op == '04':
-        api.cnpj()
+        api.consultacnpj()
 
 
 def password():
