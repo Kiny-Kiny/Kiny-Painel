@@ -27,8 +27,10 @@ cd Kiny-Painel
 python3 main.py
 
 #Caso esteja atualizando#
+
 rm -rf Kiny-Painel 
 #############
+
 apt update && apt upgrade
 apt install python
 pip3 install requests
