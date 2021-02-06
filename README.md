@@ -2,6 +2,12 @@
 Um pequeno painel de consulta grátis feito com a ajuda de Lehcs e Yato.
 VLW YATO POR ESTAR ME AJUDANDO NESSE PAINEL ;) 
 
+Esse script passou por muitas mudanças ao longo do tempo, antes era só um consultador de CEP, IP e Site
+Agora é um script fantástico que consulta várias coisas, na minha opinião, não é o suficiente, vou tentar sempre
+Melhorar o script cada vez mais com a ajuda do Yato.
+
+Vlw Yato, tmj♧
+
 Tutorial de Instalação:
 
 pkg update && pkg upgrade
