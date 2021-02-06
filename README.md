@@ -17,4 +17,4 @@ pip install requests
 
 cd Kiny-Painel
 
-python3 KinyPainelV3.py
+python3 main.py
