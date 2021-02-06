@@ -1,5 +1,6 @@
-# Kiny-Painel.
-Um pequeno painel de consulta grátis. 
+# Kiny-Painel 3.5
+Um pequeno painel de consulta grátis feito com a ajuda de Lehcs e Yato.
+VLW YATO POR ESTAR ME AJUDANDO NESSE PAINEL ;) 
 
 Tutorial de Instalação:
 
