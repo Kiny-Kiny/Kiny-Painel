@@ -25,3 +25,14 @@ pip install requests
 cd Kiny-Painel
 
 python3 main.py
+
+#Caso esteja atualizando#
+rm -rf Kiny-Painel 
+#############
+apt update && apt upgrade
+apt install python
+pip3 install requests
+git clone https://github.com/Kiny-kiny/Kiny-Painel
+cd Kiny-Painel
+chmod +x *
+python3 KinyPainelV3.py
