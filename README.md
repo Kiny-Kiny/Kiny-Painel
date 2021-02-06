@@ -8,6 +8,11 @@ Melhorar o script cada vez mais com a ajuda do Yato.
 
 Vlw Yato, tmj♧
 
+Nota - Aparentemente alguns terminais estão bugando e não estão executando a parte de número 
+Em breve resolverem os
+
+Créditos: A parte de CPF foi do script do P0ison, mas o Yato colocou os outros menus da mesma forma que o dele.
+
 Tutorial de Instalação:
 
 pkg update && pkg upgrade
