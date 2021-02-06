@@ -28,7 +28,8 @@ python3 main.py
 
 #Caso esteja atualizando#
 
-rm -rf Kiny-Painel 
+rm -rf Kiny-Painel
+ 
 #############
 
 apt update && apt upgrade
