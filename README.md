@@ -22,6 +22,8 @@ pkg install git
 
 pip install requests
 
+git clone https://github.com/Kiny-kiny/Kiny-Painel
+
 cd Kiny-Painel
 
 python3 main.py
