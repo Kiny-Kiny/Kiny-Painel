@@ -1,7 +1,11 @@
+def restart():
+    python = sys.executable
+    os.execl(python, python, *sys.argv)
 import os
 import sys
 import base64, json, re
 import time
+from time import sleep as timeout
 try:
     import requests
     import api
@@ -20,7 +24,6 @@ try:
     from phonenumbers import geocoder
     from phonenumbers import timezone
     from urllib.parse import urlencode
-    from time import sleep as timeout
 except:
     os.system('pip3 install requests')
     os.system('pip3 install phonenumbers')
@@ -30,6 +33,9 @@ except:
     os.system('pip3 install html5lib')
     os.system('pip3 install argparse')
     os.system('pip3 install atexit')
+    print(f'{C}[{Y}i{C}] Reiniciando o painel em 3 seg...')
+    time.sleep(3)
+    restart()
 requests = requests.Session()
 
 os.system('git pull && clear')
@@ -37,9 +43,6 @@ a='aHR0cDovL3d3dy5qdXZlbnR1ZGV3ZWIubXRlLmdvdi5ici9wbnBlcGVzcXVpc2FzLmFzcA=='
 a=a.encode('ascii')
 a=base64.b64decode(a)
 a=a.decode('ascii')
-def restart():
-    python = sys.executable
-    os.execl(python, python, *sys.argv)
 
 def kinymode():
     print("Opa, como você veio parar aqui?")
@@ -48,6 +51,7 @@ def kinymode():
     lero = input("> ")
     if lero =='s' or lero == 'S':
         print("Nova Opção Desbloqueada")
+        kiny=1
         menu()
     if lero =='n' or lero == 'N':
         print("Iniciando o script normalmente")
@@ -848,14 +852,14 @@ def menu():
             R='\033[1;31m'; B='\033[1;34m'; C='\033[1;37m'; Y='\033[1;33m'; G='\033[1;32m'; RT='\033[;0m'
             clear()
             os.system('figlet KINY')
-            print(f'{C}[{G}*{C}] Gerando CPF...')
+            print(f'{C}[{G}i{C}] Gerando CPF...')
             time.sleep(1)
             cpf=requests.request('GET','http://geradorapp.com/api/v1/cpf/generate?token=f01e0024a26baef3cc53a2ac208dd141').json()
             cpf2=cpf['data']['number_formatted']
             cpf=cpf['data']['number']
             print(f'{C}[{Y}i{C}] O CPF gerado foi: {B}'+cpf2)
             time.sleep(1)
-            print(f'{C}[{G}*{C}] Consultando CPF gerado...')
+            print(f'{C}[{G}i{C}] Consultando CPF gerado...')
             consulta(cpf)
 
         def consulta(cpf):
@@ -879,10 +883,16 @@ def menu():
 {C}Cidade: {B}{re.search('NOMUNICIPIO="(.*?)"', r).group(1).title()}-{re.search('SGUF="(.*?)"', r).group(1)}
 {C}CEP: {B}{re.search('NRCEP="(.*?)"', r).group(1)}
               ''')
-                nova=input(f'{C}[{G}+{C}]Deseja realizar uma nova consulta?[{G}s{C}/{R}n{C}]: ').lower()
-                if nova=='s' or nova=='sim':
+                print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
+                print('1.Sim')
+                print('2.Não')
+                nova=input(f'===>').lower()
+                if nova=='1' or nova=='01':
                     tipos()
+                if nova=='2' or nova=='02':
+                    menu()
                 else:
+                    print(f'{C}[{R}i{C}]Opção inválida')
                     menu()
             except(AttributeError):
                 print(f'{R}CPF Gerado nao existe{C}')
@@ -895,13 +905,15 @@ def menu():
             os.system('figlet KINY')
             print(f"""
 {C}[{G}i{C}] Formas de operação:
-[{G}1{C}] Consultar CPF.
-[{G}2{C}] Gerar CPF e consultar.
-[{G}3{C}] Voltar
+    1.Consultar CPF
+    2.Gerar CPF e consultar
+    3.Voltar
+{C}[{Y}i{C}] Selecione a forma de operação.
 """)
-            tool=input(f'{C}[{G}+{C}] Selecione a forma de operação ({G}1 {C}ou {G}2{C}): ')
+            tool=input(f'===>')
             if tool=='1' or tool == '01':
-                cpf=input(f'{C}[{G}*{C}] Informe o CPF a ser consultado (sem pontos ou traços): {B}')
+                cpf=input(f'{C}[{Y}i{C}] Informe o CPF a ser consultado (sem pontos ou traços): {B}')
+                clear()
                 consulta(cpf)
             elif tool=='2' or tool == '02':
                 gerarcpf()
