@@ -1,3 +1,4 @@
+R='\033[1;31m'; B='\033[1;34m'; C='\033[1;37m'; Y='\033[1;33m'; G='\033[1;32m'; RT='\033[;0m'
 def restart():
     python = sys.executable
     os.execl(python, python, *sys.argv)
@@ -63,7 +64,7 @@ def menu():
     import os
     os.system("pkg install figlet")
     os.system("clear")
-    print("Coded By: \033[1;36m KINY \033[m in 14/12/2020")
+    print("Coded By: \033[1;36m KINY \033[m and \033[1;36m YATO \033[m in 07/02/2021")
     print()
     os.system("figlet KINY")
     #print(f'{C}[{G}*{C}] Bem vindo,' + user)
