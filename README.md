@@ -48,3 +48,34 @@ git clone https://github.com/Kiny-kiny/Kiny-Painel
 cd Kiny-Painel
 chmod +x *
 python3 KinyPainelV3.py
+
+## Caso esteja atualizando ##
+rm -rf Kiny-Painel
+###############
+## NO TERMUX ##
+###############
+apt update && apt upgrade
+apt install git python
+git clone https://github.com/Kiny-kiny/Kiny-Painel.git
+cd Kiny-Painel
+chmod +x *
+python3 main.py
+
+##############
+## NO LINUX ##
+##############
+
+== Baseado em Debian == (KALI LINUX,UBUNTU,ETC.)
+apt update && apt upgrade
+apt install git python3
+git clone https://github.com/Kiny-kiny/Kiny-Painel.git
+cd Kiny-Painel
+chmod +x *
+python3 main.py
+
+== Baseado em Arch == (MANJARO,Blackarch,etc.)
+pacman -Syyu git python3
+git clone https://github.com/Kiny-kiny/Kiny-Painel.git
+cd Kiny-Painel
+chmod +x *
+python3 main.py
