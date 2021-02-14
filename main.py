@@ -33,13 +33,12 @@ except:
     os.system('pip3 install bs4')
     os.system('pip3 install html5lib')
     os.system('pip3 install argparse')
-    os.system('pip3 install atexit')
     print(f'{C}[{Y}i{C}] Reiniciando o painel em 3 seg...')
     time.sleep(3)
     restart()
 requests = requests.Session()
 
-os.system('git pull && clear')
+#os.system('git pull && clear')
 a='aHR0cDovL3d3dy5qdXZlbnR1ZGV3ZWIubXRlLmdvdi5ici9wbnBlcGVzcXVpc2FzLmFzcA=='
 a=a.encode('ascii')
 a=base64.b64decode(a)
@@ -62,7 +61,12 @@ def kinymode():
         exit()
 def menu():
     import os
-    os.system("pkg install figlet")
+    try:
+        os.system("pkg update")
+        os.system("pkg install figlet")
+    except:
+        os.system("apt update")
+        os.system("apt install figlet")
     os.system("clear")
     print("Coded By: \033[1;36m KINY \033[m and \033[1;36m YATO \033[m in 07/02/2021")
     print()
@@ -78,20 +82,34 @@ def menu():
     print("\033[32m{7} CONSULTA CNS\033[m")
     print("\033[32m{8} CONSULTA PLACA\033[m")
     print("\033[32m{9} CONSULTA CRM\033[m")
-    print("\033[32m{10} CONSULTA OPERADORA\033[m")
+    print("\033[32m{10} CONSULTA DE NUMERO\033[m")
     print("\033[32m{11} CONSULTA BIN\033[m")
     print("\033[32m{12} GERAR PESSOA\033[m")
     print("\033[32m{13} SCANEAR PORTAS\033[m")
     print("\033[32m{14} CC CHECKER\033[m")
+    #print("\033[32m{15} CONSULTA NOME\033[m")
     print()
+    print("\033[32m{97} Notas de versão\033[m")
     print("\033[32m{98} Auto-update\033[m")
     print("\033[32m{99} Update && Upgrade\033[m")
     print("\033[32m{00} EXIT\033[m")
     op = input("\033[32m===>\033[m ").strip()
     if op == '98':
+        R='\033[1;31m'; B='\033[1;34m'; C='\033[1;37m'; Y='\033[1;33m'; G='\033[1;32m'; RT='\033[;0m'
         os.system("bash update.sh")
         print('Painel atualizado.')
-        quit()
+    if op == '97':
+        R='\033[1;31m'; B='\033[1;34m'; C='\033[1;37m'; Y='\033[1;33m'; G='\033[1;32m'; RT='\033[;0m'
+        clear()
+        print(f'{C}==={R}{C} Notas de versão {C}==={R}{C}')
+        print(f'''
+        * Bug corrigido no updater
+        * Bug corrigido em consultas a placas
+
+        ''')
+        print(f'{C}{B}YATO{C} & {C}{B}KINY{C} , 2021')
+        pause = input('Pressione enter para retornar.')
+        menu()
     if op == '14':
         R='\033[1;31m'; B='\033[1;34m'; C='\033[1;37m'; Y='\033[1;33m'; G='\033[1;32m'; RT='\033[;0m'
         def checker(cc,mes,ano,cvv):
@@ -747,25 +765,30 @@ def menu():
             placa_data = req.json()
             clear()
             os.system('figlet KINY')
-            if (placa_data['codigoRetorno']) == "0":
-                print(f"{C}Ano: {B}{placa_data['ano']}{C}")
-                print(f"Data: {B}{placa_data['data']}{C}")
-                print(f"Modelo: {B}{placa_data['modelo']}{C}")
-                print(f"Ano do modelo: {B}{placa_data['anoModelo']}{C}")
-                print(f"Cor: {B}{placa_data['cor']}{C}")
-                print(f"Marca: {B}{placa_data['marca']}{C}")
-                print(f"Roubo/furto: {B}{placa_data['dataAtualizacaoRouboFurto']}{C}")
-                print(f"Situação: {B}{placa_data['situacao']}{C}")
-                print(f"Placa: {B}{placa_data['placa']}{C}")
-                print(f"Chassi: {B}{placa_data['chassi']}{C}")
-                print(f"UF: {B}{placa_data['uf']}{C}")
-                print(f"Município: {B}{placa_data['municipio']}{C}")
-                print(f"Modificada em: {B}{placa_data['dataAtualizacaoCaracteristicasVeiculo']}{C}")
-                print(f"Alarme atualizado: {B}{placa_data['dataAtualizacaoAlarme']}{C}")
-                print(f"Mensagem de retorno: {B}{placa_data['mensagemRetorno']}{C}")
-                print(f"Código de retorno: {B}{placa_data['codigoRetorno']}{C}")
-            else:
-                print(f'{C}[{R}i]{C} Ocorreu um erro,tente novamente mais tarde.')
+            try:
+                if (placa_data['codigoRetorno']) == "0":
+                    print(f"{C}Ano: {B}{placa_data['ano']}{C}")
+                    print(f"Data: {B}{placa_data['data']}{C}")
+                    print(f"Modelo: {B}{placa_data['modelo']}{C}")
+                    print(f"Ano do modelo: {B}{placa_data['anoModelo']}{C}")
+                    print(f"Cor: {B}{placa_data['cor']}{C}")
+                    print(f"Marca: {B}{placa_data['marca']}{C}")
+                    print(f"Roubo/furto: {B}{placa_data['dataAtualizacaoRouboFurto']}{C}")
+                    print(f"Situação: {B}{placa_data['situacao']}{C}")
+                    print(f"Placa: {B}{placa_data['placa']}{C}")
+                    print(f"Chassi: {B}{placa_data['chassi']}{C}")
+                    print(f"UF: {B}{placa_data['uf']}{C}")
+                    print(f"Município: {B}{placa_data['municipio']}{C}")
+                    print(f"Modificada em: {B}{placa_data['dataAtualizacaoCaracteristicasVeiculo']}{C}")
+                    print(f"Alarme atualizado: {B}{placa_data['dataAtualizacaoAlarme']}{C}")
+                    print(f"Mensagem de retorno: {B}{placa_data['mensagemRetorno']}{C}")
+                    print(f"Código de retorno: {B}{placa_data['codigoRetorno']}{C}")
+                else:
+                    print(f'{C}[{R}i]{C} Sem dados sobre.')
+            except:
+                print(f'{C}[{R}i{C}] Placa invalida')
+                time.sleep(3)
+                consultaplaca()
             del placa_data
             del req
             del placa_input
@@ -992,6 +1015,10 @@ def menu():
                 print('Bairro: {}'.format(adress_data['bairro']))
                 print('Cidade: {}'.format(adress_data["localidade"]))
                 print('Estado: {}'.format(adress_data['uf']))
+                print('IBGE: {}'.format(adress_data['ibge']))
+                print('GIA: {}'.format(adress_data['gia']))
+                print('SIAFI: {}'.format(adress_data['siafi']))
+                print('DDD: {}'.format(adress_data['ddd']))
 
             else:
                 print('{}: CEP INVALIDO.'.format(cep_input))
