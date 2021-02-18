@@ -79,3 +79,5 @@ git clone https://github.com/Kiny-kiny/Kiny-Painel.git
 cd Kiny-Painel
 chmod +x *
 python3 main.py
+
+© Kiny, 2021
