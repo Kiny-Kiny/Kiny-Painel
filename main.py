@@ -1252,6 +1252,7 @@ def password():
         os.system("clear")
         print("\033[1;31mERROR: Wrong Password....Yare Yare\033[m")
         timeout(1)
+        
 if __name__ == '__main__':
     print(f'{G} Checando por atualizacoes... {C}')
 
