@@ -1246,11 +1246,14 @@ def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def quit():
-        os.system("clear")
+
+        os.system("clear"
         print("\033[32m Arrivederci\033[m")
         timeout(1)
 
 def password():
+
+
     clear()
     global user
     user = input("USERNAME:  ")
@@ -1260,6 +1263,7 @@ def password():
         kinymode()
     if input("PASSWORD:  ").strip() == snh:
         menu()
+        
     else:
         os.system("clear")
         print("\033[1;31mERROR: Wrong Password....Yare Yare\033[m")
