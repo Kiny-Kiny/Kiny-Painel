@@ -1247,7 +1247,7 @@ def clear():
 
 def quit():
 
-        os.system("clear"
+        os.system("clear")
         print("\033[32m Arrivederci\033[m")
         timeout(1)
 
