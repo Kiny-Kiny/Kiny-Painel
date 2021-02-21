@@ -1,11 +1,8 @@
-R='\033[1;31m'; B='\033[1;34m'; C='\033[1;37m'; Y='\033[1;33m'; G='\033[1;32m'; RT='\033[;0m'
-def restart():
-    python = sys.executable
-    os.execl(python, python, *sys.argv)
 import os
 import sys
 import base64, json, re
 import time
+import subprocess
 from time import sleep as timeout
 try:
     import requests
@@ -36,6 +33,19 @@ except:
     print(f'{C}[{Y}i{C}] Reiniciando o painel em 3 seg...')
     time.sleep(3)
     restart()
+    
+R='\033[1;31m'
+B='\033[1;34m'
+C='\033[1;37m'
+Y='\033[1;33m'
+G='\033[1;32m'
+RT='\033[;0m'
+
+
+def restart():
+    python = sys.executable
+    os.execl(python, python, *sys.argv)
+    
 requests = requests.Session()
 
 #os.system('git pull && clear')
