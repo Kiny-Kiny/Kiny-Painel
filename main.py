@@ -1,6 +1,8 @@
 import os
 import sys
-import base64, json, re
+import base64
+import json
+import re
 import time
 import subprocess
 from time import sleep as timeout
