@@ -25,15 +25,9 @@ try:
     from phonenumbers import timezone
     from urllib.parse import urlencode
 except:
-    os.system('pip3 install requests')
-    os.system('pip3 install phonenumbers')
-    os.system('pip3 install urllib3')
-    os.system('pip3 install colorama')
-    os.system('pip3 install bs4')
-    os.system('pip3 install html5lib')
-    os.system('pip3 install argparse')
+    print(f'{G}[{Y}i{C}]{G}Instalando dependencias...')
+    pip = subprocess.check_output('pip3 install requests && pip3 install phonenumbers && pip3 install urllib3 && pip3 install colorama && pip3 install bs4 && pip3 install html5lib && pip3 install argparse', shell=True)
     print(f'{C}[{Y}i{C}] Reiniciando o painel em 3 seg...')
-    time.sleep(3)
     restart()
     
 R='\033[1;31m'
