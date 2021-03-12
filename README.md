@@ -1,4 +1,4 @@
-# <p align="center">PAINEL
+# <p align="center"> PAINEL
 
 <p align="center">
 <img src="https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/images%20(41).jpeg">
