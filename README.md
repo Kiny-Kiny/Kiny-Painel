@@ -1,83 +1,28 @@
-# Kiny-Painel 3.5
-Um pequeno painel de consulta grátis feito com a ajuda de Lehcs e Yato.
-VLW YATO POR ESTAR ME AJUDANDO NESSE PAINEL ;) 
+# PAINEL
+![banner](https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/images%20(41).jpeg)
 
-Esse script passou por muitas mudanças ao longo do tempo, antes era só um consultador de CEP, IP e Site
-Agora é um script fantástico que consulta várias coisas, na minha opinião, não é o suficiente, vou tentar sempre
-Melhorar o script cada vez mais com a ajuda do Yato.
+Nota: Proxima Atualização será um Beta para testar o Painel. Depois disso ele terá consulta de nome(retornando CPF) e número(consultando cpf e etc).
 
-Vlw Yato, tmj♧
+> INSTALAÇÃO 
 
-Nota - Aparentemente alguns terminais estão bugando e não estão executando a parte de número 
-Em breve resolverem os
+> apt-get update
 
-Créditos: A parte de CPF foi do script do P0ison, mas o Yato colocou os outros menus da mesma forma que o dele.
+> apt-get upgrade
 
-Tutorial de Instalação:
+> pkg install python
 
-pkg update && pkg upgrade
+> pkg install pip
 
-pkg install python 
+> pkg install git
 
-pkg install python2
+> git clone https://github.com/Kiny-Kiny/Kiny-Painel
 
-pkg install python3
+> cd consulta
 
-pkg install git
+> pip install -r requirements.txt
 
-pip install requests
+> python3 consultav3.py
 
-pip install colorama
-
-git clone https://github.com/Kiny-kiny/Kiny-Painel
-
-cd Kiny-Painel
-
-python3 main.py
-
-#Caso esteja atualizando#
-
-rm -rf Kiny-Painel
- 
-#############
-
-apt update && apt upgrade
-apt install python
-pip3 install requests
-git clone https://github.com/Kiny-kiny/Kiny-Painel
-cd Kiny-Painel
-chmod +x *
-python3 KinyPainelV3.py
-
-## Caso esteja atualizando ##
-rm -rf Kiny-Painel
-###############
-## NO TERMUX ##
-###############
-apt update && apt upgrade
-apt install git python
-git clone https://github.com/Kiny-kiny/Kiny-Painel.git
-cd Kiny-Painel
-chmod +x *
-python3 main.py
-
-##############
-## NO LINUX ##
-##############
-
-== Baseado em Debian == (KALI LINUX,UBUNTU,ETC.)
-apt update && apt upgrade
-apt install git python3
-git clone https://github.com/Kiny-kiny/Kiny-Painel.git
-cd Kiny-Painel
-chmod +x *
-python3 main.py
-
-== Baseado em Arch == (MANJARO,Blackarch,etc.)
-pacman -Syyu git python3
-git clone https://github.com/Kiny-kiny/Kiny-Painel.git
-cd Kiny-Painel
-chmod +x *
-python3 main.py
-
-© Kiny, 2021
+# LOGIN
+> Username: Kiny
+> Password: VirtualInsanity
