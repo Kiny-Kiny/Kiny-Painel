@@ -13,8 +13,9 @@
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Kiny-Kiny/Kiny-Painel" />
 </p>
 
-![banner](https://github.com/cychrisfds/consulta/blob/main/)
-
+<p align="center">
+<img src="https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/IMG-20210312-WA0079.jpg">
+</p>
 
 <p align="center">Confira meu canal do YouTube. <a href="https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w"> Clique aqui!</a>
 
