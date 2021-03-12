@@ -1,7 +1,7 @@
 # PAINEL
 ![banner](https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/images%20(41).jpeg)
 
-Nota: Proxima Atualização será um Beta para testar o Painel. Depois disso ele terá consulta de nome(retornando CPF) e número(consultando cpf e etc).
+Nota: Proxima Atualização será um Beta para testar o Painel. Depois disso ele terá consulta de nome(retornando CPF) e número(consultando CPF e etc).
 
 > INSTALAÇÃO 
 
@@ -24,5 +24,7 @@ Nota: Proxima Atualização será um Beta para testar o Painel. Depois disso ele
 > python3 consultav3.py
 
 # LOGIN
+
 > Username: Kiny
+
 > Password: VirtualInsanity
