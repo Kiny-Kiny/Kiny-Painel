@@ -3,7 +3,18 @@
 
 # Nota: Próxima Atualização será um Beta para testar o Painel. Depois disso ele terá consulta de nome(retornando CPF) e número completo(consultando CPF e etc).
 
-> INSTALAÇÃO 
+# Créditos 
+> P0isonBR(Consulta de CPF)
+
+> Snuking(Algumas ajudas no próprio script)
+
+# Patrocinadores
+
+> Syne
+
+> Douglas/Josuke
+
+# INSTALAÇÃO 
 
 > pkg update && pkg upgrade -y
 
