@@ -1,5 +1,8 @@
-# PAINEL
-![banner](https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/images%20(41).jpeg)
+# <p align="center">PAINEL
+
+<p align="center">
+<img src="https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/images%20(41).jpeg">
+</p>
 
 <p align="center">
 <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Kiny-Kiny/Kiny-Painel?style=flat" /> 
