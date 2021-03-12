@@ -56,4 +56,10 @@
 
 > Password: VirtualInsanity
 
+# CHANGELOG
+
+- Bug corrigido no Updater
+
+- Bug corrigido em consulta de placas
+
 # Dúvidas? Me chame no Whatsapp: +55 (21) 7918-0533
