@@ -4,7 +4,7 @@
 # Nota: Próxima Atualização será um Beta para testar o Painel. Depois disso ele terá consulta de nome(retornando CPF) e número completo(consultando CPF e etc).
 
 # Créditos 
-> P0isonBR(Consulta de CPF)
+> P0isonBR(Consulta de CPF/Atualização Automática)
 
 > Snuking(Algumas ajudas no próprio script)
 
