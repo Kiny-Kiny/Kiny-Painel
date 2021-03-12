@@ -5,23 +5,21 @@
 
 > INSTALAÇÃO 
 
-> apt-get update
-
-> apt-get upgrade
+> pkg update && pkg upgrade -y
 
 > pkg install python
 
-> pkg install pip
+> pkg install python2
+
+> pkg install python3
 
 > pkg install git
 
 > git clone https://github.com/Kiny-Kiny/Kiny-Painel
 
-> cd consulta
+> cd Kiny-Painel
 
-> pip install -r requirements.txt
-
-> python3 consultav3.py
+> python3 main.py
 
 # LOGIN
 
