@@ -42,7 +42,7 @@ def notes():
     Agradecemos ao P0is0n pelo novo método de atualização e
         pelas boas vindas a comunidade OpenSource
         
-    Codado por: {C}{B}YATO AND KINY{C}
+    Codado por: {C}{B}YATO{C}
     APIs ,ideia e código inicial: {C}{B}KINY{C}
     API MTE e auxilio no script: {C}{B}p0is0n{C}
     Patrocinio:Obrigado {C}{B}Syne{C} e {C}{B}Douglas{C} pelo money pra fazer o script.
