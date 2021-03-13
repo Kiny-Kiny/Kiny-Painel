@@ -176,7 +176,7 @@ while(Sair == False):
     print(f"{C}{G}[3]{C} KINY-SITE-INFOGA")
     print(f"{C}{G}[4]{C} CONSULTA DE CNPJ")
     print(f"{C}{G}[5]{C} CONSULTA BANCARIA")
-    print(f"{C}{G}[6]{C} CONSULTA CPF")
+    print(f"{C}{G}[6]{C} CONSULTA CPF[OFF]")
     print(f"{C}{G}[7]{C} CONSULTA CNS")
     print(f"{C}{G}[8]{C} CONSULTA PLACA")
     print(f"{C}{G}[9]{C} CONSULTA CRM")
