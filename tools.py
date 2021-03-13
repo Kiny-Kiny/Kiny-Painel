@@ -34,7 +34,7 @@ def notes():
 -Otimização do código
 -Nova opção no menu
         
-    Codado por: {C}{B}YATO{C}
+    reCodado por: {C}{B}YATO{C}
     APIs ,ideia e código inicial: {C}{B}KINY{C}
     API MTE e auxilio no script: {C}{B}p0is0n{C}
     Patrocinio:Obrigado {C}{B}Syne{C} e {C}{B}Douglas{C} pelo money pra fazer o script.
