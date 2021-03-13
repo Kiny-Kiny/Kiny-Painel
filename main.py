@@ -201,7 +201,7 @@ while(Sair == False):
     tools.clear()
     
     if op == '16':
-    	tools.mae()
+    	nomemae()
 
     if op == '17' and kinymode == 1:
         os.system('figlet KINY')
