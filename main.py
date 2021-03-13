@@ -11,12 +11,15 @@ RT='\033[;0m'
 ## Distribuido livremente pela licença MIT,
 ## Aos que não sabem o que isso significa,sugerimos estudo.
 #######################
-## Gostamos das suas atualizações no nosso github p0is0n,
-## espero que você não fique bravo se usarmos elas,né?
-## :p abraços,Yato e Kiny.
+##
+## Soubemos do grande roubo ao script do Snuking,feito pelo usuário ZeusXaloc,
+## Demonstramos repúdio as atitudes do mesmo,totalmente desprezível.
+## ZeusXaloc,você NÃO é bem vindo aqui.
+## 
 #######################
 ## Obrigado pelo apoio snuking
 #######################
+
 def restart():
     python = sys.executable
     os.execl(python, python, *sys.argv)
@@ -116,7 +119,7 @@ else:
 token = ["f01e0024a26baef3cc53a2ac208dd141","5072097263","25d800a8b8e8b99d77c809567aa291b8"]
 
 welcome_msg = ["Que a força esteja com você", "Bem vindo", "Você é um mito", "Okaerinasai"]
-'''
+
 if __name__ == '__main__':
     print(f'{G} Checando por atualizacoes... {C}')
     update = subprocess.check_output('git pull', shell=True)
@@ -128,7 +131,6 @@ if __name__ == '__main__':
     else:
         print('Nenhuma atualizacao disponivel.')
         time.sleep(2)
-'''
 
 if login == 1:
     tools.clear()
@@ -201,7 +203,7 @@ while(Sair == False):
     tools.clear()
     
     if op == '16':
-    	nomemae()
+    	tools.nomemae()
 
     if op == '17' and kinymode == 1:
         os.system('figlet KINY')
