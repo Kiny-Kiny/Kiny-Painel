@@ -20,12 +20,6 @@ from phonenumbers import geocoder
 from phonenumbers import timezone
 from urllib.parse import urlencode
 
-global a
-a='aHR0cDovL3d3dy5qdXZlbnR1ZGV3ZWIubXRlLmdvdi5ici9wbnBlcGVzcXVpc2FzLmFzcA=='
-a=a.encode('ascii')
-a=base64.b64decode(a)
-a=a.decode('ascii')
-
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -39,10 +33,8 @@ def notes():
 -Remoção de opção inútil
 -Otimização do código
 -Nova opção no menu
-    Agradecemos ao P0is0n pelo novo método de atualização e
-        pelas boas vindas a comunidade OpenSource
         
-    Codado por: {C}{B}YATO AND KINY{C}
+    Codado por: {C}{B}YATO{C}
     APIs ,ideia e código inicial: {C}{B}KINY{C}
     API MTE e auxilio no script: {C}{B}p0is0n{C}
     Patrocinio:Obrigado {C}{B}Syne{C} e {C}{B}Douglas{C} pelo money pra fazer o script.
@@ -233,8 +225,6 @@ def gerar_pessoa(token): #####REWORK
     if pessoa['results'][0]['gender'] == 'male':
         gender = 'M'
     age = randint(18,80)
-
-    p = people(sex=gender, age=age, state=state)
 
     print('Nome: {} {}'.format(pessoa['results'][0]['name']['first'],pessoa['results'][0]['name']['last']))
     print('Genero: {}'.format(gender))
@@ -514,7 +504,7 @@ def bank(anim):
     if kc == '01' or kc == '1':
         bank(anim)
 
-def consultacpf(cpf_api):
+def consultacpf(cpf_api,token):
     clear()
     cpf = 0
     os.system('figlet KINY')
@@ -526,7 +516,9 @@ def consultacpf(cpf_api):
 {C}[{Y}i{C}] Selecione a forma de operação.
 """)
     choice=input(f'===>')
+    clear()
     if choice=='1' or choice == '01':
+        os.system('figlet KINY')
         cpf=input(f'{C}[{Y}i{C}] Informe o CPF a ser consultado (sem pontos ou traços): {B}')
         clear()
     elif choice=='2' or choice == '02':
@@ -544,7 +536,11 @@ def consultacpf(cpf_api):
     else:
         print(f'{C}[{R}ERROR{C}] Opção inválida.')
         time.sleep(3)
-    if cpf != '0' and cpf_api == '0':
+    if cpf != '0' and cpf_api == 0:
+        a='aHR0cDovL3d3dy5qdXZlbnR1ZGV3ZWIubXRlLmdvdi5ici9wbnBlcGVzcXVpc2FzLmFzcA=='
+        a=a.encode('ascii')
+        a=base64.b64decode(a)
+        a=a.decode('ascii')
         try:### Agradecemos ao p0is0n por essa parte :)
             h={
         'Content-Type': "text/xml, application/x-www-form-urlencoded;charset=ISO-8859-1, text/xml; charset=ISO-8859-1",
@@ -567,22 +563,22 @@ def consultacpf(cpf_api):
             print(f'{R}CPF não existe{C}')
             print(f'{R}Tente novamente e pressione enter para retornar{C}')
             lo = input("===>")
-    else:
+    if cpf != 0 and cpf_api == 1:
         data = requests.get('https://jlbuscas.com/apis2020/ho20ts/cadsus.php?info={}'.format(cpf)).text
 
         a = data.replace('<br><b>', '\n').replace('</br>', '').replace('<br><h2>', '').replace('</br></h2>', '\n').replace('</b>', '').replace('<h2>','').replace('<b>','').replace('<br>','').replace('</h2>', '').replace('<h3>','').replace('</h3>','').replace('DOCUMENTOS ENCONTRADOS','DOCUMENTOS ENCONTRADOS\n    ').replace('rgDados:','Dados do RG:').replace('Dados Pessoais','Dados Pessoais\n    ').replace('endereco','').replace('certidao Dados','Dados da certidão')
 
         print(a)
-        print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
-        print('1.Sim')
-        print('2.Não')
-        nova=input(f'===>').lower()
-        if nova=='1' or nova=='01':
-            consultacpf()
-        elif nova=='2' or nova=='02':
-            pass
-        else:
-            print(f'{C}[{R}i{C}]Opção inválida')
+    print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
+    print('1.Sim')
+    print('2.Não')
+    nova=input(f'===>').lower()
+    if nova=='1' or nova=='01':
+        consultacpf(cpf_api,token)
+    elif nova=='2' or nova=='02':
+        pass
+    else:
+        print(f'{C}[{R}ERROR{C}]Opção inválida')
 
 def consultaoperadora():
     os.system("figlet KINY")
@@ -795,9 +791,12 @@ def consultatel():
         print(f'{C}[{R}i{C}] Opção inválida')
         time.sleep(3)
 def primenumero():
-    print(f'{C}[{G}i{C}] Digite o numero do celular(Limite de 1000 por dia com uso coletivo).')
+    clear()
+    os.system('figlet KINY')
+    print(f'{C}[{G}i{C}] Digite o numero do celular.')
     print(f'{C}[{Y}!{C}] Exemplo: 85988120677')
     print(f'{C}[{G}i{C}] 85 é o DDD , 9 é padrão e o restante é o numero.')
+    print(f'{C}[{Y}!{C}] Aviso: Limite de 1000 consultas por dia,caso apresente este erro,\nsó será possível consultar no dia seguinte.')
     numero = input('===>')
     data = requests.get('https://jlbuscas.com/apis2020/ho20ts/targtelefone.php?info={}'.format(numero)).text
     a = data.replace('<br><b>', '\n').replace('</br>', '').replace('<br><h2>', '').replace('</br></h2>', '\n').replace('</b>', '').replace('<h2>','').replace('<b>','').replace('<br>','').replace('</h2>', '').replace('<h3>','').replace('</h3>','').replace('DOCUMENTOS ENCONTRADOS','').replace('endereco','').replace('certidao Dados','Dados da certidão').replace('▸','\n▸').replace('<hr>','').replace('Nenhuma','\nNenhuma').replace('<h1>','\n').replace('</h1>','\n')

@@ -124,7 +124,7 @@ try:
         print(f'{G} Checando por atualizacoes... {C}')
         update = subprocess.check_output('git pull', shell=True)
         if 'Already up to date' not in update.decode():
-            print(f'{G}Atualizacao instalada!\nReiniciando app...{C}')
+            print(f'{G}Atualizacao instalada!\nReiciando app...{C}')
             time.sleep(5)
             subprocess.run('clear')
             restart()
@@ -176,13 +176,13 @@ while(Sair == False):
     print(f"{C}{G}[3]{C} KINY-SITE-INFOGA")
     print(f"{C}{G}[4]{C} CONSULTA DE CNPJ")
     print(f"{C}{G}[5]{C} CONSULTA BANCARIA")
-    print(f"{C}{G}[6]{C} CONSULTA CPF [OFF]")
+    print(f"{C}{G}[6]{C} CONSULTA CPF")
     print(f"{C}{G}[7]{C} CONSULTA CNS")
     print(f"{C}{G}[8]{C} CONSULTA PLACA")
     print(f"{C}{G}[9]{C} CONSULTA CRM")
     print(f"{C}{G}[10]{C} CONSULTA DE NUMERO")
     print(f"{C}{G}[11]{C} CONSULTA BIN")
-    print(f"{C}{G}[12]{C} GERAR PESSOA [OFF]")
+    print(f"{C}{G}[12]{C} GERAR PESSOA")
     print(f"{C}{G}[13]{C} MOSTRAR MEU IP")
     print(f"{C}{G}[14]{C} CC CHECKER")
     print(f"{C}{G}[15]{C} COVID19")
@@ -316,7 +316,7 @@ while(Sair == False):
         tools.cns(token,anim)
 
     if op == '6' or op == '06':
-        tools.consultacpf(cpf_api)
+        tools.consultacpf(cpf_api,token)
 
     if op == '5' or op == '05':
         tools.bank(anim)
