@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-<img src="https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/IMG-20210312-WA0079.jpg">
+<img src="https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/IMG-20210313-WA0017.jpg">
 </p>
 
 <p align="center">Confira meu canal do YouTube. <a href="https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w"> Clique aqui!</a>
