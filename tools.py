@@ -176,10 +176,13 @@ def crm(token):
     crm_input = input("===>")
     print(f'{C}[{G}i{C}] Digite o UF.')
     uf_input = input("===>")
-    url = 'https://www.consultacrm.com.br/api/index.php?tipo=crm&uf='+uf_input
-    data = requests.get(url+'&q={}&chave={}&destino=json'.format(crm_input,token[1]))
-    crm_data = data.json()
-            #consultas = (crm_data['api_limite']) - (crm_data['api_consultas'])
+    try:
+        url = 'https://www.consultacrm.com.br/api/index.php?tipo=crm&uf='+uf_input
+        data = requests.get(url+'&q={}&chave={}&destino=json'.format(crm_input,token[1]))
+        crm_data = data.json()
+    except:
+        print(f'{C}[{R}ERROR{C}] CRM ou UF invalido')
+        #consultas = (crm_data['api_limite']) - (crm_data['api_consultas'])
     if (crm_data['status']) == "true":
                 #print('Consultas restantes ='+consultas)
         try:
@@ -355,13 +358,16 @@ def cep(anim):
         print('SIAFI: {}'.format(adress_data['siafi']))
         print('DDD: {}'.format(adress_data['ddd']))
     else:
-        print('{C}[{R}ERROR{C}] CEP INVALIDO.')
+        print(f'{C}[{R}ERROR{C}] CEP INVALIDO.')
     print(f"{C}{G}DESEJA REALIZAR UMA NOVA CONSULTA?{C}")
     print(f"{C}[{G}1{C}] Sim")
     print(f"{C}[{G}2{C}] Não")
     option = input('===> ')
     if option == '1':
         cep(anim)
+    else:
+        del adress_data
+        del request
 
 def kiny_infoga():
     os.system("apt install nmap whois")

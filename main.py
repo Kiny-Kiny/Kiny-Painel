@@ -182,8 +182,9 @@ while(Sair == False):
     print(f"{C}{G}[13]{C} MOSTRAR MEU IP")
     print(f"{C}{G}[14]{C} CC CHECKER")
     print(f"{C}{G}[15]{C} COVID19")
+    print(f"{C}{G}[16]{C} CONSULTAR MÃE")
     if kinymode == 1:
-    	print(f"{C}{G}[16]{C} FERRAMENTAS")
+    	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
         time.sleep(1)
     print()
@@ -198,8 +199,11 @@ while(Sair == False):
     print(f"{C}{G}[00]{C} EXIT")
     op = input("===>").strip()
     tools.clear()
+    
+    if op == '16':
+    	tools.mae()
 
-    if op == '16' and kinymode == 1:
+    if op == '17' and kinymode == 1:
         os.system('figlet KINY')
         print()
         print(f'{C}[{G}1{C}] Gerar link whatsapp')
@@ -284,7 +288,7 @@ while(Sair == False):
     	tools.covid19()
 
     if op == '14':
-        tools.cc_checker()
+        tools.cc_checker(token)
 
     if op == '13':
     	tools.ip(ip_api,0,token)
