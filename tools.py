@@ -32,6 +32,7 @@ def clear():
 def notes():
     print(f'{C}==={R}{C} Notas de versão {C}==={R}{C}')
     print(f'''
+    Versão 3.8
 -Novas APIs (inclusive APIs pagas)
 -Configurações
 -Modo sem senha
@@ -41,9 +42,12 @@ def notes():
     Agradecemos ao P0is0n pelo novo método de atualização e
         pelas boas vindas a comunidade OpenSource
         
-    Codado por: {C}{B}YATO AND KINY{C}
-    APIs e ideia inicial: {C}{B}KINY{C}
+    Codado por: {C}{B}YATO{C}
+    APIs ,ideia e código inicial: {C}{B}KINY{C}
     API MTE e auxilio no script: {C}{B}p0is0n{C}
+    Patrocinio:Obrigado {C}{B}Syne{C} e {C}{B}Douglas{C} pelo money pra fazer o script.
+    
+    Obrigado {C}{B}Snuking{C}, pelo apoio e algumas ajudas;
     
     ''')
     pause = input('Pressione enter para retornar.')
