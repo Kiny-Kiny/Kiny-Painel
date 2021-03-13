@@ -62,11 +62,11 @@
 
 - Consulta Completa Por Número 
 
+- Consulta Por Nome de Mãe 
+
 # PREVIA
 
 - Consulta de Nome
-
-- Consulta por Nome de Mãe 
 
 - Consulta CADSUS
 
