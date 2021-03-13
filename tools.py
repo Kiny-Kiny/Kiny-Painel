@@ -544,7 +544,7 @@ def consultacpf(cpf_api):
     else:
         print(f'{C}[{R}ERROR{C}] Opção inválida.')
         time.sleep(3)
-    if cpf != '0' and cpf_apt == '0':
+    if cpf != '0' and cpf_api == '0':
         try:### Agradecemos ao p0is0n por essa parte :)
             h={
         'Content-Type': "text/xml, application/x-www-form-urlencoded;charset=ISO-8859-1, text/xml; charset=ISO-8859-1",
