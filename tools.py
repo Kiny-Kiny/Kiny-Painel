@@ -34,7 +34,7 @@ def notes():
 -Otimização do código
 -Nova opção no menu
         
-    reCodado por: {C}{B}YATO{C}
+    Codado por: {C}{B}YATO{C}
     APIs ,ideia e código inicial: {C}{B}KINY{C}
     API MTE e auxilio no script: {C}{B}p0is0n{C}
     Patrocinio:Obrigado {C}{B}Syne{C} e {C}{B}Douglas{C} pelo money pra fazer o script.
@@ -339,7 +339,7 @@ def cep(anim):
 
     adress_data = request.json()
     clear()
-    if 'erro' not in adress_data:
+    try:
         os.system('figlet KINY')
         print('Cep: {}'.format(adress_data['cep']))
         print('Logradouro: {}'.format(adress_data['logradouro']))
@@ -351,7 +351,7 @@ def cep(anim):
         print('GIA: {}'.format(adress_data['gia']))
         print('SIAFI: {}'.format(adress_data['siafi']))
         print('DDD: {}'.format(adress_data['ddd']))
-    else:
+    except:
         print(f'{C}[{R}ERROR{C}] CEP INVALIDO.')
     print(f"{C}{G}DESEJA REALIZAR UMA NOVA CONSULTA?{C}")
     print(f"{C}[{G}1{C}] Sim")
