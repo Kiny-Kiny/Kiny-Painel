@@ -34,17 +34,13 @@
 
 # INSTALAÇÃO 
 
-> pkg update && pkg upgrade -y
+> apt update && apt upgrade -y
 
-> pkg install python
+> apt install git python
 
-> pkg install python2
+> apt install python2
 
-> pkg install python3
-
-> pkg install git
-
-> git clone https://github.com/Kiny-Kiny/Kiny-Painel
+> git clone https://github.com/Kiny-Kiny/Kiny-Painel.git
 
 > cd Kiny-Painel
 
