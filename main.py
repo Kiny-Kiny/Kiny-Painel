@@ -182,7 +182,7 @@ while(Sair == False):
     print(f"{C}{G}[9]{C} CONSULTA CRM")
     print(f"{C}{G}[10]{C} CONSULTA DE NUMERO")
     print(f"{C}{G}[11]{C} CONSULTA BIN")
-    print(f"{C}{G}[12]{C} GERAR PESSOA")
+    print(f"{C}{G}[12]{C} GERAR PESSOA [OFF]")
     print(f"{C}{G}[13]{C} MOSTRAR MEU IP")
     print(f"{C}{G}[14]{C} CC CHECKER")
     print(f"{C}{G}[15]{C} COVID19")
