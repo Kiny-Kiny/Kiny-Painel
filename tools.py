@@ -795,7 +795,7 @@ def consultatel():
         print(f'{C}[{R}i{C}] Opção inválida')
         time.sleep(3)
 def primenumero():
-    print(f'{C}[{G}i{C}] Digite o numero do celular.')
+    print(f'{C}[{G}i{C}] Digite o numero do celular(Limite de 1000 por dia com uso coletivo).')
     print(f'{C}[{Y}!{C}] Exemplo: 85988120677')
     print(f'{C}[{G}i{C}] 85 é o DDD , 9 é padrão e o restante é o numero.')
     numero = input('===>')
