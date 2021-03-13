@@ -62,11 +62,13 @@
 
 - Bug corrigido em consulta de placas
 
+- Consulta Completa Por Número 
+
+# PREVIA
+
 - Consulta de Nome
 
 - Consulta por Nome de Mãe 
-
-- Consulta de Número Completa
 
 - Consulta CADSUS
 
