@@ -40,6 +40,8 @@
 
 > apt install python2
 
+> apt install python3
+
 > git clone https://github.com/Kiny-Kiny/Kiny-Painel.git
 
 > cd Kiny-Painel
