@@ -52,7 +52,7 @@
 
 # LOGIN
 
-> Username: Kiny
+> Username: (Qualquer um)
 
 > Password: VirtualInsanity
 
