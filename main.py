@@ -124,7 +124,7 @@ try:
         print(f'{G} Checando por atualizacoes... {C}')
         update = subprocess.check_output('git pull', shell=True)
         if 'Already up to date' not in update.decode():
-            print(f'{G}Atualizacao instalada!\nReiciando app...{C}')
+            print(f'{G}Atualizacao instalada!\nReiniciando app...{C}')
             time.sleep(5)
             subprocess.run('clear')
             restart()
