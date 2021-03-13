@@ -66,7 +66,7 @@
 
 - Consulta de Nome
 
-- Consulta de Mãe 
+- Consulta por Nome de Mãe 
 
 - Consulta de Número Completa
 
