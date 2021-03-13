@@ -19,7 +19,7 @@
 
 <p align="center">Confira meu canal do YouTube. <a href="https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w"> Clique aqui!</a>
 
-# Nota: Próxima Atualização será um Beta para testar o Painel. Depois disso ele terá consulta de nome(retornando CPF) e número completo(consultando CPF e etc).
+# Nota: Próxima Atualização será a última com coisas novas, o resto será para melhorar o script.
 
 # Créditos 
 > P0isonBR(Consulta de CPF/Atualização Automática)
@@ -61,5 +61,21 @@
 - Bug corrigido no Updater
 
 - Bug corrigido em consulta de placas
+
+# PRÓXIMA ATUALIZAÇÃO 
+
+- Consulta de Nome
+
+- Consulta de Mãe 
+
+- Consulta de Número Completa
+
+- Consulta CADSUS
+
+- Consulta Score
+
+- Consulta CPF(mais Info)
+
+- Consulta de CNPJ(mais Info)
 
 # Dúvidas? Me chame no Whatsapp: +55 (21) 7918-0533
