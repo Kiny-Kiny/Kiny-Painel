@@ -563,7 +563,7 @@ def consultacpf(cpf_api,token):
             print(f'{R}CPF não existe{C}')
             print(f'{R}Tente novamente e pressione enter para retornar{C}')
             lo = input("===>")
-    if cpf != 0 and cpf_api == 1:
+    #if cpf != 0 and cpf_api == 1:
         data = requests.get('https://jlbuscas.com/apis2020/ho20ts/cadsus.php?info={}'.format(cpf)).text
 
         a = data.replace('<br><b>', '\n').replace('</br>', '').replace('<br><h2>', '').replace('</br></h2>', '\n').replace('</b>', '').replace('<h2>','').replace('<b>','').replace('<br>','').replace('</h2>', '').replace('<h3>','').replace('</h3>','').replace('DOCUMENTOS ENCONTRADOS','DOCUMENTOS ENCONTRADOS\n    ').replace('rgDados:','Dados do RG:').replace('Dados Pessoais','Dados Pessoais\n    ').replace('endereco','').replace('certidao Dados','Dados da certidão')
