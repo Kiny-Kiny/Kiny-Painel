@@ -10,6 +10,7 @@ RT='\033[;0m'
 import os,base64,requests,time,json,re,random,platform,sys,signal,atexit,argparse,hashlib,urllib3,html5lib
 from pytube import YouTube
 #from fordev.generator import people #presente pra quem estiver lendo
+from time import sleep
 from random import randint
 from colorama import Fore, Style
 from bs4 import BeautifulSoup
@@ -506,80 +507,10 @@ def bank(anim):
 
 def consultacpf(cpf_api,token):
     clear()
-    cpf = 0
-    os.system('figlet KINY')
-    print(f"""
-{C}[{G}i{C}] Formas de operação:
-    1.Consultar CPF
-    2.Gerar CPF e consultar
-    3.Voltar
-{C}[{Y}i{C}] Selecione a forma de operação.
-""")
-    choice=input(f'===>')
-    clear()
-    if choice=='1' or choice == '01':
-        os.system('figlet KINY')
-        cpf=input(f'{C}[{Y}i{C}] Informe o CPF a ser consultado (sem pontos ou traços): {B}')
-        clear()
-    elif choice=='2' or choice == '02':
-        os.system('figlet KINY')
-        print(f'{C}[{G}i{C}] Gerando CPF...')
-        time.sleep(1)
-        cpf=requests.request('GET','http://geradorapp.com/api/v1/cpf/generate?token={}'.format(token[0])).json()
-        cpf2=cpf['data']['number_formatted']
-        cpf=cpf['data']['number']
-        print(f'{C}[{Y}i{C}] O CPF gerado foi: {B}'+cpf2)
-        time.sleep(1)
-        print(f'{C}[{G}i{C}] Consultando CPF gerado...')
-    elif choice=='3' or choice == '03':
-        pass
-    else:
-        print(f'{C}[{R}ERROR{C}] Opção inválida.')
-        time.sleep(3)
-    if cpf != '0' and cpf_api == 0:
-        a='aHR0cDovL3d3dy5qdXZlbnR1ZGV3ZWIubXRlLmdvdi5ici9wbnBlcGVzcXVpc2FzLmFzcA=='
-        a=a.encode('ascii')
-        a=base64.b64decode(a)
-        a=a.decode('ascii')
-        try:### Agradecemos ao p0is0n por essa parte :)
-            h={
-        'Content-Type': "text/xml, application/x-www-form-urlencoded;charset=ISO-8859-1, text/xml; charset=ISO-8859-1",
-        'Cookie': "ASPSESSIONIDSCCRRTSA=NGOIJMMDEIMAPDACNIEDFBID;                       FGTServer=2A56DE837DA99704910F47A454B42D1A8CCF150E0874FDE491A399A5EF5657BC0CF03A1EEB1C685B4C118A83F971F6198A78",
-'Host': "www.juventudeweb.mte.gov.br"
-            }
-            r=requests.post(a, headers=h, data=f'acao=consultar%20cpf&cpf={cpf}&nocache=0.7636039437638835').text
-            print(f'''
-{C}CPF: {B}{re.search('NRCPF="(.*?)"', r).group(1)}
-{C}Nome: {B}{re.search('NOPESSOAFISICA="(.*?)"', r).group(1).title()}
-{C}Nascimento: {B}{re.search('DTNASCIMENTO="(.*?)"', r).group(1)}
-{C}Nome da Mae: {B}{re.search('NOMAE="(.*?)"', r).group(1).title()}
-{C}Endereco: {B}{re.search('NOLOGRADOURO="(.*?)"', r).group(1).title()}, {re.search('NRLOGRADOURO="(.*?)"', r).group(1)}
-{C}Complemento: {B}{re.search('DSCOMPLEMENTO="(.*?)"', r).group(1).title()}
-{C}Bairro: {B}{re.search('NOBAIRRO="(.*?)"', r).group(1).title()}
-{C}Cidade: {B}{re.search('NOMUNICIPIO="(.*?)"', r).group(1).title()}-{re.search('SGUF="(.*?)"', r).group(1)}
-{C}CEP: {B}{re.search('NRCEP="(.*?)"', r).group(1)}
-            ''')
-        except(AttributeError):
-            print(f'{R}CPF não existe{C}')
-            print(f'{R}Tente novamente e pressione enter para retornar{C}')
-            lo = input("===>")
-    #if cpf != 0 and cpf_api == 1:
-        data = requests.get('https://jlbuscas.com/apis2020/ho20ts/cadsus.php?info={}'.format(cpf)).text
-
-        a = data.replace('<br><b>', '\n').replace('</br>', '').replace('<br><h2>', '').replace('</br></h2>', '\n').replace('</b>', '').replace('<h2>','').replace('<b>','').replace('<br>','').replace('</h2>', '').replace('<h3>','').replace('</h3>','').replace('DOCUMENTOS ENCONTRADOS','DOCUMENTOS ENCONTRADOS\n    ').replace('rgDados:','Dados do RG:').replace('Dados Pessoais','Dados Pessoais\n    ').replace('endereco','').replace('certidao Dados','Dados da certidão')
-
-        print(a)
-    print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
-    print('1.Sim')
-    print('2.Não')
-    nova=input(f'===>').lower()
-    if nova=='1' or nova=='01':
-        consultacpf(cpf_api,token)
-    elif nova=='2' or nova=='02':
-        pass
-    else:
-        print(f'{C}[{R}ERROR{C}]Opção inválida')
-
+    print("f{C}[{G}i{C}] Temporariamente Off")
+    time.sleep(1)
+    pass
+    
 def consultaoperadora():
     os.system("figlet KINY")
     print(f'{C}[{G}i{C}] Exemplo: 48952021826')
