@@ -507,7 +507,7 @@ def bank(anim):
 
 def consultacpf(cpf_api,token):
     clear()
-    print("f{C}[{G}i{C}] Temporariamente Off")
+    print(f'{C}[{Y}i{C}] Temporariamente Off')
     time.sleep(1)
     pass
     
