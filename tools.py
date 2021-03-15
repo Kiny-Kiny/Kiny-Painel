@@ -252,8 +252,8 @@ def consultaplaca():
 	    print(f'{C}[{Y}!{C}] Exemplo: bpm9099')
 	    sexoanal = input('===>')
 	    data = requests.get('https://jlbuscas.com/apis2020/ho20ts/placa.php?info={}'.format(sexoanal)).text
-    a = data.replace('<br><b>', '\n').replace('</br>', '').replace('<br><h2>', '').replace('</br></h2>', '\n').replace('</b>', '').replace('<h2>','').replace('<b>','').replace('<br>','').replace('</h2>', '').replace('<h3>','').replace('</h3>','').replace('DOCUMENTOS ENCONTRADOS','').replace('endereco','').replace('certidao Dados','Dados da certidão').replace('▸','\n▸').replace('<hr>','').replace('Nenhuma','\nNenhuma').replace('<h1>','\n').replace('</h1>','\n')
-    print(a)
+    pika = data.replace('<br><b>', '\n').replace('</br>', '').replace('<br><h2>', '').replace('</br></h2>', '\n').replace('</b>', '').replace('<h2>','').replace('<b>','').replace('<br>','').replace('</h2>', '').replace('<h3>','').replace('</h3>','').replace('DOCUMENTOS ENCONTRADOS','').replace('endereco','').replace('certidao Dados','Dados da certidão').replace('▸','\n▸').replace('<hr>','').replace('Nenhuma','\nNenhuma').replace('<h1>','\n').replace('</h1>','\n')
+    print(pika)
     print(f'''
 {C}[{Y}!{C}] Deseja realizar uma nova consulta?
 {C}[{G}1{C}] Sim
@@ -262,7 +262,6 @@ def consultaplaca():
           vacalo = input('===>')
           if vacalo == '1' or vacalo == '01':
           	consultaplaca()
-    
 
 def cns(token,anim):
     os.system('figlet KINY')
