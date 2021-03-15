@@ -246,22 +246,22 @@ def gerar_pessoa(token): #####REWORK
         gerar_pessoa(token)
 
 def consultaplaca():
-	    clear()
-	    os.system("figlet KINY")
-	    print(f'{C}[{G}i{C}] Digite o numero da ppaca.')
-	    print(f'{C}[{Y}!{C}] Exemplo: bpm9099')
-	    cugrosso = input('===>')
-	    a = requests.get('https://jlbuscas.com/apis2020/ho20ts/placa.php?info={}'.format(cugrosso)).text
-	    a = data.replace('<br><b>', '\n').replace('</br>', '').replace('<br><h2>', '').replace('</br></h2>', '\n').replace('</b>', '').replace('<h2>','').replace('<b>','').replace('<br>','').replace('</h2>', '').replace('<h3>','').replace('</h3>','').replace('DOCUMENTOS ENCONTRADOS','').replace('endereco','').replace('certidao Dados','Dados da certidão').replace('▸','\n▸').replace('<hr>','').replace('Nenhuma','\nNenhuma').replace('<h1>','\n').replace('</h1>','\n')
-	    print(a)
-	    print(f'''
+	clear()
+	os.system("figlet KINY")
+	print(f'{C}[{G}i{C}] Digite o numero da ppaca.')
+	print(f'{C}[{Y}!{C}] Exemplo: bpm9099')
+	cugrosso = input('===>')
+	a = requests.get('https://jlbuscas.com/apis2020/ho20ts/placa.php?info={}'.format(cugrosso)).text
+	a = data.replace('<br><b>', '\n').replace('</br>', '').replace('<br><h2>', '').replace('</br></h2>', '\n').replace('</b>', '').replace('<h2>','').replace('<b>','').replace('<br>','').replace('</h2>', '').replace('<h3>','').replace('</h3>','').replace('DOCUMENTOS ENCONTRADOS','').replace('endereco','').replace('certidao Dados','Dados da certidão').replace('▸','\n▸').replace('<hr>','').replace('Nenhuma','\nNenhuma').replace('<h1>','\n').replace('</h1>','\n')
+	print(a)
+	print(f'''
 {C}[{Y}!{C}] Deseja realizar uma nova consulta?
 {C}[{G}1{C}] Sim
 {C}[{G}2{C}] Não
-          ''')
-        vacalo = input('===> ')
-        if vacalo == '1' or vacalo == '01':
-            consultaplaca()
+''')
+	vacalo = input('===> ')
+	if vacalo == '1' or vacalo == '01':
+        	consultaplaca()
           	
 def cns(token,anim):
     os.system('figlet KINY')
@@ -595,7 +595,7 @@ def cc_checker(token):
                 'User-Agent': 'Mozilla/5.0 (Linux; Android 9; SM-N950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.116 Mobile Safari/537.36 EdgA/45.09.4.5083',
                 'Sec-Fetch-Mode': 'navigate',
                 'Sec-Fetch-User': '?1',
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q\u003d0.9,image/webp,image/apng,*/*;q\u003d0.8,application/signed-exchange;v\u003db3',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q\u003d0.9,image/webp,image/apng,/;q\u003d0.8,application/signed-exchange;v\u003db3',
                 'Sec-Fetch-Site': 'same-origin',
                 'Referer': 'https://doar.acnur.org/acnur/donate.html',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -755,7 +755,7 @@ def phoneinfoga():
         reqSession = requests.Session()
         headers = {
             'User-Agent': chosenUserAgent,
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,/;q=0.8',
             'Accept-Language': 'pt-br,pt;q=0.5',
             'Accept-Encoding': 'gzip,deflate',
             'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.7',
@@ -883,7 +883,7 @@ def phoneinfoga():
         headers = {
             'Host': 'numverify.com',
             'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:64.0) Gecko/20100101 Firefox/64.0',
-            'Accept': 'application/json, text/javascript, */*; q=0.01',
+            'Accept': 'application/json, text/javascript, /; q=0.01',
             'Accept-Encoding': 'gzip, deflate, br',
             'Referer': 'https://numverify.com/',
             'X-Requested-With': 'XMLHttpRequest',
