@@ -259,9 +259,9 @@ def consultaplaca():
 {C}[{G}1{C}] Sim
 {C}[{G}2{C}] Não
           ''')
-    vacalo = input('===> ')
-    if vacalo == '1' or vacalo == '01':
-        consultaplaca()
+        vacalo = input('===> ')
+        if vacalo == '1' or vacalo == '01':
+            consultaplaca()
           	
 def cns(token,anim):
     os.system('figlet KINY')
