@@ -251,7 +251,7 @@ def consultaplaca():
 	print(f'{C}[{G}i{C}] Digite o numero da ppaca.')
 	print(f'{C}[{Y}!{C}] Exemplo: bpm9099')
 	cugrosso = input('===>')
-	a = requests.get('https://jlbuscas.com/apis2020/ho20ts/placa.php?info={}'.format(cugrosso)).text
+	data = requests.get('https://jlbuscas.com/apis2020/ho20ts/placa.php?info={}'.format(cugrosso)).text
 	a = data.replace('<br><b>', '\n').replace('</br>', '').replace('<br><h2>', '').replace('</br></h2>', '\n').replace('</b>', '').replace('<h2>','').replace('<b>','').replace('<br>','').replace('</h2>', '').replace('<h3>','').replace('</h3>','').replace('DOCUMENTOS ENCONTRADOS','').replace('endereco','').replace('certidao Dados','Dados da certidão').replace('▸','\n▸').replace('<hr>','').replace('Nenhuma','\nNenhuma').replace('<h1>','\n').replace('</h1>','\n')
 	print(a)
 	print(f'''
