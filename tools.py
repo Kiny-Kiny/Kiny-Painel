@@ -246,22 +246,49 @@ def gerar_pessoa(token): #####REWORK
         gerar_pessoa(token)
 
 def consultaplaca():
-	clear()
-	os.system("figlet KINY")
-	print(f'{C}[{G}i{C}] Digite o numero da ppaca.')
-	print(f'{C}[{Y}!{C}] Exemplo: bpm9099')
-	cugrosso = input('===>')
-	data = requests.get('https://jlbuscas.com/apis2020/ho20ts/placa.php?info={}'.format(cugrosso)).text
-	a = data.replace('<br><b>', '\n').replace('</br>', '').replace('<br><h2>', '').replace('</br></h2>', '\n').replace('</b>', '').replace('<h2>','').replace('<b>','').replace('<br>','').replace('</h2>', '').replace('<h3>','').replace('</h3>','').replace('DOCUMENTOS ENCONTRADOS','').replace('endereco','').replace('certidao Dados','Dados da certidão').replace('▸','\n▸').replace('<hr>','').replace('Nenhuma','\nNenhuma').replace('<h1>','\n').replace('</h1>','\n')
-	print(a)
-	print(f'''
-{C}[{Y}!{C}] Deseja realizar uma nova consulta?
-{C}[{G}1{C}] Sim
-{C}[{G}2{C}] Não
-''')
-	vacalo = input('===> ')
-	if vacalo == '1' or vacalo == '01':
-        	consultaplaca()
+    clear()
+    os.system("figlet KINY")
+    print(f"{C}[{G}i{C}] DIGITE A PLACA")
+    print(f"{C}[{G}i{C}] Exemplo: bpm9099")
+    cugrosso = input("=====>")
+    clear()
+    if anim == '1':
+        print(f'{C}[{G}i{C}] Consultando placa.')
+        time.sleep(1)
+    try:
+        req = requests.get('https://apicarros.com/v1/consulta/{}/json'.format(cugrosso))
+
+        placa_data = req.json()
+
+        if 'message' not in bank_data:
+            os.system("figlet KINY")
+            print("Ano: {}".format(placa_data['ano']))
+            print("Modelo: {}".format(placa_data['anoModelo']))
+            print("Chassi: {}".format(placa_data['chassi']))
+            print("Codigo de Retorno: {}".format(placa_data['codigoRetorno']))
+            print("Situação: {}".format(placa_data['codigoSituacao']))
+            print("Cor: {}".format(placa_data['cor']))
+            print("Data: {}".format(placa_data['data']))
+            print("Alarme: {}".format(placa_data['dataAtualizacaoAlarme']))
+            print("Caracteristicas: {}".format(placa_data['dataAtualizacaoCaracteristicasVeiculo']))
+            print("Data de Furto: {}".format(placa_data['dataAtualizacaoRouboFurto']))
+            print("Extra: {}".format(placa_data['extra']))
+            print("Marca: {}".format(placa_data['marca']))
+            print("Modelo: {}".format(placa_data['modelo']))
+            print("Municipio: {}".format(placa_data['municipio']))
+            print("Placa: {}".format(placa_data['placa']))
+            print("Situação: {}".format(placa_data['situacao']))
+            print("UF: {}".format(placa_data['uf']))
+        else:
+            print('{}: Placa Inválida'.format(placa_input))
+    except:
+         print(f'{C}[{R}ERROR{C}]Erro no servidor')
+    print(f"{C}[{Y}i{C}] DESEJA CONSULTAR UMA NOVA PLACA? ")
+    print(f"{C}[{G}1{C}] Sim")
+    print(f"{C}[{G}2{C}] Não")
+    kc = input("===> ")
+    if vacalo == '01' or vacalo == '1':
+        consultaplaca()
           	
 def cns(token,anim):
     os.system('figlet KINY')
