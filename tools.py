@@ -246,49 +246,50 @@ def gerar_pessoa(token): #####REWORK
         gerar_pessoa(token)
 
 def consultaplaca():
-    clear()
-    os.system("figlet KINY")
-    print(f"{C}[{G}i{C}] DIGITE A PLACA")
-    print(f"{C}[{G}i{C}] Exemplo: bpm9099")
-    cugrosso = input("=====>")
-    clear()
-    if cugrosso == 'true':
-        print(f'{C}[{G}i{C}] Consultando placa.')
-        time.sleep(1)
-    try:
-        req = requests.get('https://apicarros.com/v1/consulta/{}/json'.format(cugrosso))
-
-        placa_data = req.json()
-
-        if 'message' not in bank_data:
+    #http://api.masterplaca.devplank.com/v2/placa/{placa}/json
             os.system("figlet KINY")
-            print("Ano: {}".format(placa_data['ano']))
-            print("Modelo: {}".format(placa_data['anoModelo']))
-            print("Chassi: {}".format(placa_data['chassi']))
-            print("Codigo de Retorno: {}".format(placa_data['codigoRetorno']))
-            print("Situação: {}".format(placa_data['codigoSituacao']))
-            print("Cor: {}".format(placa_data['cor']))
-            print("Data: {}".format(placa_data['data']))
-            print("Alarme: {}".format(placa_data['dataAtualizacaoAlarme']))
-            print("Caracteristicas: {}".format(placa_data['dataAtualizacaoCaracteristicasVeiculo']))
-            print("Data de Furto: {}".format(placa_data['dataAtualizacaoRouboFurto']))
-            print("Extra: {}".format(placa_data['extra']))
-            print("Marca: {}".format(placa_data['marca']))
-            print("Modelo: {}".format(placa_data['modelo']))
-            print("Municipio: {}".format(placa_data['municipio']))
-            print("Placa: {}".format(placa_data['placa']))
-            print("Situação: {}".format(placa_data['situacao']))
-            print("UF: {}".format(placa_data['uf']))
-        else:
-            print('{}: Placa Inválida'.format(placa_input))
-    except:
-         print(f'{C}[{R}ERROR{C}]Erro no servidor')
-    print(f"{C}[{Y}i{C}] DESEJA CONSULTAR UMA NOVA PLACA? ")
-    print(f"{C}[{G}1{C}] Sim")
-    print(f"{C}[{G}2{C}] Não")
-    kc = input("===> ")
-    if vacalo == '01' or vacalo == '1':
-        consultaplaca()
+            print(f'{C}[{G}i]{C}Digite o numero da placa.')
+            placa_input = input("===>")
+            req = requests.get('https://apicarros.com/v1/consulta/{}/json'.format(placa_input), verify = False) # JSQ7436
+            placa_data = req.json()
+            clear()
+            os.system('figlet KINY')
+            try:
+                if (placa_data['codigoRetorno']) == "0":
+                    print(f"{C}Ano: {B}{placa_data['ano']}{C}")
+                    print(f"Data: {B}{placa_data['data']}{C}")
+                    print(f"Modelo: {B}{placa_data['modelo']}{C}")
+                    print(f"Ano do modelo: {B}{placa_data['anoModelo']}{C}")
+                    print(f"Cor: {B}{placa_data['cor']}{C}")
+                    print(f"Marca: {B}{placa_data['marca']}{C}")
+                    print(f"Roubo/furto: {B}{placa_data['dataAtualizacaoRouboFurto']}{C}")
+                    print(f"Situação: {B}{placa_data['situacao']}{C}")
+                    print(f"Placa: {B}{placa_data['placa']}{C}")
+                    print(f"Chassi: {B}{placa_data['chassi']}{C}")
+                    print(f"UF: {B}{placa_data['uf']}{C}")
+                    print(f"Município: {B}{placa_data['municipio']}{C}")
+                    print(f"Modificada em: {B}{placa_data['dataAtualizacaoCaracteristicasVeiculo']}{C}")
+                    print(f"Alarme atualizado: {B}{placa_data['dataAtualizacaoAlarme']}{C}")
+                    print(f"Mensagem de retorno: {B}{placa_data['mensagemRetorno']}{C}")
+                    print(f"Código de retorno: {B}{placa_data['codigoRetorno']}{C}")
+                else:
+                    print(f'{C}[{R}i]{C} Sem dados sobre.')
+            except:
+                print(f'{C}[{R}ERROR{C}] Placa invalida')
+                time.sleep(3)
+            del placa_data
+            del req
+            del placa_input
+            print(f'{C}[{G}i{C}] Deseja realizar uma nova consulta?')
+            print('1.Sim')
+            print('2.Não')
+            choice = input("===>")
+            if choice == "1" or choice == "01":
+                tools.consultaplaca()
+            if choice == "2" or choice == "02":
+                pass
+            else:
+                print("Opcao invalida.")
           	
 def cns(token,anim):
     os.system('figlet KINY')
