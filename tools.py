@@ -29,7 +29,9 @@ def clear():
     
 def aovivo():
 	print(f'{C}==={R}{C} Notas de ao vivo {C}==={R}{C}')
+	print()
 	print("Esta parte foi criada par esclarecer algumas coisas sobre o script")
+	print()
 	print("Q: Consulta Premium - Esta consulta parou pelo motivo do dono do painel fechar as API, estou tentando juntar dinheiro para comprar uma nova - Minha Chave PIX: 228463d7-0bec-44bd-bddd-a780d9530f27")
 	print()
 	print("Q: A Consulta de Nome de Mae parou pelo mesmo motivo da anterior.")
