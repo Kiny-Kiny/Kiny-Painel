@@ -252,7 +252,7 @@ def consultaplaca():
     print(f"{C}[{G}i{C}] Exemplo: bpm9099")
     cugrosso = input("=====>")
     clear()
-    if anim == '1':
+    if anim == 'true':
         print(f'{C}[{G}i{C}] Consultando placa.')
         time.sleep(1)
     try:
