@@ -727,24 +727,9 @@ def consultatel():
         print(f'{C}[{R}i{C}] Opção inválida')
         time.sleep(3)
 def primenumero():
-    clear()
-    os.system('figlet KINY')
-    print(f'{C}[{G}i{C}] Digite o numero do celular.')
-    print(f'{C}[{Y}!{C}] Exemplo: 85988120677')
-    print(f'{C}[{G}i{C}] 85 é o DDD , 9 é padrão e o restante é o numero.')
-    print(f'{C}[{Y}!{C}] Aviso: Limite de 1000 consultas por dia,caso apresente este erro,\nsó será possível consultar no dia seguinte.')
-    numero = input('===>')
-    data = requests.get('https://jlbuscas.com/apis2020/ho20ts/targtelefone.php?info={}'.format(numero)).text
-    a = data.replace('<br><b>', '\n').replace('</br>', '').replace('<br><h2>', '').replace('</br></h2>', '\n').replace('</b>', '').replace('<h2>','').replace('<b>','').replace('<br>','').replace('</h2>', '').replace('<h3>','').replace('</h3>','').replace('DOCUMENTOS ENCONTRADOS','').replace('endereco','').replace('certidao Dados','Dados da certidão').replace('▸','\n▸').replace('<hr>','').replace('Nenhuma','\nNenhuma').replace('<h1>','\n').replace('</h1>','\n')
-    print(a)
-    print(f'''
-{C}[{Y}!{C}] Deseja realizar uma nova consulta?
-{C}[{G}1{C}] Sim
-{C}[{G}2{C}] Não
-          ''')
-    choice = input('===>')
-    if choice == '1' or choice == '01':
-        primenumero()
+    print(f'{C}[{G}i{C}] Temporariamente Off')
+    time.sleep(2)
+    pass
         
 def phoneinfoga():
     uagent = []
@@ -1245,19 +1230,6 @@ def phoneinfoga():
     main()
 
 def nomemae():
-    print(f'{C}[{G}i{C}] Digite o nome que queira procurar.')
-    mae = input('===>')
-    
-    data = requests.get('https://jlbuscas.com/apis2020/ho20ts/maelocaliza.php?info={}'.format(mae)).text
-    
-    a = data.replace('<br><b>', '\n').replace('</br>', '').replace('<br><h2>', '').replace('</br></h2>', '\n').replace('</b>', '').replace('<h2>','').replace('<b>','').replace('<br>','').replace('</h2>', '').replace('<h3>','').replace('</h3>','').replace('DOCUMENTOS ENCONTRADOS','').replace('endereco','').replace('certidao Dados','Dados da certidão').replace('▸','\n▸').replace('<hr>','').replace('Nenhuma','\nNenhuma').replace('<h1>','\n').replace('</h1>','\n')
-    
-    print(a)
-    print(f'''
-{C}[{Y}?{C}] Deseja realizar outra consulta ?
-{C}[{G}1{C}] Sim
-{C}[{G}2{C}] Não
-          ''')
-    choice = input('===>')
-    if choice == '1' or choice == '01':
-        nomemae()
+    print(f'{C}[{G}i{C}] Temporariamente Off')
+    time.sleep(2)
+    pass
