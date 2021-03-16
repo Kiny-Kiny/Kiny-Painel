@@ -24,6 +24,20 @@ from urllib.parse import urlencode
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
+def aovivo():
+	print(f'{C}==={R}{C} Notas de ao vivo {C}==={R}{C}')
+	print("Esta parte foi criada par esclarecer algumas coisas sobre o script")
+	print("Q: Consulta Premium - Esta consulta parou pelo motivo do dono do painel fechar as API, estou tentando juntar dinheiro para comprar uma nova - Minha Chave PIX: 228463d7-0bec-44bd-bddd-a780d9530f27")
+	print()
+	print("Q: A Consulta de Nome de Mae parou pelo mesmo motivo da anterior.")
+	print()
+	print("Q: PhoneInfoga - A forma de consulta do PhoneInfoga é o DDI, DDD e o numero(ex: 5521979180533). quanto um numero tiver apenas 8 digitos, voce deve colocar um nove na frente(ex: 55 81 9××××-××××).")
+	print()
+	pause = input("Pressione Enter para retornar")
+
 def notes():
     print(f'{C}==={R}{C} Notas de versão {C}==={R}{C}')
     print(f'''
