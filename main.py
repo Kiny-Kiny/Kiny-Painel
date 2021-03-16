@@ -196,6 +196,7 @@ while(Sair == False):
     	pass
     else:
     	print(f"{C}{G}[95]{C} Mudar username")
+    print(f"{C}{G}[94]{C} Notas ao vivo")
     print(f"{C}{G}[96]{C} Opções")
     print(f"{C}{G}[97]{C} Notas de versão")
     #print("{C}[{G}98{C}] Auto-update")
@@ -203,6 +204,9 @@ while(Sair == False):
     print(f"{C}{G}[00]{C} EXIT")
     op = input("===>").strip()
     tools.clear()
+
+   if op == '94':
+    	tools.aovivo()
     
     if op == '16':
     	tools.nomemae()
