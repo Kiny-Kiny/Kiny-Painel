@@ -205,9 +205,9 @@ while(Sair == False):
     op = input("===>").strip()
     tools.clear()
 
-   if op == '94':
+    if op == '94':
     	tools.aovivo()
-    
+
     if op == '16':
     	tools.nomemae()
 
