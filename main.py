@@ -171,6 +171,7 @@ while(Sair == False):
     if anim == 1:
         time.sleep(1)
     print()
+    print()
     print(f"{C}{G}[1]{C} BUSCADOR DE CEP")
     print(f"{C}{G}[2]{C} GEO LOCALIZADOR DE IP")
     print(f"{C}{G}[3]{C} KINY-SITE-INFOGA")
