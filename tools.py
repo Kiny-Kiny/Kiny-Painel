@@ -38,6 +38,8 @@ def aovivo():
 	print()
 	print("Q: PhoneInfoga - A forma de consulta do PhoneInfoga é o DDI, DDD e o numero(ex: 5521979180533). quanto um numero tiver apenas 8 digitos, voce deve colocar um nove na frente(ex: 55 81 9××××-××××).")
 	print()
+	print("Q: Hoje, dia 17/03/2021, iremos comprar as novas API's ilimitadas")
+	print()
 	print("Q: Próxima Atualizacao sai em Abril.")
 	print()
 	print("Meu contato: 55 21 79108-0533")
