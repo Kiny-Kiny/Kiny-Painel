@@ -42,7 +42,7 @@ def aovivo():
 	print()
 	print("Q: Próxima Atualizacao sai em Abril.")
 	print()
-	print("Meu contato: 55 21 79108-0533")
+	print("Meu contato: 55 21 7918-0533")
 	print()
 	pause = input("Pressione Enter para retornar")
 
