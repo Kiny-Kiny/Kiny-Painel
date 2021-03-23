@@ -800,7 +800,7 @@ def consultatel():
 
 def primenumero():
     clear()
-    os.sys('figlet KINY')
+    os.system('figlet KINY')
     print(f'{C}[{G}i{C}] Digite o numero(ex: 21 9××××××××).')
     requiem = input('===> ')
     api = requests.get('https://hollibot.com/0006hacker/tel.php?tel={}'.format(requiem)).json()
