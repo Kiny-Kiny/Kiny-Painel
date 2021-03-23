@@ -554,9 +554,73 @@ def bank(anim):
 
 def consultacpf(cpf_api, token):
     clear()
-    print(f'{C}[{Y}i{C}] Temporariamente Off')
-    time.sleep(3)
-    pass
+    os.system('figlet KINY')
+    print(f'{C}[{G}i{C}] Digite o CPF sem . / ou -')
+    joshu = input('===> ')
+    api = requests.get('https://hollibot.com/0006hacker/cpf.php?tel={}'.format(joshu)).json()
+    try:
+        msg = '''
+CPF: {}
+Nome: {} {} {}
+Nome Parentesco: {}
+Sexo: {}
+Data de nascimento: {}
+Status na Receita Federal: {}
+Data de atualização da Receita Federal: {}
+RG: {}
+Orgão Emissor do RG: {}
+UF do RG: {}
+Titulo eleitoral: {}
+Faleceu: {}
+Nacionalidade: {}
+Menor de Idade: {}
+Profilaxia: {}
+Estado civil: {}
+CPF da mãe: {}
+Nome da mãe: {} {} {}
+Nome de parentesco da mãe: {}
+Escolaridade: {}
+CNS: {}
+Bolsa Familia: {}
+    '''.format((int(api["result"][0]["pessoa"]["cadastral"]["CPF"])),
+               api["result"][0]["pessoa"]["cadastral"]["nomePrimeiro"],
+               api["result"][0]["pessoa"]["cadastral"]["nomeMeio"],
+               api["result"][0]["pessoa"]["cadastral"]["nomeUltimo"],
+               api["result"][0]["pessoa"]["cadastral"]["nomeParentesco"],
+               api["result"][0]["pessoa"]["cadastral"]["sexo"],
+               api["result"][0]["pessoa"]["cadastral"]["dataNascimento"],
+               api["result"][0]["pessoa"]["cadastral"]["statusReceitaFederal"],
+               api["result"][0]["pessoa"]["cadastral"]["dataAtualizacaoStatusReceitaFederal"],
+               api["result"][0]["pessoa"]["cadastral"]["rgNumero"],
+               api["result"][0]["pessoa"]["cadastral"]["rgOrgaoEmissor"],
+               api["result"][0]["pessoa"]["cadastral"]["rgUf"],
+               api["result"][0]["pessoa"]["cadastral"]["tituloEleitoral"],
+               api["result"][0]["pessoa"]["cadastral"]["obito"],
+               api["result"][0]["pessoa"]["cadastral"]["nacionalidade"],
+               api["result"][0]["pessoa"]["cadastral"]["menorDeIdade"], api["result"][0]["pessoa"]["cadastral"]["pep"],
+               api["result"][0]["pessoa"]["cadastral"]["estadoCivil"],
+               api["result"][0]["pessoa"]["cadastral"]["maeCPF"],
+               api["result"][0]["pessoa"]["cadastral"]["maeNomePrimeiro"],
+               api["result"][0]["pessoa"]["cadastral"]["maeNomeMeio"],
+               api["result"][0]["pessoa"]["cadastral"]["maeNomeUltimo"],
+               api["result"][0]["pessoa"]["cadastral"]["maeNomeParentesco"],
+               api["result"][0]["pessoa"]["cadastral"]["escolaridade"], api["result"][0]["pessoa"]["cadastral"]["cns"],
+               api["result"][0]["pessoa"]["beneficiarioProgramaSocial"]["bolsaFamilia"])
+    except:
+        msg = '{} :Número não encontrado'.format(requiem)
+    print(msg)
+
+    print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
+    print('1.Sim')
+    print('2.Não')
+    JOJO = input("===>")
+    if JOJO == '1' or JOJO == '01':
+        primenumero()
+    if JOJO == '2' or JOJO == '02':
+        pass
+    else:
+        print(f'{C}[{R}i{C}] Opção inválida')
+        time.sleep(3)
 
 
 def consultaoperadora():
