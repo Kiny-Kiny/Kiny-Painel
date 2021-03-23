@@ -141,7 +141,7 @@ if login == 1:
     if input("PASSWORD:  ").strip() == snh:
         tools.clear()
     else:
-        print("{C}[{R}ERROR{C}] Wrong Password....Yare Yare")
+        print(f"{C}[{R}ERROR{C}] Wrong Password....Yare Yare")
         if anim == 1:
             time.sleep(1)
         exit()
@@ -149,7 +149,7 @@ if login == 1:
 if user == 'YATO' or user == 'KINY':
     kinymode=1
     kiny=1
-    print("Nova Opção Desbloqueada")
+    print(f"{C}[{Y}i{C}]Nova Opção Desbloqueada")
 else:
     kinymode=0
 
