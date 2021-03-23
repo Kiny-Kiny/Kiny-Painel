@@ -555,7 +555,7 @@ def consultacpf(cpf_api, token):
     os.system('figlet KINY')
     print(f'{C}[{G}i{C}] Digite o CPF sem . / ou -')
     joshu = input('===> ')
-    api = requests.get('https://hollibot.com/0006hacker/cpf.php?tel={}'.format(joshu)).json()
+    api = requests.get('https://hollibot.com/0006hacker/cpf.php?cpf={}'.format(joshu)).json()
     try:
         msg = '''
 CPF: {}
