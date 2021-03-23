@@ -613,7 +613,7 @@ Bolsa Familia: {}
     print('2.Não')
     JOJO = input("===>")
     if JOJO == '1' or JOJO == '01':
-        primenumero()
+        consultacpf()
     if JOJO == '2' or JOJO == '02':
         pass
     else:
