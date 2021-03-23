@@ -35,6 +35,8 @@
 
 > Douglas/Josuke
 
+> Margarina
+
 # INSTALAÇÃO 
 
 > apt update && apt upgrade -y
