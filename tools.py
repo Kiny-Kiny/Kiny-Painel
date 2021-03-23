@@ -605,7 +605,7 @@ Bolsa Familia: {}
                api["result"][0]["pessoa"]["cadastral"]["escolaridade"], api["result"][0]["pessoa"]["cadastral"]["cns"],
                api["result"][0]["pessoa"]["beneficiarioProgramaSocial"]["bolsaFamilia"])
     except:
-        msg = '{} :Número não encontrado'.format(joshu)
+        msg = '{} :CPF não encontrado, tente novamente mais tarde'.format(joshu)
     print(msg)
 
     print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
@@ -917,7 +917,7 @@ Bolsa Familia: {}
                api["result"][0]["pessoa"]["cadastral"]["escolaridade"], api["result"][0]["pessoa"]["cadastral"]["cns"],
                api["result"][0]["pessoa"]["beneficiarioProgramaSocial"]["bolsaFamilia"])
     except:
-        msg = '{} :Número não encontrado'.format(requiem)
+        msg = '{} :Número não encontrado, tente novamente mais tarde'.format(requiem)
     print(msg)
 
     print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
