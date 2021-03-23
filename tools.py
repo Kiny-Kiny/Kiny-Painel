@@ -854,6 +854,7 @@ Bolsa Familia: {}
                api["result"][0]["pessoa"]["beneficiarioProgramaSocial"]["bolsaFamilia"])
     except:
         msg = '{} :Número não encontrado'.format(requiem)
+    print(msg)
 
     print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
     print('1.Sim')
