@@ -35,15 +35,17 @@ def aovivo():
     print()
     print("Esta parte foi criada par esclarecer algumas coisas sobre o script")
     print()
+    print("Q: Consulta Premium retornou, ela pode apresentar bugs e não retornar os dados(lembrando que ela é grátis)")
+    print()
+    print("Q: A consulta de CPF ainda não voltou.")
+    print()
     print(
-        "Q: Consulta Premium - Esta consulta parou pelo motivo do dono do painel fechar as API, estou tentando juntar dinheiro para comprar uma nova - Minha Chave PIX(Meta - R$100): 228463d7-0bec-44bd-bddd-a780d9530f27")
+        "Q: Minha Chave PIX: 228463d7-0bec-44bd-bddd-a780d9530f27")
     print()
     print("Q: A Consulta de Nome de Mae parou pelo mesmo motivo da anterior.")
     print()
     print(
         "Q: PhoneInfoga - A forma de consulta do PhoneInfoga é o DDI, DDD e o numero(ex: 5521979180533). quanto um numero tiver apenas 8 digitos, voce deve colocar um nove na frente(ex: 55 81 9××××-××××).")
-    print()
-    print("Q: Hoje, dia 17/03/2021, iremos comprar as novas API's ilimitadas")
     print()
     print("Q: Próxima Atualizacao sai em Abril.")
     print()
@@ -66,7 +68,7 @@ def notes():
     Codado por: {C}{B}YATO{C}
     APIs ,ideia e código inicial: {C}{B}KINY{C}
     API MTE e auxilio no script: {C}{B}p0is0n{C}
-    Patrocinio:Obrigado {C}{B}Syne{C} e {C}{B}Douglas{C} pelo money pra fazer o script.
+    Patrocinio:Obrigado {C}{B}Syne{C}, {C}{B}Douglas{C} e {C}{B}Margarina{C} pelo money pra fazer o script.
     
     Obrigado {C}{B}Snuking{C}, pelo apoio e algumas ajudas;
     
