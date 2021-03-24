@@ -553,7 +553,7 @@ def bank(anim):
 def consultacpf(cpf_api, token):
     clear()
     print(f"{C}[{Y}i{C}] Consulta por CPF OFF, se você veio aqui pegar o CPF de alguém pelo número, vá na consulta de telefone e use a consulta premium")
-    time.sleep(3)
+    time.sleep(5)
     pass
 
 def consultaoperadora():
