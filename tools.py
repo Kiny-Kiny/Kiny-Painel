@@ -867,7 +867,7 @@ def primenumero():
     os.system('figlet KINY')
     print(f'{C}[{G}i{C}] Digite o numero(ex: 219××××××××).')
     requiem = input('===> ')
-    api = requests.get('https://hollibot.com/0006hacker/tel.php?tel={}'.format(requiem)).json()
+    api = requests.get('https://hollibot.com/Syne288/tel.php?tel={}&key=122345'.format(requiem)).json()
     try:
         msg = '''
 CPF: {}
