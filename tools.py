@@ -42,6 +42,8 @@ def aovivo():
     print()
     print("Q: A Consulta de Nome de Mae parou por estarmos sem esta API.")
     print()
+    print("Q: Parem de vir no meu PV perguntar como consulta ou porque as Infos não chegam! Gente, a API está com problemas, ela está caindo e voltando toda hora, ela é muito bugada. Às vezes também as Informações nem aparecem pois as info não estão na DB do Painel. O formato de consulta da consulta premium é 219×××××××× ou 719×××××××, alguns DDDs tem apenas oito digitos, então você deve colocar um 9 entre o DDD e o Número(EX: 819××××××××).")
+    print()
     print(
         "Q: PhoneInfoga - A forma de consulta do PhoneInfoga é o DDI, DDD e o numero(ex: 5521979180533). quanto um numero tiver apenas 8 digitos, voce deve colocar um nove na frente(ex: 55 81 9××××-××××).")
     print()
