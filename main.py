@@ -188,6 +188,7 @@ while(Sair == False):
     print(f"{C}{G}[14]{C} CC CHECKER")
     print(f"{C}{G}[15]{C} COVID19")
     print(f"{C}{G}[16]{C} CONSULTAR MÃE")
+    print(f"{C}{G}[18]{C} CONSULTAR NOME")
     if kinymode == 1:
     	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
@@ -208,6 +209,9 @@ while(Sair == False):
 
     if op == '94':
     	tools.aovivo()
+
+    if op == '17':
+    	tools.consultanome()
 
     if op == '16':
     	tools.nomemae()
