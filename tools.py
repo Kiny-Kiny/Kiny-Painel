@@ -868,57 +868,13 @@ def primenumero():
     os.system('figlet KINY')
     print(f'{C}[{G}i{C}] Digite o numero(ex: 219××××××××).')
     requiem = input('===> ')
-    api = requests.get('https://hollibot.com/0006hacker/tel.php?tel={}&key=122345'.format(requiem)).json()
-    try:
-        msg = '''
-CPF: {}
-Nome: {} {} {}
-Nome Parentesco: {}
-Sexo: {}
-Data de nascimento: {}
-Status na Receita Federal: {}
-Data de atualização da Receita Federal: {}
-RG: {}
-Orgão Emissor do RG: {}
-UF do RG: {}
-Titulo eleitoral: {}
-Faleceu: {}
-Nacionalidade: {}
-Menor de Idade: {}
-Profilaxia: {}
-Estado civil: {}
-CPF da mãe: {}
-Nome da mãe: {} {} {}
-Nome de parentesco da mãe: {}
-Escolaridade: {}
-CNS: {}
-Bolsa Familia: {}
-    '''.format((int(api["result"][0]["pessoa"]["cadastral"]["CPF"])),
-               api["result"][0]["pessoa"]["cadastral"]["nomePrimeiro"],
-               api["result"][0]["pessoa"]["cadastral"]["nomeMeio"],
-               api["result"][0]["pessoa"]["cadastral"]["nomeUltimo"],
-               api["result"][0]["pessoa"]["cadastral"]["nomeParentesco"],
-               api["result"][0]["pessoa"]["cadastral"]["sexo"],
-               api["result"][0]["pessoa"]["cadastral"]["dataNascimento"],
-               api["result"][0]["pessoa"]["cadastral"]["statusReceitaFederal"],
-               api["result"][0]["pessoa"]["cadastral"]["dataAtualizacaoStatusReceitaFederal"],
-               api["result"][0]["pessoa"]["cadastral"]["rgNumero"],
-               api["result"][0]["pessoa"]["cadastral"]["rgOrgaoEmissor"],
-               api["result"][0]["pessoa"]["cadastral"]["rgUf"],
-               api["result"][0]["pessoa"]["cadastral"]["tituloEleitoral"],
-               api["result"][0]["pessoa"]["cadastral"]["obito"],
-               api["result"][0]["pessoa"]["cadastral"]["nacionalidade"],
-               api["result"][0]["pessoa"]["cadastral"]["menorDeIdade"], api["result"][0]["pessoa"]["cadastral"]["pep"],
-               api["result"][0]["pessoa"]["cadastral"]["estadoCivil"],
-               api["result"][0]["pessoa"]["cadastral"]["maeCPF"],
-               api["result"][0]["pessoa"]["cadastral"]["maeNomePrimeiro"],
-               api["result"][0]["pessoa"]["cadastral"]["maeNomeMeio"],
-               api["result"][0]["pessoa"]["cadastral"]["maeNomeUltimo"],
-               api["result"][0]["pessoa"]["cadastral"]["maeNomeParentesco"],
-               api["result"][0]["pessoa"]["cadastral"]["escolaridade"], api["result"][0]["pessoa"]["cadastral"]["cns"],
-               api["result"][0]["pessoa"]["beneficiarioProgramaSocial"]["bolsaFamilia"])
-    except:
-        msg = '{} :Número não encontrado, tente novamente mais tarde'.format(requiem)
+    data = requests.get('https://hollibot.com/syne4688/tel2.php?info={}'.format(requiem)).text
+    a = data.replace('<label "control-label" for="formGroupExampleInput5">','').replace('</label>','').replace('<span "form-control-static" "formGroupExampleInput5">','').replace('<div "row form-group">','').replace('</div>','').replace('<br>','').replace('<div "col-6">','').replace('<div "col-4">','').replace('</span>','').replace('<a href="#" title="Pesquisar CPF"','').replace('name="LinkEvoPlus"','').replace('data-"003.920.678-54">','').replace('<i "fa fa-search"></i>','').replace('</a>','').replace('(s&#xE1;bado)','(sábado)').replace('(ter&#xE7;a-feira)','(terça-feira)').replace('Data de Nascimento/Abertura:','Data de Nascimento:').replace('<div "col-2">','').replace('<div "col-10">','').replace('<div "title-block">','').replace('<style>','').replace('</style>','')
+    for i in range(0,10):
+    	try:
+    		a = api.replace(f'<h3 "title"><i "fa fa-list-ul"></i> Resultado ({i} encontrados)</h3>','')
+    	except:
+    		pass
     print(msg)
 
     print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
