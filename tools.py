@@ -875,7 +875,7 @@ def primenumero():
     		a = api.replace(f'<h3 "title"><i "fa fa-list-ul"></i> Resultado ({i} encontrados)</h3>','')
     	except:
     		pass
-    print(msg)
+    print(a)
 
     print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
     print('1.Sim')
