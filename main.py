@@ -210,7 +210,7 @@ while(Sair == False):
     if op == '94':
     	tools.aovivo()
 
-    if op == '17':
+    if op == '18':
     	tools.consultanome()
 
     if op == '16':
