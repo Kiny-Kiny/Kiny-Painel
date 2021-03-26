@@ -405,9 +405,11 @@ def cep(anim):
     option = input('===> ')
     if option == '1':
         cep(anim)
+    if option == '2':
+        pass
     else:
-        del adress_data
-        del request
+        print(f'{C}[{R}i{C}] Opção inválida')
+        time.sleep(2)
 
 
 def kiny_infoga():
