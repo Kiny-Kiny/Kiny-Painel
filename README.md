@@ -69,6 +69,8 @@
 
 - Consulta Por Nome de Mãe 
 
+- Consulta por Nome
+
 # PRÉVIA
 
 - Consulta de Nome
