@@ -852,7 +852,7 @@ def consultatel():
     print(f'O que deseja fazer?')
     print(f'[{G}1{C}]Consultar operadora por numero')
     print(f'[{G}2{C}]Phone infoga')
-    print(f'[{G}3{C}]Consulta completa')
+    print(f'[{G}3{C}]Consulta completa[{G}GRATIS{C}]')
     choi = input('===>')
     if choi == '1' or choi == '01':
         consultaoperadora()
