@@ -852,9 +852,9 @@ def youtube():
 def consultatel():
     os.system('figlet KINY')
     print(f'O que deseja fazer?')
-    print('1.Consultar operadora por numero')
-    print('2.Phone infoga')
-    print('3.Consulta premium')
+    print(f'[{G}1{C}].Consultar operadora por numero')
+    print(f'[{G}2C}].Phone infoga')
+    print(f'[{G}3{C}]Consulta completa')
     choi = input('===>')
     if choi == '1' or choi == '01':
         consultaoperadora()
