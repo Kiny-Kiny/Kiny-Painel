@@ -870,7 +870,7 @@ def primenumero():
     os.system('figlet KINY')
     print(f'{C}[{G}i{C}] Digite o numero(ex: 219××××××××).')
     requiem = input('===> ')
-    data = requests.get('https://jlbuscas.com/apis2020/hohoho/shifttelefone.php?info={}'.format(requiem)).text
+    data = requests.get('http://hollibot.com/syne57655/Tel.php?info={}'.format(requiem)).text
     a = data.replace('<label "control-label" for="formGroupExampleInput5">','').replace('</label>','').replace('<span "form-control-static" "formGroupExampleInput5">','').replace('<div "row form-group">','').replace('</div>','').replace('<br>','').replace('<div "col-6">','').replace('<div "col-4">','').replace('</span>','').replace('<a href="#" title="Pesquisar CPF"','').replace('name="LinkEvoPlus"','').replace('data-"003.920.678-54">','').replace('<i "fa fa-search"></i>','').replace('</a>','').replace('(s&#xE1;bado)','(sábado)').replace('(ter&#xE7;a-feira)','(terça-feira)').replace('Data de Nascimento/Abertura:','Data de Nascimento:').replace('<div "col-2">','').replace('<div "col-10">','').replace('<div "title-block">','').replace('<style>','').replace('</style>','')
     for i in range(0,10):
     	try:
