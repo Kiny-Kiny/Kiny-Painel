@@ -206,6 +206,23 @@ while(Sair == False):
     print(f"{C}{G}[00]{C} EXIT")
     op = input("===>").strip()
     tools.clear()
+    
+    if op == '98':
+    	try:
+    		if __name__ == '__main__':
+    			print(f'{G} Checando por atualizacoes... {C}')
+    			update = subprocess.check_output('git pull', shell=True)
+    			if 'Already up to date' not in update.decode():
+    				print(f'{G}Atualizacao instalada!\nReiniciando o painel...{C}')
+    				time.sleep(5)
+    				subprocess.run('clear')
+    				restart()
+    			else:
+    				print('Nenhuma atualizacao disponivel.')
+    				time.sleep(2)
+    	except:
+    			pass
+    			
 
     if op == '94':
     	tools.aovivo()
