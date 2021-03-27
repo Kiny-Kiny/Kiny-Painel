@@ -201,7 +201,7 @@ while(Sair == False):
     print(f"{C}{G}[94]{C} Notas ao vivo")
     print(f"{C}{G}[96]{C} Opções")
     print(f"{C}{G}[97]{C} Notas de versão")
-    #print("{C}[{G}98{C}] Auto-update")
+    print("{C}[{G}98{C}] Atualizar")
     print(f"{C}{G}[99]{C} Update && Upgrade")
     print(f"{C}{G}[00]{C} EXIT")
     op = input("===>").strip()
