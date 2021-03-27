@@ -188,7 +188,7 @@ while(Sair == False):
     print(f"{C}{G}[14]{C} CC CHECKER")
     print(f"{C}{G}[15]{C} COVID19")
     print(f"{C}{G}[16]{C} CONSULTAR MÃE {C}[{R}OFF{C}]")
-    print(f"{C}{G}[18]{C} CONSULTAR NOME {C}[{R}ERROR{C}]")
+    print(f"{C}{G}[18]{C} CONSULTAR NOME {C}[{R}OFF{C}]")
     if kinymode == 1:
     	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
