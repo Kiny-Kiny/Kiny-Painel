@@ -35,7 +35,7 @@ def aovivo():
     print()
     print("Esta parte foi criada par esclarecer algumas coisas sobre o script")
     print()
-    print("Q: Consulta Premium retornou, ela pode apresentar bugs e não retornar os dados(lembrando que ela é grátis)")
+    print("Q: As consultas por nome, telefone(completa) pararam pelas APIs caírem, estamos resolvendo[26/03/21 21:45]")
     print()
     print(
         "Q: Minha Chave PIX: 228463d7-0bec-44bd-bddd-a780d9530f27")
