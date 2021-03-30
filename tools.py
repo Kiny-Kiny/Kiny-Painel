@@ -557,26 +557,32 @@ def bank(anim):
 def consultacpf(cpf_api, token):
     clear()
     os.system('figlet KINY')
-    print(f'{C}[{G}i{C}] Digite o CPF sem / . ou -')
-    zahando = input('===> ')
-    api = requests.get('http://45.178.183.3/cpf.php?cpf={}'.format(zahando)).json()
-    try:
-        msg = print(api.text)
-    except:
-        msg = '{} :CPF NÃO ENCONTRADO'.format(zahando)
-    print(msg)
+    print(f'{C}[{G}i{C}] Informe o CPF sem / . ou -')
+    cpf_input = input("===>")
 
-    print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
-    print('1.Sim')
-    print('2.Não')
-    LOVE = input("===>")
-    if LOVE == '1' or LOVE == '01':
+    request = requests.get('http://45.178.183.3/cpf.php?cpf={}'.format(cpf_input))
+
+    adress_data = request.json()
+    clear()
+    try:
+        os.system('figlet KINY')
+        print('CPF: {}'.format(adress_data['cpf']))
+        print('Nome: {}'.format(adress_data['nome']))
+        print('Sexo: {}'.format(adress_data['sexo']))
+        print('Aniversário: {}'.format(adress_data['nascimento']))
+    except:
+        print(f'{C}[{R}ERROR{C}] CPF INVALIDO.')
+    print(f"{C}{G}DESEJA REALIZAR UMA NOVA CONSULTA?{C}")
+    print(f"{C}[{G}1{C}] Sim")
+    print(f"{C}[{G}2{C}] Não")
+    one = input('===> ')
+    if one == '1' or one == '01':
         consultacpf(cpf_api, token)
-    if LOVE == '2' or LOVE == '02':
+    if one == '2' or one == '02':
         pass
     else:
         print(f'{C}[{R}i{C}] Opção inválida')
-        time.sleep(3)
+        time.sleep(2)
 
 def consultaoperadora():
     os.system("figlet KINY")
