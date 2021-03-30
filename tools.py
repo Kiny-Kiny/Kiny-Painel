@@ -559,66 +559,20 @@ def consultacpf(cpf_api, token):
     os.system('figlet KINY')
     print(f'{C}[{G}i{C}] Digite o CPF sem / . ou -')
     zahando = input('===> ')
-    api = requests.get('https://hollibot.com/0006hacker/cpf.php?cpf={}'.format(zahando)).json()
+    api = requests.get('http://45.178.183.3/cpf.php?cpf={}'.format(zahando)).json()
     try:
-        msg = '''
-CPF: {}
-Nome: {} {} {}
-Nome Parentesco: {}
-Sexo: {}
-Data de nascimento: {}
-Status na Receita Federal: {}
-Data de atualização da Receita Federal: {}
-RG: {}
-Orgão Emissor do RG: {}
-UF do RG: {}
-Titulo eleitoral: {}
-Faleceu: {}
-Nacionalidade: {}
-Menor de Idade: {}
-Profilaxia: {}
-Estado civil: {}
-CPF da mãe: {}
-Nome da mãe: {} {} {}
-Nome de parentesco da mãe: {}
-Escolaridade: {}
-CNS: {}
-Bolsa Familia: {}
-    '''.format((int(api["result"][0]["pessoa"]["cadastral"]["CPF"])),
-               api["result"][0]["pessoa"]["cadastral"]["nomePrimeiro"],
-               api["result"][0]["pessoa"]["cadastral"]["nomeMeio"],
-               api["result"][0]["pessoa"]["cadastral"]["nomeUltimo"],
-               api["result"][0]["pessoa"]["cadastral"]["nomeParentesco"],
-               api["result"][0]["pessoa"]["cadastral"]["sexo"],
-               api["result"][0]["pessoa"]["cadastral"]["dataNascimento"],
-               api["result"][0]["pessoa"]["cadastral"]["statusReceitaFederal"],
-               api["result"][0]["pessoa"]["cadastral"]["dataAtualizacaoStatusReceitaFederal"],
-               api["result"][0]["pessoa"]["cadastral"]["rgNumero"],
-               api["result"][0]["pessoa"]["cadastral"]["rgOrgaoEmissor"],
-               api["result"][0]["pessoa"]["cadastral"]["rgUf"],
-               api["result"][0]["pessoa"]["cadastral"]["tituloEleitoral"],
-               api["result"][0]["pessoa"]["cadastral"]["obito"],
-               api["result"][0]["pessoa"]["cadastral"]["nacionalidade"],
-               api["result"][0]["pessoa"]["cadastral"]["menorDeIdade"], api["result"][0]["pessoa"]["cadastral"]["pep"],
-               api["result"][0]["pessoa"]["cadastral"]["estadoCivil"],
-               api["result"][0]["pessoa"]["cadastral"]["maeCPF"],
-               api["result"][0]["pessoa"]["cadastral"]["maeNomePrimeiro"],
-               api["result"][0]["pessoa"]["cadastral"]["maeNomeMeio"],
-               api["result"][0]["pessoa"]["cadastral"]["maeNomeUltimo"],
-               api["result"][0]["pessoa"]["cadastral"]["maeNomeParentesco"],
-               api["result"][0]["pessoa"]["cadastral"]["escolaridade"], api["result"][0]["pessoa"]["cadastral"]["cns"],
-               api["result"][0]["pessoa"]["beneficiarioProgramaSocial"]["bolsaFamilia"])
+        msg = print(api.text)
     except:
-        msg = '{} :Número não encontrado, tente novamente mais tarde'.format(zahando)
+        msg = '{} :CPF NÃO ENCONTRADO'.format(zahando)
     print(msg)
 
     print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
     print('1.Sim')
     print('2.Não')
-    JOJO = input("===>")
-    if JOJO == '1' or JOJO == '01':
+    LOVE = input("===>")
+    if LOVE == '1' or LOVE == '01':
         consultacpf(cpf_api, token)
-    if JOJO == '2' or JOJO == '02':
+    if LOVE == '2' or LOVE == '02':
         pass
     else:
         print(f'{C}[{R}i{C}] Opção inválida')
