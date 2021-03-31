@@ -35,12 +35,9 @@ def aovivo():
     print()
     print("Esta parte foi criada par esclarecer algumas coisas sobre o script")
     print()
-    print("Q: As consultas por nome parou pela API cair, estamos resolvendo[26/03/21 21:45]")
-    print()
+    print("Q: As consultas por número parou pela API estar com problema de conexão")
     print(
         "Q: Minha Chave PIX: 228463d7-0bec-44bd-bddd-a780d9530f27")
-    print()
-    print("Q: A Consulta de Nome de Mae parou por estarmos sem esta API.")
     print()
     print("Q: Parem de vir no meu PV perguntar como consulta ou porque as Infos não chegam! Gente, a API está com problemas, ela está caindo e voltando toda hora, ela é muito bugada. Às vezes também as Informações nem aparecem pois as info não estão na DB do Painel. O formato de consulta da consulta premium é 219×××××××× ou 719×××××××, alguns DDDs tem apenas oito digitos, então você deve colocar um 9 entre o DDD e o Número(EX: 819××××××××).")
     print()
