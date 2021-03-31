@@ -1356,14 +1356,8 @@ def consultanome():
 
     adress_data = request.json()
     clear()
-    try:
-        os.system('figlet KINY')
-        print('CPF: {}'.format(adress_data['cpf']))
-        print('Nome: {}'.format(adress_data['nome']))
-        print('Sexo: {}'.format(adress_data['sexo']))
-        print('Aniversário: {}'.format(adress_data['nascimento']))
-    except:
-        print(f'{C}[{R}ERROR{C}] NENHUM RESULTADO ENCONTRADO.')
+    os.system('figlet KINY')
+    print(request.text)
     print(f"{C}{G}DESEJA REALIZAR UMA NOVA CONSULTA?{C}")
     print(f"{C}[{G}1{C}] Sim")
     print(f"{C}[{G}2{C}] Não")
