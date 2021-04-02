@@ -177,7 +177,7 @@ while(Sair == False):
     print(f"{C}{G}[3]{C} KINY-SITE-INFOGA")
     print(f"{C}{G}[4]{C} CONSULTA DE CNPJ")
     print(f"{C}{G}[5]{C} CONSULTA BANCARIA")
-    print(f"{C}{G}[6]{C} CONSULTA CPF")
+    print(f"{C}{G}[6]{C} CONSULTA CPF {C}[{R}OFF{C}]")
     print(f"{C}{G}[7]{C} CONSULTA CNS")
     print(f"{C}{G}[8]{C} CONSULTA PLACA")
     print(f"{C}{G}[9]{C} CONSULTA CRM")
@@ -188,7 +188,7 @@ while(Sair == False):
     print(f"{C}{G}[14]{C} CC CHECKER")
     print(f"{C}{G}[15]{C} COVID19")
     print(f"{C}{G}[16]{C} CONSULTAR MÃE {C}[{R}OFF{C}]")
-    print(f"{C}{G}[18]{C} CONSULTAR NOME")
+    print(f"{C}{G}[18]{C} CONSULTAR NOME {C}[{R}OFF{C}]")
     if kinymode == 1:
     	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
