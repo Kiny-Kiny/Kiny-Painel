@@ -8,20 +8,6 @@ Y='\033[1;33m'
 G='\033[1;32m'
 RT='\033[;0m'
 
-def clear():
-   if platform.system() == "Windows":
-      os.system("cls")
-   elif platform.system() == "Linux":
-      os.system("clear")
-   else:
-       os.system("clear")
-
-def youtube():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w")
-   else:
-       os.system("termux-open-url https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w")
-
 clear()
 R='\033[1;31m'; B='\033[1;34m'; C='\033[1;37m'; Y='\033[1;33m'; G='\033[1;32m'; RT='\033[;0m'
 
@@ -65,6 +51,21 @@ except:
         print(f'{C}[{Y}i{C}] Reiniciando o painel em {i} seg...')
         time.sleep(1)
     restart()
+
+def clear():
+   if platform.system() == "Windows":
+      os.system("cls")
+   elif platform.system() == "Linux":
+      os.system("clear")
+   else:
+       os.system("clear")
+
+def youtube():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w")
+   else:
+       os.system("termux-open-url https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w")
+
 
 
 if sys.version_info[0] < 3:
