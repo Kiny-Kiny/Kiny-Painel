@@ -190,7 +190,7 @@ while(Sair == False):
     print(f'{C}[{G}*{C}]'+random.choice(welcome_msg)+' '+str(user)+'!')
     if anim == 1:
         time.sleep(1)
-    print()
+    print(f'{C}[{Y}*{C}]Meu Grupo: https://chat.whatsapp.com/Gnv9j0SbMtP2uO39CfjMqu')
     print()
     print(f"{C}{G}[1]{C} BUSCADOR DE CEP")
     print(f"{C}{G}[2]{C} GEO LOCALIZADOR DE IP")
