@@ -191,7 +191,7 @@ while(Sair == False):
     if anim == 1:
         time.sleep(1)
     print(f'{C}[{Y}*{C}]Meu Grupo: https://chat.whatsapp.com/Gnv9j0SbMtP2uO39CfjMqu')
-    print(f'{C}[{Y}*{C}] Meu Pix: 228463d7-0bec-44bd-bddd-a780d9530f27')
+    print(f'{C}[{Y}*{C}]Meu Pix: 228463d7-0bec-44bd-bddd-a780d9530f27')
     print()
     print(f"{C}{G}[1]{C} BUSCADOR DE CEP")
     print(f"{C}{G}[2]{C} GEO LOCALIZADOR DE IP")
