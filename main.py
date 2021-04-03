@@ -24,7 +24,7 @@ def restart():
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
-import os,sys,time,base64, json, re,subprocess
+import os,sys,time,base64, json, re,subprocess,webbrowser,platform
 try:
     import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools
     from colorama import Fore, Style
@@ -198,6 +198,7 @@ while(Sair == False):
     	pass
     else:
     	print(f"{C}{G}[95]{C} Mudar username")
+    print(f"{C}{G}[93]{C} Meu canal")
     print(f"{C}{G}[94]{C} Notas ao vivo")
     print(f"{C}{G}[96]{C} Opções")
     print(f"{C}{G}[97]{C} Notas de versão")
@@ -206,6 +207,25 @@ while(Sair == False):
     print(f"{C}{G}[00]{C} EXIT")
     op = input("===>").strip()
     tools.clear()
+    
+    if op == '93':
+    	def clear():
+    		if platform.system() == "Windows":
+    			os.system("cls")
+    		elif platform.system() == "Linux":
+    			os.system("clear")
+    		else:
+    			os.system("clear")
+    	def youtube():
+    			if platform.system() == "Windows":
+    				webbrowser.open_new_tab("https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w")
+    			else:
+    				os.system("termux-open-url https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w")
+    			clear()
+    			os.system("figlet KINY")
+    			time.sleep(1.5)
+    			youtube()
+    			pass
     
     if op == '98':
     	try:
