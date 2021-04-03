@@ -55,6 +55,11 @@ def youtube():
    else:
        os.system("termux-open-url https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w")
 
+def twyu():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("https://youtu.be/njoBMZD_jP0")
+   else:
+       os.system("termux-open-url https://youtu.be/njoBMZD_jP0")
 
 
 if sys.version_info[0] < 3:
@@ -139,7 +144,7 @@ try:
         print(f'{C}[{Y}i{C}] {G} Checando por atualizacoes... {C}')
         update = subprocess.check_output('git pull', shell=True)
         if 'Already up to date' not in update.decode():
-            print(f'{G}Atualizacao instalada!\nReiniciando o painel...{C}')
+            print(f'{C}[{Y}*{C}] {G}Atualizacao instalada!\n{C}[{Y}*{C}]Reiniciando o painel...{C}')
             time.sleep(5)
             subprocess.run('clear')
             restart()
@@ -204,6 +209,7 @@ while(Sair == False):
     print(f"{C}{G}[15]{C} COVID19")
     print(f"{C}{G}[16]{C} CONSULTAR MÃE {C}[{R}OFF{C}]")
     print(f"{C}{G}[18]{C} CONSULTAR NOME {C}[{R}OFF{C}]")
+    print(f"{C}{G}[19]{C} ???")
     if kinymode == 1:
     	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
@@ -222,6 +228,10 @@ while(Sair == False):
     print(f"{C}{G}[00]{C} EXIT")
     op = input("===>").strip()
     tools.clear()
+
+    if op == '19':
+    	twoy()
+    	pass
     
     if op == '93':
     	youtube()
@@ -230,15 +240,15 @@ while(Sair == False):
     if op == '98':
     	try:
     		if __name__ == '__main__':
-    			print(f'{G} Checando por atualizacoes... {C}')
+    			print(f'{C}[{Y}i{C}]{G} Checando por atualizacoes... {C}')
     			update = subprocess.check_output('git pull', shell=True)
     			if 'Already up to date' not in update.decode():
-    				print(f'{G}Atualizacao instalada!\nReiniciando o painel...{C}')
+    				print(f'{C}[{Y}*{C}] {G}Atualizacao instalada!\n{C}[{Y}*{C}]Reiniciando o painel...{C}')
     				time.sleep(5)
     				subprocess.run('clear')
     				restart()
     			else:
-    				print('Nenhuma atualizacao disponivel.')
+    				print(f'{C}[{Y}i{C}]Nenhuma atualizacao disponivel.')
     				time.sleep(2)
     	except:
     			pass
