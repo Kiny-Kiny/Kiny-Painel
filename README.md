@@ -95,7 +95,7 @@ Iremos avisar aki quando estiver em funcionamento cada uma das ferramentas inclu
 - [x] CONSULTA CNS
 - [x] CONSULTA PLACA
 - [x] CONSULTA CRM
-- [x] CONSULTA DE NUMERO
+- [ ] CONSULTA DE NUMERO
 - [x] CONSULTA BIN
 - [x] GERAR PESSOA
 - [x] CC CHECKER
