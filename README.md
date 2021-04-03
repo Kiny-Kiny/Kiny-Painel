@@ -88,8 +88,8 @@
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/iiMaxxi"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/77986142?s=400&u=a9b7d1654029a0ec5f107819ace7fc3e984c981b&v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a><br /><a href="https://github.com/iiMaxxi/IsqneTool" title="Aquele canto de gente entelegente">Repo💻</a><a href="https://repl.it/@iiMaxxi"><br /><sub><b>Repl.it💻</sub><br /></b></a></td>
-    <td align="center"><a href="https://github.com/Isqneeh"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/79223936?s=460&u=1952fa4fb5538604622395fc7a5328c5c537e3e2&v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a><br /><a href="https://github.com/Isqneeh/GrabberTool" title="Aquele canto de gente entelegente">Repo💻</a><a href="https://repl.it/@Isqne"><br /><sub><b>Repl.it💻</sub><br /></b></a></td>
+    <td align="center"><a href="https://github.com/Kiny-Kiny"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/77986142?s=400&u=a9b7d1654029a0ec5f107819ace7fc3e984c981b&v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a><br /><a href="https://github.com/iiMaxxi/IsqneTool" title="Aquele canto de gente entelegente">Repo💻</a><a href="https://repl.it/@iiMaxxi"><br /><sub><b>Repl.it💻</sub><br /></b></a></td>
+    <td align="center"><a href="https://github.com/Oporadokrl"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/79223936?s=460&u=1952fa4fb5538604622395fc7a5328c5c537e3e2&v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a><br /><a href="https://github.com/Isqneeh/GrabberTool" title="Aquele canto de gente entelegente">Repo💻</a><a href="https://repl.it/@Isqne"><br /><sub><b>Repl.it💻</sub><br /></b></a></td>
   </tr>
 </table>
 
