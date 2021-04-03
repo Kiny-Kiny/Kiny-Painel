@@ -17,6 +17,8 @@
 <img src="https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/IMG-20210313-WA0017.jpg">
 </p>
 
+[![Customized Card](https://github-readme-stats.vercel.app/api/pin?username=Kiny-Kiny&repo=Kiny-Painel&title_color=fff&icon_color=f9f9f9&text_color=9f9f9f&bg_color=151515)](https://github.com/Kiny-Kiny/Kiny-Painel)
+
 <p align="center">Confira meu canal do YouTube. <a href="https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w"> Clique aqui!</a>
 
 # Nota: Próxima Atualização será a última com coisas novas, o resto será para melhorar o script.
