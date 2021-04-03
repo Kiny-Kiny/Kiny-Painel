@@ -8,17 +8,6 @@ Y='\033[1;33m'
 G='\033[1;32m'
 RT='\033[;0m'
 
-clear()
-R='\033[1;31m'; B='\033[1;34m'; C='\033[1;37m'; Y='\033[1;33m'; G='\033[1;32m'; RT='\033[;0m'
-
-code_info = C + '[' + Y + 'i' + C + '] '
-code_details = C + '[' + G + '*' + C + '] '
-code_result = C + '[' + G + '+' + C + '] '
-code_error = C + '[' + R + '!' + C + '] '
-
-os.system('figlet KINY'); time.sleep(1.5)
-youtube()
-
 ## Distribuido livremente pela licença MIT,
 ## Aos que não sabem o que isso significa,sugerimos estudo.
 #######################
