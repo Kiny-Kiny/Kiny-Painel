@@ -230,7 +230,7 @@ while(Sair == False):
     tools.clear()
 
     if op == '19':
-    	twoy()
+    	twyu()
     	pass
     
     if op == '93':
