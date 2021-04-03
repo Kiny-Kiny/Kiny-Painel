@@ -73,8 +73,6 @@
 
 # PRÉVIA
 
-- Consulta de Nome
-
 - Consulta CADSUS
 
 - Consulta Score
@@ -83,8 +81,30 @@
 
 - Consulta de CNPJ(mais Info)
 
+## Nós estamos sempre atualizando a Tool!
+Por conta disso as vezes pode aparecer [OFF]
+Iremos avisar aki quando estiver em funcionamento cada uma das ferramentas inclusas!
+# Ferramentas ON
+
+- [x] BUSCADOR DE CEP
+- [x] GEO LOCALIZADOR DE IP
+- [x] CONSULTA SITE
+- [x] CONSULTA DE CNPJ
+- [x] CONSULTA BANCARIA
+- [ ] CONSULTA CPF
+- [x] CONSULTA CNS
+- [x] CONSULTA PLACA
+- [x] CONSULTA CRM
+- [x] CONSULTA DE NUMERO
+- [x] CONSULTA BIN
+- [x] GERAR PESSOA
+- [x] CC CHECKER
+- [x] COVID19
+- [ ] CONSULTAR MÃE 
+- [ ] CONSULTAR NOME 
+
 # Dev's
-<b>Está Tool foi desenvolvida por:</b>
+<b>Esta Tool foi desenvolvida por:</b>
 
 <table>
   <tr>
