@@ -138,7 +138,7 @@ else:
 '''
 token = ["f01e0024a26baef3cc53a2ac208dd141","5072097263","25d800a8b8e8b99d77c809567aa291b8"]
 
-welcome_msg = ["Que a força esteja com você", "Bem vindo", "Você é um mito", "Okaerinasai"]
+welcome_msg = ["Que a força esteja com você", "Bem vindo", "Você é um mito", "Okaerinasai", "Esta pessoa é muito boa no Websexo ->", "Você é um baitola"]
 try:
     if __name__ == '__main__':
         print(f'{C}[{Y}i{C}] {G} Checando por atualizacoes... {C}')
@@ -194,6 +194,7 @@ while(Sair == False):
     print(f'{C}[{Y}*{C}]Meu Pix: 228463d7-0bec-44bd-bddd-a780d9530f27')
     print(f'{C}[{Y}*{C}]Patrocinadores: Syne, Josuke(Douglas) e Margarina')
     print()
+    print(f'{C}[{R}i{C}]Estamos sem API de consulta por nome de mãe, nome, CPF e número, por isso elas estão OFF, estamos juntando dinheiro para comprar novas")
     print(f"{C}{G}[1]{C} BUSCADOR DE CEP")
     print(f"{C}{G}[2]{C} GEO LOCALIZADOR DE IP")
     print(f"{C}{G}[3]{C} KINY-SITE-INFOGA")
