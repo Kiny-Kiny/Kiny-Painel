@@ -83,7 +83,7 @@
 
 ## Nós estamos sempre atualizando a Tool!
 Por conta disso as vezes pode aparecer [OFF]
-Iremos avisar aki quando estiver em funcionamento cada uma das ferramentas inclusas!
+Iremos avisar aqui quando estiver em funcionamento cada uma das ferramentas inclusas!
 # Ferramentas ON
 
 - [x] BUSCADOR DE CEP
