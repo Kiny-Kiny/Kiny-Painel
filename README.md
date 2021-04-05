@@ -41,25 +41,23 @@
 
 # INSTALAÇÃO 
 
-> apt update && apt upgrade -y
+## INSTALAÇÃO 
+```
+【✔】pkg update && pkg upgrade -y
+【✔】pkg install git
+【✔】pkg install python -y
+【✔】pkg install python2 -y
+【✔】pkg install python3 -y
+【✔】git clone https://github.com/Kiny-Kiny/Kiny-Painel
+【✔】cd Kiny-Painel
+【✔】python3 main.py
+```
 
-> apt install git python
-
-> apt install python2
-
-> apt install python3
-
-> git clone https://github.com/Kiny-Kiny/Kiny-Painel
-
-> cd Kiny-Painel
-
-> python3 main.py
-
-# LOGIN
-
-> Username: (Qualquer um)
-
-> Password: VirtualInsanity
+## LOGIN
+```
+【🔐】USERNAME: (Qualquer coisa)
+【🔐】PASSWORD: VirtualInsanity
+```
 
 # CHANGELOG
 
