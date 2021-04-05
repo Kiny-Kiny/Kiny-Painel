@@ -39,8 +39,6 @@
 
 > Margarina
 
-# INSTALAÇÃO 
-
 ## INSTALAÇÃO 
 ```
 【✔】pkg update && pkg upgrade -y
