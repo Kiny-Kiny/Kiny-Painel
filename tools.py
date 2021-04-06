@@ -65,7 +65,7 @@ def notes():
     Codado por: {C}{B}YATO{C}
     APIs ,ideia e código inicial: {C}{B}KINY{C}
     API MTE e auxilio no script: {C}{B}p0is0n{C}
-    Patrocinio:Obrigado {C}{B}Syne{C}, {C}{B}Douglas{C} e {C}{B}Margarina{C} pelo money pra fazer o script.
+    Patrocinio:Obrigado {C}{B}Douglas{C} e {C}{B}Margarina{C} pelo money pra fazer o script.
     
     Obrigado {C}{B}Snuking{C}, pelo apoio e algumas ajudas;
     
