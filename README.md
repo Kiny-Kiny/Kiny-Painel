@@ -33,8 +33,6 @@
 
 # Patrocinadores
 
-> Syne
-
 > Douglas/Josuke
 
 > Margarina
