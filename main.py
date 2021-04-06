@@ -192,7 +192,7 @@ while(Sair == False):
         time.sleep(1)
     print(f'{C}[{Y}*{C}]Meu Grupo: https://chat.whatsapp.com/Gnv9j0SbMtP2uO39CfjMqu')
     print(f'{C}[{Y}*{C}]Meu Pix: 228463d7-0bec-44bd-bddd-a780d9530f27')
-    print(f'{C}[{Y}*{C}]Patrocinadores: Syne, Josuke(Douglas) e Margarina')
+    print(f'{C}[{Y}*{C}]Patrocinadores: Josuke(Douglas) e Margarina')
     print()
     print(f"{C}[{R}i{C}]Estamos sem API de consulta por nome de mãe, nome, CPF e número, por isso elas estão OFF, estamos juntando dinheiro para comprar novas")
     print(f"{C}{G}[1]{C} BUSCADOR DE CEP")
