@@ -57,16 +57,20 @@ def youtube():
 
 def zapzap():
    if platform.system() == "Windows":
-      webbrowser.open_new_tab("http://wa.me/5521979180533")
+      webbrowser.open_new_tab("http://wa.me/552179180533")
    else:
-       os.system("termux-open-url http://wa.me/5521979180533")
+       os.system("termux-open-url http://wa.me/552179180533")
 
 def twyu():
    if platform.system() == "Windows":
       webbrowser.open_new_tab("https://youtu.be/njoBMZD_jP0")
    else:
        os.system("termux-open-url https://youtu.be/njoBMZD_jP0")
-
+def gbzap():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("https://chat.whatsapp.com/Gnv9j0SbMtP2uO39CfjMqu")
+   else:
+       os.system("termux-open-url https://chat.whatsapp.com/Gnv9j0SbMtP2uO39CfjMqu")
 
 if sys.version_info[0] < 3:
     print(f'{C}[{R}ERROR{C}] Necessário utilizar python3!')
@@ -196,7 +200,6 @@ while(Sair == False):
     print(f'{C}[{G}*{C}]'+random.choice(welcome_msg)+' '+str(user)+'!')
     if anim == 1:
         time.sleep(1)
-    print(f'{C}[{Y}*{C}]Meu Grupo: https://chat.whatsapp.com/Gnv9j0SbMtP2uO39CfjMqu')
     print(f'{C}[{Y}*{C}]Meu Pix: 228463d7-0bec-44bd-bddd-a780d9530f27')
     print(f'{C}[{Y}*{C}]Patrocinadores: Josuke(Douglas) e Margarina')
     print()
