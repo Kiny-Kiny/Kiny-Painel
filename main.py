@@ -231,6 +231,7 @@ while(Sair == False):
     	pass
     else:
     	print(f"{C}{G}[95]{C} Mudar username")
+    print(f"{C}{G}[90]{C} Meu grupo")
     print(f"{C}{G}[92]{C} Meu Whatsapp")
     print(f"{C}{G}[93]{C} Meu canal")
     print(f"{C}{G}[94]{C} Notas ao vivo")
@@ -241,6 +242,10 @@ while(Sair == False):
     print(f"{C}{G}[00]{C} EXIT")
     op = input("===>").strip()
     tools.clear()
+
+    if op == '90':
+    	gbzap()
+    	pass
 
     if op == '92':
     	zapzap()
