@@ -35,7 +35,7 @@ def aovivo():
     print()
     print("Esta parte foi criada par esclarecer algumas coisas sobre o script")
     print()
-    print("Q: As consultas por número parou pela API estar com problema de conexão")
+    print("Q: As consultas por número parou pela API estar OFF. Mas consegui um novo patrocinador para comprar uma database e uma API")
     print(
         "Q: Minha Chave PIX: 228463d7-0bec-44bd-bddd-a780d9530f27")
     print()
@@ -45,8 +45,6 @@ def aovivo():
         "Q: PhoneInfoga - A forma de consulta do PhoneInfoga é o DDI, DDD e o numero(ex: 5521979180533). quanto um numero tiver apenas 8 digitos, voce deve colocar um nove na frente(ex: 55 81 9××××-××××).")
     print()
     print("Q: Próxima Atualizacao sai em Abril.")
-    print()
-    print("Meu contato: 55 21 7918-0533")
     print()
     pause = input("Pressione Enter para retornar")
 
