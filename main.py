@@ -203,7 +203,7 @@ while(Sair == False):
     print(f'{C}[{Y}*{C}]Meu Pix: 228463d7-0bec-44bd-bddd-a780d9530f27')
     print(f'{C}[{Y}*{C}]Patrocinadores: Josuke(Douglas) e Margarina')
     print()
-    print(f"{C}[{R}i{C}]Estamos sem API de consulta por nome de mãe, nome, CPF e número, por isso elas estão OFF, estamos juntando dinheiro para comprar novas")
+    print(f"{C}[{G}*{C}] Conseguimos um novo patrocinador que irá comprar novas databases e APIs, as consultas retornarão em breve :)")
     print(f"{C}{G}[1]{C} BUSCADOR DE CEP")
     print(f"{C}{G}[2]{C} GEO LOCALIZADOR DE IP")
     print(f"{C}{G}[3]{C} KINY-SITE-INFOGA")
