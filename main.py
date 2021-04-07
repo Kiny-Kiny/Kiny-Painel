@@ -55,6 +55,12 @@ def youtube():
    else:
        os.system("termux-open-url https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w")
 
+def zapzap():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("http://wa.me/5521979180533")
+   else:
+       os.system("termux-open-url http://wa.me/5521979180533")
+
 def twyu():
    if platform.system() == "Windows":
       webbrowser.open_new_tab("https://youtu.be/njoBMZD_jP0")
@@ -222,6 +228,7 @@ while(Sair == False):
     	pass
     else:
     	print(f"{C}{G}[95]{C} Mudar username")
+    print(f"{C}{G}[92]{C} Meu Whatsapp")
     print(f"{C}{G}[93]{C} Meu canal")
     print(f"{C}{G}[94]{C} Notas ao vivo")
     print(f"{C}{G}[96]{C} Opções")
@@ -231,6 +238,10 @@ while(Sair == False):
     print(f"{C}{G}[00]{C} EXIT")
     op = input("===>").strip()
     tools.clear()
+
+    if op == '92':
+    	zapzap()
+    	pass
 
     if op == '19':
     	twyu()
