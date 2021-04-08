@@ -1342,6 +1342,13 @@ def nomemae():
     pass
 
 def consultanome():
+   R='\033[1;31m'; B='\033[1;34m'; C='\033[1;37m'; Y='\033[1;33m'; G='\033[1;32m'; RT='\033>
+
+   code_info = C + '[' + Y + 'i' + C + '] '
+   code_details = C + '[' + G + '*' + C + '] '
+   code_result = C + '[' + G + '+' + C + '] '
+   code_error = C + '[' + R + '!' + C + '] '
+
    arquivo = r'banco.txt'
    ler = open(arquivo, encoding="UTF-8")
    conteudo_arquivo = ler.read()
