@@ -252,7 +252,11 @@ while(Sair == False):
     	pass
 
     if op == '19':
-    	twyu()
+    	os.system("apt install mpg123")
+    	os.system("clear")
+    	print(f'{C}[{Y}i{C}]{G} Aperte "U" para parar a música{C}')
+    	file = "TheWonderOfYou.mp3"
+	os.system("mpg123 " + file)
     	pass
     
     if op == '93':
