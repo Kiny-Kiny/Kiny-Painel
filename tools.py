@@ -1360,8 +1360,7 @@ def consultanome():
    elif tool == "2":
         dados()
    elif tool == "3":
-        import consulta
-        pass()    
+        pass    
    else:
         clear()
         print(f'{C}[{R}-{C}] Seleção inválida.')
@@ -1389,10 +1388,7 @@ def dados():
    elif tool == "4":
         pass
    else:
-        clear()
-        print(f'{C}[{R}-{C}] Seleção inválida.')
-        time.sleep(0.2)
-        main()
+        pass
 
 def nova():
     nova=input('\n' + f'{C}[{G}+{C}] Deseja realizar uma nova consulta?[{G}s{C}/{R}n{C}]: ').lower()
@@ -1400,9 +1396,7 @@ def nova():
        clear()
        consultanome()
     else:
-        clear()
-        print(f'\n{G}[PAISLEY PARK]{C}\n')
-        exit()
+        pass
 
 def nova2():
     nova=input('\n' + f'{C}[{G}+{C}] Deseja realizar uma nova consulta?[{G}s{C}/{R}n{C}]: ').lower()
