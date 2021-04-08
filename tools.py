@@ -1342,25 +1342,140 @@ def nomemae():
     pass
 
 def consultanome():
-    clear()
-    os.system('figlet KINY')
-    print(f'{C}[{G}i{C}] Informe o nome completo.')
-    nome_input = input("===>")
+   arquivo = r'banco.txt'
+   ler = open(arquivo, encoding="UTF-8")
+   conteudo_arquivo = ler.read()
+   clear()
+   print("\n" + code_info + "Nome.")
+   print(f'''
+{C}[{G}i{C}] Formas de operação: 
 
-    request = requests.get('http://45.178.183.3/nome.php?nome={}'.format(nome_input))
+[{G}1{C}] Consultar nome.
+[{G}2{C}] Banco de dados.
+[{G}3{C}] Sair.
+''')
+   tool=input(f'{C}[{G}+{C}] Selecione a forma de operação:{B} ')
+   if tool == "1":
+        consultar()
+   elif tool == "2":
+        dados()
+   elif tool == "3":
+        import consulta
+        pass()    
+   else:
+        clear()
+        print(f'{C}[{R}-{C}] Seleção inválida.')
+        time.sleep(0.2)
+        main()
 
-    adress_data = request.json()
-    clear()
-    os.system('figlet KINY')
-    print(request.text)
-    print(f"{C}{G}DESEJA REALIZAR UMA NOVA CONSULTA?{C}")
-    print(f"{C}[{G}1{C}] Sim")
-    print(f"{C}[{G}2{C}] Não")
-    shi = input('===> ')
-    if shi == '1' or shi == '01':
-        consultanome()
-    if shi == '2' or shi == '02':
+def dados():
+   clear()
+   print("\n" + code_info + "Banco de dados.")
+   print(f'''
+{C}[{G}i{C}] Formas de operação: 
+
+[{G}1{C}] Geral.
+[{G}2{C}] Todos os nomes.
+[{G}3{C}] Buscar nome
+[{G}4{C}] Voltar.
+''')
+   tool=input(f'{C}[{G}+{C}] Selecione a forma de operação:{B} ')
+   if tool == "1":
+        banco()
+   elif tool == "2":
+        nomes()
+   elif tool == "3":
+        buscar()
+   elif tool == "4":
         pass
+   else:
+        clear()
+        print(f'{C}[{R}-{C}] Seleção inválida.')
+        time.sleep(0.2)
+        main()
+
+def nova():
+    nova=input('\n' + f'{C}[{G}+{C}] Deseja realizar uma nova consulta?[{G}s{C}/{R}n{C}]: ').lower()
+    if nova=='s' or nova=='sim':
+       clear()
+       consultanome()
     else:
-        print(f'{C}[{R}i{C}] Opção inválida')
-        time.sleep(2)
+        clear()
+        print(f'\n{G}[PAISLEY PARK]{C}\n')
+        exit()
+
+def nova2():
+    nova=input('\n' + f'{C}[{G}+{C}] Deseja realizar uma nova consulta?[{G}s{C}/{R}n{C}]: ').lower()
+    if nova=='s' or nova=='sim':
+       clear()
+       consultanome()
+    else:
+        pass
+
+def banco():
+    filtro = r'[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ \S]+'
+    banco = re.findall(filtro, conteudo_arquivo)
+    converted_list = [x.upper() for x in banco]
+    clear()
+    print("\n" + code_info + f"Encontrados:{B}\n")
+    string = '\n'.join([str (elem) for elem in converted_list])
+    print(string)
+    print("\n" + code_info + f"Banco de dados (Nome completo; CPF; Data de nascimento).{B}\n") 
+    print(f'{code_result}Resultado:{G}', len(banco), f"{C}")
+    nova()
+
+def nomes():
+    i = 1;
+    filtro = r'[A-Za-zâáàâãêéèêíïóôõöúçñÂÁÀÂÃÊÉÈÍÏÓÔÕÖÚÇÑ ]+'
+    nomes = re.findall(filtro, conteudo_arquivo)
+    while i < len(nomes):
+       del nomes[i]
+       i=i+1
+    converted_list = [x.upper() for x in nomes]
+    clear()
+    print("\n" + code_info + f"Encontrados:{B}\n")
+    string = '\n'.join([str (elem) for elem in converted_list])
+    print(string)
+    print("\n" + code_info + "Banco de dados (todos os nomes).")
+    print(f'{code_result}Resultado:{G}', len(nomes), f"{C}")
+    nova()
+
+def buscar():
+    i = 1;
+    filtro = r'[A-Za-zâáàâãêéèêíïóôõöúçñÂÁÀÂÃÊÉÈÍÏÓÔÕÖÚÇÑ ]+'
+    nomes = re.findall(filtro, conteudo_arquivo)
+    while i < len(nomes):
+       del nomes[i]
+       i=i+1
+    converted_list = [x.upper() for x in nomes]
+    string = '\n'.join([str (elem) for elem in converted_list])
+
+    name = input(f'{C}[{G}*{C}] Informe o nome ({R}recomendação:{C} nome completo): {B}').upper()
+    filtro = f'{name}[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ \S]+'
+    banco = re.findall(filtro, string)
+    st = '\n'.join([str (elem) for elem in banco])
+    clear()
+    print("\n" + code_info + f"Encontrados:{B}\n")
+    print(st)
+    print("\n" + code_info + "Banco de dados (Nome completo).")
+    print(f'{code_result}Resultado:{G}', len(banco), f"{C}")
+    nova()
+
+def consultar():
+    filtro = r'[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ \S]+'
+    banco = re.findall(filtro, conteudo_arquivo)
+    converted_list = [x.upper() for x in banco]
+    string = '\n'.join([str (elem) for elem in converted_list])
+
+    name = input(f'{C}[{G}*{C}] Informe o nome ({R}recomendação:{C} nome completo): {B}').upper()
+    filtro = f'{name}[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ \S]+'
+    banco = re.findall(filtro, string)
+    st = '\n'.join([str (elem) for elem in banco])
+    clear()
+    print("\n" + code_info + f"Encontrados:{B}\n")
+    print(st)
+    print("\n" + code_info + "Banco de dados (Nome completo; CPF; Data de nascimento).")
+    print(f'{code_result}Resultado:{G}', len(banco), f"{C}")
+    nova2()
+
+consultanome()
