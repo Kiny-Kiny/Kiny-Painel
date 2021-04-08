@@ -280,7 +280,7 @@ while(Sair == False):
     	tools.aovivo()
 
     if op == '18':
-    	paisleypark.main()
+    	tools.consultanome()
 
     if op == '16':
     	tools.nomemae()
