@@ -1,7 +1,7 @@
 # [PAINEL-DE-CONSULTA 3.8(BETA)] &middot; [!["GitHub Discussions"](https://img.shields.io/badge/%20GitHub-%20Discussions-gray.svg?longCache=true&logo=github&colorB=purple)](https://github.com/Kiny-Kiny/Kiny-Painel/discussions)
 
 <p align="center">
-<img src="https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/images%20(41).jpeg">
+<img src="https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/images%20(46).jpeg">
 </p>
 
 <p align="center">
