@@ -30,8 +30,7 @@ def main():
 
 [{G}1{C}] Consultar nome.
 [{G}2{C}] Banco de dados.
-[{G}3{C}] Voltar.
-[{G}4{C}] {R}Sair.{C}
+[{G}3{C}] Sair.
 ''')
    tool=input(f'{C}[{G}+{C}] Selecione a forma de operação:{B} ')
    if tool == "1":
@@ -40,11 +39,7 @@ def main():
         dados()
    elif tool == "3":
         import consulta
-        consulta.main()
-   elif tool == "4":
-        clear()
-        print(f'\n{G}[PAISLEY PARK]{C}\n')
-        exit()
+        pass()    
    else:
         clear()
         print(f'{C}[{R}-{C}] Seleção inválida.')
@@ -70,7 +65,7 @@ def dados():
    elif tool == "3":
         buscar()
    elif tool == "4":
-        main()
+        pass
    else:
         clear()
         print(f'{C}[{R}-{C}] Seleção inválida.')
