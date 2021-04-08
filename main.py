@@ -254,7 +254,7 @@ while(Sair == False):
     if op == '19':
     	os.system("apt install mpg123 -y")
     	os.system("clear")
-    	print(f'{C}[{Y}i{C}]{G} Aperte "U" para parar a música{C}')
+    	print(f'{C}[{Y}i{C}]{G} Aperte "Q" para parar a música{C}')
     	file = "TheWonderOfYou.mp3"
     	os.system("mpg123 " + file)
     	pass
