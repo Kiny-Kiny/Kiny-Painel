@@ -1285,7 +1285,7 @@ def phoneinfoga():
 
         localScan(InputNumber)
 
-        if not number:
+        if not 'number':
             print((f"Erro: o número{B}{formatNumber(InputNumber)}{C} inválido."))
             # again()
 
