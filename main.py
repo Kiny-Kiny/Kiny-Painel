@@ -268,10 +268,14 @@ while(Sair == False):
     	print(f"{C}{G}[02 - Jamiroquai] Virtual Insanity{C} ")
     	music = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
     	if music == "01" or music == "1":
+                os.system("clear")
+                print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
     		file = "TheWonderOfYou.mp3"
     		os.system("mpg123 " + file)
     		pass
     	if music == "02" or music == "2":
+                os.system("clear")
+                print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
     		shura = "VirtualInsanityRemastered.mp3"
     		os.system("mpg123 " + shura)
     		pass
