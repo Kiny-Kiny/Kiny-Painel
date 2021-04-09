@@ -264,8 +264,8 @@ while(Sair == False):
     	os.system("apt install mpg123 -y")
     	os.system("clear")
     	print(f'{C}[{Y}i{C}]{G} Ainda irei colocar mais músicas, mas eu tô com preguiça.{C}')
-    	print(f"{C}{G}[01 - Elvis Presley] The Wonder Of You{C} ")
-    	print(f"{C}{G}[02 - Jamiroquai] Virtual Insanity{C} ")
+    	print(f"{C}{G}[01 - Elvis Presley]{C} The Wonder Of You")
+    	print(f"{C}{G}[02 - Jamiroquai]{C} Virtual Insanity")
     	music = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
     	if music == "01" or music == "1":
                 os.system("clear")
