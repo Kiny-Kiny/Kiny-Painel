@@ -263,10 +263,20 @@ while(Sair == False):
     if op == '19':
     	os.system("apt install mpg123 -y")
     	os.system("clear")
-    	print(f'{C}[{Y}i{C}]{G} Aperte "Q" para parar a música{C}')
-    	file = "TheWonderOfYou.mp3"
-    	os.system("mpg123 " + file)
-    	pass
+    	print(f'{C}[{Y}i{C}]{G} Ainda irei colocar mais músicas, mas eu tô com preguiça.{C}')
+    	print(f"{C}{G}[01 - Elvis Presley] The Wonder Of You{C} ")
+    	print(f"{C}{G}[02 - Jamiroquai] Virtual Insanity{C} ")
+    	music = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
+    	if music == "01" or music == "1":
+    		file = "TheWonderOfYou.mp3"
+    		os.system("mpg123 " + file)
+    		pass
+    	if music == "02" or music == "2":
+    		shura = "VirtualInsanityRemastered.mp3"
+    		os.system("mpg123 " + shura)
+    		pass
+    	else:
+    		pass
     
     if op == '93':
     	youtube()
