@@ -192,11 +192,11 @@ else:
     kinymode=0
 
 try:
-    os.system("pkg update")
-    os.system("pkg install figlet")
+    os.system("pkg update -y")
+    os.system("pkg install figlet -y")
 except:
-    os.system("apt update")
-    os.system("apt install figlet")
+    os.system("apt update -y")
+    os.system("apt install figlet -y")
 
 Sair = False
 while(Sair == False):
