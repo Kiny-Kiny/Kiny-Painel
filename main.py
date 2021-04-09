@@ -248,7 +248,7 @@ while(Sair == False):
     print(f"{C}{G}[98]{C} Atualizar")
     print(f"{C}{G}[99]{C} Update && Upgrade")
     print(f"{C}{G}[00]{C} EXIT")
-    op = input("===>").strip()
+    op = input(f"{C}[{G}×{C}] Selecione o número da opção:{B}").strip()
     tools.clear()
 
     if op == '90':
