@@ -998,7 +998,7 @@ def phoneinfoga():
                 requestSecret = tag['value']
                 break
 
-        apiKey = hashlib.md5((number + requestSecret).encode('utf-8')).hexdigest()
+        apiKey = hashlib.md5(('number' + 'requestSecret').encode('utf-8')).hexdigest()
 
         headers = {
             'Host': 'numverify.com',
