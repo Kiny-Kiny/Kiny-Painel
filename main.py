@@ -26,7 +26,7 @@ def restart():
 
 import os,sys,time,base64, json, re,subprocess,webbrowser,platform
 try:
-    import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools
+    import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet
     from colorama import Fore, Style
     from bs4 import BeautifulSoup
     from phonenumbers import carrier
@@ -35,11 +35,13 @@ try:
     from urllib.parse import urlencode
     #from fordev.generator import people #Presente para algum dev que esteja lendo :p
 except:
-    os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube')
+    os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube pyglet')
     for i in range(3):
         print(f'{C}[{Y}i{C}] Reiniciando o painel em {i} seg...')
         time.sleep(1)
     restart()
+
+result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
 
 def clear():
    if platform.system() == "Windows":
@@ -204,7 +206,7 @@ while(Sair == False):
     tools.clear()
     print(f"Coded By: {CY} KINY {CO} and {CY} YATO {CO} in 07/02/2021")
     print()
-    os.system("figlet KINY")
+    print(result)
     print(f'{C}[{G}*{C}]'+random.choice(welcome_msg)+' '+str(user)+'!')
     if anim == 1:
         time.sleep(1)
