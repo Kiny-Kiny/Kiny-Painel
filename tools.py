@@ -32,6 +32,7 @@ def clear():
 
 
 def aovivo():
+    print(f'{C}{G}{result}{C}')
     print(f'{C}==={R}{C} Notas de ao vivo {C}==={R}{C}')
     print()
     print(f"{C}[{R}*{C}] Esta parte foi criada par esclarecer algumas coisas sobre o script, peço que esperem e parem de vir no meu PV perguntar o motivo de vocês não conseguirem consultar.")
@@ -52,6 +53,7 @@ def aovivo():
 
 
 def notes():
+    print(f'{C}{G}{result}{C}')
     print(f'{C}==={R}{C} Notas de versão {C}==={R}{C}')
     print(f'''
     Versão 3.8
@@ -74,7 +76,7 @@ def notes():
 
 
 def covid19():
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{Y}i{C}] Informe o UF. Exemplo: sp, pa, ba ')
     choice = input('===>')
     data = requests.get('https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/{}'.format(choice)).json()
@@ -92,7 +94,7 @@ def covid19():
 
 
 def ip(ip_api, mode, token):
-    print(result)
+    print(f'{C}{G}{result}{C}')
     if ip_api == 0 or ip_api == 2:
         if mode == 0:
             data = requests.get('http://ip-api.com/json/')
@@ -124,7 +126,7 @@ def ip(ip_api, mode, token):
         if mode == 0:
             api = requests.get('http://ipwhois.app/json/').json()
         clear()
-        os.system('figlet KINY')
+        print(f'{C}{G}{result}{C}')
         try:
             if ip_api == 1:
                 print('IP: {}'.format(api['ip']))
@@ -166,7 +168,7 @@ def ip(ip_api, mode, token):
 
 
 def bin():
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print('Exemplo:45717360')
     print(f'{C}[{Y}i{C}] Digite a BIN.')
     bin_input = input("===>")
@@ -201,7 +203,7 @@ def bin():
 
 
 def crm(token):
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Digite o numero do CRM.')
     crm_input = input("===>")
     print(f'{C}[{G}i{C}] Digite o UF.')
@@ -240,7 +242,7 @@ def crm(token):
 
 
 def gerar_pessoa(token):  #####REWORK
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Gerando pessoa.')
     national = ["BR", "USA", "PT", "CA", "JP"]
     RN = randint(0, 10)
@@ -284,13 +286,13 @@ def gerar_pessoa(token):  #####REWORK
 
 def consultaplaca():
     # http://api.masterplaca.devplank.com/v2/placa/{placa}/json
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i]{C}Digite o numero da placa.')
     placa_input = input("===>")
     req = requests.get('https://apicarros.com/v1/consulta/{}/json'.format(placa_input), verify=False)  # JSQ7436
     placa_data = req.json()
     clear()
-    print(result)
+    print(f'{C}{G}{result}{C}')
     try:
         if (placa_data['codigoRetorno']) == "0":
             print(f"{C}Ano: {B}{placa_data['ano']}{C}")
@@ -330,7 +332,7 @@ def consultaplaca():
 
 
 def cns(token, anim):
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'''
 {C}[{G}i{C}]Formas de operação
 [{G}1{C}]Gerar CNS
@@ -368,7 +370,7 @@ def cns(token, anim):
 
 def cep(anim):
     clear()
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Informe o CEP.')
     cep_input = input("===>")
     if len(cep_input) != 8:
@@ -410,7 +412,7 @@ def cep(anim):
 def kiny_infoga():
     os.system("apt install nmap whois")
     clear()
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print()
     j = input("1 para HTTPS, 2 para HTTP:")
     k = input("Domain: ")
@@ -432,7 +434,7 @@ def cnpj(kct, token, anim):
     if kct == '1' or kct == '01':
         gen = "1"
     elif kct == '2' or kct == '02':
-        print(result)
+        print(f'{C}{G}{result}{C}')
         print("DIGITE O CNPJ SEM / . OU -")
         cnpj_input = input("===>")
         gen = 0
@@ -520,7 +522,7 @@ def cnpj(kct, token, anim):
 
 def bank(anim):
     clear()
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f"{C}[{G}i{C}] DIGITE O CODIGO BANCARIO")
     print(f"{C}[{G}i{C}] Exemplo: 260")
     bank_input = input("=====>")
@@ -553,7 +555,7 @@ def bank(anim):
 
 def consultacpf(cpf_api, token):
     clear()
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Informe o CPF sem / . ou -')
     cpf_input = input("===>")
 
@@ -562,7 +564,7 @@ def consultacpf(cpf_api, token):
     adress_data = request.json()
     clear()
     try:
-        print(result)
+        print(f'{C}{G}{result}{C}')
         print('CPF: {}'.format(adress_data['cpf']))
         print('Nome: {}'.format(adress_data['nome']))
         print('Sexo: {}'.format(adress_data['sexo']))
@@ -582,7 +584,7 @@ def consultacpf(cpf_api, token):
         time.sleep(2)
 
 def consultaoperadora():
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Exemplo: 48952021826')
     print(f'{C}[{Y}i{C}] Limite de consultas: 6 consultas por hora.')
     print(f'{C}[{Y}i{C}] Digite o numero com DDD.')
@@ -760,7 +762,7 @@ def cc_checker(token):
 
 def gerarlinkwhats():
     clear()
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Digite o numero.')
     num = input('===>')
     print(f'{C}[{G}i{C}] Digite a mensagem.')
@@ -777,7 +779,7 @@ def gerarlinkwhats():
 
 def youtube():
     clear()
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Selecione o modo de operação')
     print(f'{C}[{G}1{C}] MP4')
     print(f'{C}[{G}2{C}] MP3')
@@ -785,7 +787,7 @@ def youtube():
     print(f'{C}[{G}i{C}] Informe a url do video')
     url = input('===>')
     clear()
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Baixando...por favor aguarde')
     if filetype == '1':
         file = YouTube(url).streams.first()
@@ -805,7 +807,7 @@ def youtube():
 
 
 def consultatel():
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'O que deseja fazer?')
     print(f'[{G}1{C}]Consultar operadora por numero')
     print(f'[{G}2{C}]Phone infoga')
@@ -824,7 +826,7 @@ def consultatel():
 
 def primenumero():
     clear()
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Digite o numero(ex: 219××××××××).')
     requiem = input('===> ')
     data = requests.get('http://hollibot.com/syne57655/Tel.php?info={}'.format(requiem)).text
@@ -1339,13 +1341,14 @@ def phoneinfoga():
 
 
 def nomemae():
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Temporariamente Off')
     time.sleep(2)
     pass
 
 def consultanome():
     clear()
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Informe o nome completo.')
     nome_input = input("===>")
 
