@@ -312,11 +312,20 @@ while(Sair == False):
     
     if op == '98':
     	try:
+    		print(result)
     		if __name__ == '__main__':
     			print(f'{C}[{Y}i{C}]{G} Checando por atualizacoes... {C}')
     			update = subprocess.check_output('git pull', shell=True)
     			if 'Already up to date' not in update.decode():
     				print(f'{C}[{Y}*{C}] {G}Atualizacao instalada!\n{C}[{Y}*{C}]Reiniciando o painel...{C}')
+    				print("Loading:")
+    				#animation = ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"]
+    				animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]", "[■■■■■■■■■■]"]
+    				for i in range(len(animation)):
+    					time.sleep(0.2)
+    					sys.stdout.write("\r" + animation[i % len(animation)])
+    					sys.stdout.flush()
+    				print("\n")
     				time.sleep(5)
     				subprocess.run('clear')
     				restart()
