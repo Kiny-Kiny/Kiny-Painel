@@ -176,8 +176,8 @@ except:
     pass
 
 if login == 1:
-    print(result)
     tools.clear()
+    print(result)
     user = input("USERNAME:  ")
     snh = 'VirtualInsanity'
     if input("PASSWORD:  ").strip() == snh:
@@ -208,7 +208,7 @@ while(Sair == False):
     tools.clear()
     print(f"Coded By: {CY} KINY {CO} and {CY} YATO {CO} in 07/02/2021")
     print()
-    print(result)
+    print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}*{C}]'+random.choice(welcome_msg)+' '+str(user)+'!')
     if anim == 1:
         time.sleep(1)
