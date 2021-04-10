@@ -7,7 +7,7 @@ CY = '\033[1;36m'
 Y = '\033[1;33m'
 G = '\033[1;32m'
 RT = '\033[;0m'
-import os, base64, requests, time, json, re, random, platform, sys, signal, atexit, argparse, hashlib, urllib3, html5lib
+import os, base64, requests, time, json, re, random, platform, sys, signal, atexit, argparse, hashlib, urllib3, html5lib, pyfiglet
 from pytube import YouTube
 # from fordev.generator import people #presente pra quem estiver lendo
 from time import sleep
@@ -21,6 +21,7 @@ from phonenumbers import geocoder
 from phonenumbers import timezone
 from urllib.parse import urlencode
 
+result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -73,12 +74,12 @@ def notes():
 
 
 def covid19():
-    os.system('figlet KINY')
+    print(result)
     print(f'{C}[{Y}i{C}] Informe o UF. Exemplo: sp, pa, ba ')
     choice = input('===>')
     data = requests.get('https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/{}'.format(choice)).json()
     clear()
-    os.system('figlet KINY')
+    print(result)
     print("Data e horario local: {}".format(data['datetime']))
     print("Estado: {}".format(data['state']))
     print("UF: {}".format(data['uf']))
@@ -91,7 +92,7 @@ def covid19():
 
 
 def ip(ip_api, mode, token):
-    os.system('figlet KINY')
+    print(result)
     if ip_api == 0 or ip_api == 2:
         if mode == 0:
             data = requests.get('http://ip-api.com/json/')
@@ -165,7 +166,7 @@ def ip(ip_api, mode, token):
 
 
 def bin():
-    os.system('figlet KINY')
+    print(result)
     print('Exemplo:45717360')
     print(f'{C}[{Y}i{C}] Digite a BIN.')
     bin_input = input("===>")
@@ -177,7 +178,7 @@ def bin():
     except:
         print(f'{C}[{R}ERROR{C}] Ocorreu um erro,tente novamente.')
     clear()
-    os.system('figlet KINY')
+    print(result)
     print('Bandeira: {}'.format(req_data['scheme']))
     print('Marca: {}'.format(req_data['brand']))
     print('Tipo: {}'.format(req_data['type']))
@@ -200,7 +201,7 @@ def bin():
 
 
 def crm(token):
-    os.system("figlet KINY")
+    print(result)
     print(f'{C}[{G}i{C}] Digite o numero do CRM.')
     crm_input = input("===>")
     print(f'{C}[{G}i{C}] Digite o UF.')
@@ -239,7 +240,7 @@ def crm(token):
 
 
 def gerar_pessoa(token):  #####REWORK
-    os.system('figlet KINY')
+    print(result)
     print(f'{C}[{G}i{C}] Gerando pessoa.')
     national = ["BR", "USA", "PT", "CA", "JP"]
     RN = randint(0, 10)
@@ -283,13 +284,13 @@ def gerar_pessoa(token):  #####REWORK
 
 def consultaplaca():
     # http://api.masterplaca.devplank.com/v2/placa/{placa}/json
-    os.system("figlet KINY")
+    print(result)
     print(f'{C}[{G}i]{C}Digite o numero da placa.')
     placa_input = input("===>")
     req = requests.get('https://apicarros.com/v1/consulta/{}/json'.format(placa_input), verify=False)  # JSQ7436
     placa_data = req.json()
     clear()
-    os.system('figlet KINY')
+    print(result)
     try:
         if (placa_data['codigoRetorno']) == "0":
             print(f"{C}Ano: {B}{placa_data['ano']}{C}")
@@ -329,7 +330,7 @@ def consultaplaca():
 
 
 def cns(token, anim):
-    os.system('figlet KINY')
+    print(result)
     print(f'''
 {C}[{G}i{C}]Formas de operação
 [{G}1{C}]Gerar CNS
@@ -367,7 +368,7 @@ def cns(token, anim):
 
 def cep(anim):
     clear()
-    os.system('figlet KINY')
+    print(result)
     print(f'{C}[{G}i{C}] Informe o CEP.')
     cep_input = input("===>")
     if len(cep_input) != 8:
@@ -380,7 +381,7 @@ def cep(anim):
     adress_data = request.json()
     clear()
     try:
-        os.system('figlet KINY')
+        print(result)
         print('Cep: {}'.format(adress_data['cep']))
         print('Logradouro: {}'.format(adress_data['logradouro']))
         print('Complemento: {}'.format(adress_data['complemento']))
@@ -409,7 +410,7 @@ def cep(anim):
 def kiny_infoga():
     os.system("apt install nmap whois")
     clear()
-    os.system("figlet KINY")
+    print(result)
     print()
     j = input("1 para HTTPS, 2 para HTTP:")
     k = input("Domain: ")
@@ -431,7 +432,7 @@ def cnpj(kct, token, anim):
     if kct == '1' or kct == '01':
         gen = "1"
     elif kct == '2' or kct == '02':
-        os.system('figlet KINY')
+        print(result)
         print("DIGITE O CNPJ SEM / . OU -")
         cnpj_input = input("===>")
         gen = 0
@@ -519,7 +520,7 @@ def cnpj(kct, token, anim):
 
 def bank(anim):
     clear()
-    os.system("figlet KINY")
+    print(result)
     print(f"{C}[{G}i{C}] DIGITE O CODIGO BANCARIO")
     print(f"{C}[{G}i{C}] Exemplo: 260")
     bank_input = input("=====>")
@@ -552,7 +553,7 @@ def bank(anim):
 
 def consultacpf(cpf_api, token):
     clear()
-    os.system('figlet KINY')
+    print(result)
     print(f'{C}[{G}i{C}] Informe o CPF sem / . ou -')
     cpf_input = input("===>")
 
@@ -561,7 +562,7 @@ def consultacpf(cpf_api, token):
     adress_data = request.json()
     clear()
     try:
-        os.system('figlet KINY')
+        print(result)
         print('CPF: {}'.format(adress_data['cpf']))
         print('Nome: {}'.format(adress_data['nome']))
         print('Sexo: {}'.format(adress_data['sexo']))
@@ -581,13 +582,13 @@ def consultacpf(cpf_api, token):
         time.sleep(2)
 
 def consultaoperadora():
-    os.system("figlet KINY")
+    print(result)
     print(f'{C}[{G}i{C}] Exemplo: 48952021826')
     print(f'{C}[{Y}i{C}] Limite de consultas: 6 consultas por hora.')
     print(f'{C}[{Y}i{C}] Digite o numero com DDD.')
     op_input = input("===>")
     clear()
-    os.system('figlet KINY')
+    print(result)
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
     try:
@@ -759,7 +760,7 @@ def cc_checker(token):
 
 def gerarlinkwhats():
     clear()
-    os.system('figlet KINY')
+    print(result)
     print(f'{C}[{G}i{C}] Digite o numero.')
     num = input('===>')
     print(f'{C}[{G}i{C}] Digite a mensagem.')
@@ -776,7 +777,7 @@ def gerarlinkwhats():
 
 def youtube():
     clear()
-    os.system('figlet KINY')
+    print(result)
     print(f'{C}[{G}i{C}] Selecione o modo de operação')
     print(f'{C}[{G}1{C}] MP4')
     print(f'{C}[{G}2{C}] MP3')
@@ -784,7 +785,7 @@ def youtube():
     print(f'{C}[{G}i{C}] Informe a url do video')
     url = input('===>')
     clear()
-    os.system('figlet KINY')
+    print(result)
     print(f'{C}[{G}i{C}] Baixando...por favor aguarde')
     if filetype == '1':
         file = YouTube(url).streams.first()
@@ -804,7 +805,7 @@ def youtube():
 
 
 def consultatel():
-    os.system('figlet KINY')
+    print(result)
     print(f'O que deseja fazer?')
     print(f'[{G}1{C}]Consultar operadora por numero')
     print(f'[{G}2{C}]Phone infoga')
@@ -823,7 +824,7 @@ def consultatel():
 
 def primenumero():
     clear()
-    os.system('figlet KINY')
+    print(result)
     print(f'{C}[{G}i{C}] Digite o numero(ex: 219××××××××).')
     requiem = input('===> ')
     data = requests.get('http://hollibot.com/syne57655/Tel.php?info={}'.format(requiem)).text
@@ -1344,7 +1345,7 @@ def nomemae():
 
 def consultanome():
     clear()
-    os.system('figlet KINY')
+    print(result)
     print(f'{C}[{G}i{C}] Informe o nome completo.')
     nome_input = input("===>")
 
