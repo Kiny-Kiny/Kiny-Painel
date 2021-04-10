@@ -153,6 +153,7 @@ token = ["f01e0024a26baef3cc53a2ac208dd141","5072097263","25d800a8b8e8b99d77c809
 welcome_msg = ["Que a força esteja com você", "Bem vindo", "Você é um mito", "Okaerinasai", "Esta pessoa é muito boa no Websexo ->", "Você é um baitola", "Você é corno", "Você é gay"]
 try:
     if __name__ == '__main__':
+        print(result)
         print(f'{C}[{Y}i{C}] {G} Checando por atualizacoes... {C}')
         update = subprocess.check_output('git pull', shell=True)
         if 'Already up to date' not in update.decode():
@@ -175,6 +176,7 @@ except:
     pass
 
 if login == 1:
+    print(result)
     tools.clear()
     user = input("USERNAME:  ")
     snh = 'VirtualInsanity'
