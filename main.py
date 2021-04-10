@@ -153,7 +153,7 @@ token = ["f01e0024a26baef3cc53a2ac208dd141","5072097263","25d800a8b8e8b99d77c809
 welcome_msg = ["Que a força esteja com você", "Bem vindo", "Você é um mito", "Okaerinasai", "Esta pessoa é muito boa no Websexo ->", "Você é um baitola", "Você é corno", "Você é gay"]
 try:
     if __name__ == '__main__':
-        print(result)
+        print(f'{C}{G}{result}{C}')
         print(f'{C}[{Y}i{C}] {G} Checando por atualizacoes... {C}')
         update = subprocess.check_output('git pull', shell=True)
         if 'Already up to date' not in update.decode():
@@ -177,7 +177,7 @@ except:
 
 if login == 1:
     tools.clear()
-    print(result)
+    print(f'{C}{G}{result}{C}')
     user = input("USERNAME:  ")
     snh = 'VirtualInsanity'
     if input("PASSWORD:  ").strip() == snh:
@@ -266,7 +266,7 @@ while(Sair == False):
     	pass
 
     if op == '19':
-        print(result)
+        print(f'{C}{G}{result}{C}')
         os.system("apt install mpg123 -y")
         os.system("clear")
         print(result)
@@ -278,28 +278,28 @@ while(Sair == False):
         music = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
         if music == "01" or music == "1":
         	os.system("clear")
-        	print(result)
+        	print(f'{C}{G}{result}{C}')
         	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
         	file = "TheWonderOfYou.mp3"
         	os.system("mpg123 " + file)
         	pass
         if music == "02" or music == "2":
         	os.system("clear")
-        	print(result)
+        	print(f'{C}{G}{result}{C}')
         	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
         	shura = "VirtualInsanityRemastered.mp3"
         	os.system("mpeg123" + shura)
         	pass
         if music == "03" or music == "3":
         	os.system("clear")
-        	print("result")
+        	print()
         	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
         	zangetsu = "BillieJean.mp3"
         	os.system("mpeg123" + zangetsu)
         	pass
         if music == "04" or music == "4":
         	os.system("clear")
-        	print(esult)
+        	print(f'{C}{G}{result}{C}')
         	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
         	josuke = "InTheCourtOfTheCrimsonKing.mp3"
         	os.system("mpeg123" + josuke)
@@ -314,7 +314,7 @@ while(Sair == False):
     
     if op == '98':
     	try:
-    		print(result)
+    		print(f'{C}{G}{result}{C}')
     		if __name__ == '__main__':
     			print(f'{C}[{Y}i{C}]{G} Checando por atualizacoes... {C}')
     			update = subprocess.check_output('git pull', shell=True)
@@ -348,7 +348,7 @@ while(Sair == False):
     	tools.nomemae()
 
     if op == '17' and kinymode == 1:
-        print(result)
+        print(f'{C}{G}{result}{C}')
         print()
         print(f'{C}[{G}1{C}] Gerar link whatsapp')
         print(f'{C}[{G}2{C}] Youtube downloader')
@@ -481,7 +481,7 @@ while(Sair == False):
         tools.ip(ip_api,mode,token)
 
     if op == '4' or op == '04':
-        print(result)
+        print(f'{C}{G}{result}{C}')
         print(f'''
 {C}[{Y}i{C}] O QUE DESEJA FAZER?
 {C}[{G}1{C}] GERAR CNPJ
