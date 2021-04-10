@@ -229,7 +229,7 @@ while(Sair == False):
     print(f"{C}{G}[15]{C} COVID19")
     print(f"{C}{G}[16]{C} CONSULTAR MÃE {C}[{R}OFF{C}]")
     print(f"{C}{G}[18]{C} CONSULTAR NOME {C}[{R}OFF{C}]")
-    print(f"{C}{G}[19]{C} ???")
+    print(f"{C}{G}[19]{C} MÚSICAS")
     if kinymode == 1:
     	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
@@ -264,9 +264,9 @@ while(Sair == False):
     	os.system("apt install mpg123 -y")
     	os.system("clear")
     	print(f'{C}[{Y}i{C}]{G} Ainda irei colocar mais músicas, mas eu tô com preguiça.{C}')
-    	print(f"{C}{G}[01 - Elvis Presley]{C} The Wonder Of You")
-    	print(f"{C}{G}[02 - Jamiroquai]{C} Virtual Insanity")
-    	print(f"{C}{G}[03 - Michael Jackson]{C} Billie Jean")
+    	print(f"01 - [{C}{G}Elvis Presley{C}] The Wonder Of You")
+    	print(f"02 - [{C}{G}Jamiroquai{C}] Virtual Insanity")
+    	print(f"03 - [{C}{G}Michael Jackson{C}] Billie Jean")
     	music = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
     	if music == "01" or music == "1":
     	           os.system("clear")
