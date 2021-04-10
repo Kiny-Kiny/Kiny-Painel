@@ -267,6 +267,7 @@ while(Sair == False):
     	print(f"01 - [{C}{G}Elvis Presley{C}] The Wonder Of You")
     	print(f"02 - [{C}{G}Jamiroquai{C}] Virtual Insanity")
     	print(f"03 - [{C}{G}Michael Jackson{C}] Billie Jean")
+    	print(f"04 - [{C}{G}King Crimson{C}] In The Court Of The Crimson King")
     	music = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
     	if music == "01" or music == "1":
     	           os.system("clear")
@@ -285,6 +286,12 @@ while(Sair == False):
     	           print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
     	           zangetsu = "BillieJean.mp3"
     	           os.system("mpg123 " + zangetsu)
+    	           pass
+    	if music == "04" or music == "4":
+    	           os.system("clear")
+    	           print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
+    	           josuke = "InTheCourtOfTheCrimsonKing.mp3"
+    	           os.system("mpg123 " + josuke)
     	           pass
     	else:
     		pass
