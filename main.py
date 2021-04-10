@@ -216,7 +216,7 @@ while(Sair == False):
     print(f'{C}[{Y}*{C}]Patrocinadores: Josuke(Douglas) e Margarina')
     print()
     print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
-    print(f"{C}[{G}Data de retorno das consultas{C}]: {C}[{R}NÃO DEFINIDA{C}]")
+    print(f"{C}[{Y}Data de retorno das consultas{C}]: {C}[{R}NÃO DEFINIDA{C}]")
     print(f"{C}{G}[1]{C} BUSCADOR DE CEP")
     print(f"{C}{G}[2]{C} GEO LOCALIZADOR DE IP")
     print(f"{C}{G}[3]{C} KINY-SITE-INFOGA")
