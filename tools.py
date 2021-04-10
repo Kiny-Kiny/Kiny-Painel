@@ -43,6 +43,8 @@ def aovivo():
     print()
     print(f"{C}[{G}*{C}] {C}[{G}Phone Infoga{C}] - A forma de consulta do PhoneInfoga é o DDI, DDD e o numero(ex: 5521979180533). quanto um numero tiver apenas 8 digitos, voce deve colocar um nove na frente(ex: 55 81 9××××-××××).")
     print()
+    print(f'{C}[{G}*{C}] Parem de perguntar se eu tenho outro painel, esse aqui é o meu único, ele sempre recebe atualização, ele tem uma opção para atualizar, é só usarem!')
+    print()
     print(f"Próxima Atualização {C}{R}NÃO tem data{C}")
     print()
     pause = input("Pressione Enter para retornar")
