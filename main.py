@@ -213,7 +213,7 @@ while(Sair == False):
     print(f'{C}[{Y}*{C}]Meu Pix: 228463d7-0bec-44bd-bddd-a780d9530f27')
     print(f'{C}[{Y}*{C}]Patrocinadores: Josuke(Douglas) e Margarina')
     print()
-    print(f'{C}[{Y}IMPORTANTE{C}]Leiam as Notas ao vivo.')
+    print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
     print(f"{C}[{G}Data de retorno das consultas{C}]: {C}[{R}NÃO DEFINIDA{C}]")
     print(f"{C}{G}[1]{C} BUSCADOR DE CEP")
     print(f"{C}{G}[2]{C} GEO LOCALIZADOR DE IP")
@@ -330,7 +330,7 @@ while(Sair == False):
     	tools.nomemae()
 
     if op == '17' and kinymode == 1:
-        os.system('figlet KINY')
+        print(result)
         print()
         print(f'{C}[{G}1{C}] Gerar link whatsapp')
         print(f'{C}[{G}2{C}] Youtube downloader')
@@ -350,7 +350,7 @@ while(Sair == False):
     	write()
 
     if op == '96':
-            os.system('figlet KINY')
+            print(result)
             print(f'{C}[{G}1{C}] Login : {login}')
             print(f'{C}[{G}2{C}] Trocar APIs')
             print(f'{C}[{G}3{C}] Limpar data')
@@ -463,7 +463,7 @@ while(Sair == False):
         tools.ip(ip_api,mode,token)
 
     if op == '4' or op == '04':
-        os.system('figlet KINY')
+        print(result)
         print(f'''
 {C}[{Y}i{C}] O QUE DESEJA FAZER?
 {C}[{G}1{C}] GERAR CNPJ
