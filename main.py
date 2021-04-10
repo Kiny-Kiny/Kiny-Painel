@@ -266,6 +266,7 @@ while(Sair == False):
     	print(f'{C}[{Y}i{C}]{G} Ainda irei colocar mais músicas, mas eu tô com preguiça.{C}')
     	print(f"{C}{G}[01 - Elvis Presley]{C} The Wonder Of You")
     	print(f"{C}{G}[02 - Jamiroquai]{C} Virtual Insanity")
+    	print(f"{C}{G}[03 - Michael Jackson]{C} Billie Jean")
     	music = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
     	if music == "01" or music == "1":
     	           os.system("clear")
@@ -278,6 +279,12 @@ while(Sair == False):
     	           print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
     	           shura = "VirtualInsanityRemastered.mp3"
     	           os.system("mpg123 " + shura)
+    	           pass
+    	if music == "03" or music == "2":
+    	           os.system("clear")
+    	           print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
+    	           zangetsu = "BillieJean.mp3"
+    	           os.system("mpg123 " + zangetsu)
     	           pass
     	else:
     		pass
