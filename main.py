@@ -264,8 +264,10 @@ while(Sair == False):
     	pass
 
     if op == '19':
+        print(result)
     	os.system("apt install mpg123 -y")
     	os.system("clear")
+        print(result)
     	print(f'{C}[{Y}i{C}]{G} Ainda irei colocar mais músicas, mas eu tô com preguiça.{C}')
     	print(f"01 - [{C}{G}Elvis Presley{C}] The Wonder Of You")
     	print(f"02 - [{C}{G}Jamiroquai{C}] Virtual Insanity")
@@ -273,24 +275,28 @@ while(Sair == False):
     	print(f"04 - [{C}{G}King Crimson{C}] In The Court Of The Crimson King")
     	music = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
     	if music == "01" or music == "1":
+                   print(result)
     	           os.system("clear")
     	           print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
     	           file = "TheWonderOfYou.mp3"
     	           os.system("mpg123 " + file)
     	           pass
     	if music == "02" or music == "2":
+                   print(result)
     	           os.system("clear")
     	           print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
     	           shura = "VirtualInsanityRemastered.mp3"
     	           os.system("mpg123 " + shura)
     	           pass
     	if music == "03" or music == "2":
+                   print(result)
     	           os.system("clear")
     	           print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
     	           zangetsu = "BillieJean.mp3"
     	           os.system("mpg123 " + zangetsu)
     	           pass
     	if music == "04" or music == "4":
+                   print(result)
     	           os.system("clear")
     	           print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
     	           josuke = "InTheCourtOfTheCrimsonKing.mp3"
