@@ -33,18 +33,17 @@ def clear():
 def aovivo():
     print(f'{C}==={R}{C} Notas de ao vivo {C}==={R}{C}')
     print()
-    print("Esta parte foi criada par esclarecer algumas coisas sobre o script")
+    print(f"{C}[{R}*{C}] Esta parte foi criada par esclarecer algumas coisas sobre o script, peço que esperem e parem de vir no meu PV perguntar o motivo de vocês não conseguirem consultar.")
     print()
-    print("Q: As consultas por número parou pela API estar OFF. Mas consegui um novo patrocinador para comprar uma database e uma API")
-    print(
-        "Q: Minha Chave PIX: 228463d7-0bec-44bd-bddd-a780d9530f27")
+    print(f"{C}[{R}*{C}] As consultas por número parou pela API estar {C}[{R}OFF{C}]. Mas consegui um novo patrocinador para comprar uma database e uma API")
     print()
-    print("Q: Parem de vir no meu PV perguntar como consulta ou porque as Infos não chegam! Gente, a API está com problemas, ela está caindo e voltando toda hora, ela é muito bugada. Às vezes também as Informações nem aparecem pois as info não estão na DB do Painel. O formato de consulta da consulta premium é 219×××××××× ou 719×××××××, alguns DDDs tem apenas oito digitos, então você deve colocar um 9 entre o DDD e o Número(EX: 819××××××××).")
+    print(f"{C}[{G}*{C}] Minha Chave PIX: {C}[{G}228463d7-0bec-44bd-bddd-a780d9530f27{C}]")
     print()
-    print(
-        "Q: PhoneInfoga - A forma de consulta do PhoneInfoga é o DDI, DDD e o numero(ex: 5521979180533). quanto um numero tiver apenas 8 digitos, voce deve colocar um nove na frente(ex: 55 81 9××××-××××).")
+    print(f"{C}[{G}*{C}] Parem de vir no meu PV perguntar como consulta ou porque as Infos não chegam, eu tô sem API pra essas consultas!")
     print()
-    print("Q: Próxima Atualizacao sai em Abril.")
+    print(f"{C}[{G}*{C}] {C}[{G}Phone Infoga{C}] - A forma de consulta do PhoneInfoga é o DDI, DDD e o numero(ex: 5521979180533). quanto um numero tiver apenas 8 digitos, voce deve colocar um nove na frente(ex: 55 81 9××××-××××).")
+    print()
+    print(f"Próxima Atualização {C}{R}NÃO tem data{C}")
     print()
     pause = input("Pressione Enter para retornar")
 
