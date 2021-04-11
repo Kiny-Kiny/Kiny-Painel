@@ -216,6 +216,7 @@ while(Sair == False):
     print("88888o, 888  888    Y88   ,8P")
     time.sleep(0.5)
     print("MMM MMPMMM  MMM     YM  mM")
+    time.sleep(1)
     tools.clear()
     print(f"Coded By: {CY} KINY {CO} and {CY} YATO {CO} in 07/02/2021")
     print()
