@@ -289,21 +289,28 @@ while(Sair == False):
         	print(f'{C}{G}{result}{C}')
         	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
         	shura = "VirtualInsanityRemastered.mp3"
-        	os.system("mpeg123" + shura)
+        	os.system("mpg123" + shura)
         	pass
         if music == "03" or music == "3":
         	os.system("clear")
         	print()
         	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
         	zangetsu = "BillieJean.mp3"
-        	os.system("mpeg123" + zangetsu)
+        	os.system("mpg123" + zangetsu)
         	pass
         if music == "04" or music == "4":
         	os.system("clear")
         	print(f'{C}{G}{result}{C}')
         	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
         	josuke = "InTheCourtOfTheCrimsonKing.mp3"
-        	os.system("mpeg123" + josuke)
+        	os.system("mpg123" + josuke)
+        	pass
+        if music == "05" or music == "5":
+        	os.system("clear")
+        	print(f'{C}{G}{result}{C}')
+        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
+        	sus = "LoveTrain.mp3"
+        	os.system("mpg123" + sus)
         	pass
         else:
         	pass
