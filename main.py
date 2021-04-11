@@ -41,7 +41,7 @@ except:
         time.sleep(1)
     restart()
 
-result = pyfiglet.figlet_format("Kiny", font = "poison"  )
+result = pyfiglet.figlet_format("Kiny", font = "sblood"  )
 
 def clear():
    if platform.system() == "Windows":
