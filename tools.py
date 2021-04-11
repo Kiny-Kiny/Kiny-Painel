@@ -7,7 +7,7 @@ CY = '\033[1;36m'
 Y = '\033[1;33m'
 G = '\033[1;32m'
 RT = '\033[;0m'
-import os, base64, requests, time, json, re, random, platform, sys, signal, atexit, argparse, hashlib, urllib3, html5lib
+import os, base64, requests, time, json, re, random, platform, sys, signal, atexit, argparse, hashlib, urllib3, html5lib, pyfiglet
 from pytube import YouTube
 # from fordev.generator import people #presente pra quem estiver lendo
 from time import sleep
