@@ -178,9 +178,9 @@ except:
 if login == 1:
     tools.clear()
     print(f'{C}{G}{result}{C}')
-    user = input("USERNAME:  ")
+    user = input(f"{C}[{G}+{C}]USERNAME:  ")
     snh = 'VirtualInsanity'
-    if input("PASSWORD:  ").strip() == snh:
+    if input(f"{C}[{G}+{C}]PASSWORD:  ").strip() == snh:
         tools.clear()
     else:
         print(f"{C}[{R}ERROR{C}] Wrong Password....Yare Yare")
