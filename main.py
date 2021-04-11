@@ -305,6 +305,13 @@ while(Sair == False):
         	josuke = "InTheCourtOfTheCrimsonKing.mp3"
         	os.system("mpg123" + josuke)
         	pass
+        if music == "05" or music == "5":
+        	os.system("clear")
+        	print(f'{C}{G}{result}{C}')
+        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
+        	D = "LoveTrain.mp3"
+        	os.system("mpg123" + D)
+        	pass
         else:
         	pass
 
