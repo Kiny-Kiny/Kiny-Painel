@@ -1356,7 +1356,7 @@ def consultanome():
 
     adress_data = request.json()
     clear()
-    os.system('figlet KINY')
+    print(f'{C}{G}{result}{C}')
     print(request.text)
     print(f"{C}{G}DESEJA REALIZAR UMA NOVA CONSULTA?{C}")
     print(f"{C}[{G}1{C}] Sim")
