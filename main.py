@@ -207,6 +207,16 @@ Sair = False
 while(Sair == False):
 
     tools.clear()
+    print(":::  .   ::::::.    :::..-:.     ::-.")
+    time.sleep(0.5)
+    print(";;; .;;,.;;;`;;;;,  `;;; ';;.   ;;;;'                                                    [[[[[/'  [[[  [[[[[. '[[   '[[,[[[")
+    time.sleep(0.5)
+    print("_$$$$,    $$$  $$$ Y$c$$     c$$")
+    time.sleep(0.5)
+    print("88888o, 888  888    Y88   ,8P")
+    time.sleep(0.5)
+    print("MMM MMPMMM  MMM     YM  mM")
+    tools.clear()
     print(f"Coded By: {CY} KINY {CO} and {CY} YATO {CO} in 07/02/2021")
     print()
     print(f'{C}{G}{result}{C}')
