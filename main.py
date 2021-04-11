@@ -275,6 +275,7 @@ while(Sair == False):
         print(f"02 - [{C}{G}Jamiroquai{C}] Virtual Insanity")
         print(f"03 - [{C}{G}Michael Jackson{C}] Billie Jean")
         print(f"04 - [{C}{G}King Crimson{C}] In The Court Of The Crimson King")
+        print(f"05 - [{C}{G}The O'Jays{C}] Love Train")
         music = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
         if music == "01" or music == "1":
         	os.system("clear")
@@ -303,6 +304,13 @@ while(Sair == False):
         	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
         	josuke = "InTheCourtOfTheCrimsonKing.mp3"
         	os.system("mpeg123" + josuke)
+        	pass
+        if music == "05" or music == "5":
+        	os.system("clear")
+        	print(f'{C}{G}{result}{C}')
+        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
+        	tchola = "LoveTrain.mp3"
+        	os.system("mpeg123" + tchola)
         	pass
         else:
         	pass
