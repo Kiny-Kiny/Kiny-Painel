@@ -416,7 +416,7 @@ while(Sair == False):
     	write()
 
     if op == '96':
-            print(result)
+            print(f'{C}{G}{result}{C}')
             print(f'{C}[{G}1{C}] Login : {login}')
             print(f'{C}[{G}2{C}] Trocar APIs')
             print(f'{C}[{G}3{C}] Limpar data')
