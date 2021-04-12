@@ -91,6 +91,18 @@ def gbzap():
    else:
        os.system("termux-open-url https://chat.whatsapp.com/Gnv9j0SbMtP2uO39CfjMqu")
 
+def zap2():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("https://chat.whatsapp.com/G1IBFwwbI75EBIhUUS17sp")
+   else:
+       os.system("termux-open-url https://chat.whatsapp.com/G1IBFwwbI75EBIhUUS17sp")
+
+def par2():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("https://chat.whatsapp.com/LVvaqRiOer1INH1Q4juOWr")
+   else:
+       os.system("termux-open-url https://chat.whatsapp.com/LVvaqRiOer1INH1Q4juOWr")
+
 if sys.version_info[0] < 3:
     print(f'{C}[{R}ERROR{C}] Necessário utilizar python3!')
     print(f'{C}[{Y}i{C}] Instale-o com base em sua distribuição.')
@@ -245,7 +257,7 @@ while(Sair == False):
     if anim == 1:
         time.sleep(1)
     print(f'{C}[{Y}*{C}]Meu Pix: 228463d7-0bec-44bd-bddd-a780d9530f27')
-    print(f'{C}[{Y}*{C}]Patrocinadores: Josuke(Douglas) e Margarina')
+    print(f'{C}[{Y}*{C}]Patrocinadores: Josuke(Douglas), Margarina e ♞⃟𝜣͢𝑭𝑵–M4ŘŤÏŇ§♞⃟🇱🇰LÍDER')
     print()
     print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
     print(f"{C}[{Y}Data de retorno das consultas{C}]: {C}[{R}NÃO DEFINIDA{C}]")
@@ -295,7 +307,7 @@ while(Sair == False):
     else:
     	print(f"{C}{G}[95]{C} Mudar username")
     time.sleep(0.2)
-    print(f"{C}{G}[90]{C} Meu grupo")
+    print(f"{C}{G}[90]{C} Meus grupos[1]")
     time.sleep(0.2)
     print(f"{C}{G}[92]{C} Meu Whatsapp")
     time.sleep(0.2)
@@ -318,9 +330,24 @@ while(Sair == False):
     tools.clear()
 
     if op == '90':
-    	gbzap()
-    	pass
-
+    	os.system('clear')
+    	print(f'{C}{G}{result}{C}')
+        print(f"01 - [{C}{G}KinyCrimson[1]{C}]")
+        print(f"02 - [{C}{G}KinyCrimson[2]{C}]")
+        print()
+        print(f"03 - [{C}{G}OFF NOTE[Parceria]{C}]")
+        grupo = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
+        if grupo == "01" or grupo == "1":
+        	gbzapzap()
+        	pass
+        if grupo == "02" or grupo == "2":
+        	zap2()
+        	pass
+        if grupo == "03" or grupo == "3":
+        	par2()
+    	else:
+        	pass
+        
     if op == '92':
     	zapzap()
     	pass
