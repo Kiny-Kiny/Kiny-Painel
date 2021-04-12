@@ -301,7 +301,11 @@ while(Sair == False):
     else:
     	print(f"{C}{G}[95]{C} Mudar username")
     time.sleep(0.2)
-    print(f"{C}{G}[90]{C} Meus grupos")
+    print(f"{C}{G}[88]{C} Grupo Perceiro")
+    time.sleep(0.2)
+    print(f"{C}{G}[89]{C} Meu grupo[1]")
+    time.sleep(0.2)
+    print(f"{C}{G}[90]{C} Meu grupo[2]")
     time.sleep(0.2)
     print(f"{C}{G}[92]{C} Meu Whatsapp")
     time.sleep(0.2)
@@ -323,7 +327,15 @@ while(Sair == False):
     op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
     tools.clear()
 
+    if op == '88':
+    	par2()
+    	pass
+
     if op == '90':
+    	zap2()
+    	pass
+
+    if op == '89':
     	gbzapzap()
     	pass
 
