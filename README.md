@@ -1,9 +1,8 @@
 # [PAINEL-DE-CONSULTA 3.8(BETA)] &middot; [!["GitHub Discussions"](https://img.shields.io/badge/%20GitHub-%20Discussions-gray.svg?longCache=true&logo=github&colorB=purple)](https://github.com/Kiny-Kiny/Kiny-Painel/discussions)
-![](https://img.shields.io/badge/Kiny-Kiny/Kiny-Painel-orange?style=for-the-badge&logo=python.svg) 
 
 <p align="center">
   <img alt="Kiny-Kiny' Github Stats" src="https://github-readme-stats.vercel.app/api?username=Kiny-Kiny&show_icons=true&include_all_commits=true&hide_border=true" />
-<!--  <img alt="profile pic" width="195px" src="https://avatars2.githubusercontent.com/u/26059688?s=460&u=d41b000a62eab50d000c3da604d151cec27bd850&v=4" />  -->
+<!--  <img alt="profile pic" width="195px" src="https://avatars2.githubusercontent.com/u/70079144?s=460&u=d41b000a62eab50d000c3da604d151cec27bd850&v=4" />  -->
 <!--  <img src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=Kiny-Kiny&hide=ruby,perl&hide_border=true" />  -->
 </p>
 
