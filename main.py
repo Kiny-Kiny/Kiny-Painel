@@ -257,7 +257,7 @@ while(Sair == False):
     if anim == 1:
         time.sleep(1)
     print(f'{C}[{Y}*{C}]Meu Pix: 228463d7-0bec-44bd-bddd-a780d9530f27')
-    print(f'{C}[{Y}*{C}]Patrocinadores:  {CY}Josuke(Douglas){CO}, {CY}Margarina{CO} e {CY}♞⃟𝜣͢𝑭𝑵–M4ŘŤÏŇ§♞⃟🇱🇰LÍDER{CO}')
+    print(f'{C}[{Y}*{C}]Patrocinadores: {CY}Josuke(Douglas){CO}, {CY}Margarina{CO} e {CY}♞⃟𝜣͢𝑭𝑵–M4ŘŤÏŇ§♞⃟🇱🇰LÍDER{CO}')
     print()
     print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
     print(f"{C}[{Y}Data de retorno das consultas{C}]: {C}[{R}NÃO DEFINIDA{C}]")
