@@ -250,7 +250,7 @@ while(Sair == False):
     print("MMM MMPMMM  MMM     YM  mM")
     time.sleep(2)
     tools.clear()
-    print(f"Coded By: {CY} KINY {CO} and {CY} YATO {CO} in 07/02/2021")
+    print(f"{C}[{G}Dev's{C}] Coded By: {CY} KINY {CO} and {CY} YATO {CO} in 07/02/2021")
     print()
     print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}*{C}]'+random.choice(welcome_msg)+' '+str(user)+'!')
