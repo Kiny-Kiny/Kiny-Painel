@@ -1,5 +1,5 @@
 # [PAINEL-DE-CONSULTA 3.8(BETA)] &middot; [!["GitHub Discussions"](https://img.shields.io/badge/%20GitHub-%20Discussions-gray.svg?longCache=true&logo=github&colorB=purple)](https://github.com/Kiny-Kiny/Kiny-Painel/discussions)
-![](https://img.shields.io/badge/Kiny-Kiny-Kiny-Painel-orange?style=for-the-badge&logo=python.svg) 
+![](https://img.shields.io/badge/Kiny-Kiny/Kiny-Painel-orange?style=for-the-badge&logo=python.svg) 
 
 <p align="center">
 <img src="https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/images%20(46).jpeg">
