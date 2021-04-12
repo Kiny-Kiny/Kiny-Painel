@@ -574,4 +574,4 @@ while(Sair == False):
         kct = input("===> ")
         tools.cnpj(kct,token,anim)
 os.system('rm -rf __pycache__')
-print(f'{C}{R} Arrivederci{C}')
+print(f'[{C}{R}+{C}] [{C}{R}Arrivederci{C}]')
