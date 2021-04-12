@@ -309,13 +309,14 @@ while(Sair == False):
         print(f'{C}{G}{result}{C}')
         os.system("apt install mpg123 -y")
         os.system("clear")
-        print(result)
+        print(f'{C}{G}{result}{C}')
         print(f'{C}[{Y}i{C}]{G} Ainda irei colocar mais músicas, mas eu tô com preguiça.{C}')
         print(f"01 - [{C}{G}Elvis Presley{C}] The Wonder Of You")
         print(f"02 - [{C}{G}Jamiroquai{C}] Virtual Insanity")
         print(f"03 - [{C}{G}Michael Jackson{C}] Billie Jean")
         print(f"04 - [{C}{G}King Crimson{C}] In The Court Of The Crimson King")
         print(f"05 - [{C}{G}The O'Jays{C}] Love Train")
+        print(f"06 - [{C}{G}Louis Armstrong{C}] What A Wonderful World")
         music = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
         if music == "01" or music == "1":
         	os.system("clear")
@@ -351,6 +352,13 @@ while(Sair == False):
         	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
         	D = "LoveTrain.mp3"
         	os.system("mpg123 " + D)
+        	pass
+        if music == "06" or music == "6":
+        	os.system("clear")
+        	print(f'{C}{G}{result}{C}')
+        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
+        	h = "WhatAWonderfulWorld.mp3"
+        	os.system("mpg123 " + h)
         	pass
         else:
         	pass
