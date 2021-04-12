@@ -43,6 +43,23 @@ except:
 
 result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
 
+def draw_to_screen(content):
+    clear_console = 'clear' if os.name == 'posix' else 'CLS'
+    os.system(clear_console)
+    sys.stdout.write(content)
+    sys.stdout.flush()
+    time.sleep(0.2)
+
+def load_font():
+    f=open("bigmoney.txt", 'r')
+    result = {}
+    for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ ":
+        image = ""
+        for j in range(11):
+            image += f.readline()
+        result[letter] = image
+    return result
+
 def clear():
    if platform.system() == "Windows":
       os.system("cls")
@@ -206,6 +223,9 @@ except:
 Sair = False
 while(Sair == False):
 
+    letter_dict = load_font()
+    for letter in "K I N Y":
+        draw_to_screen(letter_dict[letter])
     tools.clear()
     print(":::  .   ::::::.    :::..-:.     ::-.")
     time.sleep(0.5)
