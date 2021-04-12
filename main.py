@@ -328,8 +328,7 @@ while(Sair == False):
     	print(f'{C}{G}{result}{C}')
     	print(f"01 - [{C}{G}KinyCrimson[1]{C}]")
     	print(f"02 - [{C}{G}KinyCrimson[2]{C}]")
-    	print()
-        print(f"03 - [{C}{G}OFF NOTE[Parceria]{C}]")
+    	print(f"03 - [{C}{G}OFF NOTE[Parceria]")
         grupo = input(f"{C}[{G}Digite o número do grupo{C}]===>{B}").strip()
         if grupo == "01" or grupo == "1":
         	gbzapzap()
