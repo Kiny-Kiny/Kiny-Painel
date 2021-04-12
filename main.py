@@ -51,7 +51,7 @@ def draw_to_screen(content):
     time.sleep(0.2)
 
 def load_font():
-    f=open("bigmoney.txt", 'r')
+    f=open("amogus.txt", 'r')
     result = {}
     for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ ":
         image = ""
