@@ -97,6 +97,12 @@ def zap2():
    else:
        os.system("termux-open-url https://chat.whatsapp.com/G1IBFwwbI75EBIhUUS17sp")
 
+def par2():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("https://chat.whatsapp.com/LVvaqRiOer1INH1Q4juOWr")
+   else:
+       os.system("termux-open-url https://chat.whatsapp.com/LVvaqRiOer1INH1Q4juOWr")
+
 if sys.version_info[0] < 3:
     print(f'{C}[{R}ERROR{C}] Necessário utilizar python3!')
     print(f'{C}[{Y}i{C}] Instale-o com base em sua distribuição.')
