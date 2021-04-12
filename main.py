@@ -188,7 +188,7 @@ try:
         update = subprocess.check_output('git pull', shell=True)
         if 'Already up to date' not in update.decode():
             print(f'{C}[{Y}*{C}] {G}Atualizacao instalada!\n{C}[{Y}*{C}]Reiniciando o painel...{C}')
-            print("Loading:")
+            print(f"{C}[{G}+{C}] Loading:")
             #animation = ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"]
             animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]", "[■■■■■■■■■■]"]
             for i in range(len(animation)):
@@ -429,7 +429,7 @@ while(Sair == False):
     			update = subprocess.check_output('git pull', shell=True)
     			if 'Already up to date' not in update.decode():
     				print(f'{C}[{Y}*{C}] {G}Atualizacao instalada!\n{C}[{Y}*{C}]Reiniciando o painel...{C}')
-    				print("Loading:")
+    				print(f"{C}[{G}+{C}] Loading:")
     				#animation = ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"]
     				animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]", "[■■■■■■■■■■]"]
     				for i in range(len(animation)):
