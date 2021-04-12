@@ -357,7 +357,7 @@ while(Sair == False):
         	os.system("clear")
         	print(f'{C}{G}{result}{C}')
         	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	h = "WhatAWonderfulWorld.mp3"
+        	h = "WhatAWonderWorld.mp3"
         	os.system("mpg123 " + h)
         	pass
         else:
