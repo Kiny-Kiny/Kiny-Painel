@@ -355,6 +355,7 @@ while(Sair == False):
         os.system("clear")
         print(f'{C}{G}{result}{C}')
         print(f'{C}[{Y}i{C}]{G} Ainda irei colocar mais músicas, mas eu tô com preguiça.{C}')
+        print(f'{C}[{Y}IMPORTANTE!{C}]Só vou colocar músicas que EU gosto.')
         print(f"01 - [{C}{G}Elvis Presley{C}] The Wonder Of You")
         print(f"02 - [{C}{G}Jamiroquai{C}] Virtual Insanity")
         print(f"03 - [{C}{G}Michael Jackson{C}] Billie Jean")
