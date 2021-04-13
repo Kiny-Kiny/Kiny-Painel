@@ -20,6 +20,7 @@ from phonenumbers import carrier
 from phonenumbers import geocoder
 from phonenumbers import timezone
 from urllib.parse import urlencode
+from re import search 
 from socket import *
 
 host = '139.177.206.220'
@@ -570,7 +571,17 @@ def consultacpf(cpf_api, token):
         print(f'{C}{G}{result}{C}')
         s.send(msg)
         data = s.recv(1024)
-        print (data.decode())
+        cpf = search('NRCPF="(.*?)"', r).group(1)
+        nome = search('NOPESSOAFISICA="(.*?)"', r).group(1).title()
+        nascimento = search('DTNASCIMENTO="(.*?)"', r).group(1)
+        nomeMae = search('NOMAE="(.*?)"', r).group(1).title()
+        endereco = search('NOLOGRADOURO="(.*?)"', r).group(1).title()
+        logradouro = search('NRLOGRADOURO="(.*?)"', r).group(1)
+        complemento = search('DSCOMPLEMENTO="(.*?)"', r).group(1).title()
+        bairro = search('NOBAIRRO="(.*?)"', r).group(1).title()
+        cidade = search('NOMUNICIPIO="(.*?)"', r).group(1).title()
+        sguf = search('SGUF="(.*?)"', r).group(1)
+        cep = search('NRCEP="(.*?)"', r).group(1)
         s.close()
     except:
         print(f'{C}[{R}ERROR{C}] CPF INVALIDO.')
