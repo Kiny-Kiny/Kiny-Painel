@@ -256,7 +256,7 @@ while(Sair == False):
     print(f'{C}[{G}*{C}]'+random.choice(welcome_msg)+' '+str(user)+'!')
     if anim == 1:
         time.sleep(1)
-    print(f'{C}[{Y}*{C}]Meu Pix: 0018f93e-23c2-4c25-b8e5-c29809786d94')
+    print(f'{C}[{Y}*{C}]Meu Pix: {CY}0018f93e-23c2-4c25-b8e5-c29809786d94{CO}')
     print(f'{C}[{Y}*{C}]Patrocinadores: {CY}Josuke(Douglas){CO}, {CY}Margarina{CO} e {CY}♞⃟𝜣͢𝑭𝑵–M4ŘŤÏŇ§♞⃟🇱🇰LÍDER{CO}')
     print()
     print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
