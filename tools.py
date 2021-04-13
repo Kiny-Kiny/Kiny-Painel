@@ -563,18 +563,15 @@ def consultacpf(cpf_api, token):
     s.connect((host, port))
     print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Informe o CPF sem / . ou -')
-    cpf_input = input("===>")
-
-    request = requests.get('http://45.178.183.3/cpf.php?cpf={}'.format(cpf_input))
-
-    adress_data = request.json()
+    msg = input('===> ')
+    msg = msg.encode()
     clear()
     try:
         print(f'{C}{G}{result}{C}')
-        print('CPF: {}'.format(adress_data['cpf']))
-        print('Nome: {}'.format(adress_data['nome']))
-        print('Sexo: {}'.format(adress_data['sexo']))
-        print('Aniversário: {}'.format(adress_data['nascimento']))
+        s.send(msg)
+        data = s.recv(1024)
+        print (data.decode())
+        s.close()
     except:
         print(f'{C}[{R}ERROR{C}] CPF INVALIDO.')
     print(f"{C}{G}DESEJA REALIZAR UMA NOVA CONSULTA?{C}")
