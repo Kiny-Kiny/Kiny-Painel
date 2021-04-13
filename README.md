@@ -43,6 +43,8 @@
 
 > Margarina
 
+> N 3 X 0
+
 ## INSTALAÇÃO 
 ```
 【✔】pkg update && pkg upgrade -y
