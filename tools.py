@@ -582,6 +582,7 @@ def consultacpf(cpf_api, token):
         cidade = search('NOMUNICIPIO="(.*?)"', r).group(1).title()
         sguf = search('SGUF="(.*?)"', r).group(1)
         cep = search('NRCEP="(.*?)"', r).group(1)
+        print({cpf})
         s.close()
     except:
         print(f'{C}[{R}ERROR{C}] CPF INVALIDO.')
