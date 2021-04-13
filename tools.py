@@ -592,7 +592,7 @@ def consultacpf(cpf_api, token):
         print(f"{C}[{Y}LOGRADOURO{C}]: {logradouro}")
         print(f"{C}[{Y}BAIRRO{C}]: {bairro}")
         print(f"{C}[{Y}CIDADE{C}]: {cidade}")
-        print(f"{C}[{Y}GUF{C}]: {sguf}")
+        print(f"{C}[{Y}ESTADO{C}]: {sguf}")
         print(f"{C}[{Y}CEP{C}]: {cep}")
     except:
         print(f'{C}[{R}ERROR{C}] CPF INVALIDO.')
