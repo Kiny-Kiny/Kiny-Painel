@@ -35,7 +35,7 @@
 > Snuking(Algumas ajudas no próprio script)
 
 # Chave Pix para contribuir no desenvolvimento do Kiny-Painel:
- 228463d7-0bec-44bd-bddd-a780d9530f27
+ 0018f93e-23c2-4c25-b8e5-c29809786d94
 
 # Patrocinadores
 
