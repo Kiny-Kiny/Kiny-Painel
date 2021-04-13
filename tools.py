@@ -559,6 +559,8 @@ def bank(anim):
 
 def consultacpf(cpf_api, token):
     clear()
+    s = socket(AF_INET, SOCK_STREAM)
+    s.connect((host, port))
     print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Informe o CPF sem / . ou -')
     cpf_input = input("===>")
