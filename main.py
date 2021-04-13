@@ -260,7 +260,7 @@ while(Sair == False):
     print(f'{C}[{Y}*{C}]Patrocinadores: {CY}Josuke(Douglas){CO}, {CY}Margarina{CO} e {CY}♞⃟𝜣͢𝑭𝑵–M4ŘŤÏŇ§♞⃟🇱🇰LÍDER{CO}')
     print()
     print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
-    print(f"{C}[{Y}Data de retorno das consultas{C}]: {C}[{Y}28/04/2021{C}]")
+    print(f"{C}[{Y}Data de retorno das consultas{C}]: {C}[{G}28/04/2021{C}]")
     time.sleep(0.2)
     print(f"{C}{G}[1]{C} BUSCADOR DE CEP")
     time.sleep(0.2)
