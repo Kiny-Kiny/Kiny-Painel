@@ -425,6 +425,7 @@ def cep(anim):
     else:
         print(f'{C}[{R}i{C}] Opção inválida')
         time.sleep(2)
+        pass
 
 
 def kiny_infoga():
