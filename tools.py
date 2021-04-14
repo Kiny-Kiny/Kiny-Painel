@@ -37,8 +37,10 @@ def clear():
 
 def chat():
 	os.system("pkg install irssi -y")
+	os.system("clear")
 	print(f'{C}{G}{result}{C}')
 	print(f'{C}[{Y}i{C}] TUTORIAL DE COMO ENTRAR NO CHAT')
+	print(f'{C}[{R}+{C}] RECOMENDO O USO DD VPN')
 	print()
 	print(f'{C}[{G}i{C}] /connect chat.freenode.net') 
 	print(f'{C}[{G}i{C}] /nick (seu nickname)')
