@@ -23,7 +23,7 @@ from urllib.parse import urlencode
 from re import search 
 from socket import *
 
-host = '139.177.206.220'
+host = '45.79.39.64'
 port = 55555
 
 result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
