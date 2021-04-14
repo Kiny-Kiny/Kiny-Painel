@@ -349,7 +349,7 @@ while(Sair == False):
     	pass
 
     if op == '89':
-    	gbzapzap()
+    	gbzap()
     	pass
 
     if op == '92':
