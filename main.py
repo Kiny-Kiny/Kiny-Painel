@@ -238,6 +238,7 @@ while(Sair == False):
     letter_dict = load_font()
     for letter in "K I N Y":
         draw_to_screen(letter_dict[letter])
+    tools.att()
     tools.clear()
     print(":::  .   ::::::.    :::..-:.     ::-.")
     time.sleep(0.5)
@@ -338,22 +339,27 @@ while(Sair == False):
 
     if op == '20':
     	tools.chat()
+    	tools.att()
     	pass
 
     if op == '88':
     	par2()
+    	tools.att()
     	pass
 
     if op == '90':
     	zap2()
+    	tools.att()
     	pass
 
     if op == '89':
     	gbzap()
+    	tools.att()
     	pass
 
     if op == '92':
     	zapzap()
+    	tools.att()
     	pass
 
     if op == '19':
@@ -421,11 +427,13 @@ while(Sair == False):
         	os.system("mpg123 " + m)
         	pass
         else:
+        	tools.att()
         	pass
 
     
     if op == '93':
     	youtube()
+    	tools.att()
     	pass
     
     if op == '98':
@@ -456,12 +464,15 @@ while(Sair == False):
 
     if op == '94':
     	tools.aovivo()
+    	tools.att()
 
     if op == '18':
     	tools.consultanome()
+    	tools.att()
 
     if op == '16':
     	tools.nomemae()
+    	tools.att()
 
     if op == '17' and kinymode == 1:
         print(f'{C}{G}{result}{C}')
@@ -482,6 +493,7 @@ while(Sair == False):
     	print(f'{C}[{G}i{C}] Me diga como quer ser chamado.')
     	user = input('===>')
     	write()
+    	tools.att()
 
     if op == '96':
             print(f'{C}{G}{result}{C}')
@@ -543,42 +555,55 @@ while(Sair == False):
 
     if op == '97':
         tools.notes()
+    	tools.att()
 
     if op == '15':
     	tools.covid19()
+    	tools.att()
 
     if op == '14':
         tools.cc_checker(token)
+    	tools.att()
 
     if op == '13':
     	tools.ip(ip_api,0,token)
+    	tools.att()
 
     if op == '12':
         tools.gerar_pessoa(token)
+    	tools.att()
 
     if op == '11':
         tools.bin()
+    	tools.att()
 
     if op == '10':
         tools.consultatel()
+    	tools.att()
 
     if op == '9' or op == '09':
         tools.crm(token)
+    	tools.att()
 
     if op == '8' or op == '08':
         tools.consultaplaca()
+    	tools.att()
 
     if op == '7' or op == '07':
         tools.cns(token,anim)
+    	tools.att()
 
     if op == '6' or op == '06':
         tools.consultacpf(cpf_api,token)
+    	tools.att()
 
     if op == '5' or op == '05':
         tools.bank(anim)
+    	tools.att()
 
     if op == '1' or op == '01':
         tools.cep(anim)
+    	tools.att()
 
     if op == '00' or op == '0':
         os.system("clear")
@@ -587,14 +612,17 @@ while(Sair == False):
     if op == '99' or op == '99':
         os.system("clear")
         os.system("pkg update && pkg update")
+    	tools.att()
         pass
 
     if op == '3' or op == '03':
         tools.kiny_infoga()
+    	tools.att()
 
     if op == '2' or op == '02':
         mode = 1
         tools.ip(ip_api,mode,token)
+    	tools.att()
 
     if op == '4' or op == '04':
         print(f'{C}{G}{result}{C}')
@@ -605,5 +633,6 @@ while(Sair == False):
         ''')
         kct = input("===> ")
         tools.cnpj(kct,token,anim)
+    	tools.att()
 os.system('rm -rf __pycache__')
 print(f'[{C}{R}+{C}] [{C}{R}Arrivederci{C}]')
