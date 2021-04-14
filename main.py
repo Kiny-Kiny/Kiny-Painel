@@ -298,6 +298,8 @@ while(Sair == False):
     print(f"{C}{G}[18]{C} CONSULTAR NOME {C}[{R}OFF{C}]")
     time.sleep(0.2)
     print(f"{C}{G}[19]{C} MÚSICAS")
+    time.sleep(0.2)
+    print(f"{C}{G}[20]{C} CHAT")
     if kinymode == 1:
     	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
@@ -333,6 +335,10 @@ while(Sair == False):
     print()
     op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
     tools.clear()
+
+    if op == '20':
+    	chat()
+    	pass
 
     if op == '88':
     	par2()
