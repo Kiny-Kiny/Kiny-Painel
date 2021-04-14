@@ -337,7 +337,7 @@ while(Sair == False):
     tools.clear()
 
     if op == '20':
-    	chat()
+    	tools.chat()
     	pass
 
     if op == '88':
