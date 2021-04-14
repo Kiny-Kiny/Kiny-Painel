@@ -299,7 +299,7 @@ while(Sair == False):
     time.sleep(0.2)
     print(f"{C}{G}[19]{C} MÚSICAS")
     time.sleep(0.2)
-    print(f"{C}{G}[20]{C} CHAT")
+    print(f"{C}{G}[20]{C} CHAT NO {C}[{Y}TERMINAL{C}]")
     if kinymode == 1:
     	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
