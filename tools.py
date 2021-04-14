@@ -36,17 +36,16 @@ def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def chat():
-    os.system("pkg install irssi -y")
-    print(f'{C}{G}{result}{C}')
-    print(f'{C}[{Y}i{C}] TUTORIAL DE COMO ENTRAR NO CHAT')
-    print()
-    print(f'{C}[{G}i{C}] /connect chat.freenode.net') 
-    print(f'{C}[{G}i{C}] /nick (seu nickname)')
-    print(f'{C}[{G}i{C}] /join #Kiny')
-    print(f'{C}[{R}i{C}] Quando for sair, digite /exit')
-    pause = input(f'{C}{Y}APERTE ENTER PARA IR PRO CHAT{C}')
-    os.system("irssi")
-    pass
+	os.system("pkg install irssi -y")
+	print(f'{C}{G}{result}{C}')
+	print(f'{C}[{Y}i{C}] TUTORIAL DE COMO ENTRAR NO CHAT')
+	print()
+	print(f'{C}[{G}i{C}] /connect chat.freenode.net') 
+	print(f'{C}[{G}i{C}] /nick (seu nickname)')
+	print(f'{C}[{G}i{C}] /join #Kiny')
+	print(f'{C}[{R}i{C}] Quando for sair, digite /exit')
+	pause = input(f'{C}{Y}APERTE ENTER PARA IR PRO CHAT{C}')
+	os.system("irssi")
 
 def aovivo():
     print(f'{C}{G}{result}{C}')
