@@ -92,6 +92,32 @@ def notes():
     ''')
     pause = input('Pressione enter para retornar.')
 
+def att():
+	try:
+    	if __name__ == '__main__':
+	        os.system("clear")
+	        print(f'{C}{G}{result}{C}')
+	        print(f'{C}[{Y}i{C}] {G} Checando por atualizacoes... {C}')
+	        update = subprocess.check_output('git pull', shell=True)
+	        if 'Already up to date' not in update.decode():
+	            print(f'{C}[{Y}*{C}] {G}Atualizacao instalada!\n{C}[{Y}*{C}]Reiniciando o painel...{C}')
+	            print(f"{C}[{G}+{C}] Loading:")
+	            #animation = ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"]
+       	     animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]", "[■■■■■■■■■■]"]
+ 	           for i in range(len(animation)):
+            	    time.sleep(0.2)
+ 	               sys.stdout.write("\r" + animation[i % len(animation)])
+	                sys.stdout.flush()
+	            print("\n")
+	            time.sleep(5)
+	            subprocess.run('clear')
+	            restart()
+	        else:
+ 	           print(f'{C}[{Y}i{C}] Nenhuma atualizacao disponivel.')
+	            time.sleep(2)
+	except:
+	    pass
+
 
 def covid19():
     print(f'{C}{G}{result}{C}')
