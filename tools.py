@@ -596,7 +596,7 @@ def consultacpf(cpf_api, token):
         print(f"{C}[{Y}ESTADO{C}]: {sguf}")
         print(f"{C}[{Y}CEP{C}]: {cep}")
     except:
-        print(f'{C}[{R}ERROR{C}] CPF INVALIDO.')
+        print(f'{C}[{R}ERROR{C}] PAINEL OFF OU CPF INVÁLIDO.')
     print(f"{C}{G}DESEJA REALIZAR UMA NOVA CONSULTA?{C}")
     print(f"{C}[{G}1{C}] Sim")
     print(f"{C}[{G}2{C}] Não")
