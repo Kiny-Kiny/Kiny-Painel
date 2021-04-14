@@ -621,6 +621,7 @@ def consultacpf(cpf_api, token):
     else:
         print(f'{C}[{R}i{C}] Opção inválida')
         time.sleep(2)
+        pass
 
 def consultaoperadora():
     print(f'{C}{G}{result}{C}')
