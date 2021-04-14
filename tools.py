@@ -563,6 +563,7 @@ def consultacpf(cpf_api, token):
     s = socket(AF_INET, SOCK_STREAM)
     s.connect((host, port))
     print(f'{C}{G}{result}{C}')
+    print(f'{C}[{G}i{C}] Cuidado! O servidor é instável e pode apresentar quedas.')
     print(f'{C}[{G}i{C}] Informe o CPF sem / . ou -')
     msg = input('===> ')
     msg = msg.encode()
