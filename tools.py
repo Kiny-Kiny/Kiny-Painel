@@ -597,43 +597,18 @@ def bank(anim):
 
 def consultacpf(cpf_api, token):
     clear()
-    s = socket(AF_INET, SOCK_STREAM)
-    s.connect((host, port))
     print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Cuidado! O servidor é instável e pode apresentar quedas.')
     print(f'{C}[{G}i{C}] Informe o CPF sem / . ou -')
     msg = input('===> ')
-    msg = msg.encode()
-    s.send(msg)
-    clear()
-    try:
-        print(f'{C}{G}{result}{C}')
-        data = s.recv(1024)
-        r = data.decode()
-        s.close()
-        cpf = search('NRCPF="(.*?)"', r).group(1)
-        nome = search('NOPESSOAFISICA="(.*?)"', r).group(1).title()
-        nascimento = search('DTNASCIMENTO="(.*?)"', r).group(1)
-        nomeMae = search('NOMAE="(.*?)"', r).group(1).title()
-        endereco = search('NOLOGRADOURO="(.*?)"', r).group(1).title()
-        logradouro = search('NRLOGRADOURO="(.*?)"', r).group(1)
-        complemento = search('DSCOMPLEMENTO="(.*?)"', r).group(1).title()
-        bairro = search('NOBAIRRO="(.*?)"', r).group(1).title()
-        cidade = search('NOMUNICIPIO="(.*?)"', r).group(1).title()
-        sguf = search('SGUF="(.*?)"', r).group(1)
-        cep = search('NRCEP="(.*?)"', r).group(1)
-        print(f"{C}[{Y}CPF{C}]: {cpf}")
-        print(f"{C}[{Y}NOME{C}]: {nome}")
-        print(f"{C}[{Y}NASCIMENTO{C}]: {nascimento}")
-        print(f"{C}[{Y}MÃE{C}]: {nomeMae}")
-        print(f"{C}[{Y}ENDEREÇO{C}]: {endereco}")
-        print(f"{C}[{Y}LOGRADOURO{C}]: {logradouro}")
-        print(f"{C}[{Y}BAIRRO{C}]: {bairro}")
-        print(f"{C}[{Y}CIDADE{C}]: {cidade}")
-        print(f"{C}[{Y}ESTADO{C}]: {sguf}")
-        print(f"{C}[{Y}CEP{C}]: {cep}")
-    except:
-        print(f'{C}[{R}ERROR{C}] PAINEL OFF OU CPF INVÁLIDO.')
+    data = requests.get('http://abkx0ibzbu9syg93d9ygd3g9y3dyg0d3gy0-com.umbler.net/Basica.php?lista={}'.format(msg)).text
+    a = data.replace('<label "control-label" for="formGroupExampleInput5">','').replace('</label>','').replace('<span "form-control-static" "formGroupExampleInput5">','').replace('<div "row form-group">','').replace('</br>','').replace('<br>','').replace('<div "col-6">','').replace('<div "col-4">','').replace('</span>','').replace('<a href="#" title="CONSULTADO"','').replace('name="LinkEvoPlus"','').replace('data-"003.920.678-54">','').replace('<i "fa fa-search"></i>','').replace('</a>','').replace('(s&#xE1;bado)','(sábado)').replace('(ter&#xE7;a-feira)','(terça-feira)').replace('Data de Nascimento','Data de Nascimento:').replace('<div "col-2">','').replace('<div "col-10">','').replace('<div "title-block">','').replace('<style>','').replace('</style>','')
+    for i in range(0,10):
+    	try:
+    		a = api.replace(f'<h3 "title"><i "fa fa-list-ul"></i> Resultado ({i} encontrados)</h3>','')
+    	except:
+    		pass
+    print(a)
     print(f"{C}{G}DESEJA REALIZAR UMA NOVA CONSULTA?{C}")
     print(f"{C}[{G}1{C}] Sim")
     print(f"{C}[{G}2{C}] Não")
