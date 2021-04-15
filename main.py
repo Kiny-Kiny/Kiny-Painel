@@ -26,7 +26,7 @@ def restart():
 
 import os,sys,time,base64, json, re,subprocess,webbrowser,platform
 try:
-    import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet
+    import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, cpf
     from colorama import Fore, Style
     from bs4 import BeautifulSoup
     from phonenumbers import carrier
@@ -565,7 +565,10 @@ while(Sair == False):
         tools.cns(token,anim)
 
     if op == '6' or op == '06':
-        tools.consultacpf(cpf_api,token)
+        os.system("clear")
+        print(f'{C}{G}{result}{C}')
+        cpf_input = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
+        cpf.consultar(cpf_input)
 
     if op == '5' or op == '05':
         tools.bank(anim)
