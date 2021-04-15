@@ -87,9 +87,9 @@ def twyu():
        os.system("termux-open-url https://youtu.be/njoBMZD_jP0")
 def gbzap():
    if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://chat.whatsapp.com/Gnv9j0SbMtP2uO39CfjMqu")
+      webbrowser.open_new_tab("https://chat.whatsapp.com/G8QdB0jS7l94LA8BJEoBkZ")
    else:
-       os.system("termux-open-url https://chat.whatsapp.com/Gnv9j0SbMtP2uO39CfjMqu")
+       os.system("termux-open-url https://chat.whatsapp.com/G8QdB0jS7l94LA8BJEoBkZ")
 
 def zap2():
    if platform.system() == "Windows":
