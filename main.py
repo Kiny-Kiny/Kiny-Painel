@@ -97,12 +97,6 @@ def zap2():
    else:
        os.system("termux-open-url https://chat.whatsapp.com/G1IBFwwbI75EBIhUUS17sp")
 
-def par2():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://chat.whatsapp.com/LVvaqRiOer1INH1Q4juOWr")
-   else:
-       os.system("termux-open-url https://chat.whatsapp.com/LVvaqRiOer1INH1Q4juOWr")
-
 if sys.version_info[0] < 3:
     print(f'{C}[{R}ERROR{C}] Necessário utilizar python3!')
     print(f'{C}[{Y}i{C}] Instale-o com base em sua distribuição.')
@@ -312,8 +306,6 @@ while(Sair == False):
     else:
     	print(f"{C}{G}[95]{C} Mudar username")
     time.sleep(0.2)
-    print(f"{C}{G}[88]{C} Grupo Perceiro")
-    time.sleep(0.2)
     print(f"{C}{G}[89]{C} Meu grupo[1]")
     time.sleep(0.2)
     print(f"{C}{G}[90]{C} Meu grupo[2]")
@@ -340,10 +332,6 @@ while(Sair == False):
 
     if op == '20':
     	tools.chat()
-    	pass
-
-    if op == '88':
-    	par2()
     	pass
 
     if op == '90':
