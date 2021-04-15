@@ -594,34 +594,6 @@ def bank(anim):
     if kc == '01' or kc == '1':
         bank(anim)
 
-
-def consultacpf(cpf_api, token):
-    clear()
-    print(f'{C}{G}{result}{C}')
-    print(f'{C}[{G}i{C}] Cuidado! O servidor é instável e pode apresentar quedas.')
-    print(f'{C}[{G}i{C}] Informe o CPF sem / . ou -')
-    msg = input('===> ')
-    data = requests.get('http://abkx0ibzbu9syg93d9ygd3g9y3dyg0d3gy0-com.umbler.net/Basica.php?lista={}'.format(msg)).text
-    a = data.replace('<label "control-label" for="formGroupExampleInput5">','').replace('</label>','').replace('<span "form-control-static" "formGroupExampleInput5">','').replace('<div "row form-group">','').replace('</br>','').replace('<br>','').replace('<div "col-6">','').replace('<div "col-4">','').replace('</span>','').replace('<a href="#" title="CONSULTADO"','').replace('name="LinkEvoPlus"','').replace('data-"003.920.678-54">','').replace('<i "fa fa-search"></i>','').replace('</a>','').replace('(s&#xE1;bado)','(sábado)').replace('(ter&#xE7;a-feira)','(terça-feira)').replace('Data de Nascimento','Data de Nascimento:').replace('<div "col-2">','').replace('<div "col-10">','').replace('<div "title-block">','').replace('<style>','').replace('</style>','')
-    for i in range(0,10):
-    	try:
-    		a = api.replace(f'<h3 "title"><i "fa fa-list-ul"></i> Resultado ({i} encontrados)</h3>','')
-    	except:
-    		pass
-    print(a)
-    print(f"{C}{G}DESEJA REALIZAR UMA NOVA CONSULTA?{C}")
-    print(f"{C}[{G}1{C}] Sim")
-    print(f"{C}[{G}2{C}] Não")
-    one = input('===> ')
-    if one == '1' or one == '01':
-        consultacpf(cpf_api, token)
-    if one == '2' or one == '02':
-        pass
-    else:
-        print(f'{C}[{R}i{C}] Opção inválida')
-        time.sleep(2)
-        pass
-
 def consultaoperadora():
     print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Exemplo: 48952021826')
