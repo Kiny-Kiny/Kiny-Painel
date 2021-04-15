@@ -222,9 +222,10 @@ else:
 try:
     os.system("pkg update -y")
     os.system("pkg install figlet -y")
+    os.system("pkg install curl -y")
 except:
     os.system("apt update -y")
-    os.system("apt install figlet -y")
+    os.system("apt install curl -y")
 
 Sair = False
 while(Sair == False):
