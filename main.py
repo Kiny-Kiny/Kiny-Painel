@@ -572,8 +572,8 @@ while(Sair == False):
         	cpf.consultar(cpf_input)
         	print(f'{C}[{Y}i{C}] Deseja realizar uma nonva consulta?')
         	print()
-        	print(f'{C}[{G}1{C} Sim.')
-        	print(f'{C}[{G}2{C} Não.')
+        	print(f'{C}[{G}1]{C} Sim.')
+        	print(f'{C}[{G}2]{C} Não.')
         	cov = input(f'{C}{G}===>{C}')
         	if cov == '1' or cov == '01':
         		cpfcon()
