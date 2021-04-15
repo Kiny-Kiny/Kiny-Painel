@@ -238,6 +238,7 @@ while(Sair == False):
     letter_dict = load_font()
     for letter in "K I N Y":
         draw_to_screen(letter_dict[letter])
+    tools.clear()
     tools.att()
     tools.clear()
     print(":::  .   ::::::.    :::..-:.     ::-.")
