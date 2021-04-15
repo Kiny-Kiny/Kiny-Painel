@@ -595,7 +595,6 @@ while(Sair == False):
 
     if op == '3' or op == '03':
         tools.kiny_infoga()
-    	tools.att()
 
     if op == '2' or op == '02':
         mode = 1
