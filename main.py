@@ -565,7 +565,7 @@ while(Sair == False):
         tools.cns(token,anim)
 
     if op == '6' or op == '06':
-        def cpfcon:
+        def cpfcon():
         	os.system("clear")
         	print(f'{C}{G}{result}{C}')
         	cpf_input = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
