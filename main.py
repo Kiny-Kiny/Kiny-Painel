@@ -565,11 +565,24 @@ while(Sair == False):
         tools.cns(token,anim)
 
     if op == '6' or op == '06':
-        os.system("clear")
-        print(f'{C}{G}{result}{C}')
-        cpf_input = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
-        cpf.consultar(cpf_input)
-        time.sleep(2)
+        def cpfcon:
+        	os.system("clear")
+        	print(f'{C}{G}{result}{C}')
+        	cpf_input = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
+        	cpf.consultar(cpf_input)
+        	print(f'{C}[{Y}i{C}] Deseja realizar uma nonva consulta?')
+        	print()
+        	print(f'{C}[{G}1{C} Sim.')
+        	print(f'{C}[{G}2{C} Não.')
+        	cov = input(f'{C}{G}===>{C}')
+        	if cov == '1' or cov == '01':
+        		cpfcon()
+        	if cov == '2' or cov == '02':
+        		pass
+        	else:
+        		pass
+        
+        cpfcon()
 
     if op == '5' or op == '05':
         tools.bank(anim)
