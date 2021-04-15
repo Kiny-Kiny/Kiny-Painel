@@ -569,6 +569,7 @@ while(Sair == False):
         print(f'{C}{G}{result}{C}')
         cpf_input = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
         cpf.consultar(cpf_input)
+        time.sleep(2)
 
     if op == '5' or op == '05':
         tools.bank(anim)
