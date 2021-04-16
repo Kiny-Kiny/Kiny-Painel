@@ -331,7 +331,7 @@ while(Sair == False):
     time.sleep(0.2)
     print(f"{C}{G}[16]{C} CONSULTAR MÃE {C}[{R}OFF{C}]")
     time.sleep(0.2)
-    print(f"{C}{G}[18]{C} CONSULTAR NOME {C}[{R}OFF{C}]")
+    print(f"{C}{G}[18]{C} CONSULTAR NOME {C}[{G}ON{C}]")
     time.sleep(0.2)
     print(f"{C}{G}[19]{C} MÚSICAS")
     time.sleep(0.2)
