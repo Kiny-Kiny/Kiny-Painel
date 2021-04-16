@@ -373,7 +373,7 @@ while(Sair == False):
     tools.clear()
 
     if op == '21':
-		def reve():
+    	def reve():
 			os.system("clear")
 			print(f'{C}{G}{result}{C}')
 			print()
