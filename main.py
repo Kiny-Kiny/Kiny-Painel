@@ -691,7 +691,7 @@ while(Sair == False):
 
     if op == '00' or op == '0':
         os.system("clear")
-        os.system("rm -rf __pycache__')
+        os.system("rm -rf __pycache__")
         print(f'[{C}{R}+{C}] [{C}{R}Arrivederci{C}]')
         exit()
 
