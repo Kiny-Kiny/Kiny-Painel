@@ -336,6 +336,8 @@ while(Sair == False):
     print(f"{C}{G}[19]{C} MÚSICAS")
     time.sleep(0.2)
     print(f"{C}{G}[20]{C} CHAT NO {C}[{Y}TERMINAL{C}]")
+    time.sleep(0.2)
+    print(f"{C}{G}[21]{C} GRUPO ANTI-{C}{R}ATZ{C} {C}[{R}Poze Revenge{C}]")
     if kinymode == 1:
     	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
@@ -369,6 +371,10 @@ while(Sair == False):
     print()
     op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
     tools.clear()
+
+    if op == '21':
+    	antiatz()
+    	pass
 
     if op == '20':
     	tools.chat()
