@@ -413,6 +413,7 @@ while(Sair == False):
     					alv()
     				if alvo == '06' or alvo == '6':
     					pass
+
     				else:
     					alv()
     					
@@ -421,8 +422,10 @@ while(Sair == False):
     		if reve == '02' or reve == '2':
     			antiatz()
     			pass
+
     		if reve == '3' or reve == '03':
     			pass
+
     		else:
     			reve()
     			
