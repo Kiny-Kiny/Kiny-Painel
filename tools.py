@@ -1359,34 +1359,25 @@ def nomemae():
     pass
 
 def consultanome():
-	divisor = '<footer class="rodape">'
+    clear()
+    print(f'{C}{G}{result}{C}')
+    print(f'{C}[{G}i{C}] Informe o nome completo.')
+    nome_input = input("===>")
 
-	url = 'https://semnomeconsultafree.000webhostapp.com/'
-	nome = input('NOME ')
-	h = {
-	    'Host': 'semnomeconsultafree.000webhostapp.com',
- 	   'content-length': '36',
-	    'cache-control': 'max-age=0',
-	    'upgrade-insecure-requests': '1',
-	    'origin': 'https://semnomeconsultafree.000webhostapp.com',
-	    'content-type': 'application/x-www-form-urlencoded',
-	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; SM-A105M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Mobile Safari/537.36',
-   	 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-	    'sec-gpc': '1',
-	    'sec-fetch-site': 'same-origin',
-	    'sec-fetch-mode': 'navigate',
-	    'sec-fetch-user': '?1',
-	    'sec-fetch-dest': 'document',
-	    'referer': 'https://semnomeconsultafree.000webhostapp.com/',
-	    'accept-encoding': 'gzip, deflate, br',
- 	   'accept-language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'
-	}
-	r = post(url, headers=h, data=f'cpf=&nome={nome}').text
-	r = r.replace('<br>', '\n')
-	r = r.split(divisor)
-	r = r[0]
-	divisor2 = '<div class="results">'
-	r = r.split(divisor2)
-	r = r[1]
-	r = r.replace('</div>', '')
-	print (r)
+    request = requests.get('http://45.178.183.3/nome.php?nome={}'.format(nome_input))
+
+    adress_data = request.json()
+    clear()
+    print(f'{C}{G}{result}{C}')
+    print(request.text)
+    print(f"{C}{G}DESEJA REALIZAR UMA NOVA CONSULTA?{C}")
+    print(f"{C}[{G}1{C}] Sim")
+    print(f"{C}[{G}2{C}] Não")
+    shi = input('===> ')
+    if shi == '1' or shi == '01':
+        consultanome()
+    if shi == '2' or shi == '02':
+        pass
+    else:
+        print(f'{C}[{R}i{C}] Opção inválida')
+        time.sleep(2)
