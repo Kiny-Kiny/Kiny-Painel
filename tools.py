@@ -73,8 +73,7 @@ def chat():
 	pause = input(f'{C}{Y}APERTE ENTER PARA IR PRO CHAT{C}')
 	os.system("irssi")
 
- def reve():
-    	os.system("clear")
+def reve():
     	print(f'{C}{G}{result}{C}')
     	print()
     	print(f"[{C}{R}+{C}] Esta parte foi criada para vingar o fato que ocorreu com MC Poze do Rodo, onde ele teve todos os seus dados pessoais explanados sem qualquer motivo.")
