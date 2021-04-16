@@ -99,9 +99,9 @@ def zap2():
 
 def antiatz():
    if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://chat.whatsapp.com/DrdhAQwzuiK7xFvcCtDj8T")
+      webbrowser.open_new_tab("https://chat.whatsapp.com/IQ5wXm1Rclm6ot3dpQlcN2")
    else:
-       os.system("termux-open-url https://chat.whatsapp.com/DrdhAQwzuiK7xFvcCtDj8T")
+       os.system("termux-open-url https://chat.whatsapp.com/IQ5wXm1Rclm6ot3dpQlcN2")
 
 
 def alvo1():
