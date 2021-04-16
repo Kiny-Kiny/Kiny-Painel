@@ -282,7 +282,7 @@ while(Sair == False):
     print(f"{C}{R}88888o, 888  888    Y88   ,8P{C}")
     time.sleep(0.5)
     print(f"{C}{R}MMM MMPMMM  MMM     YM  mM{C}")
-    print(f"[{C}{R}+{C}] Licensiado pelo MIT. Não me responsabilizo por qualquer uso indevido.")
+    print(f"[{C}{R}+{C}] Licenciado pelo MIT. Não me responsabilizo por qualquer uso indevido.")
     time.sleep(2)
     tools.clear()
     time.sleep(2)
