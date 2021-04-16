@@ -425,7 +425,6 @@ while(Sair == False):
 
     		if reve == '3' or reve == '03':
     			pass
-
     		else:
     			reve()
     			
@@ -692,7 +691,10 @@ while(Sair == False):
 
     if op == '00' or op == '0':
         os.system("clear")
-        Sair = True
+        os.system("rm -rf __pycache__')
+        print(f'[{C}{R}+{C}] [{C}{R}Arrivederci{C}]')
+        exit()
+
 
     if op == '99' or op == '99':
         os.system("clear")
