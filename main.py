@@ -103,6 +103,37 @@ def antiatz():
    else:
        os.system("termux-open-url https://chat.whatsapp.com/DrdhAQwzuiK7xFvcCtDj8T")
 
+
+def alvo1():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("wa.me/559584079659")
+   else:
+       os.system("termux-open-url wa.me/559584079659")
+       
+def alvo2():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("wa.me/558186422466")
+   else:
+       os.system("termux-open-url wa.me/558186422466")
+       
+def alvo3():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("wa.me/556892336616")
+   else:
+       os.system("termux-open-url wa.me/556892336616")
+       
+def alvo4():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("wa.me/556791392399")
+   else:
+       os.system("termux-open-url wa.me/556791392399")
+       
+def alvo5():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("wa.me/553898633356")
+   else:
+       os.system("termux-open-url wa.me/553898633356")
+
 if sys.version_info[0] < 3:
     print(f'{C}[{R}ERROR{C}] Necessário utilizar python3!')
     print(f'{C}[{Y}i{C}] Instale-o com base em sua distribuição.')
@@ -305,6 +336,8 @@ while(Sair == False):
     print(f"{C}{G}[19]{C} MÚSICAS")
     time.sleep(0.2)
     print(f"{C}{G}[20]{C} CHAT NO {C}[{Y}TERMINAL{C}]")
+    time.sleep(0.2)
+    print(f"{C}{G}[21]{C} VINGANÇA CONTRA {C}[{R}ATZ{C}]")
     if kinymode == 1:
     	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
@@ -338,6 +371,62 @@ while(Sair == False):
     print()
     op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
     tools.clear()
+
+    if op == '21':
+		def reve():
+			os.system("clear")
+			print(f'{C}{G}{result}{C}')
+			print()
+			print(f"[{C}{R}+{C}] Esta parte foi criada para vingar o fato que ocorreu com MC Poze do Rodo, onde ele teve todos os seus dados pessoais explanados sem qualquer motivo.")
+			print()
+			print(f"{C}[{Y}1{C}] Lista de Alvos.")
+			print(f"{C}[{Y}2{C}] Formação Anti-ATZ.")
+			print(f"{C}[{Y}3{C}] Sair.")
+			reve = input(f"{C}{G}===> {C}")
+			if reve == '1' or reve == '01':
+				def alv():
+					os.system("clear")
+					print(f'{C}{G}{result}{C}')
+					print()
+					print(f"{C}[{Y}Alvo - 1{C}]")
+					print(f"{C}[{Y}Alvo - 2{C}]")
+					print(f"{C}[{Y}Alvo - 3{C}]")
+					print(f"{C}[{Y}Alvo - 4{C}]")
+					print(f"{C}[{Y}Alvo - 5{C}]")
+					print()
+					print(f"{C}[{Y}Sair - 6{C}]")
+					input = alvo(f"{G}{G}===> {C}")
+					if alvo == '01' or alvo == '1':
+						alvo1()
+						alv()
+					if alvo == '02' or alvo == '2':
+						alvo2()
+						alv()
+					if alvo == '03' or alvo == '3':
+						alvo3()
+						alv()
+					if alvo == '04' or alvo == '4':
+						alvo4()
+						alv()
+					if alvo == '05' or alvo == '5':
+						alvo5()
+						alv()
+					if alvo == '06' or alvo == '6':
+						pass
+					else:
+						alv()
+					
+				alv()
+			
+			if reve == '02' or reve == '02':
+				antiatz()
+				pass
+			if reve == '03' or reve == '03':
+				pass
+			else:
+				reve()
+	
+		reve()
 
     if op == '20':
     	tools.chat()
