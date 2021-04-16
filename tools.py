@@ -1358,7 +1358,7 @@ def nomemae():
     time.sleep(2)
     pass
 
-def nome():
+def consultanome():
 	divisor = '<footer class="rodape">'
 
 	url = 'https://semnomeconsultafree.000webhostapp.com/'
