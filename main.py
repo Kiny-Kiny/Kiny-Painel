@@ -637,7 +637,7 @@ while(Sair == False):
 
     if op == '00' or op == '0':
         os.system("clear")
-        Sair = true
+        Sair = True
 
 
     if op == '99' or op == '99':
