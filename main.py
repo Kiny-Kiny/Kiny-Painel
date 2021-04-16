@@ -374,59 +374,59 @@ while(Sair == False):
 
     if op == '21':
     	def reve():
-			os.system("clear")
-			print(f'{C}{G}{result}{C}')
-			print()
-			print(f"[{C}{R}+{C}] Esta parte foi criada para vingar o fato que ocorreu com MC Poze do Rodo, onde ele teve todos os seus dados pessoais explanados sem qualquer motivo.")
-			print()
-			print(f"{C}[{Y}1{C}] Lista de Alvos.")
-			print(f"{C}[{Y}2{C}] Formação Anti-ATZ.")
-			print(f"{C}[{Y}3{C}] Sair.")
-			reve = input(f"{C}{G}===> {C}")
-			if reve == '1' or reve == '01':
-				def alv():
-					os.system("clear")
-					print(f'{C}{G}{result}{C}')
-					print()
-					print(f"{C}[{Y}Alvo - 1{C}]")
-					print(f"{C}[{Y}Alvo - 2{C}]")
-					print(f"{C}[{Y}Alvo - 3{C}]")
-					print(f"{C}[{Y}Alvo - 4{C}]")
-					print(f"{C}[{Y}Alvo - 5{C}]")
-					print()
-					print(f"{C}[{Y}Sair - 6{C}]")
-					input = alvo(f"{G}{G}===> {C}")
-					if alvo == '01' or alvo == '1':
-						alvo1()
-						alv()
-					if alvo == '02' or alvo == '2':
-						alvo2()
-						alv()
-					if alvo == '03' or alvo == '3':
-						alvo3()
-						alv()
-					if alvo == '04' or alvo == '4':
-						alvo4()
-						alv()
-					if alvo == '05' or alvo == '5':
-						alvo5()
-						alv()
-					if alvo == '06' or alvo == '6':
-						pass
-					else:
-						alv()
-					
-				alv()
-			
-			if reve == '02' or reve == '02':
-				antiatz()
-				pass
-			if reve == '03' or reve == '03':
-				pass
-			else:
-				reve()
-	
-		reve()
+    		os.system("clear")
+    		print(f'{C}{G}{result}{C}')
+    		print()
+    		print(f"[{C}{R}+{C}] Esta parte foi criada para vingar o fato que ocorreu com MC Poze do Rodo, onde ele teve todos os seus dados pessoais explanados sem qualquer motivo.")
+    		print()
+    		print(f"{C}[{Y}1{C}] Lista de Alvos.")
+    		print(f"{C}[{Y}2{C}] Formação Anti-ATZ.")
+    		print(f"{C}[{Y}3{C}] Sair.")
+    		reve = input(f"{C}{G}===> {C}")
+    		if reve == '1' or reve == '01':
+    			def alv():
+    				os.system("clear")
+    				print(f'{C}{G}{result}{C}')
+    				print()
+    				print(f"{C}[{Y}Alvo - 1{C}]")
+    				print(f"{C}[{Y}Alvo - 2{C}]")
+    				print(f"{C}[{Y}Alvo - 3{C}]")
+    				print(f"{C}[{Y}Alvo - 4{C}]")
+    				print(f"{C}[{Y}Alvo - 5{C}]")
+    				print()
+    				print(f"{C}[{Y}Sair - 6{C}]")
+    				input = alvo(f"{G}{G}===> {C}")
+    				if alvo == '01' or alvo == '1':
+    					alvo1()
+    					alv()
+    				if alvo == '02' or alvo == '2':
+    					alvo2()
+    					alv()
+    				if alvo == '03' or alvo == '3':
+    					alvo3()
+    					alv()
+    				if alvo == '04' or alvo == '4':
+    					alvo4()
+    					alv()
+    				if alvo == '05' or alvo == '5':
+    					alvo5()
+    					alv()
+    				if alvo == '06' or alvo == '6':
+    					pass
+    				else:
+    					alv()
+    					
+    			alv()
+    			
+    		if reve == '02' or reve == '2':
+    			antiatz()
+    			pass
+    		if reve == '3' or reve == '03':
+    			pass
+    		else:
+    			reve()
+    			
+    reve()
 
     if op == '20':
     	tools.chat()
