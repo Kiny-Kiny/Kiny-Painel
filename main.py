@@ -500,6 +500,7 @@ while(Sair == False):
         	print(f'{C}{G}{result}{C}')
         	nome_input = input(f'{C}[{Y}Digite o NOME{C}]: ')
         	nome.consultar(nome_input)
+        	print(nome.consultar(nome_input))
         	print(f'{C}[{Y}i{C}] Deseja realizar uma nonva consulta?')
         	print()
         	print(f'{C}[{G}1{C}] Sim.')
