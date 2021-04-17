@@ -495,22 +495,24 @@ while(Sair == False):
     	tools.aovivo()
 
     if op == '18':
-        def nomeconsulta():
+        def consultanome():
         	os.system("clear")
         	print(f'{C}{G}{result}{C}')
-        	nome_input = input(f'{C}[{Y}Digite o Nome que deseja consultar{C}]: ')
-        	print(nome.consultar(nome_input))
+        	nome_input = input(f'{C}[{Y}Digite o NOME{C}]: ')
+        	nome.consultar(nome_input)
         	print(f'{C}[{Y}i{C}] Deseja realizar uma nonva consulta?')
         	print()
         	print(f'{C}[{G}1{C}] Sim.')
         	print(f'{C}[{G}2{C}] Não.')
-        	zam = input(f'{C}{G}===>{C}')
-        	if zam == '1' or zam == '01':
-        		nomeconsulta()
-        	if zam == '2' or zam == '02':
+        	cov = input(f'{C}{G}===>{C}')
+        	if zak == '1' or zak == '01':
+        		consultanome()
+        	if zak == '2' or zak == '02':
         		pass
         	else:
         		pass
+        
+        consultanome()
 
     if op == '16':
     	tools.nomemae()
