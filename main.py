@@ -641,16 +641,16 @@ while(Sair == False):
                 try:
                 	r = json.loads(requests.get('http://poisonbr.sytes.net:12344/ConsultaCPF/' + cpf).content.decode('utf-8'))
                 	print(f'''
-                	{C}CPF: {B}{r["cpf"]}
-                	{C}Nome: {B}{r["nome"].title()}
-                	{C}Nascimento: {B}{r["dataNascimento"]}
-                	{C}Nome da Mae: {B}{r["nomeMae"].title()}
-                	{C}Nome do Pai: {B}{r["nomePai"].title()}
-                	{C}Endereco: {B}{r["enderecoTipoLogradouro"].title()} {r["enderecoLogradouro"].title()}, {r["enderecoNumero"]}
-                	{C}Complemento: {B}{r["enderecoComplemento"].title()}
-                	{C}Bairro: {B}{r["enderecoBairro"].title()}
-                	{C}Cidade: {B}{r["enderecoMunicipio"].title()}
-                	{C}CEP: {B}{r["enderecoCep"]}
+                	{C}CPF: {Y}{r["cpf"]}
+                	{C}Nome: {Y}{r["nome"].title()}
+                	{C}Nascimento: {Y}{r["dataNascimento"]}
+                	{C}Nome da Mae: {Y}{r["nomeMae"].title()}
+                	{C}Nome do Pai: {Y}{r["nomePai"].title()}
+                	{C}Endereco: {Y}{r["enderecoTipoLogradouro"].title()} {r["enderecoLogradouro"].title()}, {r["enderecoNumero"]}
+                	{C}Complemento: {Y}{r["enderecoComplemento"].title()}
+                	{C}Bairro: {Y}{r["enderecoBairro"].title()}
+                	{C}Cidade: {Y}{r["enderecoMunicipio"].title()}
+                	{C}CEP: {Y}{r["enderecoCep"]}
                 	''')
                 except Exception as e:
                 	print(f'{C}Erro: {R}{e}{RT}')
