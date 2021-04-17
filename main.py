@@ -26,7 +26,7 @@ def restart():
 
 import os,sys,time,base64, json, re,subprocess,webbrowser,platform
 try:
-    import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, cpf
+    import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, cpf, nome
     from colorama import Fore, Style
     from bs4 import BeautifulSoup
     from phonenumbers import carrier
@@ -495,7 +495,22 @@ while(Sair == False):
     	tools.aovivo()
 
     if op == '18':
-    	tools.consultanome()
+        def nomeconsulta():
+        	os.system("clear")
+        	print(f'{C}{G}{result}{C}')
+        	nome_input = input(f'{C}[{Y}Digite o Nome que deseja consultar{C}]: ')
+        	print(nome.consultar(nome_input))
+        	print(f'{C}[{Y}i{C}] Deseja realizar uma nonva consulta?')
+        	print()
+        	print(f'{C}[{G}1{C}] Sim.')
+        	print(f'{C}[{G}2{C}] Não.')
+        	zam = input(f'{C}{G}===>{C}')
+        	if zam == '1' or zam == '01':
+        		nomeconsulta()
+        	if zam == '2' or zam == '02':
+        		pass
+        	else:
+        		pass
 
     if op == '16':
     	tools.nomemae()
