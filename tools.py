@@ -1357,27 +1357,3 @@ def nomemae():
     print(f'{C}[{G}i{C}] Temporariamente Off')
     time.sleep(2)
     pass
-
-def consultanome():
-    clear()
-    print(f'{C}{G}{result}{C}')
-    print(f'{C}[{G}i{C}] Informe o nome completo.')
-    nome_input = input("===>")
-
-    request = requests.get('http://45.178.183.3/nome.php?nome={}'.format(nome_input))
-
-    adress_data = request.json()
-    clear()
-    print(f'{C}{G}{result}{C}')
-    print(request.text)
-    print(f"{C}{G}DESEJA REALIZAR UMA NOVA CONSULTA?{C}")
-    print(f"{C}[{G}1{C}] Sim")
-    print(f"{C}[{G}2{C}] Não")
-    shi = input('===> ')
-    if shi == '1' or shi == '01':
-        consultanome()
-    if shi == '2' or shi == '02':
-        pass
-    else:
-        print(f'{C}[{R}i{C}] Opção inválida')
-        time.sleep(2)
