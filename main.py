@@ -505,7 +505,7 @@ while(Sair == False):
         	print()
         	print(f'{C}[{G}1{C}] Sim.')
         	print(f'{C}[{G}2{C}] Não.')
-        	cov = input(f'{C}{G}===>{C}')
+        	zak = input(f'{C}{G}===>{C}')
         	if zak == '1' or zak == '01':
         		consultanome()
         	if zak == '2' or zak == '02':
