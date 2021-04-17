@@ -309,7 +309,7 @@ while(Sair == False):
     time.sleep(0.2)
     print(f"{C}{G}[5]{C} CONSULTA BANCARIA")
     time.sleep(0.2)
-    print(f"{C}{G}[6]{C} CONSULTA CPF {C}[{G}ON{C}]")
+    print(f"{C}{G}[6]{C} CONSULTA CPF {C}[{R}ON{C}]")
     time.sleep(0.2)
     print(f"{C}{G}[7]{C} CONSULTA CNS")
     time.sleep(0.2)
