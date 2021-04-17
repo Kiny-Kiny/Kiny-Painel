@@ -130,9 +130,9 @@ def alvo4():
        
 def alvo5():
    if platform.system() == "Windows":
-      webbrowser.open_new_tab("wa.me/553898633356")
+      webbrowser.open_new_tab("https://chat.whatsapp.com/DelttpvNeQS93n0l2MJFWU")
    else:
-       os.system("termux-open-url wa.me/553898633356")
+       os.system("termux-open-url https://chat.whatsapp.com/DelttpvNeQS93n0l2MJFWU")
 
 if sys.version_info[0] < 3:
     print(f'{C}[{R}ERROR{C}] Necessário utilizar python3!')
@@ -338,6 +338,8 @@ while(Sair == False):
     print(f"{C}{G}[20]{C} CHAT NO {C}[{Y}TERMINAL{C}]")
     time.sleep(0.2)
     print(f"{C}{G}[21]{C} GRUPO S.C.W {C}[{Y}PARCERIA{C}]")
+    time.sleep(0.2)
+    print(f"{C}{G}[22]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]")
     if kinymode == 1:
     	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
@@ -371,6 +373,10 @@ while(Sair == False):
     print()
     op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
     tools.clear()
+
+    if op == '22':
+    	alvo5()
+    	pass
 
     if op == '21':
     	antiatz()
