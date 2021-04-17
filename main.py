@@ -635,21 +635,37 @@ while(Sair == False):
 
     if op == '6' or op == '06':
         def cpfcon():
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	cpf_input = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
-        	cpf.consultar(cpf_input)
-        	print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
-        	print()
-        	print(f'{C}[{G}1{C}] Sim.')
-        	print(f'{C}[{G}2{C}] Não.')
-        	cov = input(f'{C}{G}===>{C}')
-        	if cov == '1' or cov == '01':
-        		cpfcon()
-        	if cov == '2' or cov == '02':
-        		pass
-        	else:
-        		pass
+                os.system("clear")
+                print(f'{C}{G}{result}{C}')
+                cpf = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
+                try:
+                	r = json.loads(requests.get('http://poisonbr.sytes.net:12344/ConsultaCPF/' + cpf).content.decode('utf-8'))
+                	print(f'''
+                	{C}CPF: {B}{r["cpf"]}
+                	{C}Nome: {B}{r["nome"].title()}
+                	{C}Nascimento: {B}{r["dataNascimento"]}
+                	{C}Nome da Mae: {B}{r["nomeMae"].title()}
+                	{C}Nome do Pai: {B}{r["nomePai"].title()}
+                	{C}Endereco: {B}{r["enderecoTipoLogradouro"].title()} {r["enderecoLogradouro"].title()}, {r["enderecoNumero"]}
+                	{C}Complemento: {B}{r["enderecoComplemento"].title()}
+                	{C}Bairro: {B}{r["enderecoBairro"].title()}
+                	{C}Cidade: {B}{r["enderecoMunicipio"].title()}
+                	{C}CEP: {B}{r["enderecoCep"]}
+                	''')
+                except Exception as e:
+                	print(f'{C}Erro: {R}{e}{RT}')
+                
+                print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
+                print()
+                print(f'{C}[{G}1{C}] Sim.')
+                print(f'{C}[{G}2{C}] Não.')
+                cov = input(f'{C}{G}===>{C}')
+                if cov == '1' or cov == '01':
+                        cpfcon()
+                if cov == '2' or cov == '02':
+                        pass
+                else:
+                        pass
         
         cpfcon()
 
