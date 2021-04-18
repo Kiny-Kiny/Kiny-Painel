@@ -653,7 +653,7 @@ while(Sair == False):
                 	{C}CEP: {Y}{r["enderecoCep"]}
                 	''')
                 except Exception as e:
-                	print(f'{C}Erro: {R}{e}{RT}')
+                	print(f'{C}[{R}*{C}] CPF INVALIDO')
                 
                 print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
                 print()
