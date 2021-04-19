@@ -651,8 +651,8 @@ while(Sair == False):
                 	{C}Bairro: {Y}{r["enderecoBairro"].title()}
                 	{C}Cidade: {Y}{r["enderecoMunicipio"].title()}
                 	{C}CEP: {Y}{r["enderecoCep"]}
-                	{C}DDD: {Y}{r["ddd"]}
-                	{C}TELEFONE: {Y}{r["numero"]}
+                	{C}DDD: {Y}{r["ddd"].title()}
+                	{C}TELEFONE: {Y}{r["numero"].title()}
                 	''')
                 except Exception as e:
                 	print(f'{C}[{R}*{C}] CPF INVALIDO')
