@@ -241,6 +241,7 @@ if login == 1:
     snh = 'VirtualInsanity'
     if input(f"{C}[{G}+{C}]PASSWORD:  ").strip() == snh:
         print(f'{C}[{G}*{C}] Acesso liberado.')
+        time.sleep(1.5)
         tools.clear()
     else:
         print(f"{C}[{R}ERROR{C}] Wrong Password....Yare Yare")
