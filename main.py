@@ -41,7 +41,7 @@ except:
         time.sleep(1)
     restart()
 
-result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
+result = pyfiglet.figlet_format("Kiny 2", font = "cosmic"  )
 
 def draw_to_screen(content):
     clear_console = 'clear' if os.name == 'posix' else 'CLS'
