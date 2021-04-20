@@ -518,6 +518,7 @@ while(Sair == False):
         	if zak == '1' or zak == '01':
         		os.system("clear")
         		for v in range(30, -1, -1):
+        			print(f'{C}{G}{result}{C}')
         			print(f"{C}[{Y}*{C}] Modo de Espera: {v} Segundos...")
         			time.sleep(1)
         			os.system("clear")
@@ -672,6 +673,7 @@ while(Sair == False):
                 if cov == '1' or cov == '01':
                         os.system("clear")
                         for i in range(30, -1, -1):
+                        	print(f'{C}{G}{result}{C}')
                         	print(f"{C}[{Y}*{C}] Modo de Espera: {i} Segundos...")
                         	time.sleep(1)
                         	os.system("clear")
