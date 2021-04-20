@@ -512,7 +512,7 @@ while(Sair == False):
         	#NÃO REMOVA O FOR, ELE SERVE PARA NÃO FAZER A API CAIR ;(
         	if zak == '1' or zak == '01':
         		os.system("clear")
-        		for v in range(31):
+        		for v in range(30, -1, -1):
         			print(f"{C}[{Y}*{C}] Modo de Espera: {v} Segundos...")
         			time.sleep(1)
         		consultanome()
@@ -665,7 +665,7 @@ while(Sair == False):
                 cov = input(f'{C}{G}===>{C}')
                 if cov == '1' or cov == '01':
                         os.system("clear")
-                        for i in range(31):
+                        for i in range(30, -1, -1):
                         	print(f"{C}[{Y}*{C}] Modo de Espera: {i} Segundos...")
                         	time.sleep(1)
                         	os.system("clear")
