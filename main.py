@@ -514,7 +514,7 @@ while(Sair == False):
         		os.system("clear")
         		for v in range(31):
         			print(f"{C}[{Y}*{C}] Modo de Espera: {v} Segundos...")
-        			time.sleep()
+        			time.sleep(1)
         		consultanome()
         	if zak == '2' or zak == '02':
         		pass
