@@ -47,7 +47,7 @@
 
 ## INSTALAÇÃO 
 ```
-【✔】pkg update && pkg upgrade -y
+【✔】pkg upgrade && pkg update -y
 【✔】pkg install git -y
 【✔】pkg install python -y
 【✔】pkg install python2 -y
