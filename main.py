@@ -291,7 +291,7 @@ while(Sair == False):
         time.sleep(1)
     print(f'{C}[{Y}*{C}]Meu Pix: {CY}0018f93e-23c2-4c25-b8e5-c29809786d94{CO}')
     print(f'{C}[{Y}*{C}]Patrocinadores: {CY}Josuke(Douglas){CO}, {CY}Margarina{CO}, {CY}♞⃟𝜣͢𝑭𝑵–M4ŘŤÏŇ§♞⃟🇱🇰LÍDER{CO} e {CY}N 3 X 0{CO}')
-    print(f'[{C}{R}+{C}] Se vierem no meu PV perguntar quando as consultas vão voltar, vou dar block ou ignorar.')
+    print(f'[{C}{R}+{C}] A API de CPF ficou OFF pois alguns membros do meu grupo começaram a consultar exageradamente usando um bot de Consultas no Whatsapp que utilizava a mesma API. O dono me disse que era 10 consultas por segundo pelo mesmo IP(IP do bot, ou seja, do dono do bot), isso significa que os culpados foram os membros.")
     print()
     print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
     print(f"{C}[{Y}Data de retorno das consultas{C}]: {C}[{G}28/04/2021{C}]")
