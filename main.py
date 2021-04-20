@@ -509,7 +509,12 @@ while(Sair == False):
         	print(f'{C}[{G}1{C}] Sim.')
         	print(f'{C}[{G}2{C}] Não.')
         	zak = input(f'{C}{G}===>{C}')
+        	#NÃO REMOVA O FOR, ELE SERVE PARA NÃO FAZER A API CAIR ;(
         	if zak == '1' or zak == '01':
+        		os.system("clear")
+        		for v in range(31):
+        			print(f"{C}[{Y}*{C}] Modo de Espera: {v} Segundos...")
+        			time.sleep()
         		consultanome()
         	if zak == '2' or zak == '02':
         		pass
@@ -652,13 +657,18 @@ while(Sair == False):
                 	''')
                 except Exception as e:
                 	print(f'{C}[{R}*{C}] CPF INVALIDO')
-                
+                #NÃO REMOVA O FOR, ELE SERVE PARA NÃO FAZER A API CAIR ;(
                 print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
                 print()
                 print(f'{C}[{G}1{C}] Sim.')
                 print(f'{C}[{G}2{C}] Não.')
                 cov = input(f'{C}{G}===>{C}')
                 if cov == '1' or cov == '01':
+                        os.system("clear")
+                        for i in range(31):
+                        	print(f"{C}[{Y}*{C}] Modo de Espera: {i} Segundos...")
+                        	time.sleep(1)
+                        	os.system("clear")
                         cpfcon()
                 if cov == '2' or cov == '02':
                         pass
