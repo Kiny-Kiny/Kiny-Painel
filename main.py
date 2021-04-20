@@ -38,7 +38,6 @@ except:
     os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube pyfiglet')
     for i in range(3):
         print(f'{C}[{Y}i{C}] Reiniciando o painel em {i} seg...')
-        time.sleep(1)
     restart()
 
 result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
