@@ -366,7 +366,7 @@ def consultaplaca():
     print('2.Não')
     choice = input("===>")
     if choice == "1" or choice == "01":
-        tools.consultaplaca()
+        consultaplaca()
     if choice == "2" or choice == "02":
         pass
     else:
