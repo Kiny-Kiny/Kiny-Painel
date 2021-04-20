@@ -243,6 +243,8 @@ if login == 1:
         tools.clear()
     else:
         print(f"{C}[{R}ERROR{C}] Wrong Password....Yare Yare")
+        time.sleep(2)
+        os.system("python3 main.py")
         if anim == 1:
             time.sleep(1)
         exit()
