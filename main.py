@@ -35,6 +35,7 @@ try:
     from urllib.parse import urlencode
     #from fordev.generator import people #Presente para algum dev que esteja lendo :p
 except:
+    os.system('pkg install curl wget perl nano -y')
     os.system('pkg install figlet -y')
     os.system('python3 -m pip install --upgrade pip')
     os.system('pip3 install pyfiglet')
