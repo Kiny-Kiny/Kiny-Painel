@@ -36,6 +36,7 @@ try:
     #from fordev.generator import people #Presente para algum dev que esteja lendo :p
 except:
     os.system('python3 -m pip install --upgrade pip')
+    os.system('pip3 install pyfiglet')
     os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube pyfiglet')
     pass
 
