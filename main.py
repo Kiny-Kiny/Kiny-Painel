@@ -69,6 +69,12 @@ def clear():
    else:
        os.system("clear")
 
+def pastebin():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("https://pastebin.com/fxB1cAPb")
+   else:
+       os.system("termux-open-url https://pastebin.com/fxB1cAPb")
+
 def youtube():
    if platform.system() == "Windows":
       webbrowser.open_new_tab("https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w")
@@ -250,6 +256,7 @@ if login == 1:
         print(f"{C}[{R}ERROR{C}] Wrong Password....Yare Yare")
         time.sleep(2)
         os.system("python3 main.py")
+        pastebin()
         if anim == 1:
             time.sleep(1)
         exit()
