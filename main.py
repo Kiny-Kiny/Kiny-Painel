@@ -669,6 +669,9 @@ while(Sair == False):
                 print(f'{C}[{G}2{C}] Não.')
                 cov = input(f'{C}{G}===>{C}')
                 if cov == '1' or cov == '01':
+                        for i in range(30, -1, -1):
+                        	print(f"{C}[{Y}*{C}]MODO DE ESPERA: [i] Segundos")
+                        	os.system("clear")
                         cpfcon()
                 if cov == '2' or cov == '02':
                         pass
