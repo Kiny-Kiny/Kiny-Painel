@@ -27,7 +27,6 @@ from requests import post
 host = '45.79.39.64'
 port = 55555
 
-os.system('pip install pyfiglet==0.7')
 result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
 
 def clear():
