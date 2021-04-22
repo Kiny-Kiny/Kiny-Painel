@@ -671,6 +671,7 @@ while(Sair == False):
                 if cov == '1' or cov == '01':
                         for v in range(0, 30):
                         	print(f"{C}[{Y}*{C}]MODO DE ESPERA: [v] Segundos")
+                        	time.sleep(1)
                         	os.system("clear")
                         cpfcon()
                 if cov == '2' or cov == '02':
