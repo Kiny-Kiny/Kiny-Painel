@@ -667,16 +667,16 @@ while(Sair == False):
                 try:
                 	ab = requests.get(base64.b64decode(re.search("\'(.*?)\'", a).group(1)).decode() + cpf).json()
                 	print(f'''
-                	{C}CPF: {B}{ab["cpf"]}
-                	{C}Nome: {B}{ab["nome"].title()}
-                	{C}Nascimento: {B}{ab["dataNascimento"]}
-                	{C}Nome da Mae: {B}{ab["nomeMae"].title()}
-                	{C}Nome do Pai: {B}{ab["nomePai"].title()}
-                	{C}Endereco: {B}{ab["enderecoTipoLogradouro"].title()} {ab["enderecoLogradouro"].title()}, {ab["enderecoNumero"]}
-                	{C}Complemento: {B}{ab["enderecoComplemento"].title()}
-                	{C}Bairro: {B}{ab["enderecoBairro"].title()}
-                	{C}Cidade: {B}{ab["enderecoMunicipio"].title()}
-                	{C}CEP: {B}{ab["enderecoCep"]}
+                	{C}CPF: {Y}{ab["cpf"]}
+                	{C}Nome: {Y}{ab["nome"].title()}
+                	{C}Nascimento: {Y}{ab["dataNascimento"]}
+                	{C}Nome da Mae: {Y}{ab["nomeMae"].title()}
+                	{C}Nome do Pai: {Y}{ab["nomePai"].title()}
+                	{C}Endereco: {Y}{ab["enderecoTipoLogradouro"].title()} {ab["enderecoLogradouro"].title()}, {ab["enderecoNumero"]}
+                	{C}Complemento: {Y}{ab["enderecoComplemento"].title()}
+                	{C}Bairro: {Y}{ab["enderecoBairro"].title()}
+                	{C}Cidade: {Y}{ab["enderecoMunicipio"].title()}
+                	{C}CEP: {Y}{ab["enderecoCep"]}
                 	''')
                 except Exception as e:
                 	print(f'{C}[{R}*{C}] CPF INVALIDO')
