@@ -513,6 +513,12 @@ while(Sair == False):
         	print(f'{C}[{G}2{C}] Não.')
         	zak = input(f'{C}{G}===>{C}')
         	if zak == '1' or zak == '01':
+        		for g in range(30, -1, -1):
+        			os.system("clear")
+        			print(f'{C}{G}{result}{C}')
+        			print(f"{C}[{Y}*{C}]MODO DE ESPERA: {g} Segundo(s)")
+        			time.sleep(1)
+        			os.system("clear")
         		consultanome()
         	if zak == '2' or zak == '02':
         		pass
@@ -670,7 +676,9 @@ while(Sair == False):
                 cov = input(f'{C}{G}===>{C}')
                 if cov == '1' or cov == '01':
                         for v in range(30, -1, -1):
-                        	print(f"{C}[{Y}*{C}]MODO DE ESPERA: {v} Segundos")
+                        	os.system("clear")
+                        	print(f'{C}{G}{result}{C}')
+                        	print(f"{C}[{Y}*{C}]MODO DE ESPERA: {v} Segundo(s)")
                         	time.sleep(1)
                         	os.system("clear")
                         cpfcon()
