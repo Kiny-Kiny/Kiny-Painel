@@ -27,6 +27,12 @@ from requests import post
 host = '45.79.39.64'
 port = 55555
 
+def rekt():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("https://pastebin.com/fxB1cAPb")
+   else:
+       os.system("termux-open-url https://pastebin.com/fxB1cAPb")
+
 result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
 
 def clear():
@@ -838,6 +844,8 @@ def consultatel():
 
 def primenumero():
     clear()
+    rekt()
+    pass
     print(f'{C}{G}{result}{C}')
     print(f'{C}[{G}i{C}] Digite o numero(ex: 219××××××××).')
     requiem = input('===> ')
