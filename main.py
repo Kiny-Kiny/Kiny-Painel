@@ -246,9 +246,9 @@ except:
 if login == 1:
     tools.clear()
     print(f'{C}{G}{result}{C}')
-    user = input(f"{C}[{G}+{C}]USERNAME:  ")
+    user = input(f"{C}[{G}+{C}]USERNAME:  {B}")
     snh = 'VirtualInsanity'
-    if input(f"{C}[{G}+{C}]PASSWORD:  ").strip() == snh:
+    if input(f"{C}[{G}+{C}]PASSWORD:  {B}").strip() == snh:
         print(f'{C}[{G}*{C}] Acesso liberado.')
         time.sleep(1.5)
         tools.clear()
