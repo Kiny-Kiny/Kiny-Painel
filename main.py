@@ -677,7 +677,10 @@ while(Sair == False):
                 	{C}Bairro: {Y}{ab["enderecoBairro"].title()}
                 	{C}Cidade: {Y}{ab["enderecoMunicipio"].title()}
                 	{C}CEP: {Y}{ab["enderecoCep"]}
+                	{C} DDD: {Y}{ab['telefone'][i]['ddd']}
+                	{C} Numero: {Y}{ab['telefone'][i]['numero']}
                 	''')
+                		
                 except Exception as e:
                 	print(f'{C}[{R}*{C}] CPF INVALIDO')
                 #NÃO REMOVA O FOR, ELE SERVE PARA NÃO FAZER A API CAIR ;(
