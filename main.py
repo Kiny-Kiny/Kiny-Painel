@@ -654,7 +654,6 @@ while(Sair == False):
         def cpfcon():
                 os.system("clear")
                 print(f'{C}{G}{result}{C}')
-                print(f'{C}[{R}OFF{C}] Certos membros do meu grupo de Whatsapp começaram a utilizar Bots para fazer consulta usando a API de CPF, fazendo o dono ser obrigado a fechar ela por muitos acessos. OBS: A culpa NÃO é dos desenvolvedores dos Bots, e sim dos membros que ficaram utilizando elas a toa para atos totalmente banais.')
                 cpf = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
                 cpf = re.sub('[^0-9]+', '', cpf)
                 a = [x + 76 for x in range(5)]
