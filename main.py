@@ -678,6 +678,9 @@ while(Sair == False):
                 	{C}Cidade: {Y}{ab["enderecoMunicipio"].title()}
                 	{C}CEP: {Y}{ab["enderecoCep"]}
                 	''')
+                	for i in range(0,10):
+                		print(f"{C} DDD: {Y}{ab['telefone'][i]['ddd']}")
+                		print(f"{C} Numero: {Y}{ab['telefone'][i]['numero']}")
                 		
                 except Exception as e:
                 	print(f'{C}[{R}*{C}] CPF INVALIDO')
