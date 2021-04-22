@@ -38,7 +38,7 @@ except:
     os.system('pkg install curl wget perl nano -y')
     os.system('pkg install figlet -y')
     os.system('python3 -m pip install --upgrade pip')
-    os.system('pip3 install pyfiglet')
+    os.system('pip install pyfiglet==0.7')
     os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube pyfiglet')
     pass
 
@@ -256,7 +256,6 @@ if login == 1:
         print(f"{C}[{R}ERROR{C}] Wrong Password....Yare Yare")
         time.sleep(2)
         os.system("python3 main.py")
-        pastebin()
         if anim == 1:
             time.sleep(1)
         exit()
