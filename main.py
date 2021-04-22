@@ -677,8 +677,6 @@ while(Sair == False):
                 	{C}Bairro: {Y}{ab["enderecoBairro"].title()}
                 	{C}Cidade: {Y}{ab["enderecoMunicipio"].title()}
                 	{C}CEP: {Y}{ab["enderecoCep"]}
-                	{C} DDD: {Y}{ab['telefone'][0]['ddd']}
-                	{C} Numero: {Y}{ab['telefone'][0]['numero']}
                 	''')
                 		
                 except Exception as e:
