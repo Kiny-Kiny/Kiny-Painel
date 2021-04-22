@@ -660,7 +660,7 @@ while(Sair == False):
                 	''')
                 except Exception as e:
                 	print(f'{C}[{R}*{C}] CPF INVALIDO')
-                
+
                 print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
                 print()
                 print(f'{C}[{G}1{C}] Sim.')
