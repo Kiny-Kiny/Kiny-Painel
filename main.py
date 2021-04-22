@@ -678,7 +678,7 @@ while(Sair == False):
                 	{C}Cidade: {Y}{ab["enderecoMunicipio"].title()}
                 	{C}CEP: {Y}{ab["enderecoCep"]}
                 	''')
-
+                		
                 except Exception as e:
                 	print(f'{C}[{R}*{C}] CPF INVALIDO')
                 #NÃO REMOVA O FOR, ELE SERVE PARA NÃO FAZER A API CAIR ;(
@@ -735,4 +735,4 @@ while(Sair == False):
         kct = input("===> ")
         tools.cnpj(kct,token,anim)
 os.system('rm -rf __pycache__')
-print(f'[{C}{R}+{C}] [{C}{R}Arrivederci{C}]')
+print(f'[{C}{R}+{C}] [{C}{R}Arrivederci{C}]'
