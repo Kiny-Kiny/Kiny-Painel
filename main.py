@@ -26,22 +26,18 @@ def restart():
 
 import os,sys,time,base64, json, re,subprocess,webbrowser,platform
 try:
-    import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, cpf, nome, re
-    import apicpf as b
+    import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, cpf, nome
     from colorama import Fore, Style
     from bs4 import BeautifulSoup
     from phonenumbers import carrier
     from phonenumbers import geocoder
     from phonenumbers import timezone
     from urllib.parse import urlencode
+    import apicpf as b
     #from fordev.generator import people #Presente para algum dev que esteja lendo :p
 except:
-    os.system('pkg install curl wget perl nano -y')
-    os.system('pkg install figlet -y')
-    os.system('python3 -m pip install --upgrade pip')
-    os.system('pip install pyfiglet==0.7')
     os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube pyfiglet')
-    pass
+    restart()
 
 result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
 
@@ -69,12 +65,6 @@ def clear():
       os.system("clear")
    else:
        os.system("clear")
-
-def pastebin():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://pastebin.com/fxB1cAPb")
-   else:
-       os.system("termux-open-url https://pastebin.com/fxB1cAPb")
 
 def youtube():
    if platform.system() == "Windows":
@@ -247,16 +237,12 @@ except:
 if login == 1:
     tools.clear()
     print(f'{C}{G}{result}{C}')
-    user = input(f"{C}[{G}+{C}]USERNAME:  {B}")
+    user = input(f"{C}[{G}+{C}]USERNAME:  ")
     snh = 'VirtualInsanity'
-    if input(f"{C}[{G}+{C}]PASSWORD:  {B}").strip() == snh:
-        print(f'{C}[{G}*{C}] Acesso liberado.')
-        time.sleep(1.5)
+    if input(f"{C}[{G}+{C}]PASSWORD:  ").strip() == snh:
         tools.clear()
     else:
         print(f"{C}[{R}ERROR{C}] Wrong Password....Yare Yare")
-        time.sleep(2)
-        os.system("python3 main.py")
         if anim == 1:
             time.sleep(1)
         exit()
@@ -306,6 +292,7 @@ while(Sair == False):
         time.sleep(1)
     print(f'{C}[{Y}*{C}]Meu Pix: {CY}0018f93e-23c2-4c25-b8e5-c29809786d94{CO}')
     print(f'{C}[{Y}*{C}]Patrocinadores: {CY}Josuke(Douglas){CO}, {CY}Margarina{CO}, {CY}♞⃟𝜣͢𝑭𝑵–M4ŘŤÏŇ§♞⃟🇱🇰LÍDER{CO} e {CY}N 3 X 0{CO}')
+    print(f'[{C}{R}+{C}] Se vierem no meu PV perguntar quando as consultas vão voltar, vou dar block ou ignorar.')
     print()
     print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
     print(f"{C}[{Y}Data de retorno das consultas{C}]: {C}[{G}28/04/2021{C}]")
@@ -320,7 +307,7 @@ while(Sair == False):
     time.sleep(0.2)
     print(f"{C}{G}[5]{C} CONSULTA BANCARIA")
     time.sleep(0.2)
-    print(f"{C}{G}[6]{C} CONSULTA CPF {C}[{G}ON{C}]")
+    print(f"{C}{G}[6]{C} CONSULTA CPF {C}[{R}ON{C}]")
     time.sleep(0.2)
     print(f"{C}{G}[7]{C} CONSULTA CNS")
     time.sleep(0.2)
@@ -361,9 +348,9 @@ while(Sair == False):
     else:
     	print(f"{C}{G}[95]{C} Mudar username")
     time.sleep(0.2)
-    print(f"{C}{G}[89]{C} Meu grupo{C}[{B}1{C}]")
+    print(f"{C}{G}[89]{C} Meu grupo[1]")
     time.sleep(0.2)
-    print(f"{C}{G}[90]{C} Meu grupo{C}[{B}2{C}]")
+    print(f"{C}{G}[90]{C} Meu grupo[2]")
     time.sleep(0.2)
     print(f"{C}{G}[92]{C} Meu Whatsapp")
     time.sleep(0.2)
@@ -523,14 +510,7 @@ while(Sair == False):
         	print(f'{C}[{G}1{C}] Sim.')
         	print(f'{C}[{G}2{C}] Não.')
         	zak = input(f'{C}{G}===>{C}')
-        	#NÃO REMOVA O FOR, ELE SERVE PARA NÃO FAZER A API CAIR ;(
         	if zak == '1' or zak == '01':
-        		os.system("clear")
-        		for v in range(30, -1, -1):
-        			print(f'{C}{G}{result}{C}')
-        			print(f"{C}[{Y}*{C}] Modo de Espera: {v} Segundos...")
-        			time.sleep(1)
-        			os.system("clear")
         		consultanome()
         	if zak == '2' or zak == '02':
         		pass
@@ -680,19 +660,13 @@ while(Sair == False):
                 	''')
                 except Exception as e:
                 	print(f'{C}[{R}*{C}] CPF INVALIDO')
-                #NÃO REMOVA O FOR, ELE SERVE PARA NÃO FAZER A API CAIR ;(
+                
                 print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
                 print()
                 print(f'{C}[{G}1{C}] Sim.')
                 print(f'{C}[{G}2{C}] Não.')
                 cov = input(f'{C}{G}===>{C}')
                 if cov == '1' or cov == '01':
-                        os.system("clear")
-                        for i in range(30, -1, -1):
-                        	print(f'{C}{G}{result}{C}')
-                        	print(f"{C}[{Y}*{C}] Modo de Espera: {i} Segundos...")
-                        	time.sleep(1)
-                        	os.system("clear")
                         cpfcon()
                 if cov == '2' or cov == '02':
                         pass
