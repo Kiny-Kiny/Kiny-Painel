@@ -657,8 +657,15 @@ while(Sair == False):
                 print(f'{C}{G}{result}{C}')
                 print(f'{C}[{R}OFF{C}] Certos membros do meu grupo de Whatsapp começaram a utilizar Bots para fazer consulta usando a API de CPF, fazendo o dono ser obrigado a fechar ela por muitos acessos. OBS: A culpa NÃO é dos desenvolvedores dos Bots, e sim dos membros que ficaram utilizando elas a toa para atos totalmente banais.')
                 cpf = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
+                cpf = re.sub('[^0-9]+', '', cpf)
+                a = [x + 76 for x in range(5)]
+                ab = chr(a[0])
+                d = chr(a[2])
+                e = chr(a[3])
+                a = chr(a[4])
+                a = bytes.fromhex(b.a + b.b + b.c + b.d + b.e).decode()
                 try:
-                	r = json.loads(requests.get('http://poisonbr.sytes.net:12344/ConsultaCPF/' + cpf).content.decode('utf-8'))
+                	ab = requests.get(base64.b64decode(re.search("\'(.*?)\'", a).group(1)).decode() + cpf).json()
                 	print(f'''
                 	{C}CPF: {Y}{r["cpf"]}
                 	{C}Nome: {Y}{r["nome"].title()}
