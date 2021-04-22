@@ -362,9 +362,9 @@ while(Sair == False):
     else:
     	print(f"{C}{G}[95]{C} Mudar username")
     time.sleep(0.2)
-    print(f"{C}{G}[89]{C} Meu grupo[1]")
+    print(f"{C}{G}[89]{C} Meu grupo{C}[{B}1{C}]")
     time.sleep(0.2)
-    print(f"{C}{G}[90]{C} Meu grupo[2]")
+    print(f"{C}{G}[90]{C} Meu grupo{C}[{B}2{C}]")
     time.sleep(0.2)
     print(f"{C}{G}[92]{C} Meu Whatsapp")
     time.sleep(0.2)
