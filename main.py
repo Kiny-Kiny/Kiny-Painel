@@ -27,7 +27,7 @@ def restart():
 import os,sys,time,base64, json, re,subprocess,webbrowser,platform
 try:
     import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, cpf, nome, re
-    import banner as b
+    import apicpf as b
     from colorama import Fore, Style
     from bs4 import BeautifulSoup
     from phonenumbers import carrier
