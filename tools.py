@@ -29,9 +29,9 @@ port = 55555
 
 def rekt():
    if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://pastebin.com/fxB1cAPb")
+      webbrowser.open_new_tab("https://youtu.be/1oAZVariAvk")
    else:
-       os.system("termux-open-url https://pastebin.com/fxB1cAPb")
+       os.system("termux-open-url https://youtu.be/1oAZVariAvk")
 
 result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
 
