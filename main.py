@@ -670,7 +670,7 @@ while(Sair == False):
                 cov = input(f'{C}{G}===>{C}')
                 if cov == '1' or cov == '01':
                         for v in range(0, 30):
-                        	print(f"{C}[{Y}*{C}]MODO DE ESPERA: [v] Segundos")
+                        	print(f"{C}[{Y}*{C}]MODO DE ESPERA: {v} Segundos")
                         	time.sleep(1)
                         	os.system("clear")
                         cpfcon()
