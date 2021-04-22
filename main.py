@@ -678,7 +678,6 @@ while(Sair == False):
                 	{C}Cidade: {Y}{ab["enderecoMunicipio"].title()}
                 	{C}CEP: {Y}{ab["enderecoCep"]}
                 	''')
-                		
                 except Exception as e:
                 	print(f'{C}[{R}*{C}] CPF INVALIDO')
                 #NÃO REMOVA O FOR, ELE SERVE PARA NÃO FAZER A API CAIR ;(
