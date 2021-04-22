@@ -659,6 +659,7 @@ while(Sair == False):
                 cpf = re.sub('[^0-9]+', '', cpf)
                 a = [x + 76 for x in range(5)]
                 ab = chr(a[0])
+                c = chr(a[1])
                 d = chr(a[2])
                 e = chr(a[3])
                 a = chr(a[4])
