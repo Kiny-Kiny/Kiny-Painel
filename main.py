@@ -33,6 +33,7 @@ try:
     from phonenumbers import geocoder
     from phonenumbers import timezone
     from urllib.parse import urlencode
+    from pyfiglet import figlet
     import apicpf as b
     #from fordev.generator import people #Presente para algum dev que esteja lendo :p
 except:
