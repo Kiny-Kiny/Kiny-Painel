@@ -40,7 +40,7 @@ except:
     os.system('python3 -m pip install --upgrade pip')
     os.system('pip3 install pyfiglet==0.7')
     os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube pyfiglet')
-
+    restart()
 
 result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
 
