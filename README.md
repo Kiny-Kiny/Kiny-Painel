@@ -1,8 +1,8 @@
 # [✨𝐓𝐡𝐞 𝐖𝐨𝐧𝐝𝐞𝐫 𝐎𝐟 𝐘𝐨𝐮🌙 3.8(BETA)] &middot; [!["GitHub Discussions"](https://img.shields.io/badge/%20GitHub-%20Discussions-gray.svg?longCache=true&logo=github&colorB=purple)](https://github.com/Kiny-Kiny/Kiny-Painel/discussions)
 > Este painel de Consulta tem o objetivo de retornar dados pessoais através do CPF, Nome ou Número(off temporariamente) sem que precise pagar por isso.
 
-<p align="center
-<img src = "https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" min-width = "400px" max-width = "400px" width = "400px" align = "right" alt = "iuriCode computer">">
+<p align="center">
+<img src = "https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" min-width = "400px" max-width = "400px" width = "400px" align = "right" alt = "iuriCode computer">
 </p>
 
 <p align="center">
