@@ -25,6 +25,7 @@ def restart():
     os.execl(python, python, *sys.argv)
 
 import os,sys,time,base64, json, re,subprocess,webbrowser,platform
+os.system('pip3 install pyfiglet')
 try:
     import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, cpf, nome
     from colorama import Fore, Style
