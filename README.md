@@ -2,7 +2,7 @@
 > Este painel de Consulta tem o objetivo de retornar dados pessoais através do CPF, Nome ou Número(off temporariamente) sem que precise pagar por isso.
 
 <p align="center">
-<img src="https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/images%20(46).jpeg">
+<img src = "https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" min-width = "400px" max-width = "400px" width = "400px" align = "right" alt = "iuriCode computer">">
 </p>
 
 <p align="center">
