@@ -641,6 +641,7 @@ while(Sair == False):
 
     if op == '6' or op == '06':
         def cpfcon():
+                # Créditos da "endpoint": p0isonBR
                 os.system("clear")
                 print(f'{C}{G}{result}{C}')
                 cpf = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
