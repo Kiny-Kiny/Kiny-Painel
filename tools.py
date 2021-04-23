@@ -846,29 +846,29 @@ def primenumero():
     clear()
     rekt()
     pass
-    print(f'{C}{G}{result}{C}')
-    print(f'{C}[{G}i{C}] Digite o numero(ex: 219××××××××).')
-    requiem = input('===> ')
-    data = requests.get('https://dualitybuscas.com/cpf4/upload.php?placa={}&reload='.format(requiem)).text
-    a = data.replace('<label "control-label" for="formGroupExampleInput5">','').replace('</label>','').replace('<span "form-control-static" "formGroupExampleInput5">','').replace('<div "row form-group">','').replace('</br>','').replace('<br>','').replace('<div "col-6">','').replace('<div "col-4">','').replace('</span>','').replace('<a href="#" title="CONSULTADO"','').replace('name="LinkEvoPlus"','').replace('data-"003.920.678-54">','').replace('<i "fa fa-search"></i>','').replace('</a>','').replace('(s&#xE1;bado)','(sábado)').replace('(ter&#xE7;a-feira)','(terça-feira)').replace('Data de Nascimento','Data de Nascimento:').replace('<div "col-2">','').replace('<div "col-10">','').replace('<div "title-block">','').replace('<style>','').replace('</style>','')
-    for i in range(0,10):
-    	try:
-    		a = api.replace(f'<h3 "title"><i "fa fa-list-ul"></i> Resultado ({i} encontrados)</h3>','')
-    	except:
-    		pass
-    print(a)
+    #print(f'{C}{G}{result}{C}')
+    #print(f'{C}[{G}i{C}] Digite o numero(ex: 219××××××××).')
+    #requiem = input('===> ')
+    #data = requests.get('https://dualitybuscas.com/cpf4/upload.php?placa={}&reload='.format(requiem)).text
+    #a = data.replace('<label "control-label" for="formGroupExampleInput5">','').replace('</label>','').replace('<span "form-control-static" "formGroupExampleInput5">','').replace('<div "row form-group">','').replace('</br>','').replace('<br>','').replace('<div "col-6">','').replace('<div "col-4">','').replace('</span>','').replace('<a href="#" title="CONSULTADO"','').replace('name="LinkEvoPlus"','').replace('data-"003.920.678-54">','').replace('<i "fa fa-search"></i>','').replace('</a>','').replace('(s&#xE1;bado)','(sábado)').replace('(ter&#xE7;a-feira)','(terça-feira)').replace('Data de Nascimento','Data de Nascimento:').replace('<div "col-2">','').replace('<div "col-10">','').replace('<div "title-block">','').replace('<style>','').replace('</style>','')
+    #for i in range(0,10):
+    	#try:
+    		#a = api.replace(f'<h3 "title"><i "fa fa-list-ul"></i> Resultado ({i} encontrados)</h3>','')
+    	#except:
+    		#pass
+    #print(a)
 
-    print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
-    print('1.Sim')
-    print('2.Não')
-    OHNO = input("===>")
-    if OHNO == '1' or OHNO == '01':
+    #print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
+    #print('1.Sim')
+    #print('2.Não')
+    #OHNO = input("===>")
+    #if OHNO == '1' or OHNO == '01':
         primenumero()
-    if OHNO == '2' or OHNO == '02':
-        pass
-    else:
-        print(f'{C}[{R}i{C}] Opção inválida')
-        time.sleep(3)
+    #if OHNO == '2' or OHNO == '02':
+        #pass
+    #else:
+        #print(f'{C}[{R}i{C}] Opção inválida')
+        #time.sleep(3)
 
 
 def phoneinfoga():
