@@ -242,9 +242,13 @@ if login == 1:
     user = input(f"{C}[{G}+{C}]USERNAME:  ")
     snh = 'VirtualInsanity'
     if input(f"{C}[{G}+{C}]PASSWORD:  ").strip() == snh:
+        print(f"{C}[{G}*{C}] Acesso Liberado...")
+        time.sleep(1)
         tools.clear()
     else:
         print(f"{C}[{R}ERROR{C}] Wrong Password....Yare Yare")
+        time.sleep(1)
+        os.system("python3 main.py")
         if anim == 1:
             time.sleep(1)
         exit()
