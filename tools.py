@@ -863,7 +863,7 @@ def primenumero():
     #print('2.Não')
     #OHNO = input("===>")
     #if OHNO == '1' or OHNO == '01':
-        primenumero()
+        #primenumero()
     #if OHNO == '2' or OHNO == '02':
         #pass
     #else:
