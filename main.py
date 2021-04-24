@@ -338,13 +338,11 @@ while(Sair == False):
     time.sleep(0.2)
     print(f"{C}{G}[18]{C} CONSULTAR NOME {C}[{G}ON{C}]")
     time.sleep(0.2)
-    print(f"{C}{G}[19]{C} MÚSICAS")
+    print(f"{C}{G}[19]{C} CHAT NO {C}[{Y}TERMINAL{C}]")
     time.sleep(0.2)
-    print(f"{C}{G}[20]{C} CHAT NO {C}[{Y}TERMINAL{C}]")
+    print(f"{C}{G}[20]{C} GRUPO S.C.W {C}[{Y}PARCERIA{C}]")
     time.sleep(0.2)
-    print(f"{C}{G}[21]{C} GRUPO S.C.W {C}[{Y}PARCERIA{C}]")
-    time.sleep(0.2)
-    print(f"{C}{G}[22]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]")
+    print(f"{C}{G}[21]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]")
     if kinymode == 1:
     	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
@@ -379,15 +377,15 @@ while(Sair == False):
     op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
     tools.clear()
 
-    if op == '22':
+    if op == '21':
     	alvo5()
     	pass
 
-    if op == '21':
+    if op == '20':
     	antiatz()
     	pass
 
-    if op == '20':
+    if op == '19':
     	tools.chat()
     	pass
 
@@ -403,7 +401,7 @@ while(Sair == False):
     	zapzap()
     	pass
 
-    if op == '19':
+    if op == '282822882':
         print(f'{C}{G}{result}{C}')
         os.system("apt install mpg123 -y")
         os.system("clear")
