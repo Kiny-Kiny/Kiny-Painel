@@ -25,21 +25,21 @@ def restart():
     os.execl(python, python, *sys.argv)
 
 import os,sys,time,base64, json, re,subprocess,webbrowser,platform
-os.system('clear')
 try:
-	os.system('pip3 install pyfiglet==0.7')
-	os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube pyfiglet')
+    import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, cpf, nome
+    from colorama import Fore, Style
+    from bs4 import BeautifulSoup
+    from phonenumbers import carrier
+    from phonenumbers import geocoder
+    from phonenumbers import timezone
+    from urllib.parse import urlencode
+    import apicpf as b
+    #from fordev.generator import people #Presente para algum dev que esteja lendo :p
 except:
-	import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, cpf, nome
-	from colorama import Fore, Style
-	from bs4 import BeautifulSoup
-	from phonenumbers import carrier
-	from phonenumbers import geocoder
-	from phonenumbers import timezone
-	from urllib.parse import urlencode
-	import apicpf as b
-	#from fordev.generator import people #Presente para algum dev que esteja lendo :p
-
+    os.system('python3 -m pip install --upgrade pip')
+    os.system('pip3 install pyfiglet==0.7')
+    os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube pyfiglet')
+    restart()
 
 result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
 
@@ -304,34 +304,35 @@ while(Sair == False):
     print(f"{C}[{Y}Data de retorno das consultas{C}]: {C}[{G}28/04/2021{C}]")
     time.sleep(0.2)
     print(f'''
-{C}[{Y}+{C}] Consultas:
+    {C}[{Y}+{C}] Consultas:
     
-{C}{G}[1]{C} BUSCADOR DE CEP 
-{C}{G}[2]{C} GEO LOCALIZADOR DE IP 
-{C}{G}[3]{C} KINY-SITE-INFOGA
+    {C}{G}[1]{C} BUSCADOR DE CEP 
+    {C}{G}[2]{C} GEO LOCALIZADOR DE IP 
+    {C}{G}[3]{C} KINY-SITE-INFOGA
     
-{C}{G}[4]{C} CONSULTA DE CNPJ 
-{C}{G}[5]{C} CONSULTA BANCARIA 
-{C}{G}[6]{C} CONSULTA CPF {C}[{R}OFF{C}]
+    {C}{G}[4]{C} CONSULTA DE CNPJ 
+    {C}{G}[5]{C} CONSULTA BANCARIA 
+    {C}{G}[6]{C} CONSULTA CPF {C}[{R}OFF{C}]
     
-{C}{G}[7]{C} CONSULTA CNS 
-{C}{G}[8]{C} CONSULTA PLACA 
-{C}{G}[9]{C} CONSULTA CRM
+    {C}{G}[7]{C} CONSULTA CNS 
+    {C}{G}[8]{C} CONSULTA PLACA 
+    {C}{G}[9]{C} CONSULTA CRM
     
-{C}{G}[10]{C} CONSULTA DE NUMERO 
-{C}{G}[11]{C} CONSULTA BIN 
-{C}{G}[12]{C} GERAR PESSOA
+    {C}{G}[10]{C} CONSULTA DE NUMERO 
+    {C}{G}[11]{C} CONSULTA BIN 
+    {C}{G}[12]{C} GERAR PESSOA
     
-{C}{G}[13]{C} MOSTRAR MEU IP 
-{C}{G}[14]{C} CC CHECKER 
-{C}{G}[15]{C} COVID19
+    {C}{G}[13]{C} MOSTRAR MEU IP 
+    {C}{G}[14]{C} CC CHECKER 
+    {C}{G}[15]{C} COVID19
     
-{C}{G}[16]{C} CONSULTAR MÃE {C}[{R}OFF{C}]
-{C}{G}[18]{C} CONSULTAR NOME {C}[{G}ON{C}]
-{C}{G}[19]{C} CHAT NO {C}[{Y}TERMINAL{C}] 
+    {C}{G}[16]{C} CONSULTAR MÃE {C}[{R}OFF{C}]
+    {C}{G}[18]{C} CONSULTAR NOME {C}[{G}ON{C}]
+    {C}{G}[19]{C} CHAT NO {C}[{Y}TERMINAL{C}] 
     
-{C}{G}[20]{C} GRUPO S.C.W {C}[{Y}PARCERIA{C}] 
-{C}{G}[21]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]''')
+    {C}{G}[20]{C} GRUPO S.C.W {C}[{Y}PARCERIA{C}] 
+    {C}{G}[21]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]
+    ''')
     if kinymode == 1:
     	print()
     	print(f"{C}[{Y}+{C}] Nova Opção Desbloqueada:")
@@ -341,21 +342,25 @@ while(Sair == False):
         time.sleep(1)
     print()
     print(f'''
-{C}[{Y}+{C}] Opções: 
+    {C}[{Y}+{C}] Opções: 
     
-{C}{G}[89]{C} Meu grupo[1]
-{C}{G}[90]{C} Meu grupo[2]
-{C}{G}[92]{C} Meu Whatsapp
+    {C}{G}[89]{C} Meu grupo[1] 
     
-{C}{G}[93]{C} Meu canal 
-{C}{G}[94]{C} Notas ao vivo 
-{C}{G}[96]{C} Opções
+    {C}{G}[90]{C} Meu grupo[2] 
     
-{C}{G}[97]{C} Notas de versão 
-{C}{G}[98]{C} Atualizar 
-{C}{G}[99]{C} Update && Upgrade
+    {C}{G}[92]{C} Meu Whatsapp
     
-{C}[{R}00{C}] EXIT
+    {C}{G}[93]{C} Meu canal 
+    
+    {C}{G}[94]{C} Notas ao vivo 
+    
+    {C}{G}[96]{C} Opções
+    
+    {C}{G}[97]{C} Notas de versão 
+    {C}{G}[98]{C} Atualizar 
+    {C}{G}[99]{C} Update && Upgrade
+    
+    {C}[{R}00{C}] EXIT
     ''')
     if login:
     	pass
