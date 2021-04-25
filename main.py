@@ -337,7 +337,7 @@ while(Sair == False):
     
     {C}{G}[97]{C} Notas de versão {C}{G}[98]{C} Atualizar {C}{G}[99]{C} Update && Upgrade
     
-    {C}[{R}00]]{C} EXIT
+    {C}[{R}00]{C} EXIT
     ''')
     if login:
     	pass
