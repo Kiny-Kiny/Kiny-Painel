@@ -642,7 +642,7 @@ while(Sair == False):
                 os.system("clear")
                 print(f'{C}{G}{result}{C}')
                 cpf = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
-                r = requests.get('https://apilocal-o4bmx.ondigitalocean.app/cpf.php?cpf={}'.format(cpf)).json()
+                r = requests.get('https://apilocal-o4bmx.ondigitalocean.app/cpf.php?cpf={}'.format(cpf))
                 adress_data = r.json()
                 try:
                 	print('{C}[{Y}Grau{C}]: {}'.format(adress_data['grauQualidade']))
