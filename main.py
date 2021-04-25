@@ -337,12 +337,12 @@ while(Sair == False):
     
     {C}{G}[97]{C} Notas de versão {C}{G}[98]{C} Atualizar {C}{G}[99]{C} Update && Upgrade
     
-    {C}[{R}00]{C} EXIT
+    {C}[{R}00{C}] EXIT
     ''')
     if login:
     	pass
     else:
-    	print(f"{C}[{Y}+{C}] Opção de troca de nome")
+    	print(f"{C}[{Y}+{C}] Opção de troca de nome:")
     	print(f"{C}{G}[95]{C} Mudar username")
     print()
     op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
