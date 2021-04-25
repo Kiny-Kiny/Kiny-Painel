@@ -642,30 +642,27 @@ while(Sair == False):
                 os.system("clear")
                 print(f'{C}{G}{result}{C}')
                 cpf = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
-                cpf = re.sub('[^0-9]+', '', cpf)
-                a = [x + 76 for x in range(5)]
-                ab = chr(a[0])
-                c = chr(a[1])
-                d = chr(a[2])
-                e = chr(a[3])
-                a = chr(a[4])
-                a = bytes.fromhex(b.a + b.b + b.c + b.d + b.e).decode()
+                requests = requests.get('https://apilocal-o4bmx.ondigitalocean.app/cpf.php?cpf={}'.format(cpf))
+                adress_data = requests.json()
                 try:
-                	ab = requests.get(base64.b64decode(re.search("\'(.*?)\'", a).group(1)).decode() + cpf).json()
-                	print(f'''
-                	{C}CPF: {Y}{ab["cpf"]}
-                	{C}Nome: {Y}{ab["nome"].title()}
-                	{C}Nascimento: {Y}{ab["dataNascimento"]}
-                	{C}Nome da Mae: {Y}{ab["nomeMae"].title()}
-                	{C}Nome do Pai: {Y}{ab["nomePai"].title()}
-                	{C}Endereco: {Y}{ab["enderecoTipoLogradouro"].title()} {ab["enderecoLogradouro"].title()}, {ab["enderecoNumero"]}
-                	{C}Complemento: {Y}{ab["enderecoComplemento"].title()}
-                	{C}Bairro: {Y}{ab["enderecoBairro"].title()}
-                	{C}Cidade: {Y}{ab["enderecoMunicipio"].title()}
-                	{C}CEP: {Y}{ab["enderecoCep"]}
-                	''')
-                except Exception as e:
-                	print(f'{C}[{R}*{C}] CPF INVALIDO')
+                	print('{C}[{Y}Grau{C}]: {}'.format(adress_data['grauQualidade']))
+                	print('{C}[{Y}CNS{C}]: {}'.format(adress_data['cns']))
+                	print('{C}[{Y}Nome{Y}]: {}'.format(adress_data['nome']))
+                	print('{C}[{Y}Aniversario{C}]: {}'.format(adress_data['dataNascimento']))
+                	print('{C}[{Y}Nome da Mãe{C}]: {}'.format(adress_data['nomeMae']))
+                	print('{C}[{Y}Nome do Pai{C}]: {}'.format(adress_data['nomePai']))
+                	print('{C}[{Y}Gênero{C}]: {}'.format(adress_data['sexoDescricao']))
+                	print('{C}[{Y}Raça{C}]: {}'.format(adress_data['racaCorDescricao']))
+                	print('{C}[{Y}Nacionalidade{C}]: {}'.format(adress_data['nacionalidade']))
+                	print('{C}[{Y}Local de Nascimento{C}]: {}'.format(adress_data['municipioNascimento']))
+                	print('{C}[{Y}Endereco{C}]: {}'.format(adress_data['enderecoNumero']))
+                	print('{C}[{Y}Bairro{C}]: {}'.format(adress_data['enderecoBairro']))
+                	print('{C}[{Y}CEP{C}]: {}'.format(adress_data['enderecoCep']))
+                	print('{C}[{Y}Municipio{C}]: {}'.format(adress_data['enderecoMunicipio']))
+                	print('{C}[{Y}DDD{C}]: {}'.format(adress_data['telefone'][0]['ddd']))
+                	print('{C}[{Y}Número{C}]: {}'.format(adress_data['telefone'][0]['numero']))
+                except:
+                	print(f'{C}[{R}*{C}] CPF INVALIDO OU NÃO ENCONTRADO')
 
                 print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
                 print()
