@@ -331,8 +331,7 @@ while(Sair == False):
     {C}{G}[19]{C} CHAT NO {C}[{Y}TERMINAL{C}] 
     
     {C}{G}[20]{C} GRUPO S.C.W {C}[{Y}PARCERIA{C}] 
-    {C}{G}[21]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]
-    ''')
+    {C}{G}[21]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]''')
     if kinymode == 1:
     	print()
     	print(f"{C}[{Y}+{C}] Nova Opção Desbloqueada:")
