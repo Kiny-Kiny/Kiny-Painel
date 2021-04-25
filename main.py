@@ -643,7 +643,7 @@ while(Sair == False):
                 print(f'{C}{G}{result}{C}')
                 cpf = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
                 sexo = requests.get('https://apilocal-o4bmx.ondigitalocean.app/cpf.php?cpf={}'.format(cpf))
-                adress_data = sexo.json()
+                adress_data = requests.json()
                 try:
                 	print('{C}[{Y}Grau{C}]: {}'.format(adress_data['grauQualidade']))
                 	print('{C}[{Y}CNS{C}]: {}'.format(adress_data['cns']))
