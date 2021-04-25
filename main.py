@@ -343,16 +343,12 @@ while(Sair == False):
     print(f'''
     {C}[{Y}+{C}] Opções: 
     
-    {C}{G}[89]{C} Meu grupo[1] 
-    
-    {C}{G}[90]{C} Meu grupo[2] 
-    
+    {C}{G}[89]{C} Meu grupo[1]
+    {C}{G}[90]{C} Meu grupo[2]
     {C}{G}[92]{C} Meu Whatsapp
     
     {C}{G}[93]{C} Meu canal 
-    
     {C}{G}[94]{C} Notas ao vivo 
-    
     {C}{G}[96]{C} Opções
     
     {C}{G}[97]{C} Notas de versão 
