@@ -303,75 +303,47 @@ while(Sair == False):
     print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
     print(f"{C}[{Y}Data de retorno das consultas{C}]: {C}[{G}28/04/2021{C}]")
     time.sleep(0.2)
-    print(f"{C}{G}[1]{C} BUSCADOR DE CEP")
-    time.sleep(0.2)
-    print(f"{C}{G}[2]{C} GEO LOCALIZADOR DE IP")
-    time.sleep(0.2)
-    print(f"{C}{G}[3]{C} KINY-SITE-INFOGA")
-    time.sleep(0.2)
-    print(f"{C}{G}[4]{C} CONSULTA DE CNPJ")
-    time.sleep(0.2)
-    print(f"{C}{G}[5]{C} CONSULTA BANCARIA")
-    time.sleep(0.2)
-    print(f"{C}{G}[6]{C} CONSULTA CPF {C}[{R}OFF{C}]")
-    time.sleep(0.2)
-    print(f"{C}{G}[7]{C} CONSULTA CNS")
-    time.sleep(0.2)
-    print(f"{C}{G}[8]{C} CONSULTA PLACA")
-    time.sleep(0.2)
-    print(f"{C}{G}[9]{C} CONSULTA CRM")
-    time.sleep(0.2)
-    print(f"{C}{G}[10]{C} CONSULTA DE NUMERO")
-    time.sleep(0.2)
-    print(f"{C}{G}[11]{C} CONSULTA BIN")
-    time.sleep(0.2)
-    print(f"{C}{G}[12]{C} GERAR PESSOA")
-    time.sleep(0.2)
-    print(f"{C}{G}[13]{C} MOSTRAR MEU IP")
-    time.sleep(0.2)
-    print(f"{C}{G}[14]{C} CC CHECKER")
-    time.sleep(0.2)
-    print(f"{C}{G}[15]{C} COVID19")
-    time.sleep(0.2)
-    print(f"{C}{G}[16]{C} CONSULTAR MÃE {C}[{R}OFF{C}]")
-    time.sleep(0.2)
-    print(f"{C}{G}[18]{C} CONSULTAR NOME {C}[{G}ON{C}]")
-    time.sleep(0.2)
-    print(f"{C}{G}[19]{C} CHAT NO {C}[{Y}TERMINAL{C}]")
-    time.sleep(0.2)
-    print(f"{C}{G}[20]{C} GRUPO S.C.W {C}[{Y}PARCERIA{C}]")
-    time.sleep(0.2)
-    print(f"{C}{G}[21]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]")
+    print(f'''
+    {C}[{Y}+{C}] Consultas:
+    
+    {C}{G}[1]{C} BUSCADOR DE CEP {C}{G}[2]{C} GEO LOCALIZADOR DE IP {C}{G}[3]{C} KINY-SITE-INFOGA
+    
+    {C}{G}[4]{C} CONSULTA DE CNPJ {C}{G}[5]{C} CONSULTA BANCARIA {C}{G}[6]{C} CONSULTA CPF {C}[{R}OFF{C}]
+    
+    {C}{G}[7]{C} CONSULTA CNS {C}{G}[8]{C} CONSULTA PLACA {C}{G}[9]{C} CONSULTA CRM
+    
+    {C}{G}[10]{C} CONSULTA DE NUMERO {C}{G}[11]{C} CONSULTA BIN {C}{G}[12]{C} GERAR PESSOA
+    
+    {C}{G}[13]{C} MOSTRAR MEU IP {C}{G}[14]{C} CC CHECKER {C}{G}[15]{C} COVID19
+    
+    {C}{G}[16]{C} CONSULTAR MÃE {C}[{R}OFF{C}] {C}{G}[18]{C} CONSULTAR NOME {C}[{G}ON{C}] {C}{G}[19]{C} CHAT NO {C}[{Y}TERMINAL{C}] 
+    
+    {C}{G}[20]{C} GRUPO S.C.W {C}[{Y}PARCERIA{C}] {C}{G}[21]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]
+    ''')
     if kinymode == 1:
+    	print()
+    	print(f"{C}[{Y}+{C}] Nova Opção Desbloqueada:")
+    	print()
     	print(f"{C}{G}[17]{C} FERRAMENTAS")
     if anim==1:
         time.sleep(1)
     print()
+    print(f'''
+    {C}[{Y}+{C}] Opções: 
+    
+    {C}{G}[89]{C} Meu grupo[1] {C}{G}[90]{C} Meu grupo[2] {C}{G}[92]{C} Meu Whatsapp
+    
+    {C}{G}[93]{C} Meu canal {C}{G}[94]{C} Notas ao vivo {C}{G}[96]{C} Opções
+    
+    {C}{G}[97]{C} Notas de versão {C}{G}[98]{C} Atualizar {C}{G}[99]{C} Update && Upgrade
+    
+    {C}[{R}00]]{C} EXIT
+    ''')
     if login:
     	pass
     else:
+    	print(f"{C}[{Y}+{C}] Opção de troca de nome")
     	print(f"{C}{G}[95]{C} Mudar username")
-    time.sleep(0.2)
-    print(f"{C}{G}[89]{C} Meu grupo[1]")
-    time.sleep(0.2)
-    print(f"{C}{G}[90]{C} Meu grupo[2]")
-    time.sleep(0.2)
-    print(f"{C}{G}[92]{C} Meu Whatsapp")
-    time.sleep(0.2)
-    print(f"{C}{G}[93]{C} Meu canal")
-    time.sleep(0.2)
-    print(f"{C}{G}[94]{C} Notas ao vivo")
-    time.sleep(0.2)
-    print(f"{C}{G}[96]{C} Opções")
-    time.sleep(0.2)
-    print(f"{C}{G}[97]{C} Notas de versão")
-    time.sleep(0.2)
-    print(f"{C}{G}[98]{C} Atualizar")
-    time.sleep(0.2)
-    print(f"{C}{G}[99]{C} Update && Upgrade")
-    time.sleep(0.2)
-    print(f"{C}{G}[00]{C} EXIT")
-    time.sleep(0.2)
     print()
     op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
     tools.clear()
