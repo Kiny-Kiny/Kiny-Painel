@@ -28,7 +28,7 @@ import os,sys,time,base64, json, re,subprocess,webbrowser,platform
 os.system('python3 -m pip install --upgrade pip')
 os.system('pip3 install pyfiglet==0.7')
 os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube pyfiglet')
-import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, cpf, nome
+import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, nome
 from colorama import Fore, Style
 from bs4 import BeautifulSoup
 from phonenumbers import carrier
