@@ -25,18 +25,21 @@ def restart():
     os.execl(python, python, *sys.argv)
 
 import os,sys,time,base64, json, re,subprocess,webbrowser,platform
-os.system('python3 -m pip install --upgrade pip')
-os.system('pip3 install pyfiglet==0.7')
-os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube pyfiglet')
-import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, nome
-from colorama import Fore, Style
-from bs4 import BeautifulSoup
-from phonenumbers import carrier
-from phonenumbers import geocoder
-from phonenumbers import timezone
-from urllib.parse import urlencode
-import apicpf as b
-#from fordev.generator import people #Presente para algum dev que esteja lendo :p
+try:
+	import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, nome
+	from colorama import Fore, Style
+	from bs4 import BeautifulSoup
+	from phonenumbers import carrier
+	from phonenumbers import geocoder
+	from phonenumbers import timezone
+	from urllib.parse import urlencode
+	import apicpf as b
+	#from fordev.generator import people #Presente para algum dev que esteja lendo :p
+except:
+	os.system('python3 -m pip install --upgrade pip')
+	os.system('pip3 install pyfiglet==0.7')
+	os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube pyfiglet')
+	restart()
 
 result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
 
