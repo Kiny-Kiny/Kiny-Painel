@@ -654,6 +654,7 @@ while(Sair == False):
     				
     	def cpf():
     			try:
+    				print(f'{C}{G}{result}{C}')
     				cpf = input(f"\n{C}[{G}*{C}] Informe o CPF a ser consultado: {B}")
     				print()
     				cpf = re.sub('[^0-9]+', '', cpf)
