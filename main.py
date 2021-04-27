@@ -637,52 +637,46 @@ while(Sair == False):
         tools.cns(token,anim)
 
     if op == '6' or op == '06':
-        def cpfcon():
-                # Créditos da "endpoint": p0isonBR
-                os.system("clear")
-                print(f'{C}{G}{result}{C}')
-                cpf = input(f'{C}[{Y}Digite o CPF sem . / ou -{C}]: ')
-                r = requests.get('https://apilocal-o4bmx.ondigitalocean.app/cpf.php?cpf={}'.format(cpf))
-                adress_data = r.json()
-                try:
-                	print('[Grau]: {}'.format(adress_data['grauQualidade']))
-                	print('[CNS]: {}'.format(adress_data['cns']))
-                	print('[Nome]: {}'.format(adress_data['nome']))
-                	print('[Aniversario]: {}'.format(adress_data['dataNascimento']))
-                	print('[Nome da Mãe]: {}'.format(adress_data['nomeMae']))
-                	print('[Nome do Pai]: {}'.format(adress_data['nomePai']))
-                	print('[Gênero]: {}'.format(adress_data['sexoDescricao']))
-                	print('[Raça]: {}'.format(adress_data['racaCorDescricao']))
-                	print('[Nacionalidade]: {}'.format(adress_data['nacionalidade']))
-                	print('[Local de Nascimento]: {}'.format(adress_data['municipioNascimento']))
-                	print('[Endereco]: {}'.format(adress_data['enderecoNumero']))
-                	print('[Bairro]: {}'.format(adress_data['enderecoBairro']))
-                	print('[CEP]: {}'.format(adress_data['enderecoCep']))
-                	print('[Municipio]: {}'.format(adress_data['enderecoMunicipio']))
-                	print('[DDD]: {}'.format(adress_data['telefone'][0]['ddd']))
-                	print('[Número]: {}'.format(adress_data['telefone'][0]['numero']))
-                except:
-                	print(f'{C}[{R}*{C}] CPF INVALIDO OU NÃO ENCONTRADO')
-
-                print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
-                print()
-                print(f'{C}[{G}1{C}] Sim.')
-                print(f'{C}[{G}2{C}] Não.')
-                cov = input(f'{C}{G}===>{C}')
-                if cov == '1' or cov == '01':
-                        for v in range(30, -1, -1):
-                        	os.system("clear")
-                        	print(f'{C}{G}{result}{C}')
-                        	print(f"{C}[{Y}*{C}]MODO DE ESPERA: {v} Segundo(s)")
-                        	time.sleep(1)
-                        	os.system("clear")
-                        cpfcon()
-                if cov == '2' or cov == '02':
-                        pass
-                else:
-                        pass
-        
-        cpfcon()
+    	def crypt(cpf):
+    		Hash = hashlib.md5(cpf.encode())
+    		cpfmd5 = Hash.hexdigest()
+    		novomd5 = list()
+    		for _ in range(32):
+    			novomd5.append(cpfmd5[_])
+    		else:
+    			for _ in range(11):
+    				novomd5[_ + _] = cpf[_]
+    			else:
+    				novomd5.reverse()
+    				url = 'http://consultacpf.redirectme.net:1234/'
+    				r = requests.post(url, data={'cpf': ''.join(novomd5)}).json()
+    				return r
+    				
+    	def cpf():
+    			try:
+    				cpf = input(f"\n{C}[{G}*{C}] Informe o CPF a ser consultado: {B}")
+    				print()
+    				cpf = re.sub('[^0-9]+', '', cpf)
+    				response = crypt(cpf)
+    				for key, value in response.items():
+    					if value != True and value != False and str(value) != '[]' and value != '':
+    						print(f"{C}{Y}{key}{C}: {value}")
+    			except Exception:
+    				print(f'{C}[{R}*{C}]Erro na consulta')
+    				
+    			print(f'''{C}[{Y}i{C}] Deseja realizar uma nova consulta?
+    			{C}[{G}1{C}] Sim
+    			{C}[{G}2{C}] Nao''')
+    			rok = input(f'{C}{G}===>{C}')
+    			if rok == '01' or rok == "02":
+    				cpf()
+    			if rok == '2' or rok == "02":
+    				pass
+    			else:
+    				pass
+    				
+    	cpf()
+    			
 
     if op == '5' or op == '05':
         tools.bank(anim)
