@@ -665,9 +665,9 @@ while(Sair == False):
     			except Exception:
     				print(f'{C}[{R}*{C}]Erro na consulta')
     				
-    			print(f'''{C}[{Y}i{C}] Deseja realizar uma nova consulta?
-    			{C}[{G}1{C}] Sim
-    			{C}[{G}2{C}] Nao''')
+    			print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
+    			print(f'{C}[{G}1{C}] Sim')
+    			print(f'{C}[{G}2{C}] Nao')
     			rok = input(f'{C}{G}===>{C}')
     			if rok == '01' or rok == "02":
     				cpf()
