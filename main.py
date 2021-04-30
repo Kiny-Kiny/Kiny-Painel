@@ -295,7 +295,7 @@ while(Sair == False):
     print(f'{C}{G}{result}{C}')    
     print(f'{C}[{G}*{C}]'+random.choice(welcome_msg)+' '+str(user)+'!')
     print()
-    print(f'{C}[{R}*{C}] ESTE PAINEL FOI DISPONIBILIZADO GRATUITAMENTE, SE VOCÊ PAGOU POR ISSO VOCÊ LEVOU GOLPE")
+    print(f'{C}[{R}*{C}] ESTE PAINEL FOI DISPONIBILIZADO GRATUITAMENTE, SE VOCÊ PAGOU POR ISSO VOCÊ LEVOU GOLPE')
     print()
     if anim == 1:
         time.sleep(1)
