@@ -369,7 +369,7 @@ while(Sair == False):
     	print(f"{C}[{Y}+{C}] Opção de troca de nome:")
     	print(f"{C}{G}[95]{C} Mudar username")
     print()
-    print(f'{C}[{R}*{C}] ESTE PAINEL FOI DISPONIBILIZADO GRATUITAMENTE, SE VOCÊ PAGOU POR ISSO VOCÊ LEVOU GOLPE')
+    print(f'{C}[{R}*{C}] ESTE PAINEL FOI DISPONIBILIZADO GRATUITAMENTE, SE VOCÊ PAGOU POR ISSO LEVOU GOLPE')
     op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
     tools.clear()
 
