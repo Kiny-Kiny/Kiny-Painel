@@ -292,8 +292,11 @@ while(Sair == False):
     time.sleep(2)
     print(f"{C}[{G}Dev's{C}] Coded By: {CY} KINY {CO} and {CY} YATO {CO} in 07/02/2021")
     print()
-    print(f'{C}{G}{result}{C}')
+    print(f'{C}{G}{result}{C}')    
     print(f'{C}[{G}*{C}]'+random.choice(welcome_msg)+' '+str(user)+'!')
+    print()
+    print(f'{C}[{R}*{C}] ESTE PAINEL FOI DISPONIBILIZADO GRATUITAMENTE, SE VOCÊ PAGOU POR ISSO VOCÊ LEVOU GOLPE")
+    print()
     if anim == 1:
         time.sleep(1)
     print(f'{C}[{Y}*{C}]Meu Pix: {CY}0018f93e-23c2-4c25-b8e5-c29809786d94{CO}')
