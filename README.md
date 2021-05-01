@@ -5,7 +5,7 @@
 <img src = "https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" min-width = "400px" max-width = "400px" width = "400px" align = "right" alt = "iuriCode computer">
 </p>
 
-- Problemas no Pip, recomendo esperar o PyOrg resolver o problema.
+- Problemas no Pip, recomendamos esperar até o PyOrg resolver o problema.
 
 <p align="center">
   <img alt="Kiny-Kiny' Github Stats" src="https://github-readme-stats.vercel.app/api?username=Kiny-Kiny&show_icons=true&include_all_commits=true&hide_border=true" />
