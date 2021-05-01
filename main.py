@@ -20,6 +20,10 @@ RT='\033[;0m'
 ## Obrigado pelo apoio snuking
 #######################
 
+NO_FORMAT="\033[0m"
+C_GREY89="\033[38;5;254m"
+C_RED1="\033[48;5;196m"
+
 def restart():
     python = sys.executable
     os.execl(python, python, *sys.argv)
@@ -369,7 +373,7 @@ while(Sair == False):
     	print(f"{C}[{Y}+{C}] Opção de troca de nome:")
     	print(f"{C}{G}[95]{C} Mudar username")
     print()
-    print(f'{C}[{R}*{C}] ESTE PAINEL FOI DISPONIBILIZADO GRATUITAMENTE, SE VOCÊ PAGOU POR ISSO LEVOU GOLPE')
+    print(f"{C_GREY89}{C_RED1}ESTE PAINEL FOI DISPONIBILIZADO GRATUITAMENTE, SE VOCÊ PAGOU POR ISSO FOI ENGANADO.{NO_FORMAT}")
     op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
     tools.clear()
 
