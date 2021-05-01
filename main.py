@@ -99,9 +99,9 @@ def zap2():
 
 def antiatz():
    if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://chat.whatsapp.com/JsqKbgnnJAM2WuUwaMSojd")
+      webbrowser.open_new_tab("https://chat.whatsapp.com/Jhrhuyf7GCzI8fITIrjSDV")
    else:
-       os.system("termux-open-url https://chat.whatsapp.com/JsqKbgnnJAM2WuUwaMSojd")
+       os.system("termux-open-url https://chat.whatsapp.com/Jhrhuyf7GCzI8fITIrjSDV")
 
 
 def alvo1():
@@ -331,7 +331,7 @@ while(Sair == False):
     {C}{G}[18]{C} CONSULTAR NOME {C}[{G}ON{C}]
     {C}{G}[19]{C} CHAT NO {C}[{Y}TERMINAL{C}] 
     
-    {C}{G}[20]{C} GRUPO S.C.W {C}[{Y}PARCERIA{C}] 
+    {C}{G}[20]{C} GRUPO S.W.B {C}[{Y}PARCERIA{C}] 
     {C}{G}[21]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]
     ''')
     if kinymode == 1:
