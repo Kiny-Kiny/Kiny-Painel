@@ -306,7 +306,7 @@ while(Sair == False):
     print(f'[{C}{R}+{C}] Se vierem no meu PV perguntar quando as consultas vão voltar, vou dar block ou ignorar.')
     print()
     print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
-    print(f"{C}[{Y}Data de retorno das consultas por número{C}]: {C}[{G}05/05/2021{C}] {C}{Y}MOTIVO: ESTÁVAMOS PLANEJANDO RETORNAR COM A CONSULTA DE NÚMERO NO DIA 03/05, MAS SÓ IREMOS CONSEGUIR COMPRAR NO MESMO DIA A API, ENTÃO NÃO TERÍAMOS TEMPO DE CODAR{C}")
+    print(f"{C}[{Y}Data de retorno das consultas por número{C}]: {C}[{G}013/05/2021{C}] {C}{Y}MOTIVO: ESTÁVAMOS PLANEJANDO RETORNAR COM A CONSULTA DE NÚMERO NO DIA 05/05, MAS TIVEMOS PROBLEMAS COM NOSSO PATROCINADOR{C}")
     time.sleep(0.2)
     print(f'''
     {C}[{Y}+{C}] Consultas:
