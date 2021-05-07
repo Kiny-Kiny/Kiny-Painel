@@ -663,7 +663,7 @@ while(Sair == False):
     			print(f'{C}[{G}2{C}] Nao')
     			rok = input(f'{C}{G}===>{C}')
     			if rok == '01' or rok == "02":
-    				cpf()
+    				zahandocpf()
     			if rok == '2' or rok == "02":
     				pass
     			else:
