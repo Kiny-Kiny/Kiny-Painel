@@ -317,7 +317,7 @@ while(Sair == False):
     
     {C}{G}[4]{C} CONSULTA DE CNPJ 
     {C}{G}[5]{C} CONSULTA BANCARIA 
-    {C}{G}[6]{C} CONSULTA CPF {C}[{R}OFF{C}]
+    {C}{G}[6]{C} CONSULTA CPF {C}[{G}ON{C}]
     
     {C}{G}[7]{C} CONSULTA CNS 
     {C}{G}[8]{C} CONSULTA PLACA 
