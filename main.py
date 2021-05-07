@@ -643,7 +643,7 @@ while(Sair == False):
         tools.cns(token,anim)
 
     if op == '6' or op == '06':
-    	def zahandocpf:
+    	def zahandocpf():
     			os.system("clear")
     			print(f'{C}{G}{result}{C}')
     			lmao = input(f"{C}[{G}*{C}] Digite o CPF: ")
