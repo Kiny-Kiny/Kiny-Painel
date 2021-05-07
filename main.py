@@ -643,33 +643,22 @@ while(Sair == False):
         tools.cns(token,anim)
 
     if op == '6' or op == '06':
-    	def crypt(cpf):
-    		Hash = hashlib.md5(cpf.encode())
-    		cpfmd5 = Hash.hexdigest()
-    		novomd5 = list()
-    		for _ in range(32):
-    			novomd5.append(cpfmd5[_])
-    		else:
-    			for _ in range(11):
-    				novomd5[_ + _] = cpf[_]
-    			else:
-    				novomd5.reverse()
-    				url = 'http://consultacpf.redirectme.net:1234/'
-    				r = requests.post(url, data={'cpf': ''.join(novomd5)}).json()
-    				return r
-    				
-    	def cpf():
+    	def zahandocpf:
+    			os.system("clear")
+    			print(f'{C}{G}{result}{C}')
+    			lmao = input(f"{C}[{G}*{C}] Digite o CPF: ")
+    			data = requests.get('http://api.trackear.com.br/basepv/cpf/{}/noip'.format(lmao)).json()
     			try:
+    				os.system("clear")
     				print(f'{C}{G}{result}{C}')
-    				cpf = input(f"\n{C}[{G}*{C}] Informe o CPF a ser consultado: {B}")
-    				print()
-    				cpf = re.sub('[^0-9]+', '', cpf)
-    				response = crypt(cpf)
-    				for key, value in response.items():
-    					if value != True and value != False and str(value) != '[]' and value != '':
-    						print(f"{C}{Y}{key}{C}: {value}")
-    			except Exception:
-    				print(f'{C}[{R}*{C}]Erro na consulta')
+    				print("CPF: {}".format(data['cpf']))
+    				print("Nome: {}".format(data['nome']))
+    				print("Sexo: {}".format(data['sexo']))
+    				print("Data de Nascimento: {}".format(data['dtNascimento']))
+    				print("Idade: {}".format(data['idade']))
+    				print("Data da Consulta: {}".format(data['dtConsulta']))
+    			except:
+    				print(f"{C}[{R}*{C}] CPF INVÁLIDO OU SERVIDOR FORA DO AR.")
     				
     			print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
     			print(f'{C}[{G}1{C}] Sim')
@@ -682,7 +671,7 @@ while(Sair == False):
     			else:
     				pass
     				
-    	cpf()
+    	zahandocpf()
     			
 
     if op == '5' or op == '05':
