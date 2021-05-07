@@ -649,8 +649,6 @@ while(Sair == False):
     			lmao = input(f"{C}[{G}*{C}] Digite o CPF: ")
     			data = requests.get('http://api.trackear.com.br/basepv/cpf/{}/noip'.format(lmao)).json()
     			try:
-    				os.system("clear")
-    				print(f'{C}{G}{result}{C}')
     				print("CPF: {}".format(data['cpf']))
     				print("Nome: {}".format(data['nome']))
     				print("Sexo: {}".format(data['sexo']))
