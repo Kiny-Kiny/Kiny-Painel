@@ -1,743 +1,429 @@
-global R,B,C,Y,G,RT,CY,CO
-CO='\033[m'
-R='\033[1;31m'
-B='\033[1;34m'
-C='\033[1;37m'
-CY='\033[1;36m'
-Y='\033[1;33m'
-G='\033[1;32m'
-RT='\033[;0m'
-
-## Distribuido livremente pela licença MIT,
-## Aos que não sabem o que isso significa,sugerimos estudo.
-#######################
-##
-## Soubemos do grande roubo ao script do Snuking,feito pelo usuário ZeusXaloc,
-## Demonstramos repúdio as atitudes do mesmo,totalmente desprezível.
-## ZeusXaloc,você NÃO é bem vindo aqui.
-## 
-#######################
-## Obrigado pelo apoio snuking
-#######################
-
-NO_FORMAT="\033[0m"
-C_GREY89="\033[38;5;254m"
-C_RED1="\033[48;5;196m"
-
-def restart():
-    python = sys.executable
-    os.execl(python, python, *sys.argv)
-
-import os,sys,time,base64, json, re,subprocess,webbrowser,platform
+import marshal, zlib
+import os, sys
 try:
-	import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, nome
-	from colorama import Fore, Style
-	from bs4 import BeautifulSoup
-	from phonenumbers import carrier
-	from phonenumbers import geocoder
-	from phonenumbers import timezone
-	from urllib.parse import urlencode
-	import apicpf as b
-	#from fordev.generator import people #Presente para algum dev que esteja lendo :p
+	import base64
 except:
-	os.system('python3 -m pip install --upgrade pip')
-	os.system('pip3 install pyfiglet==0.7')
-	os.system('pip3 install requests phonenumbers urllib3 colorama bs4 html5lib argparse pytube pyfiglet')
-	restart()
+	os.system("pip3 install base64")
+	os.system("pip install bass64")
+	import base64
 
-result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
-
-def draw_to_screen(content):
-    clear_console = 'clear' if os.name == 'posix' else 'CLS'
-    os.system(clear_console)
-    sys.stdout.write(content)
-    sys.stdout.flush()
-    time.sleep(0.2)
-
-def load_font():
-    f=open("amogus.txt", 'r')
-    result = {}
-    for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ ":
-        image = ""
-        for j in range(11):
-            image += f.readline()
-        result[letter] = image
-    return result
-
-def clear():
-   if platform.system() == "Windows":
-      os.system("cls")
-   elif platform.system() == "Linux":
-      os.system("clear")
-   else:
-       os.system("clear")
-
-def youtube():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w")
-   else:
-       os.system("termux-open-url https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w")
-
-def zapzap():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("http://wa.me/552179180533")
-   else:
-       os.system("termux-open-url http://wa.me/552179180533")
-
-def twyu():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://youtu.be/njoBMZD_jP0")
-   else:
-       os.system("termux-open-url https://youtu.be/njoBMZD_jP0")
-def gbzap():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://chat.whatsapp.com/CWUSrKYeJG67kVTQmt0ZGo")
-   else:
-       os.system("termux-open-url https://chat.whatsapp.com/CWUSrKYeJG67kVTQmt0ZGo")
-
-def zap2():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://chat.whatsapp.com/G1IBFwwbI75EBIhUUS17sp")
-   else:
-       os.system("termux-open-url https://chat.whatsapp.com/G1IBFwwbI75EBIhUUS17sp")
-
-def antiatz():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://chat.whatsapp.com/Jhrhuyf7GCzI8fITIrjSDV")
-   else:
-       os.system("termux-open-url https://chat.whatsapp.com/Jhrhuyf7GCzI8fITIrjSDV")
-
-
-def alvo1():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("wa.me/559584079659")
-   else:
-       os.system("termux-open-url wa.me/559584079659")
-       
-def alvo2():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("wa.me/558186422466")
-   else:
-       os.system("termux-open-url wa.me/558186422466")
-       
-def alvo3():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("wa.me/556892336616")
-   else:
-       os.system("termux-open-url wa.me/556892336616")
-       
-def alvo4():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("wa.me/556791392399")
-   else:
-       os.system("termux-open-url wa.me/556791392399")
-       
-def alvo5():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://chat.whatsapp.com/DelttpvNeQS93n0l2MJFWU")
-   else:
-       os.system("termux-open-url https://chat.whatsapp.com/DelttpvNeQS93n0l2MJFWU")
-
-if sys.version_info[0] < 3:
-    print(f'{C}[{R}ERROR{C}] Necessário utilizar python3!')
-    print(f'{C}[{Y}i{C}] Instale-o com base em sua distribuição.')
-    sys.exit()
-
-requests = requests.Session()
-def clear_config():
-	if os.path.exists('options.txt'):
-    			try:
-    				os.remove('options.txt')
-    			except:
-    				os.system('rm options.txt')
-
-	if os.path.exists('user'):
-    			try:
-    				os.remove('user')
-    			except:
-    				os.system('rm user')
-
-def write():
-    clear_config()
-    f = open('options.txt','a')
-    f.write(str(login))
-    f.write(str(cpf_api))
-    f.write(str(ip_api))
-    f.write(str(placa_api))
-    f.write(str(cnpj_api))
-    f.write(str(anim))
-    f.write(str(menu_return))
-    f.close()
-    if os.path.exists('user'):
-        os.remove('user')
-    f = open("user","a")
-    f.write(user)
-    f.close
-
-global login
-global user
-global cpf_api
-global ip_api
-global placa_api
-global cnpj_api
-
-if os.path.exists('options.txt') and os.path.exists('user'):
-    f = open('options.txt','r') # Nao espero que vc se ache hacker por saber mexer com esse arquivo
-    data = f.read()
-    login = int(data[0])
-    cpf_api = int(data[1])
-    ip_api = int(data[2])
-    placa_api = int(data[3])
-    cnpj_api = int(data[4])
-    anim = int(data[5])
-    menu_return = int(data[6])
-    f.close()
-    f = open('user','r')
-    user = f.read()
-    f.close()
-    del data
-else:
-    login = int('1')
-    user = 0
-    cpf_api = 0
-    ip_api = 0
-    placa_api = 0
-    cnpj_api = 0
-    menu_return = 0
-    anim = 0
-
-'''
-    Logo abaixo você pode colocar seus tokens pessoais para usar as APIs de forma privada
-    1 lugar da lista é da API Geradorapp
-    2 lugar da lista é a API de consulta de CRM
-    3 lugar da lista é da API OpenWeather.org
-'''
-token = ["f01e0024a26baef3cc53a2ac208dd141","5072097263","25d800a8b8e8b99d77c809567aa291b8"]
-
-welcome_msg = ["Que a força esteja com você", "Bem vindo", "Você é um mito", "Okaerinasai", "Esta pessoa é muito boa no Websexo ->", "Você é um baitola", "Você é corno", "Você é gay"]
-try:
-    if __name__ == '__main__':
-        os.system("clear")
-        print(f'{C}{G}{result}{C}')
-        print(f'{C}[{Y}i{C}] {G} Checando por atualizacoes... {C}')
-        update = subprocess.check_output('git pull', shell=True)
-        if 'Already up to date' not in update.decode():
-            print(f'{C}[{Y}*{C}] {G}Atualizacao instalada!\n{C}[{Y}*{C}]Reiniciando o painel...{C}')
-            print(f"{C}[{G}+{C}] Loading:")
-            #animation = ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"]
-            animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]", "[■■■■■■■■■■]"]
-            for i in range(len(animation)):
-                time.sleep(0.2)
-                sys.stdout.write("\r" + animation[i % len(animation)])
-                sys.stdout.flush()
-            print("\n")
-            time.sleep(5)
-            subprocess.run('clear')
-            restart()
-        else:
-            print(f'{C}[{Y}i{C}] Nenhuma atualizacao disponivel.')
-            time.sleep(2)
-except:
-    pass
-
-if login == 1:
-    tools.clear()
-    print(f'{C}{G}{result}{C}')
-    user = input(f"{C}[{G}+{C}]USERNAME:  ")
-    snh = 'VirtualInsanity'
-    if input(f"{C}[{G}+{C}]PASSWORD:  ").strip() == snh:
-        print(f"{C}[{G}*{C}] Acesso Liberado...")
-        time.sleep(1)
-        tools.clear()
-    else:
-        print(f"{C}[{R}ERROR{C}] Wrong Password....Yare Yare")
-        time.sleep(1)
-        os.system("python3 main.py")
-        if anim == 1:
-            time.sleep(1)
-        exit()
-    print("\n ")
-if user == 'YATO' or user == 'KINY':
-    kinymode=1
-    kiny=1
-    print(f"{C}[{Y}i{C}]Nova Opção Desbloqueada")
-else:
-    kinymode=0
-
-try:
-    os.system("pkg update -y")
-    os.system("pkg install figlet -y")
-    os.system("pkg install curl -y")
-except:
-    os.system("apt update -y")
-    os.system("apt install curl -y")
-
-Sair = False
-while(Sair == False):
-
-    letter_dict = load_font()
-    for letter in "K I N Y":
-        draw_to_screen(letter_dict[letter])
-    tools.clear()
-    tools.att()
-    tools.clear()
-    print(f"{C}{R}:::  .   ::::::.    :::..-:.     ::-.{C}")
-    time.sleep(0.5)
-    print(f"{C}{R};;; .;;,.;;;`;;;;,  `;;; ';;.   ;;;;'                                                    [[[[[/'  [[[  [[[[[. '[[   '[[,[[[{C}")
-    time.sleep(0.5)
-    print(f"{C}{R}_$$$$,    $$$  $$$ Y$c$$     c$${C}")
-    time.sleep(0.5)
-    print(f"{C}{R}88888o, 888  888    Y88   ,8P{C}")
-    time.sleep(0.5)
-    print(f"{C}{R}MMM MMPMMM  MMM     YM  mM{C}")
-    print(f"[{C}{R}+{C}] Licenciado pelo MIT. Não me responsabilizo por qualquer uso indevido.")
-    time.sleep(2)
-    tools.clear()
-    time.sleep(2)
-    print(f"{C}[{G}Dev's{C}] Coded By: {CY} KINY {CO} and {CY} YATO {CO} in 07/02/2021")
-    print()
-    print(f'{C}{G}{result}{C}')    
-    print(f'{C}[{G}*{C}]'+random.choice(welcome_msg)+' '+str(user)+'!')
-    print()
-    if anim == 1:
-        time.sleep(1)
-    print(f'{C}[{Y}*{C}]Meu Pix: {CY}0018f93e-23c2-4c25-b8e5-c29809786d94{CO}')
-    print(f'{C}[{Y}*{C}]Patrocinadores: {CY}Josuke(Douglas){CO}, {CY}Margarina{CO}, {CY}ᬊ𝜣͢𝑭𝑵 𝐌𝐀𝐑𝐓𝐈𝐍𝐒 ↯ 𝐀𝐍𝐓 𝐏𝐀𝐈𝐍↯{CO} e {CY}N 3 X 0{CO}')
-    print(f'[{C}{R}+{C}] Se vierem no meu PV perguntar quando as consultas vão voltar, vou dar block ou ignorar.')
-    print()
-    print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
-    print(f"{C}[{Y}Data de retorno das consultas por número{C}]: {C}[{G}13/05/2021{C}] {C}{Y}MOTIVO: ESTÁVAMOS PLANEJANDO RETORNAR COM A CONSULTA DE NÚMERO NO DIA 05/05, MAS TIVEMOS PROBLEMAS COM NOSSO PATROCINADOR{C}")
-    time.sleep(0.2)
-    print(f'''
-    {C}[{Y}+{C}] Consultas:
-    
-    {C}{G}[1]{C} BUSCADOR DE CEP 
-    {C}{G}[2]{C} GEO LOCALIZADOR DE IP 
-    {C}{G}[3]{C} KINY-SITE-INFOGA
-    
-    {C}{G}[4]{C} CONSULTA DE CNPJ 
-    {C}{G}[5]{C} CONSULTA BANCARIA 
-    {C}{G}[6]{C} CONSULTA CPF {C}[{G}ON{C}]
-    
-    {C}{G}[7]{C} CONSULTA CNS 
-    {C}{G}[8]{C} CONSULTA PLACA 
-    {C}{G}[9]{C} CONSULTA CRM
-    
-    {C}{G}[10]{C} CONSULTA DE NUMERO 
-    {C}{G}[11]{C} CONSULTA BIN 
-    {C}{G}[12]{C} GERAR PESSOA
-    
-    {C}{G}[13]{C} MOSTRAR MEU IP 
-    {C}{G}[14]{C} CC CHECKER 
-    {C}{G}[15]{C} COVID19
-    
-    {C}{G}[16]{C} CONSULTAR MÃE {C}[{R}OFF{C}]
-    {C}{G}[18]{C} CONSULTAR NOME {C}[{G}ON{C}]
-    {C}{G}[19]{C} CHAT NO {C}[{Y}TERMINAL{C}] 
-    
-    {C}{G}[20]{C} GRUPO S.W.B {C}[{Y}PARCERIA{C}] 
-    {C}{G}[21]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]
-    {C}{G}[22]{C} CONSULTA DE EMAIL
-    ''')
-    if kinymode == 1:
-    	print()
-    	print(f"{C}[{Y}+{C}] Nova Opção Desbloqueada:")
-    	print()
-    	print(f"{C}{G}[17]{C} FERRAMENTAS")
-    if anim==1:
-        time.sleep(1)
-    print()
-    print(f'''
-    {C}[{Y}+{C}] Opções: 
-    
-    {C}{G}[89]{C} Meu grupo[1] 
-    
-    {C}{G}[90]{C} Meu grupo[2] 
-    
-    {C}{G}[92]{C} Meu Whatsapp
-    
-    {C}{G}[93]{C} Meu canal 
-    
-    {C}{G}[94]{C} Notas ao vivo 
-    
-    {C}{G}[96]{C} Opções
-    
-    {C}{G}[97]{C} Notas de versão 
-    {C}{G}[98]{C} Atualizar 
-    {C}{G}[99]{C} Update && Upgrade
-    
-    {C}[{R}00{C}] EXIT
-    ''')
-    if login:
-    	pass
-    else:
-    	print(f"{C}[{Y}+{C}] Opção de troca de nome:")
-    	print(f"{C}{G}[95]{C} Mudar username")
-    print()
-    print(f"{C_GREY89}{C_RED1}ESTE PAINEL FOI DISPONIBILIZADO GRATUITAMENTE, SE VOCÊ PAGOU POR ISSO FOI ENGANADO.{NO_FORMAT}")
-    op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
-    tools.clear()
-    
-    if op  == '23':
-    	pass
-    
-    if op == '22':
-    	def email():
-    		os.system("clear")
-    		print(f'{C}{G}{result}{C}')
-    		sss = input(f'{C}[{G}Digite o Email desejado{C}]: ')
-    		api = requests.get('http://api.trackear.com.br/leak/?check={}&type=email'.format(sss)).json()
-    		try:
-    			encontrados = api['found']
-    			print(f'Encontrados: {api["found"]}')
-    			for i in range(0,encontrados):
-    				print(f'''
-{C}{Y}E-mail e Senha{C}: {api['result'][i]['line']}
-{C}{Y}Último Login{C}: {api['result'][i]['last_breach']}
-''')
-    		except:
-    			print(f"{C}[{R}*{C}] Email Não Encontrado")
-    			
-    		print(f"{C}[{Y}*{C}] Deseja realizar uma nova consulta?")
-    		print(f'{C}[{G}1{C}] Sim')
-    		print(f"{C}[{G}2{C}] Não")
-    		seh = input(f"{C}[{G}Escolha a opção desejada{C}]: ")
-    		if seh == '01' or seh == '1':
-    			email()
-    		if seh == '02' or seh == '2':
-    			pass
-    		else:
-    			pass
-    		
-    	email()
-    		
-
-    if op == '21':
-    	alvo5()
-    	pass
-
-    if op == '20':
-    	antiatz()
-    	pass
-
-    if op == '19':
-    	tools.chat()
-    	pass
-
-    if op == '90':
-    	zap2()
-    	pass
-
-    if op == '89':
-    	gbzap()
-    	pass
-
-    if op == '92':
-    	zapzap()
-    	pass
-
-    if op == '282822882':
-        print(f'{C}{G}{result}{C}')
-        os.system("apt install mpg123 -y")
-        os.system("clear")
-        print(f'{C}{G}{result}{C}')
-        print(f'{C}[{Y}i{C}]{G} Ainda irei colocar mais músicas, mas eu tô com preguiça.{C}')
-        print(f'{C}[{Y}IMPORTANTE!{C}]Só vou colocar músicas que EU gosto.')
-        print(f"01 - [{C}{G}Elvis Presley{C}] The Wonder Of You")
-        print(f"02 - [{C}{G}Jamiroquai{C}] Virtual Insanity")
-        print(f"03 - [{C}{G}Michael Jackson{C}] Billie Jean")
-        print(f"04 - [{C}{G}King Crimson{C}] In The Court Of The Crimson King")
-        print(f"05 - [{C}{G}The O'Jays{C}] Love Train")
-        print(f"06 - [{C}{G}Louis Armstrong{C}] What A Wonderful World")
-        print(f"07 - [{C}{G}Michael Jackson{C}] Smooth Criminal")
-        music = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
-        if music == "01" or music == "1":
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	file = "TheWonderOfYou.mp3"
-        	os.system("mpg123 " + file)
-        	pass
-        if music == "02" or music == "2":
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	shura = "VirtualInsanityRemastered.mp3"
-        	os.system("mpg123 " + shura)
-        	pass
-        if music == "03" or music == "3":
-        	os.system("clear")
-        	print()
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	zangetsu = "BillieJean.mp3"
-        	os.system("mpg123 " + zangetsu)
-        	pass
-        if music == "04" or music == "4":
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	josuke = "InTheCourtOfTheCrimsonKing.mp3"
-        	os.system("mpg123 " + josuke)
-        	pass
-        if music == "05" or music == "5":
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	D = "LoveTrain.mp3"
-        	os.system("mpg123 " + D)
-        	pass
-        if music == "06" or music == "6":
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	h = "WhatAWonderWorld.mp3"
-        	os.system("mpg123 " + h)
-        	pass
-        if music == "07" or music == "7":
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	m = "SmoothCriminal.mp3"
-        	os.system("mpg123 " + m)
-        	pass
-        else:
-        	tools.att()
-        	pass
-
-    
-    if op == '93':
-    	youtube()
-    	pass
-    
-    if op == '98':
-    	try:
-    		print(f'{C}{G}{result}{C}')
-    		if __name__ == '__main__':
-    			print(f'{C}[{Y}i{C}]{G} Checando por atualizacoes... {C}')
-    			update = subprocess.check_output('git pull', shell=True)
-    			if 'Already up to date' not in update.decode():
-    				print(f'{C}[{Y}*{C}] {G}Atualizacao instalada!\n{C}[{Y}*{C}]Reiniciando o painel...{C}')
-    				print(f"{C}[{G}+{C}] Loading:")
-    				#animation = ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"]
-    				animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]", "[■■■■■■■■■■]"]
-    				for i in range(len(animation)):
-    					time.sleep(0.2)
-    					sys.stdout.write("\r" + animation[i % len(animation)])
-    					sys.stdout.flush()
-    				print("\n")
-    				time.sleep(5)
-    				subprocess.run('clear')
-    				restart()
-    			else:
-    				print(f'{C}[{Y}i{C}]Nenhuma atualizacao disponivel.')
-    				time.sleep(2)
-    	except:
-    			pass
-    			
-
-    if op == '94':
-    	tools.aovivo()
-
-    if op == '18':
-        def consultanome():
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	nome_input = input(f'{C}[{Y}Digite o NOME{C}]: ')
-        	nome.consultar(nome_input)
-        	print(nome.consultar(nome_input))
-        	print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
-        	print()
-        	print(f'{C}[{G}1{C}] Sim.')
-        	print(f'{C}[{G}2{C}] Não.')
-        	zak = input(f'{C}{G}===>{C}')
-        	if zak == '1' or zak == '01':
-        		for g in range(30, -1, -1):
-        			os.system("clear")
-        			print(f'{C}{G}{result}{C}')
-        			print(f"{C}[{Y}*{C}]MODO DE ESPERA: {g} Segundo(s)")
-        			time.sleep(1)
-        			os.system("clear")
-        		consultanome()
-        	if zak == '2' or zak == '02':
-        		pass
-        	else:
-        		pass
-        
-        consultanome()
-
-    if op == '16':
-    	tools.nomemae()
-
-    if op == '17' and kinymode == 1:
-        print(f'{C}{G}{result}{C}')
-        print()
-        print(f'{C}[{G}1{C}] Gerar link whatsapp')
-        print(f'{C}[{G}2{C}] Youtube downloader')
-        print()
-        print(f'{C}[{G}0{C}] Sair')
-        print()
-        choice = input('===>')
-        if choice == '1' or choice == '01':
-            tools.gerarlinkwhats()
-        if choice == '2' or choice == '02':
-            tools.youtube()
-
-    if op == '95':
-    	print()
-    	print(f'{C}[{G}i{C}] Me diga como quer ser chamado.')
-    	user = input('===>')
-    	write()
-    	tools.att()
-
-    if op == '96':
-            print(f'{C}{G}{result}{C}')
-            print(f'{C}[{G}1{C}] Login : {login}')
-            print(f'{C}[{G}2{C}] Trocar APIs')
-            print(f'{C}[{G}3{C}] Limpar data')
-            print(f'{C}[{G}4{C}] Animação: {anim}')
-            #print(f'{C}[{G}5{C}] Modo retornar ao menu: {menu_return}')
-            print()
-            print(f'{C}[{G}0{C}] Voltar')
-            choice = input('===>')
-            tools.clear()
-            if choice == '1' or choice == '01':
-                login ^= 1
-            if choice == '2' or choice == '02':
-                lista_api_cpf = ["MTE","CADSUS"]
-                cpf_api_name = (lista_api_cpf[cpf_api])
-                lista_api_ip = ["IP-API 1","API-IP 2"]
-                ip_api_name = (lista_api_ip[ip_api])
-                lista_api_cnpj = ["receitaws","Governo"]
-                cnpj_api_name = (lista_api_cnpj[cnpj_api])
-                lista_api_placa = ["receitaws","Governo"]
-                placa_api_name = (lista_api_placa[placa_api])
-                print(f'{C}[{G}1{C}] CPF API: {cpf_api_name}')
-                print(f'{C}[{G}2{C}] IP API: {ip_api_name}')
-                print(f'{C}[{G}3{C}] PLACA API: {placa_api_name}')
-                print(f'{C}[{G}4{C}] CNPJ API: {cnpj_api_name}')
-                print()
-                print(f'{C}[{G}0{C}] Voltar')
-                choice2 = input('===>')
-
-                if choice2 == '1' or choice2 == '01':
-                    cpf_api = cpf_api + 1
-                if choice2 == '2' or choice2 == '02':
-                    ip_api = ip_api + 1
-                if choice2 == '3' or choice2 == '03':
-                    placa_api = placa_api + 1
-                if choice2 == '4' or choice2 == '04':
-                    cnpj_api = cnpj_api + 1
-
-                if int(cpf_api) >= int('2'):
-                    cpf_api = 0
-                if int(cnpj_api) >= int('2'):
-                    cnpj_api = 0
-                if int(placa_api) >= int('2'):
-                    placa_api = 0
-                if int(ip_api) >= int('2'):
-                    ip_api = 0
-            if choice == '3' or choice == '03':
-                clear_config()
-            if choice == '4' or choice == '04':
-                anim ^= 1
-            if choice == '5' or choice == '05':
-                menu_return ^= 1
-            if choice != 1 and choice !=2 and choice !=3 and choice!=4 and choice!=5 and choice!=0:
-                tools.clear()
-                print(f'{C}[{R}ERROR{C}] Opção inválida')
-            write()
-
-    if op == '97':
-        tools.notes()
-
-    if op == '15':
-    	tools.covid19()
-
-    if op == '14':
-        tools.cc_checker(token)
-
-    if op == '13':
-    	tools.ip(ip_api,0,token)
-
-    if op == '12':
-        tools.gerar_pessoa(token)
-
-    if op == '11':
-        tools.bin()
-
-    if op == '10':
-        tools.consultatel()
-
-    if op == '9' or op == '09':
-        tools.crm(token)
-
-    if op == '8' or op == '08':
-        tools.consultaplaca()
-
-    if op == '7' or op == '07':
-        tools.cns(token,anim)
-
-    if op == '6' or op == '06':
-    	def zahandocpf():
-    			os.system("clear")
-    			print(f'{C}{G}{result}{C}')
-    			lmao = input(f"{C}[{G}*{C}] Digite o CPF: ")
-    			data = requests.get('http://api.trackear.com.br/basepv/cpf/{}/noip'.format(lmao)).json()
-    			try:
-    				print("CPF: {}".format(data['cpf']))
-    				print("Nome: {}".format(data['nome']))
-    				print("Sexo: {}".format(data['sexo']))
-    				print("Data de Nascimento: {}".format(data['dtNascimento']))
-    				print("Idade: {}".format(data['idade']))
-    				print("Data da Consulta: {}".format(data['dtConsulta']))
-    			except:
-    				print(f"{C}[{R}*{C}] CPF INVÁLIDO OU SERVIDOR FORA DO AR.")
-    				
-    			print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
-    			print(f'{C}[{G}1{C}] Sim')
-    			print(f'{C}[{G}2{C}] Nao')
-    			rok = input(f'{C}{G}===>{C}')
-    			if rok == '01' or rok == "02":
-    				zahandocpf()
-    			if rok == '2' or rok == "02":
-    				pass
-    			else:
-    				pass
-    				
-    	zahandocpf()
-    			
-
-    if op == '5' or op == '05':
-        tools.bank(anim)
-
-    if op == '1' or op == '01':
-        tools.cep(anim)
-
-    if op == '00' or op == '0':
-        os.system("clear")
-        Sair = True
-
-
-    if op == '99' or op == '99':
-        os.system("clear")
-        os.system("pkg update && pkg update")
-        pass
-
-    if op == '3' or op == '03':
-        tools.kiny_infoga()
-
-    if op == '2' or op == '02':
-        mode = 1
-        tools.ip(ip_api,mode,token)
-
-    if op == '4' or op == '04':
-        print(f'{C}{G}{result}{C}')
-        print(f'''
-{C}[{Y}i{C}] O QUE DESEJA FAZER?
-{C}[{G}1{C}] GERAR CNPJ
-{C}[{G}2{C}] CONSULTAR CNPJ
-        ''')
-        kct = input("===> ")
-        tools.cnpj(kct,token,anim)
-os.system('rm -rf __pycache__')
-print(f'[{C}{R}+{C}] [{C}{R}Arrivederci{C}]')
+a = (base64.b64decode('''Z2xvYmFsIFIsQixDLFksRyxSVCxDWSxDTwpDTz0nXDAzM1ttJwpSPSdcMDMzWzE7MzFtJwpCPSdc
+MDMzWzE7MzRtJwpDPSdcMDMzWzE7MzdtJwpDWT0nXDAzM1sxOzM2bScKWT0nXDAzM1sxOzMzbScK
+Rz0nXDAzM1sxOzMybScKUlQ9J1wwMzNbOzBtJwoKIyMgRGlzdHJpYnVpZG8gbGl2cmVtZW50ZSBw
+ZWxhIGxpY2Vuw6dhIE1JVCwKIyMgQW9zIHF1ZSBuw6NvIHNhYmVtIG8gcXVlIGlzc28gc2lnbmlm
+aWNhLHN1Z2VyaW1vcyBlc3R1ZG8uCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCiMjCiMjIFNvdWJl
+bW9zIGRvIGdyYW5kZSByb3VibyBhbyBzY3JpcHQgZG8gU251a2luZyxmZWl0byBwZWxvIHVzdcOh
+cmlvIFpldXNYYWxvYywKIyMgRGVtb25zdHJhbW9zIHJlcMO6ZGlvIGFzIGF0aXR1ZGVzIGRvIG1l
+c21vLHRvdGFsbWVudGUgZGVzcHJlesOtdmVsLgojIyBaZXVzWGFsb2Msdm9jw6ogTsODTyDDqSBi
+ZW0gdmluZG8gYXF1aS4KIyMgCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCiMjIE9icmlnYWRvIHBl
+bG8gYXBvaW8gc251a2luZwojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwoKTk9fRk9STUFUPSJcMDMz
+WzBtIgpDX0dSRVk4OT0iXDAzM1szODs1OzI1NG0iCkNfUkVEMT0iXDAzM1s0ODs1OzE5Nm0iCgpk
+ZWYgcmVzdGFydCgpOgogICAgcHl0aG9uID0gc3lzLmV4ZWN1dGFibGUKICAgIG9zLmV4ZWNsKHB5
+dGhvbiwgcHl0aG9uLCAqc3lzLmFyZ3YpCgppbXBvcnQgb3Msc3lzLHRpbWUsYmFzZTY0LCBqc29u
+LCByZSxzdWJwcm9jZXNzLHdlYmJyb3dzZXIscGxhdGZvcm0KdHJ5OgoJaW1wb3J0IHJlcXVlc3Rz
+LHBsYXRmb3JtLHNpZ25hbCxhdGV4aXQsYXJncGFyc2UscmFuZG9tLGhhc2hsaWIsdXJsbGliMyxo
+dG1sNWxpYixwaG9uZW51bWJlcnMsanNvbix0b29scywgcHlmaWdsZXQsIG5vbWUKCWZyb20gY29s
+b3JhbWEgaW1wb3J0IEZvcmUsIFN0eWxlCglmcm9tIGJzNCBpbXBvcnQgQmVhdXRpZnVsU291cAoJ
+ZnJvbSBwaG9uZW51bWJlcnMgaW1wb3J0IGNhcnJpZXIKCWZyb20gcGhvbmVudW1iZXJzIGltcG9y
+dCBnZW9jb2RlcgoJZnJvbSBwaG9uZW51bWJlcnMgaW1wb3J0IHRpbWV6b25lCglmcm9tIHVybGxp
+Yi5wYXJzZSBpbXBvcnQgdXJsZW5jb2RlCglpbXBvcnQgYXBpY3BmIGFzIGIKCSNmcm9tIGZvcmRl
+di5nZW5lcmF0b3IgaW1wb3J0IHBlb3BsZSAjUHJlc2VudGUgcGFyYSBhbGd1bSBkZXYgcXVlIGVz
+dGVqYSBsZW5kbyA6cApleGNlcHQ6Cglvcy5zeXN0ZW0oJ3B5dGhvbjMgLW0gcGlwIGluc3RhbGwg
+LS11cGdyYWRlIHBpcCcpCglvcy5zeXN0ZW0oJ3BpcDMgaW5zdGFsbCBweWZpZ2xldD09MC43JykK
+CW9zLnN5c3RlbSgncGlwMyBpbnN0YWxsIHJlcXVlc3RzIHBob25lbnVtYmVycyB1cmxsaWIzIGNv
+bG9yYW1hIGJzNCBodG1sNWxpYiBhcmdwYXJzZSBweXR1YmUgcHlmaWdsZXQnKQoJcmVzdGFydCgp
+CgpyZXN1bHQgPSBweWZpZ2xldC5maWdsZXRfZm9ybWF0KCJLaW55IiwgZm9udCA9ICJjb3NtaWMi
+ICApCgpkZWYgZHJhd190b19zY3JlZW4oY29udGVudCk6CiAgICBjbGVhcl9jb25zb2xlID0gJ2Ns
+ZWFyJyBpZiBvcy5uYW1lID09ICdwb3NpeCcgZWxzZSAnQ0xTJwogICAgb3Muc3lzdGVtKGNsZWFy
+X2NvbnNvbGUpCiAgICBzeXMuc3Rkb3V0LndyaXRlKGNvbnRlbnQpCiAgICBzeXMuc3Rkb3V0LmZs
+dXNoKCkKICAgIHRpbWUuc2xlZXAoMC4yKQoKZGVmIGxvYWRfZm9udCgpOgogICAgZj1vcGVuKCJh
+bW9ndXMudHh0IiwgJ3InKQogICAgcmVzdWx0ID0ge30KICAgIGZvciBsZXR0ZXIgaW4gIkFCQ0RF
+RkdISUpLTE1OT1BRUlNUVVZXWFlaICI6CiAgICAgICAgaW1hZ2UgPSAiIgogICAgICAgIGZvciBq
+IGluIHJhbmdlKDExKToKICAgICAgICAgICAgaW1hZ2UgKz0gZi5yZWFkbGluZSgpCiAgICAgICAg
+cmVzdWx0W2xldHRlcl0gPSBpbWFnZQogICAgcmV0dXJuIHJlc3VsdAoKZGVmIGNsZWFyKCk6CiAg
+IGlmIHBsYXRmb3JtLnN5c3RlbSgpID09ICJXaW5kb3dzIjoKICAgICAgb3Muc3lzdGVtKCJjbHMi
+KQogICBlbGlmIHBsYXRmb3JtLnN5c3RlbSgpID09ICJMaW51eCI6CiAgICAgIG9zLnN5c3RlbSgi
+Y2xlYXIiKQogICBlbHNlOgogICAgICAgb3Muc3lzdGVtKCJjbGVhciIpCgpkZWYgeW91dHViZSgp
+OgogICBpZiBwbGF0Zm9ybS5zeXN0ZW0oKSA9PSAiV2luZG93cyI6CiAgICAgIHdlYmJyb3dzZXIu
+b3Blbl9uZXdfdGFiKCJodHRwczovL3lvdXR1YmUuY29tL2NoYW5uZWwvVUMxYVR2a3ZtVFZPN09K
+Nm9peHRKbzh3IikKICAgZWxzZToKICAgICAgIG9zLnN5c3RlbSgidGVybXV4LW9wZW4tdXJsIGh0
+dHBzOi8veW91dHViZS5jb20vY2hhbm5lbC9VQzFhVHZrdm1UVk83T0o2b2l4dEpvOHciKQoKZGVm
+IHphcHphcCgpOgogICBpZiBwbGF0Zm9ybS5zeXN0ZW0oKSA9PSAiV2luZG93cyI6CiAgICAgIHdl
+YmJyb3dzZXIub3Blbl9uZXdfdGFiKCJodHRwOi8vd2EubWUvNTUyMTc5MTgwNTMzIikKICAgZWxz
+ZToKICAgICAgIG9zLnN5c3RlbSgidGVybXV4LW9wZW4tdXJsIGh0dHA6Ly93YS5tZS81NTIxNzkx
+ODA1MzMiKQoKZGVmIHR3eXUoKToKICAgaWYgcGxhdGZvcm0uc3lzdGVtKCkgPT0gIldpbmRvd3Mi
+OgogICAgICB3ZWJicm93c2VyLm9wZW5fbmV3X3RhYigiaHR0cHM6Ly95b3V0dS5iZS9uam9CTVpE
+X2pQMCIpCiAgIGVsc2U6CiAgICAgICBvcy5zeXN0ZW0oInRlcm11eC1vcGVuLXVybCBodHRwczov
+L3lvdXR1LmJlL25qb0JNWkRfalAwIikKZGVmIGdiemFwKCk6CiAgIGlmIHBsYXRmb3JtLnN5c3Rl
+bSgpID09ICJXaW5kb3dzIjoKICAgICAgd2ViYnJvd3Nlci5vcGVuX25ld190YWIoImh0dHBzOi8v
+Y2hhdC53aGF0c2FwcC5jb20vQ1dVU3JLWWVKRzY3a1ZUUW10MFpHbyIpCiAgIGVsc2U6CiAgICAg
+ICBvcy5zeXN0ZW0oInRlcm11eC1vcGVuLXVybCBodHRwczovL2NoYXQud2hhdHNhcHAuY29tL0NX
+VVNyS1llSkc2N2tWVFFtdDBaR28iKQoKZGVmIHphcDIoKToKICAgaWYgcGxhdGZvcm0uc3lzdGVt
+KCkgPT0gIldpbmRvd3MiOgogICAgICB3ZWJicm93c2VyLm9wZW5fbmV3X3RhYigiaHR0cHM6Ly9j
+aGF0LndoYXRzYXBwLmNvbS9HMUlCRnd3Ykk3NUVCSWhVVVMxN3NwIikKICAgZWxzZToKICAgICAg
+IG9zLnN5c3RlbSgidGVybXV4LW9wZW4tdXJsIGh0dHBzOi8vY2hhdC53aGF0c2FwcC5jb20vRzFJ
+QkZ3d2JJNzVFQkloVVVTMTdzcCIpCgpkZWYgYW50aWF0eigpOgogICBpZiBwbGF0Zm9ybS5zeXN0
+ZW0oKSA9PSAiV2luZG93cyI6CiAgICAgIHdlYmJyb3dzZXIub3Blbl9uZXdfdGFiKCJodHRwczov
+L2NoYXQud2hhdHNhcHAuY29tL0pocmh1eWY3R0N6SThmSVRJcmpTRFYiKQogICBlbHNlOgogICAg
+ICAgb3Muc3lzdGVtKCJ0ZXJtdXgtb3Blbi11cmwgaHR0cHM6Ly9jaGF0LndoYXRzYXBwLmNvbS9K
+aHJodXlmN0dDekk4ZklUSXJqU0RWIikKCgpkZWYgYWx2bzEoKToKICAgaWYgcGxhdGZvcm0uc3lz
+dGVtKCkgPT0gIldpbmRvd3MiOgogICAgICB3ZWJicm93c2VyLm9wZW5fbmV3X3RhYigid2EubWUv
+NTU5NTg0MDc5NjU5IikKICAgZWxzZToKICAgICAgIG9zLnN5c3RlbSgidGVybXV4LW9wZW4tdXJs
+IHdhLm1lLzU1OTU4NDA3OTY1OSIpCiAgICAgICAKZGVmIGFsdm8yKCk6CiAgIGlmIHBsYXRmb3Jt
+LnN5c3RlbSgpID09ICJXaW5kb3dzIjoKICAgICAgd2ViYnJvd3Nlci5vcGVuX25ld190YWIoIndh
+Lm1lLzU1ODE4NjQyMjQ2NiIpCiAgIGVsc2U6CiAgICAgICBvcy5zeXN0ZW0oInRlcm11eC1vcGVu
+LXVybCB3YS5tZS81NTgxODY0MjI0NjYiKQogICAgICAgCmRlZiBhbHZvMygpOgogICBpZiBwbGF0
+Zm9ybS5zeXN0ZW0oKSA9PSAiV2luZG93cyI6CiAgICAgIHdlYmJyb3dzZXIub3Blbl9uZXdfdGFi
+KCJ3YS5tZS81NTY4OTIzMzY2MTYiKQogICBlbHNlOgogICAgICAgb3Muc3lzdGVtKCJ0ZXJtdXgt
+b3Blbi11cmwgd2EubWUvNTU2ODkyMzM2NjE2IikKICAgICAgIApkZWYgYWx2bzQoKToKICAgaWYg
+cGxhdGZvcm0uc3lzdGVtKCkgPT0gIldpbmRvd3MiOgogICAgICB3ZWJicm93c2VyLm9wZW5fbmV3
+X3RhYigid2EubWUvNTU2NzkxMzkyMzk5IikKICAgZWxzZToKICAgICAgIG9zLnN5c3RlbSgidGVy
+bXV4LW9wZW4tdXJsIHdhLm1lLzU1Njc5MTM5MjM5OSIpCiAgICAgICAKZGVmIGFsdm81KCk6CiAg
+IGlmIHBsYXRmb3JtLnN5c3RlbSgpID09ICJXaW5kb3dzIjoKICAgICAgd2ViYnJvd3Nlci5vcGVu
+X25ld190YWIoImh0dHBzOi8vY2hhdC53aGF0c2FwcC5jb20vRGVsdHRwdk5lUVM5M24wbDJNSkZX
+VSIpCiAgIGVsc2U6CiAgICAgICBvcy5zeXN0ZW0oInRlcm11eC1vcGVuLXVybCBodHRwczovL2No
+YXQud2hhdHNhcHAuY29tL0RlbHR0cHZOZVFTOTNuMGwyTUpGV1UiKQoKaWYgc3lzLnZlcnNpb25f
+aW5mb1swXSA8IDM6CiAgICBwcmludChmJ3tDfVt7Un1FUlJPUntDfV0gTmVjZXNzw6FyaW8gdXRp
+bGl6YXIgcHl0aG9uMyEnKQogICAgcHJpbnQoZid7Q31be1l9aXtDfV0gSW5zdGFsZS1vIGNvbSBi
+YXNlIGVtIHN1YSBkaXN0cmlidWnDp8Ojby4nKQogICAgc3lzLmV4aXQoKQoKcmVxdWVzdHMgPSBy
+ZXF1ZXN0cy5TZXNzaW9uKCkKZGVmIGNsZWFyX2NvbmZpZygpOgoJaWYgb3MucGF0aC5leGlzdHMo
+J29wdGlvbnMudHh0Jyk6CiAgICAJCQl0cnk6CiAgICAJCQkJb3MucmVtb3ZlKCdvcHRpb25zLnR4
+dCcpCiAgICAJCQlleGNlcHQ6CiAgICAJCQkJb3Muc3lzdGVtKCdybSBvcHRpb25zLnR4dCcpCgoJ
+aWYgb3MucGF0aC5leGlzdHMoJ3VzZXInKToKICAgIAkJCXRyeToKICAgIAkJCQlvcy5yZW1vdmUo
+J3VzZXInKQogICAgCQkJZXhjZXB0OgogICAgCQkJCW9zLnN5c3RlbSgncm0gdXNlcicpCgpkZWYg
+d3JpdGUoKToKICAgIGNsZWFyX2NvbmZpZygpCiAgICBmID0gb3Blbignb3B0aW9ucy50eHQnLCdh
+JykKICAgIGYud3JpdGUoc3RyKGxvZ2luKSkKICAgIGYud3JpdGUoc3RyKGNwZl9hcGkpKQogICAg
+Zi53cml0ZShzdHIoaXBfYXBpKSkKICAgIGYud3JpdGUoc3RyKHBsYWNhX2FwaSkpCiAgICBmLndy
+aXRlKHN0cihjbnBqX2FwaSkpCiAgICBmLndyaXRlKHN0cihhbmltKSkKICAgIGYud3JpdGUoc3Ry
+KG1lbnVfcmV0dXJuKSkKICAgIGYuY2xvc2UoKQogICAgaWYgb3MucGF0aC5leGlzdHMoJ3VzZXIn
+KToKICAgICAgICBvcy5yZW1vdmUoJ3VzZXInKQogICAgZiA9IG9wZW4oInVzZXIiLCJhIikKICAg
+IGYud3JpdGUodXNlcikKICAgIGYuY2xvc2UKCmdsb2JhbCBsb2dpbgpnbG9iYWwgdXNlcgpnbG9i
+YWwgY3BmX2FwaQpnbG9iYWwgaXBfYXBpCmdsb2JhbCBwbGFjYV9hcGkKZ2xvYmFsIGNucGpfYXBp
+CgppZiBvcy5wYXRoLmV4aXN0cygnb3B0aW9ucy50eHQnKSBhbmQgb3MucGF0aC5leGlzdHMoJ3Vz
+ZXInKToKICAgIGYgPSBvcGVuKCdvcHRpb25zLnR4dCcsJ3InKSAjIE5hbyBlc3Blcm8gcXVlIHZj
+IHNlIGFjaGUgaGFja2VyIHBvciBzYWJlciBtZXhlciBjb20gZXNzZSBhcnF1aXZvCiAgICBkYXRh
+ID0gZi5yZWFkKCkKICAgIGxvZ2luID0gaW50KGRhdGFbMF0pCiAgICBjcGZfYXBpID0gaW50KGRh
+dGFbMV0pCiAgICBpcF9hcGkgPSBpbnQoZGF0YVsyXSkKICAgIHBsYWNhX2FwaSA9IGludChkYXRh
+WzNdKQogICAgY25wal9hcGkgPSBpbnQoZGF0YVs0XSkKICAgIGFuaW0gPSBpbnQoZGF0YVs1XSkK
+ICAgIG1lbnVfcmV0dXJuID0gaW50KGRhdGFbNl0pCiAgICBmLmNsb3NlKCkKICAgIGYgPSBvcGVu
+KCd1c2VyJywncicpCiAgICB1c2VyID0gZi5yZWFkKCkKICAgIGYuY2xvc2UoKQogICAgZGVsIGRh
+dGEKZWxzZToKICAgIGxvZ2luID0gaW50KCcxJykKICAgIHVzZXIgPSAwCiAgICBjcGZfYXBpID0g
+MAogICAgaXBfYXBpID0gMAogICAgcGxhY2FfYXBpID0gMAogICAgY25wal9hcGkgPSAwCiAgICBt
+ZW51X3JldHVybiA9IDAKICAgIGFuaW0gPSAwCgonJycKICAgIExvZ28gYWJhaXhvIHZvY8OqIHBv
+ZGUgY29sb2NhciBzZXVzIHRva2VucyBwZXNzb2FpcyBwYXJhIHVzYXIgYXMgQVBJcyBkZSBmb3Jt
+YSBwcml2YWRhCiAgICAxIGx1Z2FyIGRhIGxpc3RhIMOpIGRhIEFQSSBHZXJhZG9yYXBwCiAgICAy
+IGx1Z2FyIGRhIGxpc3RhIMOpIGEgQVBJIGRlIGNvbnN1bHRhIGRlIENSTQogICAgMyBsdWdhciBk
+YSBsaXN0YSDDqSBkYSBBUEkgT3BlbldlYXRoZXIub3JnCicnJwp0b2tlbiA9IFsiZjAxZTAwMjRh
+MjZiYWVmM2NjNTNhMmFjMjA4ZGQxNDEiLCI1MDcyMDk3MjYzIiwiMjVkODAwYThiOGU4Yjk5ZDc3
+YzgwOTU2N2FhMjkxYjgiXQoKd2VsY29tZV9tc2cgPSBbIlF1ZSBhIGZvcsOnYSBlc3RlamEgY29t
+IHZvY8OqIiwgIkJlbSB2aW5kbyIsICJWb2PDqiDDqSB1bSBtaXRvIiwgIk9rYWVyaW5hc2FpIiwg
+IkVzdGEgcGVzc29hIMOpIG11aXRvIGJvYSBubyBXZWJzZXhvIC0+IiwgIlZvY8OqIMOpIHVtIGJh
+aXRvbGEiLCAiVm9jw6ogw6kgY29ybm8iLCAiVm9jw6ogw6kgZ2F5Il0KdHJ5OgogICAgaWYgX19u
+YW1lX18gPT0gJ19fbWFpbl9fJzoKICAgICAgICBvcy5zeXN0ZW0oImNsZWFyIikKICAgICAgICBw
+cmludChmJ3tDfXtHfXtyZXN1bHR9e0N9JykKICAgICAgICBwcmludChmJ3tDfVt7WX1pe0N9XSB7
+R30gQ2hlY2FuZG8gcG9yIGF0dWFsaXphY29lcy4uLiB7Q30nKQogICAgICAgIHVwZGF0ZSA9IHN1
+YnByb2Nlc3MuY2hlY2tfb3V0cHV0KCdnaXQgcHVsbCcsIHNoZWxsPVRydWUpCiAgICAgICAgaWYg
+J0FscmVhZHkgdXAgdG8gZGF0ZScgbm90IGluIHVwZGF0ZS5kZWNvZGUoKToKICAgICAgICAgICAg
+cHJpbnQoZid7Q31be1l9KntDfV0ge0d9QXR1YWxpemFjYW8gaW5zdGFsYWRhIVxue0N9W3tZfSp7
+Q31dUmVpbmljaWFuZG8gbyBwYWluZWwuLi57Q30nKQogICAgICAgICAgICBwcmludChmIntDfVt7
+R30re0N9XSBMb2FkaW5nOiIpCiAgICAgICAgICAgICNhbmltYXRpb24gPSBbIjEwJSIsICIyMCUi
+LCAiMzAlIiwgIjQwJSIsICI1MCUiLCAiNjAlIiwgIjcwJSIsICI4MCUiLCAiOTAlIiwgIjEwMCUi
+XQogICAgICAgICAgICBhbmltYXRpb24gPSBbIlvilqDilqHilqHilqHilqHilqHilqHilqHilqHi
+lqFdIiwiW+KWoOKWoOKWoeKWoeKWoeKWoeKWoeKWoeKWoeKWoV0iLCAiW+KWoOKWoOKWoOKWoeKW
+oeKWoeKWoeKWoeKWoeKWoV0iLCAiW+KWoOKWoOKWoOKWoOKWoeKWoeKWoeKWoeKWoeKWoV0iLCAi
+W+KWoOKWoOKWoOKWoOKWoOKWoeKWoeKWoeKWoeKWoV0iLCAiW+KWoOKWoOKWoOKWoOKWoOKWoOKW
+oeKWoeKWoeKWoV0iLCAiW+KWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoeKWoeKWoV0iLCAiW+KWoOKW
+oOKWoOKWoOKWoOKWoOKWoOKWoOKWoeKWoV0iLCAiW+KWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKW
+oOKWoV0iLCAiW+KWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoOKWoF0iXQogICAgICAgICAgICBm
+b3IgaSBpbiByYW5nZShsZW4oYW5pbWF0aW9uKSk6CiAgICAgICAgICAgICAgICB0aW1lLnNsZWVw
+KDAuMikKICAgICAgICAgICAgICAgIHN5cy5zdGRvdXQud3JpdGUoIlxyIiArIGFuaW1hdGlvbltp
+ICUgbGVuKGFuaW1hdGlvbildKQogICAgICAgICAgICAgICAgc3lzLnN0ZG91dC5mbHVzaCgpCiAg
+ICAgICAgICAgIHByaW50KCJcbiIpCiAgICAgICAgICAgIHRpbWUuc2xlZXAoNSkKICAgICAgICAg
+ICAgc3VicHJvY2Vzcy5ydW4oJ2NsZWFyJykKICAgICAgICAgICAgcmVzdGFydCgpCiAgICAgICAg
+ZWxzZToKICAgICAgICAgICAgcHJpbnQoZid7Q31be1l9aXtDfV0gTmVuaHVtYSBhdHVhbGl6YWNh
+byBkaXNwb25pdmVsLicpCiAgICAgICAgICAgIHRpbWUuc2xlZXAoMikKZXhjZXB0OgogICAgcGFz
+cwoKaWYgbG9naW4gPT0gMToKICAgIHRvb2xzLmNsZWFyKCkKICAgIHByaW50KGYne0N9e0d9e3Jl
+c3VsdH17Q30nKQogICAgdXNlciA9IGlucHV0KGYie0N9W3tHfSt7Q31dVVNFUk5BTUU6ICAiKQog
+ICAgc25oID0gJ1ZpcnR1YWxJbnNhbml0eScKICAgIGlmIGlucHV0KGYie0N9W3tHfSt7Q31dUEFT
+U1dPUkQ6ICAiKS5zdHJpcCgpID09IHNuaDoKICAgICAgICBwcmludChmIntDfVt7R30qe0N9XSBB
+Y2Vzc28gTGliZXJhZG8uLi4iKQogICAgICAgIHRpbWUuc2xlZXAoMSkKICAgICAgICB0b29scy5j
+bGVhcigpCiAgICBlbHNlOgogICAgICAgIHByaW50KGYie0N9W3tSfUVSUk9Se0N9XSBXcm9uZyBQ
+YXNzd29yZC4uLi5ZYXJlIFlhcmUiKQogICAgICAgIHRpbWUuc2xlZXAoMSkKICAgICAgICBvcy5z
+eXN0ZW0oInB5dGhvbjMgbWFpbi5weSIpCiAgICAgICAgaWYgYW5pbSA9PSAxOgogICAgICAgICAg
+ICB0aW1lLnNsZWVwKDEpCiAgICAgICAgZXhpdCgpCiAgICBwcmludCgiXG4gIikKaWYgdXNlciA9
+PSAnWUFUTycgb3IgdXNlciA9PSAnS0lOWSc6CiAgICBraW55bW9kZT0xCiAgICBraW55PTEKICAg
+IHByaW50KGYie0N9W3tZfWl7Q31dTm92YSBPcMOnw6NvIERlc2Jsb3F1ZWFkYSIpCmVsc2U6CiAg
+ICBraW55bW9kZT0wCgp0cnk6CiAgICBvcy5zeXN0ZW0oInBrZyB1cGRhdGUgLXkiKQogICAgb3Mu
+c3lzdGVtKCJwa2cgaW5zdGFsbCBmaWdsZXQgLXkiKQogICAgb3Muc3lzdGVtKCJwa2cgaW5zdGFs
+bCBjdXJsIC15IikKZXhjZXB0OgogICAgb3Muc3lzdGVtKCJhcHQgdXBkYXRlIC15IikKICAgIG9z
+LnN5c3RlbSgiYXB0IGluc3RhbGwgY3VybCAteSIpCgpTYWlyID0gRmFsc2UKd2hpbGUoU2FpciA9
+PSBGYWxzZSk6CgogICAgbGV0dGVyX2RpY3QgPSBsb2FkX2ZvbnQoKQogICAgZm9yIGxldHRlciBp
+biAiSyBJIE4gWSI6CiAgICAgICAgZHJhd190b19zY3JlZW4obGV0dGVyX2RpY3RbbGV0dGVyXSkK
+ICAgIHRvb2xzLmNsZWFyKCkKICAgIHRvb2xzLmF0dCgpCiAgICB0b29scy5jbGVhcigpCiAgICBw
+cmludChmIntDfXtSfTo6OiAgLiAgIDo6Ojo6Oi4gICAgOjo6Li4tOi4gICAgIDo6LS57Q30iKQog
+ICAgdGltZS5zbGVlcCgwLjUpCiAgICBwcmludChmIntDfXtSfTs7OyAuOzssLjs7O2A7Ozs7LCAg
+YDs7OyAnOzsuICAgOzs7OycgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgW1tbW1svJyAgW1tbICBbW1tbWy4gJ1tbICAgJ1tbLFtbW3tDfSIpCiAgICB0
+aW1lLnNsZWVwKDAuNSkKICAgIHByaW50KGYie0N9e1J9XyQkJCQsICAgICQkJCAgJCQkIFkkYyQk
+ICAgICBjJCR7Q30iKQogICAgdGltZS5zbGVlcCgwLjUpCiAgICBwcmludChmIntDfXtSfTg4ODg4
+bywgODg4ICA4ODggICAgWTg4ICAgLDhQe0N9IikKICAgIHRpbWUuc2xlZXAoMC41KQogICAgcHJp
+bnQoZiJ7Q317Un1NTU0gTU1QTU1NICBNTU0gICAgIFlNICBtTXtDfSIpCiAgICBwcmludChmIlt7
+Q317Un0re0N9XSBMaWNlbmNpYWRvIHBlbG8gTUlULiBOw6NvIG1lIHJlc3BvbnNhYmlsaXpvIHBv
+ciBxdWFscXVlciB1c28gaW5kZXZpZG8uIikKICAgIHRpbWUuc2xlZXAoMikKICAgIHRvb2xzLmNs
+ZWFyKCkKICAgIHRpbWUuc2xlZXAoMikKICAgIHByaW50KGYie0N9W3tHfURldidze0N9XSBDb2Rl
+ZCBCeToge0NZfSBLSU5ZIHtDT30gYW5kIHtDWX0gWUFUTyB7Q099IGluIDA3LzAyLzIwMjEiKQog
+ICAgcHJpbnQoKQogICAgcHJpbnQoZid7Q317R317cmVzdWx0fXtDfScpICAgIAogICAgcHJpbnQo
+Zid7Q31be0d9KntDfV0nK3JhbmRvbS5jaG9pY2Uod2VsY29tZV9tc2cpKycgJytzdHIodXNlcikr
+JyEnKQogICAgcHJpbnQoKQogICAgaWYgYW5pbSA9PSAxOgogICAgICAgIHRpbWUuc2xlZXAoMSkK
+ICAgIHByaW50KGYne0N9W3tZfSp7Q31dTWV1IFBpeDoge0NZfTAwMThmOTNlLTIzYzItNGMyNS1i
+OGU1LWMyOTgwOTc4NmQ5NHtDT30nKQogICAgcHJpbnQoZid7Q31be1l9KntDfV1QYXRyb2NpbmFk
+b3Jlczoge0NZfUpvc3VrZShEb3VnbGFzKXtDT30sIHtDWX1NYXJnYXJpbmF7Q099LCB7Q1l94ayK
+8J2co82i8J2RrfCdkbUg8J2QjPCdkIDwnZCR8J2Qk/CdkIjwnZCN8J2QkiDihq8g8J2QgPCdkI3w
+nZCTIPCdkI/wnZCA8J2QiPCdkI3ihq97Q099IGUge0NZfU4gMyBYIDB7Q099JykKICAgIHByaW50
+KGYnW3tDfXtSfSt7Q31dIFNlIHZpZXJlbSBubyBtZXUgUFYgcGVyZ3VudGFyIHF1YW5kbyBhcyBj
+b25zdWx0YXMgdsOjbyB2b2x0YXIsIHZvdSBkYXIgYmxvY2sgb3UgaWdub3Jhci4nKQogICAgcHJp
+bnQoKQogICAgcHJpbnQoZid7Q31be1l9SU1QT1JUQU5URSF7Q31dTGVpYW0gYXMgTm90YXMgYW8g
+dml2by4nKQogICAgcHJpbnQoZiJ7Q31be1l9RGF0YSBkZSByZXRvcm5vIGRhcyBjb25zdWx0YXMg
+cG9yIG7Dum1lcm97Q31dOiB7Q31be0d9MTMvMDUvMjAyMXtDfV0ge0N9e1l9TU9USVZPOiBFU1TD
+gVZBTU9TIFBMQU5FSkFORE8gUkVUT1JOQVIgQ09NIEEgQ09OU1VMVEEgREUgTsOaTUVSTyBOTyBE
+SUEgMDUvMDUsIE1BUyBUSVZFTU9TIFBST0JMRU1BUyBDT00gTk9TU08gUEFUUk9DSU5BRE9Se0N9
+IikKICAgIHRpbWUuc2xlZXAoMC4yKQogICAgcHJpbnQoZicnJwogICAge0N9W3tZfSt7Q31dIENv
+bnN1bHRhczoKICAgIAogICAge0N9e0d9WzFde0N9IEJVU0NBRE9SIERFIENFUCAKICAgIHtDfXtH
+fVsyXXtDfSBHRU8gTE9DQUxJWkFET1IgREUgSVAgCiAgICB7Q317R31bM117Q30gS0lOWS1TSVRF
+LUlORk9HQQogICAgCiAgICB7Q317R31bNF17Q30gQ09OU1VMVEEgREUgQ05QSiAKICAgIHtDfXtH
+fVs1XXtDfSBDT05TVUxUQSBCQU5DQVJJQSAKICAgIHtDfXtHfVs2XXtDfSBDT05TVUxUQSBDUEYg
+e0N9W3tHfU9Oe0N9XQogICAgCiAgICB7Q317R31bN117Q30gQ09OU1VMVEEgQ05TIAogICAge0N9
+e0d9Wzhde0N9IENPTlNVTFRBIFBMQUNBIAogICAge0N9e0d9Wzlde0N9IENPTlNVTFRBIENSTQog
+ICAgCiAgICB7Q317R31bMTBde0N9IENPTlNVTFRBIERFIE5VTUVSTyAKICAgIHtDfXtHfVsxMV17
+Q30gQ09OU1VMVEEgQklOIAogICAge0N9e0d9WzEyXXtDfSBHRVJBUiBQRVNTT0EKICAgIAogICAg
+e0N9e0d9WzEzXXtDfSBNT1NUUkFSIE1FVSBJUCAKICAgIHtDfXtHfVsxNF17Q30gQ0MgQ0hFQ0tF
+UiAKICAgIHtDfXtHfVsxNV17Q30gQ09WSUQxOQogICAgCiAgICB7Q317R31bMTZde0N9IENPTlNV
+TFRBUiBNw4NFIHtDfVt7Un1PRkZ7Q31dCiAgICB7Q317R31bMThde0N9IENPTlNVTFRBUiBOT01F
+IHtDfVt7R31PTntDfV0KICAgIHtDfXtHfVsxOV17Q30gQ0hBVCBOTyB7Q31be1l9VEVSTUlOQUx7
+Q31dIAogICAgCiAgICB7Q317R31bMjBde0N9IEdSVVBPIFMuVy5CIHtDfVt7WX1QQVJDRVJJQXtD
+fV0gCiAgICB7Q317R31bMjFde0N9IEdSVVBPIFNVUkXDl1dFQiB7Q31be1l9UEFSQ0VSSUF7Q31d
+CiAgICB7Q317R31bMjJde0N9IENPTlNVTFRBIERFIEVNQUlMCiAgICAnJycpCiAgICBpZiBraW55
+bW9kZSA9PSAxOgogICAgCXByaW50KCkKICAgIAlwcmludChmIntDfVt7WX0re0N9XSBOb3ZhIE9w
+w6fDo28gRGVzYmxvcXVlYWRhOiIpCiAgICAJcHJpbnQoKQogICAgCXByaW50KGYie0N9e0d9WzE3
+XXtDfSBGRVJSQU1FTlRBUyIpCiAgICBpZiBhbmltPT0xOgogICAgICAgIHRpbWUuc2xlZXAoMSkK
+ICAgIHByaW50KCkKICAgIHByaW50KGYnJycKICAgIHtDfVt7WX0re0N9XSBPcMOnw7VlczogCiAg
+ICAKICAgIHtDfXtHfVs4OV17Q30gTWV1IGdydXBvWzFdIAogICAgCiAgICB7Q317R31bOTBde0N9
+IE1ldSBncnVwb1syXSAKICAgIAogICAge0N9e0d9WzkyXXtDfSBNZXUgV2hhdHNhcHAKICAgIAog
+ICAge0N9e0d9WzkzXXtDfSBNZXUgY2FuYWwgCiAgICAKICAgIHtDfXtHfVs5NF17Q30gTm90YXMg
+YW8gdml2byAKICAgIAogICAge0N9e0d9Wzk2XXtDfSBPcMOnw7VlcwogICAgCiAgICB7Q317R31b
+OTdde0N9IE5vdGFzIGRlIHZlcnPDo28gCiAgICB7Q317R31bOThde0N9IEF0dWFsaXphciAKICAg
+IHtDfXtHfVs5OV17Q30gVXBkYXRlICYmIFVwZ3JhZGUKICAgIAogICAge0N9W3tSfTAwe0N9XSBF
+WElUCiAgICAnJycpCiAgICBpZiBsb2dpbjoKICAgIAlwYXNzCiAgICBlbHNlOgogICAgCXByaW50
+KGYie0N9W3tZfSt7Q31dIE9ww6fDo28gZGUgdHJvY2EgZGUgbm9tZToiKQogICAgCXByaW50KGYi
+e0N9e0d9Wzk1XXtDfSBNdWRhciB1c2VybmFtZSIpCiAgICBwcmludCgpCiAgICBwcmludChmIntD
+X0dSRVk4OX17Q19SRUQxfUVTVEUgUEFJTkVMIEZPSSBESVNQT05JQklMSVpBRE8gR1JBVFVJVEFN
+RU5URSwgU0UgVk9Dw4ogUEFHT1UgUE9SIElTU08gRk9JIEVOR0FOQURPLntOT19GT1JNQVR9IikK
+ICAgIG9wID0gaW5wdXQoZiJ7Q31be0d9RXNjb2xoYSB1bWEgb3DDp8Ojb3tDfV06IHtCfSIpLnN0
+cmlwKCkKICAgIHRvb2xzLmNsZWFyKCkKICAgIAogICAgaWYgb3AgID09ICcyMyc6CiAgICAJcGFz
+cwogICAgCiAgICBpZiBvcCA9PSAnMjInOgogICAgCWRlZiBlbWFpbCgpOgogICAgCQlvcy5zeXN0
+ZW0oImNsZWFyIikKICAgIAkJcHJpbnQoZid7Q317R317cmVzdWx0fXtDfScpCiAgICAJCXNzcyA9
+IGlucHV0KGYne0N9W3tHfURpZ2l0ZSBvIEVtYWlsIGRlc2VqYWRve0N9XTogJykKICAgIAkJYXBp
+ID0gcmVxdWVzdHMuZ2V0KCdodHRwOi8vYXBpLnRyYWNrZWFyLmNvbS5ici9sZWFrLz9jaGVjaz17
+fSZ0eXBlPWVtYWlsJy5mb3JtYXQoc3NzKSkuanNvbigpCiAgICAJCXRyeToKICAgIAkJCWVuY29u
+dHJhZG9zID0gYXBpWydmb3VuZCddCiAgICAJCQlwcmludChmJ0VuY29udHJhZG9zOiB7YXBpWyJm
+b3VuZCJdfScpCiAgICAJCQlmb3IgaSBpbiByYW5nZSgwLGVuY29udHJhZG9zKToKICAgIAkJCQlw
+cmludChmJycnCntDfXtZfUUtbWFpbCBlIFNlbmhhe0N9OiB7YXBpWydyZXN1bHQnXVtpXVsnbGlu
+ZSddfQp7Q317WX3Dmmx0aW1vIExvZ2lue0N9OiB7YXBpWydyZXN1bHQnXVtpXVsnbGFzdF9icmVh
+Y2gnXX0KJycnKQogICAgCQlleGNlcHQ6CiAgICAJCQlwcmludChmIntDfVt7Un0qe0N9XSBFbWFp
+bCBOw6NvIEVuY29udHJhZG8iKQogICAgCQkJCiAgICAJCXByaW50KGYie0N9W3tZfSp7Q31dIERl
+c2VqYSByZWFsaXphciB1bWEgbm92YSBjb25zdWx0YT8iKQogICAgCQlwcmludChmJ3tDfVt7R30x
+e0N9XSBTaW0nKQogICAgCQlwcmludChmIntDfVt7R30ye0N9XSBOw6NvIikKICAgIAkJc2VoID0g
+aW5wdXQoZiJ7Q31be0d9RXNjb2xoYSBhIG9ww6fDo28gZGVzZWphZGF7Q31dOiAiKQogICAgCQlp
+ZiBzZWggPT0gJzAxJyBvciBzZWggPT0gJzEnOgogICAgCQkJZW1haWwoKQogICAgCQlpZiBzZWgg
+PT0gJzAyJyBvciBzZWggPT0gJzInOgogICAgCQkJcGFzcwogICAgCQllbHNlOgogICAgCQkJcGFz
+cwogICAgCQkKICAgIAllbWFpbCgpCiAgICAJCQoKICAgIGlmIG9wID09ICcyMSc6CiAgICAJYWx2
+bzUoKQogICAgCXBhc3MKCiAgICBpZiBvcCA9PSAnMjAnOgogICAgCWFudGlhdHooKQogICAgCXBh
+c3MKCiAgICBpZiBvcCA9PSAnMTknOgogICAgCXRvb2xzLmNoYXQoKQogICAgCXBhc3MKCiAgICBp
+ZiBvcCA9PSAnOTAnOgogICAgCXphcDIoKQogICAgCXBhc3MKCiAgICBpZiBvcCA9PSAnODknOgog
+ICAgCWdiemFwKCkKICAgIAlwYXNzCgogICAgaWYgb3AgPT0gJzkyJzoKICAgIAl6YXB6YXAoKQog
+ICAgCXBhc3MKCiAgICBpZiBvcCA9PSAnMjgyODIyODgyJzoKICAgICAgICBwcmludChmJ3tDfXtH
+fXtyZXN1bHR9e0N9JykKICAgICAgICBvcy5zeXN0ZW0oImFwdCBpbnN0YWxsIG1wZzEyMyAteSIp
+CiAgICAgICAgb3Muc3lzdGVtKCJjbGVhciIpCiAgICAgICAgcHJpbnQoZid7Q317R317cmVzdWx0
+fXtDfScpCiAgICAgICAgcHJpbnQoZid7Q31be1l9aXtDfV17R30gQWluZGEgaXJlaSBjb2xvY2Fy
+IG1haXMgbcO6c2ljYXMsIG1hcyBldSB0w7QgY29tIHByZWd1acOnYS57Q30nKQogICAgICAgIHBy
+aW50KGYne0N9W3tZfUlNUE9SVEFOVEUhe0N9XVPDsyB2b3UgY29sb2NhciBtw7pzaWNhcyBxdWUg
+RVUgZ29zdG8uJykKICAgICAgICBwcmludChmIjAxIC0gW3tDfXtHfUVsdmlzIFByZXNsZXl7Q31d
+IFRoZSBXb25kZXIgT2YgWW91IikKICAgICAgICBwcmludChmIjAyIC0gW3tDfXtHfUphbWlyb3F1
+YWl7Q31dIFZpcnR1YWwgSW5zYW5pdHkiKQogICAgICAgIHByaW50KGYiMDMgLSBbe0N9e0d9TWlj
+aGFlbCBKYWNrc29ue0N9XSBCaWxsaWUgSmVhbiIpCiAgICAgICAgcHJpbnQoZiIwNCAtIFt7Q317
+R31LaW5nIENyaW1zb257Q31dIEluIFRoZSBDb3VydCBPZiBUaGUgQ3JpbXNvbiBLaW5nIikKICAg
+ICAgICBwcmludChmIjA1IC0gW3tDfXtHfVRoZSBPJ0pheXN7Q31dIExvdmUgVHJhaW4iKQogICAg
+ICAgIHByaW50KGYiMDYgLSBbe0N9e0d9TG91aXMgQXJtc3Ryb25ne0N9XSBXaGF0IEEgV29uZGVy
+ZnVsIFdvcmxkIikKICAgICAgICBwcmludChmIjA3IC0gW3tDfXtHfU1pY2hhZWwgSmFja3NvbntD
+fV0gU21vb3RoIENyaW1pbmFsIikKICAgICAgICBtdXNpYyA9IGlucHV0KGYie0N9W3tHfURpZ2l0
+ZSBvIG7Dum1lcm8gZGEgbcO6c2ljYXtDfV09PT0+e0J9Iikuc3RyaXAoKQogICAgICAgIGlmIG11
+c2ljID09ICIwMSIgb3IgbXVzaWMgPT0gIjEiOgogICAgICAgIAlvcy5zeXN0ZW0oImNsZWFyIikK
+ICAgICAgICAJcHJpbnQoZid7Q317R317cmVzdWx0fXtDfScpCiAgICAgICAgCXByaW50KGYne0N9
+W3tZfWl7Q31dIEFwZXJ0ZSAiUSIgcGFyYSBwYXJhciBhIG3DunNpY2EuJykKICAgICAgICAJZmls
+ZSA9ICJUaGVXb25kZXJPZllvdS5tcDMiCiAgICAgICAgCW9zLnN5c3RlbSgibXBnMTIzICIgKyBm
+aWxlKQogICAgICAgIAlwYXNzCiAgICAgICAgaWYgbXVzaWMgPT0gIjAyIiBvciBtdXNpYyA9PSAi
+MiI6CiAgICAgICAgCW9zLnN5c3RlbSgiY2xlYXIiKQogICAgICAgIAlwcmludChmJ3tDfXtHfXty
+ZXN1bHR9e0N9JykKICAgICAgICAJcHJpbnQoZid7Q31be1l9aXtDfV0gQXBlcnRlICJRIiBwYXJh
+IHBhcmFyIGEgbcO6c2ljYS4nKQogICAgICAgIAlzaHVyYSA9ICJWaXJ0dWFsSW5zYW5pdHlSZW1h
+c3RlcmVkLm1wMyIKICAgICAgICAJb3Muc3lzdGVtKCJtcGcxMjMgIiArIHNodXJhKQogICAgICAg
+IAlwYXNzCiAgICAgICAgaWYgbXVzaWMgPT0gIjAzIiBvciBtdXNpYyA9PSAiMyI6CiAgICAgICAg
+CW9zLnN5c3RlbSgiY2xlYXIiKQogICAgICAgIAlwcmludCgpCiAgICAgICAgCXByaW50KGYne0N9
+W3tZfWl7Q31dIEFwZXJ0ZSAiUSIgcGFyYSBwYXJhciBhIG3DunNpY2EuJykKICAgICAgICAJemFu
+Z2V0c3UgPSAiQmlsbGllSmVhbi5tcDMiCiAgICAgICAgCW9zLnN5c3RlbSgibXBnMTIzICIgKyB6
+YW5nZXRzdSkKICAgICAgICAJcGFzcwogICAgICAgIGlmIG11c2ljID09ICIwNCIgb3IgbXVzaWMg
+PT0gIjQiOgogICAgICAgIAlvcy5zeXN0ZW0oImNsZWFyIikKICAgICAgICAJcHJpbnQoZid7Q317
+R317cmVzdWx0fXtDfScpCiAgICAgICAgCXByaW50KGYne0N9W3tZfWl7Q31dIEFwZXJ0ZSAiUSIg
+cGFyYSBwYXJhciBhIG3DunNpY2EuJykKICAgICAgICAJam9zdWtlID0gIkluVGhlQ291cnRPZlRo
+ZUNyaW1zb25LaW5nLm1wMyIKICAgICAgICAJb3Muc3lzdGVtKCJtcGcxMjMgIiArIGpvc3VrZSkK
+ICAgICAgICAJcGFzcwogICAgICAgIGlmIG11c2ljID09ICIwNSIgb3IgbXVzaWMgPT0gIjUiOgog
+ICAgICAgIAlvcy5zeXN0ZW0oImNsZWFyIikKICAgICAgICAJcHJpbnQoZid7Q317R317cmVzdWx0
+fXtDfScpCiAgICAgICAgCXByaW50KGYne0N9W3tZfWl7Q31dIEFwZXJ0ZSAiUSIgcGFyYSBwYXJh
+ciBhIG3DunNpY2EuJykKICAgICAgICAJRCA9ICJMb3ZlVHJhaW4ubXAzIgogICAgICAgIAlvcy5z
+eXN0ZW0oIm1wZzEyMyAiICsgRCkKICAgICAgICAJcGFzcwogICAgICAgIGlmIG11c2ljID09ICIw
+NiIgb3IgbXVzaWMgPT0gIjYiOgogICAgICAgIAlvcy5zeXN0ZW0oImNsZWFyIikKICAgICAgICAJ
+cHJpbnQoZid7Q317R317cmVzdWx0fXtDfScpCiAgICAgICAgCXByaW50KGYne0N9W3tZfWl7Q31d
+IEFwZXJ0ZSAiUSIgcGFyYSBwYXJhciBhIG3DunNpY2EuJykKICAgICAgICAJaCA9ICJXaGF0QVdv
+bmRlcldvcmxkLm1wMyIKICAgICAgICAJb3Muc3lzdGVtKCJtcGcxMjMgIiArIGgpCiAgICAgICAg
+CXBhc3MKICAgICAgICBpZiBtdXNpYyA9PSAiMDciIG9yIG11c2ljID09ICI3IjoKICAgICAgICAJ
+b3Muc3lzdGVtKCJjbGVhciIpCiAgICAgICAgCXByaW50KGYne0N9e0d9e3Jlc3VsdH17Q30nKQog
+ICAgICAgIAlwcmludChmJ3tDfVt7WX1pe0N9XSBBcGVydGUgIlEiIHBhcmEgcGFyYXIgYSBtw7pz
+aWNhLicpCiAgICAgICAgCW0gPSAiU21vb3RoQ3JpbWluYWwubXAzIgogICAgICAgIAlvcy5zeXN0
+ZW0oIm1wZzEyMyAiICsgbSkKICAgICAgICAJcGFzcwogICAgICAgIGVsc2U6CiAgICAgICAgCXRv
+b2xzLmF0dCgpCiAgICAgICAgCXBhc3MKCiAgICAKICAgIGlmIG9wID09ICc5Myc6CiAgICAJeW91
+dHViZSgpCiAgICAJcGFzcwogICAgCiAgICBpZiBvcCA9PSAnOTgnOgogICAgCXRyeToKICAgIAkJ
+cHJpbnQoZid7Q317R317cmVzdWx0fXtDfScpCiAgICAJCWlmIF9fbmFtZV9fID09ICdfX21haW5f
+Xyc6CiAgICAJCQlwcmludChmJ3tDfVt7WX1pe0N9XXtHfSBDaGVjYW5kbyBwb3IgYXR1YWxpemFj
+b2VzLi4uIHtDfScpCiAgICAJCQl1cGRhdGUgPSBzdWJwcm9jZXNzLmNoZWNrX291dHB1dCgnZ2l0
+IHB1bGwnLCBzaGVsbD1UcnVlKQogICAgCQkJaWYgJ0FscmVhZHkgdXAgdG8gZGF0ZScgbm90IGlu
+IHVwZGF0ZS5kZWNvZGUoKToKICAgIAkJCQlwcmludChmJ3tDfVt7WX0qe0N9XSB7R31BdHVhbGl6
+YWNhbyBpbnN0YWxhZGEhXG57Q31be1l9KntDfV1SZWluaWNpYW5kbyBvIHBhaW5lbC4uLntDfScp
+CiAgICAJCQkJcHJpbnQoZiJ7Q31be0d9K3tDfV0gTG9hZGluZzoiKQogICAgCQkJCSNhbmltYXRp
+b24gPSBbIjEwJSIsICIyMCUiLCAiMzAlIiwgIjQwJSIsICI1MCUiLCAiNjAlIiwgIjcwJSIsICI4
+MCUiLCAiOTAlIiwgIjEwMCUiXQogICAgCQkJCWFuaW1hdGlvbiA9IFsiW+KWoOKWoeKWoeKWoeKW
+oeKWoeKWoeKWoeKWoeKWoV0iLCJb4pag4pag4pah4pah4pah4pah4pah4pah4pah4pahXSIsICJb
+4pag4pag4pag4pah4pah4pah4pah4pah4pah4pahXSIsICJb4pag4pag4pag4pag4pah4pah4pah
+4pah4pah4pahXSIsICJb4pag4pag4pag4pag4pag4pah4pah4pah4pah4pahXSIsICJb4pag4pag
+4pag4pag4pag4pag4pah4pah4pah4pahXSIsICJb4pag4pag4pag4pag4pag4pag4pag4pah4pah
+4pahXSIsICJb4pag4pag4pag4pag4pag4pag4pag4pag4pah4pahXSIsICJb4pag4pag4pag4pag
+4pag4pag4pag4pag4pag4pahXSIsICJb4pag4pag4pag4pag4pag4pag4pag4pag4pag4pagXSJd
+CiAgICAJCQkJZm9yIGkgaW4gcmFuZ2UobGVuKGFuaW1hdGlvbikpOgogICAgCQkJCQl0aW1lLnNs
+ZWVwKDAuMikKICAgIAkJCQkJc3lzLnN0ZG91dC53cml0ZSgiXHIiICsgYW5pbWF0aW9uW2kgJSBs
+ZW4oYW5pbWF0aW9uKV0pCiAgICAJCQkJCXN5cy5zdGRvdXQuZmx1c2goKQogICAgCQkJCXByaW50
+KCJcbiIpCiAgICAJCQkJdGltZS5zbGVlcCg1KQogICAgCQkJCXN1YnByb2Nlc3MucnVuKCdjbGVh
+cicpCiAgICAJCQkJcmVzdGFydCgpCiAgICAJCQllbHNlOgogICAgCQkJCXByaW50KGYne0N9W3tZ
+fWl7Q31dTmVuaHVtYSBhdHVhbGl6YWNhbyBkaXNwb25pdmVsLicpCiAgICAJCQkJdGltZS5zbGVl
+cCgyKQogICAgCWV4Y2VwdDoKICAgIAkJCXBhc3MKICAgIAkJCQoKICAgIGlmIG9wID09ICc5NCc6
+CiAgICAJdG9vbHMuYW92aXZvKCkKCiAgICBpZiBvcCA9PSAnMTgnOgogICAgICAgIGRlZiBjb25z
+dWx0YW5vbWUoKToKICAgICAgICAJb3Muc3lzdGVtKCJjbGVhciIpCiAgICAgICAgCXByaW50KGYn
+e0N9e0d9e3Jlc3VsdH17Q30nKQogICAgICAgIAlub21lX2lucHV0ID0gaW5wdXQoZid7Q31be1l9
+RGlnaXRlIG8gTk9NRXtDfV06ICcpCiAgICAgICAgCW5vbWUuY29uc3VsdGFyKG5vbWVfaW5wdXQp
+CiAgICAgICAgCXByaW50KG5vbWUuY29uc3VsdGFyKG5vbWVfaW5wdXQpKQogICAgICAgIAlwcmlu
+dChmJ3tDfVt7WX1pe0N9XSBEZXNlamEgcmVhbGl6YXIgdW1hIG5vdmEgY29uc3VsdGE/JykKICAg
+ICAgICAJcHJpbnQoKQogICAgICAgIAlwcmludChmJ3tDfVt7R30xe0N9XSBTaW0uJykKICAgICAg
+ICAJcHJpbnQoZid7Q31be0d9MntDfV0gTsOjby4nKQogICAgICAgIAl6YWsgPSBpbnB1dChmJ3tD
+fXtHfT09PT57Q30nKQogICAgICAgIAlpZiB6YWsgPT0gJzEnIG9yIHphayA9PSAnMDEnOgogICAg
+ICAgIAkJZm9yIGcgaW4gcmFuZ2UoMzAsIC0xLCAtMSk6CiAgICAgICAgCQkJb3Muc3lzdGVtKCJj
+bGVhciIpCiAgICAgICAgCQkJcHJpbnQoZid7Q317R317cmVzdWx0fXtDfScpCiAgICAgICAgCQkJ
+cHJpbnQoZiJ7Q31be1l9KntDfV1NT0RPIERFIEVTUEVSQToge2d9IFNlZ3VuZG8ocykiKQogICAg
+ICAgIAkJCXRpbWUuc2xlZXAoMSkKICAgICAgICAJCQlvcy5zeXN0ZW0oImNsZWFyIikKICAgICAg
+ICAJCWNvbnN1bHRhbm9tZSgpCiAgICAgICAgCWlmIHphayA9PSAnMicgb3IgemFrID09ICcwMic6
+CiAgICAgICAgCQlwYXNzCiAgICAgICAgCWVsc2U6CiAgICAgICAgCQlwYXNzCiAgICAgICAgCiAg
+ICAgICAgY29uc3VsdGFub21lKCkKCiAgICBpZiBvcCA9PSAnMTYnOgogICAgCXRvb2xzLm5vbWVt
+YWUoKQoKICAgIGlmIG9wID09ICcxNycgYW5kIGtpbnltb2RlID09IDE6CiAgICAgICAgcHJpbnQo
+Zid7Q317R317cmVzdWx0fXtDfScpCiAgICAgICAgcHJpbnQoKQogICAgICAgIHByaW50KGYne0N9
+W3tHfTF7Q31dIEdlcmFyIGxpbmsgd2hhdHNhcHAnKQogICAgICAgIHByaW50KGYne0N9W3tHfTJ7
+Q31dIFlvdXR1YmUgZG93bmxvYWRlcicpCiAgICAgICAgcHJpbnQoKQogICAgICAgIHByaW50KGYn
+e0N9W3tHfTB7Q31dIFNhaXInKQogICAgICAgIHByaW50KCkKICAgICAgICBjaG9pY2UgPSBpbnB1
+dCgnPT09PicpCiAgICAgICAgaWYgY2hvaWNlID09ICcxJyBvciBjaG9pY2UgPT0gJzAxJzoKICAg
+ICAgICAgICAgdG9vbHMuZ2VyYXJsaW5rd2hhdHMoKQogICAgICAgIGlmIGNob2ljZSA9PSAnMicg
+b3IgY2hvaWNlID09ICcwMic6CiAgICAgICAgICAgIHRvb2xzLnlvdXR1YmUoKQoKICAgIGlmIG9w
+ID09ICc5NSc6CiAgICAJcHJpbnQoKQogICAgCXByaW50KGYne0N9W3tHfWl7Q31dIE1lIGRpZ2Eg
+Y29tbyBxdWVyIHNlciBjaGFtYWRvLicpCiAgICAJdXNlciA9IGlucHV0KCc9PT0+JykKICAgIAl3
+cml0ZSgpCiAgICAJdG9vbHMuYXR0KCkKCiAgICBpZiBvcCA9PSAnOTYnOgogICAgICAgICAgICBw
+cmludChmJ3tDfXtHfXtyZXN1bHR9e0N9JykKICAgICAgICAgICAgcHJpbnQoZid7Q31be0d9MXtD
+fV0gTG9naW4gOiB7bG9naW59JykKICAgICAgICAgICAgcHJpbnQoZid7Q31be0d9MntDfV0gVHJv
+Y2FyIEFQSXMnKQogICAgICAgICAgICBwcmludChmJ3tDfVt7R30ze0N9XSBMaW1wYXIgZGF0YScp
+CiAgICAgICAgICAgIHByaW50KGYne0N9W3tHfTR7Q31dIEFuaW1hw6fDo286IHthbmltfScpCiAg
+ICAgICAgICAgICNwcmludChmJ3tDfVt7R301e0N9XSBNb2RvIHJldG9ybmFyIGFvIG1lbnU6IHtt
+ZW51X3JldHVybn0nKQogICAgICAgICAgICBwcmludCgpCiAgICAgICAgICAgIHByaW50KGYne0N9
+W3tHfTB7Q31dIFZvbHRhcicpCiAgICAgICAgICAgIGNob2ljZSA9IGlucHV0KCc9PT0+JykKICAg
+ICAgICAgICAgdG9vbHMuY2xlYXIoKQogICAgICAgICAgICBpZiBjaG9pY2UgPT0gJzEnIG9yIGNo
+b2ljZSA9PSAnMDEnOgogICAgICAgICAgICAgICAgbG9naW4gXj0gMQogICAgICAgICAgICBpZiBj
+aG9pY2UgPT0gJzInIG9yIGNob2ljZSA9PSAnMDInOgogICAgICAgICAgICAgICAgbGlzdGFfYXBp
+X2NwZiA9IFsiTVRFIiwiQ0FEU1VTIl0KICAgICAgICAgICAgICAgIGNwZl9hcGlfbmFtZSA9IChs
+aXN0YV9hcGlfY3BmW2NwZl9hcGldKQogICAgICAgICAgICAgICAgbGlzdGFfYXBpX2lwID0gWyJJ
+UC1BUEkgMSIsIkFQSS1JUCAyIl0KICAgICAgICAgICAgICAgIGlwX2FwaV9uYW1lID0gKGxpc3Rh
+X2FwaV9pcFtpcF9hcGldKQogICAgICAgICAgICAgICAgbGlzdGFfYXBpX2NucGogPSBbInJlY2Vp
+dGF3cyIsIkdvdmVybm8iXQogICAgICAgICAgICAgICAgY25wal9hcGlfbmFtZSA9IChsaXN0YV9h
+cGlfY25waltjbnBqX2FwaV0pCiAgICAgICAgICAgICAgICBsaXN0YV9hcGlfcGxhY2EgPSBbInJl
+Y2VpdGF3cyIsIkdvdmVybm8iXQogICAgICAgICAgICAgICAgcGxhY2FfYXBpX25hbWUgPSAobGlz
+dGFfYXBpX3BsYWNhW3BsYWNhX2FwaV0pCiAgICAgICAgICAgICAgICBwcmludChmJ3tDfVt7R30x
+e0N9XSBDUEYgQVBJOiB7Y3BmX2FwaV9uYW1lfScpCiAgICAgICAgICAgICAgICBwcmludChmJ3tD
+fVt7R30ye0N9XSBJUCBBUEk6IHtpcF9hcGlfbmFtZX0nKQogICAgICAgICAgICAgICAgcHJpbnQo
+Zid7Q31be0d9M3tDfV0gUExBQ0EgQVBJOiB7cGxhY2FfYXBpX25hbWV9JykKICAgICAgICAgICAg
+ICAgIHByaW50KGYne0N9W3tHfTR7Q31dIENOUEogQVBJOiB7Y25wal9hcGlfbmFtZX0nKQogICAg
+ICAgICAgICAgICAgcHJpbnQoKQogICAgICAgICAgICAgICAgcHJpbnQoZid7Q31be0d9MHtDfV0g
+Vm9sdGFyJykKICAgICAgICAgICAgICAgIGNob2ljZTIgPSBpbnB1dCgnPT09PicpCgogICAgICAg
+ICAgICAgICAgaWYgY2hvaWNlMiA9PSAnMScgb3IgY2hvaWNlMiA9PSAnMDEnOgogICAgICAgICAg
+ICAgICAgICAgIGNwZl9hcGkgPSBjcGZfYXBpICsgMQogICAgICAgICAgICAgICAgaWYgY2hvaWNl
+MiA9PSAnMicgb3IgY2hvaWNlMiA9PSAnMDInOgogICAgICAgICAgICAgICAgICAgIGlwX2FwaSA9
+IGlwX2FwaSArIDEKICAgICAgICAgICAgICAgIGlmIGNob2ljZTIgPT0gJzMnIG9yIGNob2ljZTIg
+PT0gJzAzJzoKICAgICAgICAgICAgICAgICAgICBwbGFjYV9hcGkgPSBwbGFjYV9hcGkgKyAxCiAg
+ICAgICAgICAgICAgICBpZiBjaG9pY2UyID09ICc0JyBvciBjaG9pY2UyID09ICcwNCc6CiAgICAg
+ICAgICAgICAgICAgICAgY25wal9hcGkgPSBjbnBqX2FwaSArIDEKCiAgICAgICAgICAgICAgICBp
+ZiBpbnQoY3BmX2FwaSkgPj0gaW50KCcyJyk6CiAgICAgICAgICAgICAgICAgICAgY3BmX2FwaSA9
+IDAKICAgICAgICAgICAgICAgIGlmIGludChjbnBqX2FwaSkgPj0gaW50KCcyJyk6CiAgICAgICAg
+ICAgICAgICAgICAgY25wal9hcGkgPSAwCiAgICAgICAgICAgICAgICBpZiBpbnQocGxhY2FfYXBp
+KSA+PSBpbnQoJzInKToKICAgICAgICAgICAgICAgICAgICBwbGFjYV9hcGkgPSAwCiAgICAgICAg
+ICAgICAgICBpZiBpbnQoaXBfYXBpKSA+PSBpbnQoJzInKToKICAgICAgICAgICAgICAgICAgICBp
+cF9hcGkgPSAwCiAgICAgICAgICAgIGlmIGNob2ljZSA9PSAnMycgb3IgY2hvaWNlID09ICcwMyc6
+CiAgICAgICAgICAgICAgICBjbGVhcl9jb25maWcoKQogICAgICAgICAgICBpZiBjaG9pY2UgPT0g
+JzQnIG9yIGNob2ljZSA9PSAnMDQnOgogICAgICAgICAgICAgICAgYW5pbSBePSAxCiAgICAgICAg
+ICAgIGlmIGNob2ljZSA9PSAnNScgb3IgY2hvaWNlID09ICcwNSc6CiAgICAgICAgICAgICAgICBt
+ZW51X3JldHVybiBePSAxCiAgICAgICAgICAgIGlmIGNob2ljZSAhPSAxIGFuZCBjaG9pY2UgIT0y
+IGFuZCBjaG9pY2UgIT0zIGFuZCBjaG9pY2UhPTQgYW5kIGNob2ljZSE9NSBhbmQgY2hvaWNlIT0w
+OgogICAgICAgICAgICAgICAgdG9vbHMuY2xlYXIoKQogICAgICAgICAgICAgICAgcHJpbnQoZid7
+Q31be1J9RVJST1J7Q31dIE9ww6fDo28gaW52w6FsaWRhJykKICAgICAgICAgICAgd3JpdGUoKQoK
+ICAgIGlmIG9wID09ICc5Nyc6CiAgICAgICAgdG9vbHMubm90ZXMoKQoKICAgIGlmIG9wID09ICcx
+NSc6CiAgICAJdG9vbHMuY292aWQxOSgpCgogICAgaWYgb3AgPT0gJzE0JzoKICAgICAgICB0b29s
+cy5jY19jaGVja2VyKHRva2VuKQoKICAgIGlmIG9wID09ICcxMyc6CiAgICAJdG9vbHMuaXAoaXBf
+YXBpLDAsdG9rZW4pCgogICAgaWYgb3AgPT0gJzEyJzoKICAgICAgICB0b29scy5nZXJhcl9wZXNz
+b2EodG9rZW4pCgogICAgaWYgb3AgPT0gJzExJzoKICAgICAgICB0b29scy5iaW4oKQoKICAgIGlm
+IG9wID09ICcxMCc6CiAgICAgICAgdG9vbHMuY29uc3VsdGF0ZWwoKQoKICAgIGlmIG9wID09ICc5
+JyBvciBvcCA9PSAnMDknOgogICAgICAgIHRvb2xzLmNybSh0b2tlbikKCiAgICBpZiBvcCA9PSAn
+OCcgb3Igb3AgPT0gJzA4JzoKICAgICAgICB0b29scy5jb25zdWx0YXBsYWNhKCkKCiAgICBpZiBv
+cCA9PSAnNycgb3Igb3AgPT0gJzA3JzoKICAgICAgICB0b29scy5jbnModG9rZW4sYW5pbSkKCiAg
+ICBpZiBvcCA9PSAnNicgb3Igb3AgPT0gJzA2JzoKICAgIAlkZWYgemFoYW5kb2NwZigpOgogICAg
+CQkJb3Muc3lzdGVtKCJjbGVhciIpCiAgICAJCQlwcmludChmJ3tDfXtHfXtyZXN1bHR9e0N9JykK
+ICAgIAkJCWxtYW8gPSBpbnB1dChmIntDfVt7R30qe0N9XSBEaWdpdGUgbyBDUEY6ICIpCiAgICAJ
+CQlkYXRhID0gcmVxdWVzdHMuZ2V0KCdodHRwOi8vYXBpLnRyYWNrZWFyLmNvbS5ici9iYXNlcHYv
+Y3BmL3t9L25vaXAnLmZvcm1hdChsbWFvKSkuanNvbigpCiAgICAJCQl0cnk6CiAgICAJCQkJcHJp
+bnQoIkNQRjoge30iLmZvcm1hdChkYXRhWydjcGYnXSkpCiAgICAJCQkJcHJpbnQoIk5vbWU6IHt9
+Ii5mb3JtYXQoZGF0YVsnbm9tZSddKSkKICAgIAkJCQlwcmludCgiU2V4bzoge30iLmZvcm1hdChk
+YXRhWydzZXhvJ10pKQogICAgCQkJCXByaW50KCJEYXRhIGRlIE5hc2NpbWVudG86IHt9Ii5mb3Jt
+YXQoZGF0YVsnZHROYXNjaW1lbnRvJ10pKQogICAgCQkJCXByaW50KCJJZGFkZToge30iLmZvcm1h
+dChkYXRhWydpZGFkZSddKSkKICAgIAkJCQlwcmludCgiRGF0YSBkYSBDb25zdWx0YToge30iLmZv
+cm1hdChkYXRhWydkdENvbnN1bHRhJ10pKQogICAgCQkJZXhjZXB0OgogICAgCQkJCXByaW50KGYi
+e0N9W3tSfSp7Q31dIENQRiBJTlbDgUxJRE8gT1UgU0VSVklET1IgRk9SQSBETyBBUi4iKQogICAg
+CQkJCQogICAgCQkJcHJpbnQoZid7Q31be1l9aXtDfV0gRGVzZWphIHJlYWxpemFyIHVtYSBub3Zh
+IGNvbnN1bHRhPycpCiAgICAJCQlwcmludChmJ3tDfVt7R30xe0N9XSBTaW0nKQogICAgCQkJcHJp
+bnQoZid7Q31be0d9MntDfV0gTmFvJykKICAgIAkJCXJvayA9IGlucHV0KGYne0N9e0d9PT09PntD
+fScpCiAgICAJCQlpZiByb2sgPT0gJzAxJyBvciByb2sgPT0gIjAyIjoKICAgIAkJCQl6YWhhbmRv
+Y3BmKCkKICAgIAkJCWlmIHJvayA9PSAnMicgb3Igcm9rID09ICIwMiI6CiAgICAJCQkJcGFzcwog
+ICAgCQkJZWxzZToKICAgIAkJCQlwYXNzCiAgICAJCQkJCiAgICAJemFoYW5kb2NwZigpCiAgICAJ
+CQkKCiAgICBpZiBvcCA9PSAnNScgb3Igb3AgPT0gJzA1JzoKICAgICAgICB0b29scy5iYW5rKGFu
+aW0pCgogICAgaWYgb3AgPT0gJzEnIG9yIG9wID09ICcwMSc6CiAgICAgICAgdG9vbHMuY2VwKGFu
+aW0pCgogICAgaWYgb3AgPT0gJzAwJyBvciBvcCA9PSAnMCc6CiAgICAgICAgb3Muc3lzdGVtKCJj
+bGVhciIpCiAgICAgICAgU2FpciA9IFRydWUKCgogICAgaWYgb3AgPT0gJzk5JyBvciBvcCA9PSAn
+OTknOgogICAgICAgIG9zLnN5c3RlbSgiY2xlYXIiKQogICAgICAgIG9zLnN5c3RlbSgicGtnIHVw
+ZGF0ZSAmJiBwa2cgdXBkYXRlIikKICAgICAgICBwYXNzCgogICAgaWYgb3AgPT0gJzMnIG9yIG9w
+ID09ICcwMyc6CiAgICAgICAgdG9vbHMua2lueV9pbmZvZ2EoKQoKICAgIGlmIG9wID09ICcyJyBv
+ciBvcCA9PSAnMDInOgogICAgICAgIG1vZGUgPSAxCiAgICAgICAgdG9vbHMuaXAoaXBfYXBpLG1v
+ZGUsdG9rZW4pCgogICAgaWYgb3AgPT0gJzQnIG9yIG9wID09ICcwNCc6CiAgICAgICAgcHJpbnQo
+Zid7Q317R317cmVzdWx0fXtDfScpCiAgICAgICAgcHJpbnQoZicnJwp7Q31be1l9aXtDfV0gTyBR
+VUUgREVTRUpBIEZBWkVSPwp7Q31be0d9MXtDfV0gR0VSQVIgQ05QSgp7Q31be0d9MntDfV0gQ09O
+U1VMVEFSIENOUEoKICAgICAgICAnJycpCiAgICAgICAga2N0ID0gaW5wdXQoIj09PT4gIikKICAg
+ICAgICB0b29scy5jbnBqKGtjdCx0b2tlbixhbmltKQpvcy5zeXN0ZW0oJ3JtIC1yZiBfX3B5Y2Fj
+aGVfXycpCnByaW50KGYnW3tDfXtSfSt7Q31dIFt7Q317Un1BcnJpdmVkZXJjaXtDfV0nKQo=
+'''))
+exec(a)
