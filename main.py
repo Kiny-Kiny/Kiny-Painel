@@ -402,9 +402,9 @@ while(Sair == False):
     		print(f'{C}[{G}1{C}] Sim')
     		print(f"{C}[{G}2{C}] Não")
     		seh = input(f"{C}[{G}Escolha a opção desejada{C}]: ")
-    		if seh == '01' or == '1':
+    		if seh == '01' or seh == '1':
     			email()
-    		if seh == '02' or == '2':
+    		if seh == '02' or seh == '2':
     			pass
     		else:
     			pass
