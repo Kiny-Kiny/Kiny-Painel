@@ -337,6 +337,7 @@ while(Sair == False):
     
     {C}{G}[20]{C} GRUPO S.W.B {C}[{Y}PARCERIA{C}] 
     {C}{G}[21]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]
+    {C}{G}[22]{C} CONSULTA DE EMAIL
     ''')
     if kinymode == 1:
     	print()
@@ -376,6 +377,40 @@ while(Sair == False):
     print(f"{C_GREY89}{C_RED1}ESTE PAINEL FOI DISPONIBILIZADO GRATUITAMENTE, SE VOCÊ PAGOU POR ISSO FOI ENGANADO.{NO_FORMAT}")
     op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
     tools.clear()
+    
+    if op  == '23':
+    	pass
+    
+    if op == '22':
+    	def email():
+    		os.system("clear")
+    		print(f'{C}{G}{result}{C}')
+    		sss = input(f'{C}[{G}Digite o Email desejado{C}]: ')
+    		api = requests.get('http://api.trackear.com.br/leak/?check={}&type=email'.format(sss)).json()
+    		try:
+    			encontrados = api['found']
+    			print(f'Encontrados: {api["found"]}')
+    			for i in range(0,encontrados):
+    				print(f'''
+{C}{Y}E-mail e Senha{C}: {api['result'][i]['line']}
+{C}{Y}Último Login{C}: {api['result'][i]['last_breach']}
+''')
+    		except:
+    			print(f"{C}[{R}*{C}] Email Não Encontrado")
+    			
+    		print(f"{C}[{Y}*{C}] Deseja realizar uma nova consulta?")
+    		print(f'{C}[{G}1{C}] Sim')
+    		print(f"{C}[{G}2{C}] Não")
+    		seh = input(f"{C}[{G}Escolha a opção desejada{C}]: ")
+    		if seh == '01' or == '1':
+    			email()
+    		if seh == '02' or == '2':
+    			pass
+    		else:
+    			pass
+    		
+    	email()
+    		
 
     if op == '21':
     	alvo5()
