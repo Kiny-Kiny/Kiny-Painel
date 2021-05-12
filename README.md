@@ -98,7 +98,7 @@ Iremos avisar aqui quando estiver em funcionamento cada uma das ferramentas incl
 - [x] CONSULTA SITE
 - [x] CONSULTA DE CNPJ
 - [x] CONSULTA BANCARIA
-- [x] CONSULTA CPF
+- [ ] CONSULTA CPF
 - [x] CONSULTA CNS
 - [x] CONSULTA PLACA
 - [x] CONSULTA CRM
@@ -108,7 +108,7 @@ Iremos avisar aqui quando estiver em funcionamento cada uma das ferramentas incl
 - [x] CC CHECKER
 - [x] COVID19
 - [ ] CONSULTAR MÃE 
-- [x] CONSULTAR NOME 
+- [ ] CONSULTAR NOME 
 
 # Dev's
 <b>Esta Tool foi desenvolvida por:</b>
