@@ -72,6 +72,12 @@ def clear():
    else:
        os.system("clear")
 
+def gp3():
+   if platform.system() == "Windows":
+      webbrowser.open_new_tab("https://chat.whatsapp.com/KAN3t1iVBrhK0dVW8RCpUR")
+   else:
+       os.system("termux-open-url https://chat.whatsapp.com/KAN3t1iVBrhK0dVW8RCpUR")
+
 def youtube():
    if platform.system() == "Windows":
       webbrowser.open_new_tab("https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w")
@@ -349,6 +355,8 @@ while(Sair == False):
     print()
     print(f'''
     {C}[{Y}+{C}] Opções: 
+
+    {C}{G}[88]{C} Meu grupo[3] 
     
     {C}{G}[89]{C} Meu grupo[1] 
     
@@ -377,6 +385,9 @@ while(Sair == False):
     print(f"{C_GREY89}{C_RED1}ESTE PAINEL FOI DISPONIBILIZADO GRATUITAMENTE, SE VOCÊ PAGOU POR ISSO FOI ENGANADO.{NO_FORMAT}")
     op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
     tools.clear()
+
+    if op  == '88':
+    	gp3()
     
     if op  == '23':
     	pass
