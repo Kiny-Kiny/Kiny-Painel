@@ -1,123 +1,86 @@
-# [✨𝐓𝐡𝐞 𝐖𝐨𝐧𝐝𝐞𝐫 𝐎𝐟 𝐘𝐨𝐮🌙 3.8(BETA)] &middot; [!["GitHub Discussions"](https://img.shields.io/badge/%20GitHub-%20Discussions-gray.svg?longCache=true&logo=github&colorB=purple)](https://github.com/Kiny-Kiny/Kiny-Painel/discussions)
-> Este painel de Consulta tem o objetivo de retornar dados pessoais através do CPF, Nome ou Número(off temporariamente) sem que precise pagar por isso.
+<p align="center" ><img alt="Kiny-Painel" src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png"></p>
+
+<h1 align="center">Kiny-Painel (BETA)</h1>
+<p align="center">
+  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Kiny-Kiny/Kiny-Painel">
+  <img alt="Latest version" src="https://img.shields.io/github/v/release/Kiny-Kiny/Kiny-Painel.svg" alt="Latest version">
+
+  <p align="center">
+    Este painel de consulta tem o objetivo de retornar dados pessoais através do Nome, Número ou CPF. De forma que não precise pagar por isso...
+  </p>
+</p> 
+
+
 
 <p align="center">
-<img src = "https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" min-width = "400px" max-width = "400px" width = "400px" align = "right" alt = "iuriCode computer">
+  <a href="https://github.com/Kiny-Kiny/Kiny-Painel/blob/master/README.md#-features">Features</a> •
+  <a href="https://github.com/Kiny-Kiny/Kiny-Painel/blob/master/README.md#-install">Install & Run</a> •
+  <a href="https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w">Youtube Channel</a> •
+  <a href="https://github.com/Kiny-Kiny/Kiny-Painel/blob/master/README.md#-credits">Credits</a> •
+  <a href="https://github.com/Kiny-Kiny">Author</a>
 </p>
 
-- Se for instalar pelo Termux, instale com a versão do F-Droid.
+<h3><p align="center">Version: 3.8 Beta</p></h3>
+ 
+<h2 align="center">📆  Features</h2>
 
-<p align="center">
-  <img alt="Kiny-Kiny' Github Stats" src="https://github-readme-stats.vercel.app/api?username=Kiny-Kiny&show_icons=true&include_all_commits=true&hide_border=true" />
-<!--  <img alt="profile pic" width="195px" src="https://avatars2.githubusercontent.com/u/70079144?s=460&u=d41b000a62eab50d000c3da604d151cec27bd850&v=4" />  -->
-<!--  <img src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=Kiny-Kiny&hide=ruby,perl&hide_border=true" />  -->
+Todos os que estão marcados já se encontram presente no **Kiny-Painel** funcionando. 
+Os que não estão, é porque ainda estão em desenvolvimento.
+
+- [x] Consulta de CEP
+- [x] Consulta de CNPJ
+- [x] Consulta de CRM
+- [x] Consulta de CNS
+- [ ] Consulta de CPF
+- [x] Consulta de BIN
+- [ ] Consulta de Nome
+- [ ] Consulta de Nome da mãe
+- [ ] Consulta de Número
+- [x] Consulta de Número **[(PhoneInfoga)](https://github.com/sundowndev/phoneinfoga)**
+- [x] Consulta de Placa
+- [x] Consulta de Site **(WHOIS)**
+- [x] Geolocalizador de IP
+
+
+<h2 align="center">🖥 Install</h2>
+
+Estamos sempre atualizando a ferramenta. Por conta disso, as vezes consultas podem ficar **offline** temporariamente. 
+Iremos avisar aqui quando cada ferramentas for atualizada!
+Para você executar o **Kiny-Painel** é nescessario ter o python instalado e para isso você pode baixar no site oficial do python clicando [**Aqui!**](https://www.python.org/downloads/)
+
+Depois de baixar e instalar o python você pode baixar o **Kiny-Painel** diretamente do github com os seguintes comandos:
+
+```
+$ pkg upgrade && pkg update -y
+$ pkg install git -y
+$ pkg install python -y
+$ pkg install python2 -y
+$ pkg install python3 -y
+$ git clone https://github.com/Kiny-Kiny/Kiny-Painel
+$ cd Kiny-Painel
+$ python3 main.py
+```
+
+<p align="center" >
+  <h2 align="center">🚀 Running</h2>
+  <img alt="Kiny-Painel" src="https://i.imgur.com/V2jmvAJ.png">
 </p>
 
-<p align="center">
-<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Kiny-Kiny/Kiny-Painel?style=flat" /> 
-<img alt="GitHub forks" src="https://img.shields.io/github/forks/Kiny-Kiny/Kiny-Painel?style=flat" />
-<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Kiny-Kiny/Kiny-Painel" />
-<img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/Kiny-Kiny/Kiny-Painel" />
-<img alt="GitHub closed pull requests" src="https://img.shields.io/github/issues-pr-closed/Kiny-Kiny/Kiny-Painel" />
-<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Kiny-Kiny/Kiny-Painel" />
-</p>
 
-<p align="center">
-<img src="https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/IMG-20210313-WA0017.jpg">
-</p>
+<h2 align="center">🙏  Credits</h2>
 
-[![Customized Card](https://github-readme-stats.vercel.app/api/pin?username=Kiny-Kiny&repo=Kiny-Painel&title_color=fff&icon_color=f9f9f9&text_color=9f9f9f&bg_color=151515)](https://github.com/Kiny-Kiny/Kiny-Painel)
+| Autor          | Ajuda                                      |
+| -------------- |:-------------:|
+| P0isonBR       | Consulta de CPF/Atualização Automática     |
+| Snuking        | Algumas ajudas no próprio script           |
+| Douglas/Josuke | Patrocinador                               |
+| Margarina      | Patrocinador                               |
+| N 3 X 0        | Patrocinador                               |
 
-<p align="center">Confira meu canal do YouTube. <a href="https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w"> Clique aqui!</a>
-
-# Nota: Próxima Atualização será a última com coisas novas, o resto será para melhorar o script.
-
-# Créditos 
-> P0isonBR(Consulta de CPF/Atualização Automática)
-
-> Snuking(Algumas ajudas no próprio script)
-
-# Chave Pix para contribuir no desenvolvimento do Kiny-Painel:
- 0018f93e-23c2-4c25-b8e5-c29809786d94
-
-# Patrocinadores
-
-> Douglas/Josuke
-
-> Margarina
-
-> N 3 X 0
-
-## INSTALAÇÃO 
-```
-【✔】pkg upgrade && pkg update -y
-【✔】pkg install git -y
-【✔】pkg install python -y
-【✔】pkg install python2 -y
-【✔】pkg install python3 -y
-【✔】git clone https://github.com/Kiny-Kiny/Kiny-Painel
-【✔】cd Kiny-Painel
-【✔】python3 main.py
-```
-
-## LOGIN
-```
-【🔐】USERNAME: (Qualquer coisa)
-【🔐】PASSWORD: VirtualInsanity
-```
-
-# CHANGELOG
-
-- Bug corrigido no Updater
-
-- Bug corrigido em consulta de placas
-
-- Consulta Completa Por Número 
-
-- Consulta Por Nome de Mãe 
-
-- Consulta por Nome
-
-# PRÉVIA
-
-- Consulta CADSUS
-
-- Consulta Score
-
-- Consulta CPF(mais Info)
-
-- Consulta de CNPJ(mais Info)
-
-## Nós estamos sempre atualizando a Tool!
-Por conta disso as vezes pode aparecer [OFF]
-Iremos avisar aqui quando estiver em funcionamento cada uma das ferramentas inclusas!
-# Ferramentas ON
-
-- [x] BUSCADOR DE CEP
-- [x] GEO LOCALIZADOR DE IP
-- [x] CONSULTA SITE
-- [x] CONSULTA DE CNPJ
-- [x] CONSULTA BANCARIA
-- [ ] CONSULTA CPF
-- [x] CONSULTA CNS
-- [x] CONSULTA PLACA
-- [x] CONSULTA CRM
-- [ ] CONSULTA DE NUMERO
-- [x] CONSULTA BIN
-- [x] GERAR PESSOA
-- [x] CC CHECKER
-- [x] COVID19
-- [ ] CONSULTAR MÃE 
-- [ ] CONSULTAR NOME 
-
-# Dev's
-<b>Esta Tool foi desenvolvida por:</b>
-
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/Kiny-Kiny"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/70079144?s=400&u=a9b7d1654029a0ec5f107819ace7fc3e984c981b&v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a><br /><a href="https://github.com/Kiny-Kiny/Kiny-Painel" title="Aquele canto de gente entelegente">Repo💻</a><a href="https://wa.me/552179180533"><br /><sub><b>Whatsapp💻</sub><br /></b></a></td>
-    <td align="center"><a href="https://github.com/Oporadokrl"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/71855447?s=460&u=1952fa4fb5538604622395fc7a5328c5c537e3e2&v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a><br /><a href="https://github.com/Oporadokrl/Kinypainel" title="Aquele canto de gente entelegente">Repo💻</a><a href="https://wa.me/5511975924829"><br /><sub><b>Whatsapp💻</sub><br /></b></a></td>
-  </tr>
-</table>
-
-# Dúvidas? Me chame no Whatsapp: +55 (21) 7918-0533
+ 
+ <h2 align="center">💰 Donate</h2>
+ 
+ Chave **Pix** para quem quiser contribuir e ajudar o painel a se manter ativo:
+ ```
+  0018f93e-23c2-4c25-b8e5-c29809786d94
+ ```
