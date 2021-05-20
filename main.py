@@ -312,7 +312,7 @@ while(Sair == False):
     print(f'[{C}{R}+{C}] Se vierem no meu PV perguntar quando as consultas vão voltar, vou dar block ou ignorar.')
     print()
     print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
-    print(f"{C}[{Y}Data de retorno das consultas por número{C}]: {C}[{G}13/05/2021{C}] {C}{Y}MOTIVO: ESTÁVAMOS PLANEJANDO RETORNAR COM A CONSULTA DE NÚMERO NO DIA 05/05, MAS TIVEMOS PROBLEMAS COM NOSSO PATROCINADOR{C}")
+    print(f"{C}[{Y}Data de retorno das consultas por número{C}]: {C}[{R}SEM DATA{C}] {C}{Y}MOTIVO: COMPRAMOS UMA API DE NÚMERO NO TELEGRAM COM O @MaikinBr, mas até agora ele não enviou.{C}")
     time.sleep(0.2)
     print(f'''
     {C}[{Y}+{C}] Consultas:
@@ -339,11 +339,9 @@ while(Sair == False):
     
     {C}{G}[16]{C} CONSULTAR MÃE {C}[{R}OFF{C}]
     {C}{G}[18]{C} CONSULTAR NOME {C}[{R}OFF{C}]
-    {C}{G}[19]{C} CHAT NO {C}[{Y}TERMINAL{C}] 
-    
-    {C}{G}[20]{C} GRUPO S.W.B {C}[{Y}PARCERIA{C}] 
-    {C}{G}[21]{C} GRUPO SURE×WEB {C}[{Y}PARCERIA{C}]
-    {C}{G}[22]{C} CONSULTA DE EMAIL {C}[{R}OFF{C}]
+    {C}{G}[19]{C} CHAT NO {C}[{Y}TERMINAL{C}]
+
+    {C}{G}[20]{C} CONSULTA DE EMAIL {C}[{R}OFF{C}]
     ''')
     if kinymode == 1:
     	print()
@@ -392,7 +390,7 @@ while(Sair == False):
     if op  == '23':
     	pass
     
-    if op == '22':
+    if op == '20':
     	def email():
     		os.system("clear")
     		print(f'{C}{G}{result}{C}')
@@ -422,15 +420,6 @@ while(Sair == False):
     		
     	email()
     		
-
-    if op == '21':
-    	alvo5()
-    	pass
-
-    if op == '20':
-    	antiatz()
-    	pass
-
     if op == '19':
     	tools.chat()
     	pass
