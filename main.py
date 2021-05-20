@@ -312,7 +312,7 @@ while(Sair == False):
     print(f'[{C}{R}+{C}] Se vierem no meu PV perguntar quando as consultas vão voltar, vou dar block ou ignorar.')
     print()
     print(f'{C}[{Y}IMPORTANTE!{C}]Leiam as Notas ao vivo.')
-    print(f"{C}[{Y}Data de retorno das consultas por número{C}]: {C}[{R}SEM DATA{C}] {C}{Y}MOTIVO: COMPRAMOS UMA API DE NÚMERO NO TELEGRAM COM O @MaikinBr, mas até agora ele não enviou.{C}")
+    print(f"{C}[{G}Data de retorno das consultas por número{C}]: {C}[{R}SEM DATA{C}] {C}{Y}MOTIVO: COMPRAMOS UMA API DE NÚMERO NO TELEGRAM COM O @MaikinBr, mas até agora ele não enviou.{C}")
     time.sleep(0.2)
     print(f'''
     {C}[{Y}+{C}] Consultas:
