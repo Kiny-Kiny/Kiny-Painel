@@ -31,7 +31,7 @@ Os que não estão, é porque ainda estão em desenvolvimento.
 - [x] Consulta de CNPJ
 - [x] Consulta de CRM
 - [x] Consulta de CNS
-- [ ] Consulta de CPF
+- [x] Consulta de CPF
 - [x] Consulta de BIN
 - [ ] Consulta de Nome
 - [ ] Consulta de Nome da mãe
