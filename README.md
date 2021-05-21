@@ -61,6 +61,11 @@ $ cd Kiny-Painel
 $ python3 main.py
 ```
 
+```
+Username: (Seu nome/nick)
+Password: VirtualInsanity
+```
+
 <p align="center" >
   <h2 align="center">🚀 Running</h2>
   <img alt="Kiny-Painel" src="https://i.imgur.com/V2jmvAJ.png">
