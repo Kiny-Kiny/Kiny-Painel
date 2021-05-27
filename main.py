@@ -250,8 +250,8 @@ if login == 1:
     tools.clear()
     print(f'{C}{G}{result}{C}')
     user = input(f"{C}[{G}+{C}]USERNAME:  ")
-    snh = 'VirtualInsanity'
-    if input(f"{C}[{G}+{C}]PASSWORD:  ").strip() == snh:
+    snh = -1429980375
+    if hash(input(f"{C}[{G}+{C}]PASSWORD:  ").strip()) == snh:
         print(f"{C}[{G}*{C}] Acesso Liberado...")
         time.sleep(1)
         tools.clear()
@@ -263,7 +263,7 @@ if login == 1:
             time.sleep(1)
         exit()
     print("\n ")
-if user == 'YATO' or user == 'KINY':
+if hash(user) == -1208135292 or hash(user) == 2055045082:
     kinymode=1
     kiny=1
     print(f"{C}[{Y}i{C}]Nova Opção Desbloqueada")
@@ -381,16 +381,22 @@ while(Sair == False):
     	print(f"{C}{G}[95]{C} Mudar username")
     print()
     print(f"{C_GREY89}{C_RED1}ESTE PAINEL FOI DISPONIBILIZADO GRATUITAMENTE, SE VOCÊ PAGOU POR ISSO FOI ENGANADO.{NO_FORMAT}")
-    op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
+    while True:
+        op = input(f"{C}[{G}Escolha uma opção{C}]: {B}").strip()
+        try:
+	    op = int(op)
+	    break
+        except:
+	    print("OPÇÃO INVÁLIDA")
     tools.clear()
 
-    if op  == '88':
+    if op  == 88:
     	gp3()
     
-    if op  == '23':
+    if op  == 23:
     	pass
     
-    if op == '20':
+    if op == 20:
     	def email():
     		os.system("clear")
     		print(f'{C}{G}{result}{C}')
@@ -420,23 +426,23 @@ while(Sair == False):
     		
     	email()
     		
-    if op == '19':
+    if op == 19:
     	tools.chat()
     	pass
 
-    if op == '90':
+    if op == 90:
     	zap2()
     	pass
 
-    if op == '89':
+    if op == 89:
     	gbzap()
     	pass
 
-    if op == '92':
+    if op == 92:
     	zapzap()
     	pass
 
-    if op == '282822882':
+    if op == 282822882:
         print(f'{C}{G}{result}{C}')
         os.system("apt install mpg123 -y")
         os.system("clear")
@@ -505,11 +511,11 @@ while(Sair == False):
         	pass
 
     
-    if op == '93':
+    if op == 93:
     	youtube()
     	pass
     
-    if op == '98':
+    if op == 98:
     	try:
     		print(f'{C}{G}{result}{C}')
     		if __name__ == '__main__':
@@ -535,10 +541,10 @@ while(Sair == False):
     			pass
     			
 
-    if op == '94':
+    if op == 94:
     	tools.aovivo()
 
-    if op == '18':
+    if op == 18:
         def consultanome():
         	os.system("clear")
         	print(f'{C}{G}{result}{C}')
@@ -565,10 +571,10 @@ while(Sair == False):
         
         consultanome()
 
-    if op == '16':
+    if op == 16:
     	tools.nomemae()
 
-    if op == '17' and kinymode == 1:
+    if op == 17 and kinymode == 1:
         print(f'{C}{G}{result}{C}')
         print()
         print(f'{C}[{G}1{C}] Gerar link whatsapp')
@@ -582,14 +588,14 @@ while(Sair == False):
         if choice == '2' or choice == '02':
             tools.youtube()
 
-    if op == '95':
+    if op == 95:
     	print()
     	print(f'{C}[{G}i{C}] Me diga como quer ser chamado.')
     	user = input('===>')
     	write()
     	tools.att()
 
-    if op == '96':
+    if op == 96:
             print(f'{C}{G}{result}{C}')
             print(f'{C}[{G}1{C}] Login : {login}')
             print(f'{C}[{G}2{C}] Trocar APIs')
@@ -647,37 +653,37 @@ while(Sair == False):
                 print(f'{C}[{R}ERROR{C}] Opção inválida')
             write()
 
-    if op == '97':
+    if op == 97:
         tools.notes()
 
-    if op == '15':
+    if op == 15:
     	tools.covid19()
 
-    if op == '14':
+    if op == 14:
         tools.cc_checker(token)
 
-    if op == '13':
+    if op == 13:
     	tools.ip(ip_api,0,token)
 
-    if op == '12':
+    if op == 12:
         tools.gerar_pessoa(token)
 
-    if op == '11':
+    if op == 11:
         tools.bin()
 
-    if op == '10':
+    if op == 10:
         tools.consultatel()
 
-    if op == '9' or op == '09':
+    if op == 9:
         tools.crm(token)
 
-    if op == '8' or op == '08':
+    if op == 8:
         tools.consultaplaca()
 
-    if op == '7' or op == '07':
+    if op == 7:
         tools.cns(token,anim)
 
-    if op == '6' or op == '06':
+    if op == 6:
     	def zahandocpf():
     			os.system("clear")
     			print(f'{C}{G}{result}{C}')
@@ -707,30 +713,30 @@ while(Sair == False):
     	zahandocpf()
     			
 
-    if op == '5' or op == '05':
+    if op == 5:
         tools.bank(anim)
 
-    if op == '1' or op == '01':
+    if op == 1:
         tools.cep(anim)
 
-    if op == '00' or op == '0':
+    if op == 0:
         os.system("clear")
         Sair = True
 
 
-    if op == '99' or op == '99':
+    if op == 99:
         os.system("clear")
         os.system("pkg update && pkg update")
         pass
 
-    if op == '3' or op == '03':
+    if op == 3:
         tools.kiny_infoga()
 
-    if op == '2' or op == '02':
+    if op == 2:
         mode = 1
         tools.ip(ip_api,mode,token)
 
-    if op == '4' or op == '04':
+    if op == 4:
         print(f'{C}{G}{result}{C}')
         print(f'''
 {C}[{Y}i{C}] O QUE DESEJA FAZER?
