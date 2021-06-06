@@ -679,8 +679,8 @@ while(Sair == False):
 
     if op == '6' or op == '06':
     	def zahandocpf():
-    			def cpf_validate(numbers):
-    				cpfzao = [int(char) for char in numbers if char.isdigit()]
+    				def cpf_validate(numbers):
+    					cpfzao = [int(char) for char in numbers if char.isdigit()]
     				
     				if len(cpfzao) != 11:
     					return False
@@ -725,6 +725,7 @@ Complemento : {api['compl']}''')
                 else:
     				print(f"{C}[{R}CPF INVÁLIDO{C}]")
     				time.sleep(3)
+
     	zahandocpf()
     			
 
