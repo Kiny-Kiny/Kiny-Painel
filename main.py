@@ -679,38 +679,17 @@ while(Sair == False):
 
     if op == '6' or op == '06':
     	def zahandocpf():
-    			def cpf_validate(numbers):
-    				cpfzao = [int(char) for char in numbers if char.isdigit()]
-    				
-    				if len(cpfzao) != 11:
-    					return False
-    				if cpfzao == cpfzao[::-1]:
-    					return False
-    				for i in range(9, 11):
-    					value = sum((cpfzao[num] * ((i+1) - num) for num in range(0, i)))
-    					digit = ((value * 10) % 11) % 10
-    					if digit != cpfzao[i]:
-    						return False
-    				return True
     			os.system("clear")
     			print(f'{C}{G}{result}{C}')
     			lmao = input(f"{C}[{G}*{C}] Digite o CPF: ")
-    			data = requests.get('https://api.isaaclock.site/data/v1/{}'.format(lmao))
-    			api = data.json()
+    			data = requests.get('http://api.trackear.com.br/basepv/cpf/{}/noip'.format(lmao)).json()
     			try:
-    				print(f'''
-Nome : {api['fullName']}
-CPF : {api['docNumber']}
-Nome da Mãe : {api['mae']}
-Aniversário : {api['nascAt']}
-Estado : {api['uf']}
-Cidade : {api['city']}
-CEP : {api['cep']}
-Logradouro : {api['logra']}
-Bairro : {api['bairro']}
-Número da Casa: {api['number']}
-Complemento : {api['compl']}
-''')
+    				print("CPF: {}".format(data['cpf']))
+    				print("Nome: {}".format(data['nome']))
+    				print("Sexo: {}".format(data['sexo']))
+    				print("Data de Nascimento: {}".format(data['dtNascimento']))
+    				print("Idade: {}".format(data['idade']))
+    				print("Data da Consulta: {}".format(data['dtConsulta']))
     			except:
     				print(f"{C}[{R}*{C}] CPF INVÁLIDO OU SERVIDOR FORA DO AR.")
     				
@@ -724,9 +703,7 @@ Complemento : {api['compl']}
     				pass
     			else:
     				pass
-    		else:
-    			print(f"{C}[{R}CPF INVÁLIDO{C}]")
-    			time.sleep(3)
+    				
     	zahandocpf()
     			
 
