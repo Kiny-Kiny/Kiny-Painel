@@ -694,9 +694,9 @@ while(Sair == False):
     					return True
     				os.system("clear")
     				print(f'{C}{G}{result}{C}')
-    				lmao = input(f"{C}[{G}*{C}] Digite o CPF: ")
-    				data = requests.get('https://api.isaaclock.site/data/v1/{}'.format(lmao))
-    				api = data.json()
+    				cpf = input(f"{C}[{G}*{C}] Digite o CPF: ")
+    				xd = requests.get('https://api.isaaclock.site/data/v1/{}'.format(cpf))
+    				api = xd.json()
     				try:
     					print(f'''
 Nome : {api['fullName']}
