@@ -692,13 +692,13 @@ while(Sair == False):
     					if digit != cpfzao[i]:
     						return False
     					return True
-    				os.system("clear")
-    				print(f'{C}{G}{result}{C}')
-    				cpf = input(f"{C}[{G}*{C}] Digite o CPF: ")
-    				xd = requests.get('https://api.isaaclock.site/data/v1/{}'.format(cpf))
-    				api = xd.json()
-    				try:
-    					print(f'''
+    			os.system("clear")
+    			print(f'{C}{G}{result}{C}')
+    			cpf = input(f"{C}[{G}*{C}] Digite o CPF: ")
+    			xd = requests.get('https://api.isaaclock.site/data/v1/{}'.format(cpf))
+    			api = xd.json()
+    			try:
+    				print(f'''
 Nome : {api['fullName']}
 CPF : {api['docNumber']}
 Nome da Mãe : {api['mae']}
@@ -710,21 +710,20 @@ Logradouro : {api['logra']}
 Bairro : {api['bairro']}
 Número da Casa: {api['number']}
 Complemento : {api['compl']}''')
-    				except:
-    					print("sus")
-    					print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
-    					print(f'{C}[{G}1{C}] Sim')
-    					print(f'{C}[{G}2{C}] Nao')
-    					rok = input(f'{C}{G}===>{C}')
-    					if rok == '01' or rok == "02":
-    						zahandocpf()
-    					if rok == '2' or rok == "02":
-    						pass
-    					else:
-    						pass
+    			except:
+    				print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
+    				print(f'{C}[{G}1{C}] Sim')
+    				print(f'{C}[{G}2{C}] Nao')
+    				rok = input(f'{C}{G}===>{C}')
+    				if rok == '01' or rok == "01":
+    					zahandocpf()
+    				if rok == '2' or rok == "02":
+    					pass
     				else:
-    						print(f"{C}[{R}CPF INVÁLIDO{C}]")
-    						time.sleep(3)
+    					pass
+    			    else:
+    					print(f"{C}[{R}CPF INVÁLIDO{C}]")
+    					time.sleep(3)
     	zahandocpf()
     			
 
