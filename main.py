@@ -724,7 +724,8 @@ Complemento : {api['compl']}''')
     				    pass
     				   else:
     				        pass
-                else:
+    				        
+    			else:
     				print(f"{C}[{R}CPF INVÁLIDO{C}]")
     				time.sleep(3)
 
