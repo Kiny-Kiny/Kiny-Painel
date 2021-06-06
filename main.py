@@ -679,27 +679,27 @@ while(Sair == False):
 
     if op == '6' or op == '06':
     	def zahandocpf():
-    				def cpf_validate(numbers):
-    					cpfzao = [int(char) for char in numbers if char.isdigit()]
-    				
-    				if len(cpfzao) != 11:
-    					return False
-    				if cpfzao == cpfzao[::-1]:
-    					return False
-    				for i in range(9, 11):
-    					value = sum((cpfzao[num] * ((i+1) - num) for num in range(0, i)))
-    					digit = ((value * 10) % 11) % 10
-    					if digit != cpfzao[i]:
-    						return False
-    					return True
-    				os.system("clear")
-    				print(f'{C}{G}{result}{C}')
-    				cpf = input(f"{C}[{G}*{C}] Digite o CPF: ")
-    				if cpf_validade(cpf):
-    				   xd = requests.get('https://api.isaaclock.site/data/v1/{}'.format(cpf))
-    				   api = xd.json()
-    				   try:
-    				   	print(f'''
+            def cpf_validate(numbers):
+                cpf = [int(char) for char in numbers if char.isdigit()]
+                if len(cpf) != 11:
+                    return False
+                if cpf == cpf[::-1]:
+                    return False
+                for i in range(9, 11):
+                    value = sum((cpf[num] * ((i+1) - num) for num in range(0, i)))
+                    digit = ((value * 10) % 11) % 10
+                    if digit != cpf[i]:
+                        return False
+                return True
+
+    	    os.system("clear")
+    	    print(f'{C}{G}{result}{C}')
+    	    cpfInput = input(f"{C}[{G}*{C}] Digite o CPF: ")
+            if cpf_validate(cpfInput):
+                req = requests.get('https://api.isaaclock.site/data/v1/{}'.format(cpfInput))
+                api = req.json()
+                try:
+                    print(f'''
 Nome : {api['fullName']}
 CPF : {api['docNumber']}
 Nome da Mãe : {api['mae']}
@@ -711,25 +711,21 @@ Logradouro : {api['logra']}
 Bairro : {api['bairro']}
 Número da Casa: {api['number']}
 Complemento : {api['compl']}''')
-    				   except:
-    				   	print("sus")
-    				   
-    				   print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
-    				   print(f'{C}[{G}1{C}] Sim')
-    				   print(f'{C}[{G}2{C}] Nao')
-    				   rok = input(f'{C}{G}===>{C}')
-    				   if rok == '01' or rok == "01":
-    				    zahandocpf()
-    				   if rok == '2' or rok == "02":
-    				    pass
-    				   else:
-    				        pass
-    				        
-    			else:
-    				print(f"{C}[{R}CPF INVÁLIDO{C}]")
-    				time.sleep(3)
-
-    	zahandocpf()
+                except:
+                    print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
+                    print(f'{C}[{G}1{C}] Sim')
+                    print(f'{C}[{G}2{C}] Nao')
+                    rok = input(f'{C}{G}===>{C}')
+                    if rok == '01' or rok == "01":
+                        zahandocpf()
+                    if rok == '2' or rok == "02":
+                        pass
+                    else:
+                        pass
+            else:
+                print(f"{C}[{R}CPF INVÁLIDO{C}]")
+                time.sleep(3)
+        zahandocpf()
     			
 
     if op == '5' or op == '05':
