@@ -694,19 +694,17 @@ while(Sair == False):
             if cpf_validate(cpfInput):
                 req = requests.get('https://api.isaaclock.site/data/v1/{}'.format(cpfInput))
                 api = req.json()
-                try:
-                    print(f'''Nome : {api['fullName']}\nCPF : {api['docNumber']}\nNome da Mãe : {api['mae']}\nAniversário : {api['nascAt']}\nEstado : {api['uf']}\nCidade : {api['city']}\nCEP : {api['cep']}\nLogradouro : {api['logra']}\nBairro : {api['bairro']}\nNúmero da Casa: {api['number']}\nComplemento : {api['compl']}''')
-                except:
-                    print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
-                    print(f'{C}[{G}1{C}] Sim')
-                    print(f'{C}[{G}2{C}] Nao')
-                    rok = input(f'{C}{G}===>{C}')
-                    if rok == '01' or rok == "01":
-                        zahandocpf()
-                    if rok == '2' or rok == "02":
-                        pass
-                    else:
-                        pass
+                print(f'''Nome : {api['fullName']}\nCPF : {api['docNumber']}\nNome da Mãe : {api['mae']}\nAniversário : {api['nascAt']}\nEstado : {api['uf']}\nCidade : {api['city']}\nCEP : {api['cep']}\nLogradouro : {api['logra']}\nBairro : {api['bairro']}\nNúmero da Casa: {api['number']}\nComplemento : {api['compl']}''')
+                print(f'{C}[{G}1{C}] Sim')
+                print(f'{C}[{G}2{C}] Nao')
+                rok = input(f'{C}{G}===>{C}')
+                if rok == '01' or rok == "01":
+                    zahandocpf()
+                if rok == '2' or rok == "02":
+                    pass
+                else:
+                	pass
+            
             else:
                 print(f"{C}[{R}CPF INVÁLIDO{C}]")
                 time.sleep(3)
