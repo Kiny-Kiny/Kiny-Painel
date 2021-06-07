@@ -340,7 +340,6 @@ while(Sair == False):
     {C}{G}[16]{C} CONSULTAR MÃE {C}[{R}OFF{C}]
     {C}{G}[18]{C} CONSULTAR NOME {C}[{R}OFF{C}]
     {C}{G}[19]{C} CHAT NO {C}[{Y}TERMINAL{C}]
-
     {C}{G}[20]{C} CONSULTA DE EMAIL {C}[{R}OFF{C}]
     ''')
     if kinymode == 1:
@@ -353,7 +352,6 @@ while(Sair == False):
     print()
     print(f'''
     {C}[{Y}+{C}] Opções: 
-
     {C}{G}[88]{C} Meu grupo[3] 
     
     {C}{G}[89]{C} Meu grupo[1] 
@@ -678,34 +676,43 @@ while(Sair == False):
         tools.cns(token,anim)
 
     if op == '6' or op == '06':
-    	def zahandocpf():
-    			os.system("clear")
-    			print(f'{C}{G}{result}{C}')
-    			lmao = input(f"{C}[{G}*{C}] Digite o CPF: ")
-    			data = requests.get('http://api.trackear.com.br/basepv/cpf/{}/noip'.format(lmao)).json()
-    			try:
-    				print("CPF: {}".format(data['cpf']))
-    				print("Nome: {}".format(data['nome']))
-    				print("Sexo: {}".format(data['sexo']))
-    				print("Data de Nascimento: {}".format(data['dtNascimento']))
-    				print("Idade: {}".format(data['idade']))
-    				print("Data da Consulta: {}".format(data['dtConsulta']))
-    			except:
-    				print(f"{C}[{R}*{C}] CPF INVÁLIDO OU SERVIDOR FORA DO AR.")
-    				
-    			print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
-    			print(f'{C}[{G}1{C}] Sim')
-    			print(f'{C}[{G}2{C}] Nao')
-    			rok = input(f'{C}{G}===>{C}')
-    			if rok == '01' or rok == "02":
-    				zahandocpf()
-    			if rok == '2' or rok == "02":
-    				pass
-    			else:
-    				pass
-    				
-    	zahandocpf()
-    			
+        def cpf_validate(numbers):
+            cpf = [int(char) for char in numbers if char.isdigit()]
+            if len(cpf) != 11:
+                return False
+            if cpf == cpf[::-1]:
+                return False
+            for i in range(9, 11):
+                value = sum((cpf[num] * ((i+1) - num) for num in range(0, i)))
+                digit = ((value * 10) % 11) % 10
+                if digit != cpf[i]:
+                    return False
+            return True
+        def zahandocpf():
+            os.system("clear")
+            print(f'{C}{G}{result}{C}')
+            cpfInput = input(f"{C}[{G}*{C}] Digite o CPF: ")
+            if cpf_validate(cpfInput):
+                req = requests.get('https://api.isaaclock.site/data/v1/{}'.format(cpfInput))
+                api = req.json()
+                try:
+                    print(f'''Nome : {api['fullName']}\nCPF : {api['docNumber']}\nNome da Mãe : {api['mae']}\nAniversário : {api['nascAt']}\nEstado : {api['uf']}\nCidade : {api['city']}\nCEP : {api['cep']}\nLogradouro : {api['logra']}\nBairro : {api['bairro']}\nNúmero da Casa: {api['number']}\nComplemento : {api['compl']}''')
+                except:
+                    print(f'{C}[{Y}i{C}] Deseja realizar uma nova consulta?')
+                    print(f'{C}[{G}1{C}] Sim')
+                    print(f'{C}[{G}2{C}] Nao')
+                    rok = input(f'{C}{G}===>{C}')
+                    if rok == '01' or rok == "01":
+                        zahandocpf()
+                    if rok == '2' or rok == "02":
+                        pass
+                    else:
+                        pass
+            else:
+                print(f"{C}[{R}CPF INVÁLIDO{C}]")
+                time.sleep(3)
+        
+        zahandocpf()
 
     if op == '5' or op == '05':
         tools.bank(anim)
