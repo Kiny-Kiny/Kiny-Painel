@@ -257,6 +257,11 @@ if login == 1:
     else:
         print(f"{C}[{R}ERROR{C}] Wrong Password....Yare Yare")
         time.sleep(1)
+        try:
+        	os.system("cmatrix -L")
+        except:
+        	os.system("pkg install cmatrix")
+        	os.system("cmatrix -L")
         os.system("python3 main.py")
         if anim == 1:
             time.sleep(1)
