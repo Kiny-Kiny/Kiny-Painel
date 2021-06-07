@@ -106,43 +106,6 @@ def zap2():
    else:
        os.system("termux-open-url https://chat.whatsapp.com/G1IBFwwbI75EBIhUUS17sp")
 
-def antiatz():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://chat.whatsapp.com/Jhrhuyf7GCzI8fITIrjSDV")
-   else:
-       os.system("termux-open-url https://chat.whatsapp.com/Jhrhuyf7GCzI8fITIrjSDV")
-
-
-def alvo1():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("wa.me/559584079659")
-   else:
-       os.system("termux-open-url wa.me/559584079659")
-       
-def alvo2():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("wa.me/558186422466")
-   else:
-       os.system("termux-open-url wa.me/558186422466")
-       
-def alvo3():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("wa.me/556892336616")
-   else:
-       os.system("termux-open-url wa.me/556892336616")
-       
-def alvo4():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("wa.me/556791392399")
-   else:
-       os.system("termux-open-url wa.me/556791392399")
-       
-def alvo5():
-   if platform.system() == "Windows":
-      webbrowser.open_new_tab("https://chat.whatsapp.com/DelttpvNeQS93n0l2MJFWU")
-   else:
-       os.system("termux-open-url https://chat.whatsapp.com/DelttpvNeQS93n0l2MJFWU")
-
 if sys.version_info[0] < 3:
     print(f'{C}[{R}ERROR{C}] Necessário utilizar python3!')
     print(f'{C}[{Y}i{C}] Instale-o com base em sua distribuição.')
@@ -389,10 +352,10 @@ while(Sair == False):
     if op  == '88':
     	gp3()
     
-    if op  == '23':
+    elif op  == '23':
     	pass
     
-    if op == '20':
+    elif op == '20':
     	def email():
     		os.system("clear")
     		print(f'{C}{G}{result}{C}')
@@ -422,96 +385,27 @@ while(Sair == False):
     		
     	email()
     		
-    if op == '19':
+    elif op == '19':
     	tools.chat()
     	pass
 
-    if op == '90':
+    elif op == '90':
     	zap2()
     	pass
 
-    if op == '89':
+    elif op == '89':
     	gbzap()
     	pass
 
-    if op == '92':
+    elif op == '92':
     	zapzap()
     	pass
 
-    if op == '282822882':
-        print(f'{C}{G}{result}{C}')
-        os.system("apt install mpg123 -y")
-        os.system("clear")
-        print(f'{C}{G}{result}{C}')
-        print(f'{C}[{Y}i{C}]{G} Ainda irei colocar mais músicas, mas eu tô com preguiça.{C}')
-        print(f'{C}[{Y}IMPORTANTE!{C}]Só vou colocar músicas que EU gosto.')
-        print(f"01 - [{C}{G}Elvis Presley{C}] The Wonder Of You")
-        print(f"02 - [{C}{G}Jamiroquai{C}] Virtual Insanity")
-        print(f"03 - [{C}{G}Michael Jackson{C}] Billie Jean")
-        print(f"04 - [{C}{G}King Crimson{C}] In The Court Of The Crimson King")
-        print(f"05 - [{C}{G}The O'Jays{C}] Love Train")
-        print(f"06 - [{C}{G}Louis Armstrong{C}] What A Wonderful World")
-        print(f"07 - [{C}{G}Michael Jackson{C}] Smooth Criminal")
-        music = input(f"{C}[{G}Digite o número da música{C}]===>{B}").strip()
-        if music == "01" or music == "1":
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	file = "TheWonderOfYou.mp3"
-        	os.system("mpg123 " + file)
-        	pass
-        if music == "02" or music == "2":
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	shura = "VirtualInsanityRemastered.mp3"
-        	os.system("mpg123 " + shura)
-        	pass
-        if music == "03" or music == "3":
-        	os.system("clear")
-        	print()
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	zangetsu = "BillieJean.mp3"
-        	os.system("mpg123 " + zangetsu)
-        	pass
-        if music == "04" or music == "4":
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	josuke = "InTheCourtOfTheCrimsonKing.mp3"
-        	os.system("mpg123 " + josuke)
-        	pass
-        if music == "05" or music == "5":
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	D = "LoveTrain.mp3"
-        	os.system("mpg123 " + D)
-        	pass
-        if music == "06" or music == "6":
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	h = "WhatAWonderWorld.mp3"
-        	os.system("mpg123 " + h)
-        	pass
-        if music == "07" or music == "7":
-        	os.system("clear")
-        	print(f'{C}{G}{result}{C}')
-        	print(f'{C}[{Y}i{C}] Aperte "Q" para parar a música.')
-        	m = "SmoothCriminal.mp3"
-        	os.system("mpg123 " + m)
-        	pass
-        else:
-        	tools.att()
-        	pass
-
-    
-    if op == '93':
+    elif op == '93':
     	youtube()
     	pass
     
-    if op == '98':
+    elif op == '98':
     	try:
     		print(f'{C}{G}{result}{C}')
     		if __name__ == '__main__':
@@ -537,10 +431,10 @@ while(Sair == False):
     			pass
     			
 
-    if op == '94':
+    elif op == '94':
     	tools.aovivo()
 
-    if op == '18':
+    elif op == '18':
         def consultanome():
         	os.system("clear")
         	print(f'{C}{G}{result}{C}')
@@ -567,10 +461,10 @@ while(Sair == False):
         
         consultanome()
 
-    if op == '16':
+    elif op == '16':
     	tools.nomemae()
 
-    if op == '17' and kinymode == 1:
+    elif op == '17' and kinymode == 1:
         print(f'{C}{G}{result}{C}')
         print()
         print(f'{C}[{G}1{C}] Gerar link whatsapp')
@@ -584,14 +478,14 @@ while(Sair == False):
         if choice == '2' or choice == '02':
             tools.youtube()
 
-    if op == '95':
+    elif op == '95':
     	print()
     	print(f'{C}[{G}i{C}] Me diga como quer ser chamado.')
     	user = input('===>')
     	write()
     	tools.att()
 
-    if op == '96':
+    elif op == '96':
             print(f'{C}{G}{result}{C}')
             print(f'{C}[{G}1{C}] Login : {login}')
             print(f'{C}[{G}2{C}] Trocar APIs')
@@ -649,37 +543,37 @@ while(Sair == False):
                 print(f'{C}[{R}ERROR{C}] Opção inválida')
             write()
 
-    if op == '97':
+    elif op == '97':
         tools.notes()
 
-    if op == '15':
+    elif op == '15':
     	tools.covid19()
 
-    if op == '14':
+    elif op == '14':
         tools.cc_checker(token)
 
-    if op == '13':
+    elif op == '13':
     	tools.ip(ip_api,0,token)
 
-    if op == '12':
+    elif op == '12':
         tools.gerar_pessoa(token)
 
-    if op == '11':
+    elif op == '11':
         tools.bin()
 
-    if op == '10':
+    elif op == '10':
         tools.consultatel()
 
-    if op == '9' or op == '09':
+    elif op == '9' or op == '09':
         tools.crm(token)
 
-    if op == '8' or op == '08':
+    elif op == '8' or op == '08':
         tools.consultaplaca()
 
-    if op == '7' or op == '07':
+    elif op == '7' or op == '07':
         tools.cns(token,anim)
 
-    if op == '6' or op == '06':
+    elif op == '6' or op == '06':
         def cpf_validate(numbers):
             cpf = [int(char) for char in numbers if char.isdigit()]
             if len(cpf) != 11:
@@ -716,30 +610,30 @@ while(Sair == False):
         
         zahandocpf()
 
-    if op == '5' or op == '05':
+    elif op == '5' or op == '05':
         tools.bank(anim)
 
-    if op == '1' or op == '01':
+    elif op == '1' or op == '01':
         tools.cep(anim)
 
-    if op == '00' or op == '0':
+    elif op == '00' or op == '0':
         os.system("clear")
         Sair = True
 
 
-    if op == '99' or op == '99':
+    elif op == '99' or op == '99':
         os.system("clear")
         os.system("pkg update && pkg update")
         pass
 
-    if op == '3' or op == '03':
+    elif op == '3' or op == '03':
         tools.kiny_infoga()
 
-    if op == '2' or op == '02':
+    elif op == '2' or op == '02':
         mode = 1
         tools.ip(ip_api,mode,token)
 
-    if op == '4' or op == '04':
+    elif op == '4' or op == '04':
         print(f'{C}{G}{result}{C}')
         print(f'''
 {C}[{Y}i{C}] O QUE DESEJA FAZER?
