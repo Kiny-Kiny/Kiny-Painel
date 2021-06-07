@@ -378,7 +378,7 @@ while(Sair == False):
     		seh = input(f"{C}[{G}Escolha a opção desejada{C}]: ")
     		if seh == '01' or seh == '1':
     			email()
-    		if seh == '02' or seh == '2':
+    		elif seh == '02' or seh == '2':
     			pass
     		else:
     			pass
@@ -454,7 +454,7 @@ while(Sair == False):
         			time.sleep(1)
         			os.system("clear")
         		consultanome()
-        	if zak == '2' or zak == '02':
+        	elif zak == '2' or zak == '02':
         		pass
         	else:
         		pass
@@ -475,7 +475,7 @@ while(Sair == False):
         choice = input('===>')
         if choice == '1' or choice == '01':
             tools.gerarlinkwhats()
-        if choice == '2' or choice == '02':
+        elif choice == '2' or choice == '02':
             tools.youtube()
 
     elif op == '95':
@@ -599,7 +599,7 @@ while(Sair == False):
                 rok = input(f'{C}{G}===>{C}')
                 if rok == '01' or rok == "01":
                     zahandocpf()
-                if rok == '2' or rok == "02":
+                elif rok == '2' or rok == "02":
                     pass
                 else:
                 	pass
