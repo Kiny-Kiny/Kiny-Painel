@@ -694,7 +694,7 @@ while(Sair == False):
             if cpf_validate(cpfInput):
                 req = requests.get('https://api.isaaclock.site/data/v1/{}'.format(cpfInput))
                 api = req.json()
-                print(f'''Nome : {api['fullName']}\nCPF : {api['docNumber']}\nNome da Mãe : {api['mae']}\nAniversário : {api['nascAt']}\nEstado : {api['uf']}\nCidade : {api['city']}\nCEP : {api['cep']}\nLogradouro : {api['logra']}\nBairro : {api['bairro']}\nNúmero da Casa: {api['number']}\nComplemento : {api['compl']}''')
+                print(f'''\n{C}{Y}Nome{C} : {api['fullName']}\n{C}{Y}CPF{C} : {api['docNumber']}\n{C}{Y}Nome da Mãe{C} : {api['mae']}\n{C}{Y}Aniversário{C} : {api['nascAt']}\n{C}{Y}Estado{C} : {api['uf']}\n{C}{Y}Cidade{C} : {api['city']}\n{C}{Y}CEP{C} : {api['cep']}\n{C}{Y}Logradouro{C} : {api['logra']}\n{C}{Y}Bairro{C} : {api['bairro']}\n{C}{Y}Número da Casa{C}  : {api['number']}\n{C}{Y}Complemento{C} : {api['compl']}\n''')
                 print(f'{C}[{G}1{C}] Sim')
                 print(f'{C}[{G}2{C}] Nao')
                 rok = input(f'{C}{G}===>{C}')
