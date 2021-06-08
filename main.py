@@ -28,9 +28,30 @@ def restart():
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
-import os,sys,time,base64, json, re,subprocess,webbrowser,platform
+import os
+import sys
+import time
+import base64
+import json
+import re
+import subprocess
+import webbrowser
+import platform
 try:
-	import requests,platform,signal,atexit,argparse,random,hashlib,urllib3,html5lib,phonenumbers,json,tools, pyfiglet, nome
+	import requests
+	import platform
+	import signal
+	import atexit
+	import argparse
+	import random
+	import hashlib
+	import urllib3
+	import html5lib
+	import phonenumbers
+	import json
+	import tools
+	import pyfiglet
+	import nome
 	from colorama import Fore, Style
 	from bs4 import BeautifulSoup
 	from phonenumbers import carrier
