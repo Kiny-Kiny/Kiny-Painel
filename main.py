@@ -52,6 +52,7 @@ try:
 	import tools
 	import pyfiglet
 	import nome
+	import chat
 	from colorama import Fore, Style
 	from bs4 import BeautifulSoup
 	from phonenumbers import carrier
@@ -407,7 +408,7 @@ while(Sair == False):
     	email()
     		
     elif op == '19':
-    	tools.chat()
+    	chat.chat()
     	pass
 
     elif op == '90':
