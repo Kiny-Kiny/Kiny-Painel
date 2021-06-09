@@ -54,6 +54,7 @@ try:
 	import nome
 	import bin
 	import chat
+	import covid
 	from colorama import Fore, Style
 	from bs4 import BeautifulSoup
 	from phonenumbers import carrier
@@ -570,7 +571,7 @@ while(Sair == False):
         tools.notes()
 
     elif op == '15':
-    	tools.covid19()
+    	covid.covid19()
 
     elif op == '14':
         tools.cc_checker(token)
