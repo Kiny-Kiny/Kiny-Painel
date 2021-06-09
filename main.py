@@ -50,6 +50,7 @@ try:
 	import phonenumbers
 	import json
 	import tools
+	import consultatel
 	import pyfiglet
 	import nome
 	import whois
@@ -590,7 +591,7 @@ while(Sair == False):
         bin.bin()
 
     elif op == '10':
-        tools.consultatel()
+        consultatel.consultatel()
 
     elif op == '9' or op == '09':
         tools.crm(token)
