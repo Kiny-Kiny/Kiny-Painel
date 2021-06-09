@@ -9,7 +9,7 @@ G = '\033[1;32m'
 RT = '\033[;0m'
 import requests
 import os
-import sus
+import sys
 import pyfiglet
 result = pyfiglet.figlet_format("Kiny", font = "cosmic"  )
 
