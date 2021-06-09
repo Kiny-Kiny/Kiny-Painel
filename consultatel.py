@@ -62,8 +62,8 @@ def consultaoperadora():
     print(f'{C}[{Y}i{C}] Limite de consultas: 6 consultas por hora.')
     print(f'{C}[{Y}i{C}] Digite o numero com DDD.')
     op_input = input("===>")
-    clear()
-    print(result)
+    os.system("clear")
+    print(f"{C}{G}{result}{C}")
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
     try:
@@ -114,7 +114,7 @@ def consultaoperadora():
 
 
 def primenumero():
-    clear()
+    os.system("clear")
     rekt()
     pass
     #print(f'{C}{G}{result}{C}')
@@ -623,7 +623,7 @@ def phoneinfoga():
     def again():
         again = input("\n" + f'{C}[{G}+{C}] Deseja realizar uma nova consulta?[{G}s{C}/{R}n{C}]: ')
         if again == "s" or again == "sim":
-            os.system("clear)
+            os.system("clear")
             main()
         elif again == "nao" or again == "n":
             pass
