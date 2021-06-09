@@ -24,7 +24,7 @@ def cns(token, anim):
 [{G}2{C}]Consultar CNS
 ''')
     choice = input('===>')
-    clear()
+    os.system('clear')
     if choice == '1' or choice == '01':
         print(f'{C}[{G}i{C}] Gerando CNS')
         cns = requests.request('GET', 'http://geradorapp.com/api/v1/cns/generate?token={}'.format(token[0])).json()
