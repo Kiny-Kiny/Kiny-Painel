@@ -17,6 +17,7 @@ import atexit
 import argparse
 import random
 import platform
+import webbrowser
 import time
 import hashlib
 import json
