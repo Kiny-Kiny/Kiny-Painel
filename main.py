@@ -53,6 +53,7 @@ try:
 	import pyfiglet
 	import nome
 	import whois
+	import cnpj
 	import bin
 	import chat
 	import placa
