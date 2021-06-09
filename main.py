@@ -593,7 +593,7 @@ while(Sair == False):
         tools.crm(token)
 
     elif op == '8' or op == '08':
-        tools.consultaplaca()
+        placa.consultaplaca()
 
     elif op == '7' or op == '07':
         tools.cns(token,anim)
