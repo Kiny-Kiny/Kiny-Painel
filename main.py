@@ -581,7 +581,7 @@ while(Sair == False):
         tools.gerar_pessoa(token)
 
     elif op == '11':
-        tools.bin()
+        bin.bin()
 
     elif op == '10':
         tools.consultatel()
