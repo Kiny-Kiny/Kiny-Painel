@@ -47,5 +47,3 @@ def bin():
     else:
         print(f'{C}[{R}ERROR{C}] Opção inválida')
         time.sleep(3)
-
-bin()
