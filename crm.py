@@ -38,7 +38,7 @@ def cns(token, anim):
         entrada = input('===>')
     if anim == 1:
         time.sleep(1)
-    clear()
+    os.system('clear')
     cns_data = requests.get('http://geradorapp.com/api/v1/cns/validate/{}?token={}'.format(entrada, token[0])).json()
     try:
         print('Numero: {}'.format(cns_data["data"]["number"]))
