@@ -667,6 +667,6 @@ while(Sair == False):
 {C}[{G}2{C}] CONSULTAR CNPJ
         ''')
         kct = input("===> ")
-        tools.cnpj(kct,token,anim)
+        cnpj.cnpj(kct,token,anim)
 os.system('rm -rf __pycache__')
 print(f'[{C}{R}+{C}] [{C}{R}Arrivederci{C}]')
