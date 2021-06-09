@@ -244,7 +244,7 @@ if login == 1:
         try:
         	os.system("cmatrix -L")
         except:
-        	os.system("pkg install cmatrix")
+        	os.system("pkg install cmatrix -y")
         	os.system("cmatrix -L")
         os.system("python3 main.py")
         if anim == 1:
