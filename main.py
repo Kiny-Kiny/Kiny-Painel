@@ -52,6 +52,7 @@ try:
 	import tools
 	import pyfiglet
 	import nome
+	import whois
 	import bin
 	import chat
 	import covid
@@ -651,7 +652,7 @@ while(Sair == False):
         pass
 
     elif op == '3' or op == '03':
-        tools.kiny_infoga()
+        whois.kiny_infoga()
 
     elif op == '2' or op == '02':
         mode = 1
