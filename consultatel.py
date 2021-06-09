@@ -56,6 +56,62 @@ def consultatel():
         print(f'{C}[{R}i{C}] Opção inválida')
         time.sleep(3)
 
+def consultaoperadora():
+    print(f'{C}{G}{result}{C}')
+    print(f'{C}[{G}i{C}] Exemplo: 48952021826')
+    print(f'{C}[{Y}i{C}] Limite de consultas: 6 consultas por hora.')
+    print(f'{C}[{Y}i{C}] Digite o numero com DDD.')
+    op_input = input("===>")
+    clear()
+    print(result)
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
+    try:
+        request = requests.get('http://free.telein.com.br/sistema/consulta_json.php?chave=senhasite&numero=' + op_input,
+                               headers=headers)
+        op_data = request.json()
+    except:
+        print(f'{C}[{R}i{C}] Limite de consultas atingido')
+        print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
+        print('1.Sim')
+        print('2.Não')
+        cho = input("===>")
+        if cho == '1' or cho == '01':
+            consultaoperadora()
+        elif cho == '2' or cho == '02':
+            pass
+        else:
+            print(f'{C}[{R}ERROR{C}] Opção inválida')
+    op_final = 'null'
+    if (op_data['operadora']) == '553016':
+        op_final = 'CLARO'
+    if (op_data['operadora']) == '553070':
+        op_final = 'OI'
+    if (op_data['operadora']) == '553066':
+        op_final = 'NEXTEL'
+    if (op_data['operadora']) == '553102':
+        op_final = 'TIM'
+    if (op_data['operadora']) == '553097':
+        op_final = 'VIVO'
+    elif (op_data['operadora']) == '99':
+        print(f'{C}[{R}*{C}] Não foi possível consultar a operadora')
+    if op_final == 'null':
+        print(f'{C}[{R}*{C}] Operadora invalida.')
+    else:
+        print(f'{C}[{G}*{C}] Operadora:' + op_final)
+    # print(op_data['operadora'])
+    print(f'{C}[{Y}i{C}] Deseja fazer uma nova consulta?')
+    print('1.Sim')
+    print('2.Não')
+    cho = input("===>")
+    if cho == '1' or cho == '01':
+        consultaoperadora()
+    if cho == '2' or cho == '02':
+        pass
+    else:
+        print(f'{C}[{R}i{C}] Opção inválida')
+        time.sleep(3)
+
 
 def primenumero():
     clear()
