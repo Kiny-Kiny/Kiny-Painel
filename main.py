@@ -56,6 +56,7 @@ try:
 	import cnpj
 	import bin
 	import chat
+	import crm
 	import placa
 	import covid
 	from colorama import Fore, Style
@@ -592,7 +593,7 @@ while(Sair == False):
         tools.consultatel()
 
     elif op == '9' or op == '09':
-        tools.crm(token)
+        crm.crm(token)
 
     elif op == '8' or op == '08':
         placa.consultaplaca()
