@@ -21,7 +21,7 @@ def covid19():
     choice = input('===>')
     data = requests.get('https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/{}'.format(choice)).json()
     os.system('clear')
-    print(f'{C}[{Y}{result}{C}]')
+    print(f'{C}{G}{result}{C}')
     print("Data e horario local: {}".format(data['datetime']))
     print("Estado: {}".format(data['state']))
     print("UF: {}".format(data['uf']))
