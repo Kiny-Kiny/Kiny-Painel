@@ -52,7 +52,6 @@ try:
 	import tools
 	import pyfiglet
 	import nome
-	import bin
 	import chat
 	from colorama import Fore, Style
 	from bs4 import BeautifulSoup
