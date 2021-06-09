@@ -1,0 +1,9 @@
+requests
+phonenumbers
+urllib3
+colorama
+bs4
+html5lib
+argparse
+pytube
+pyfiglet
