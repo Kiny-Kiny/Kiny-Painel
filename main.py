@@ -56,7 +56,7 @@ try:
 	import cnpj
 	import bin
 	import chat
-	import crm
+	import cns
 	import placa
 	import covid
 	from colorama import Fore, Style
@@ -593,13 +593,13 @@ while(Sair == False):
         tools.consultatel()
 
     elif op == '9' or op == '09':
-        crm.crm(token)
+        tools.crm(token)
 
     elif op == '8' or op == '08':
         placa.consultaplaca()
 
     elif op == '7' or op == '07':
-        tools.cns(token,anim)
+        cns.cns(token,anim)
 
     elif op == '6' or op == '06':
         def cpf_validate(numbers):
