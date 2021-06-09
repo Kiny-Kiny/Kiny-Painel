@@ -23,7 +23,7 @@ def consultaplaca():
     placa_input = input("===>")
     req = requests.get('https://apicarros.com/v1/consulta/{}/json'.format(placa_input), verify=False)  # JSQ7436
     placa_data = req.json()
-    clear()
+    os.system('clear')
     print(f'{C}{G}{result}{C}')
     try:
         if (placa_data['codigoRetorno']) == "0":
