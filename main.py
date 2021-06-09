@@ -55,6 +55,7 @@ try:
 	import whois
 	import bin
 	import chat
+	import placa
 	import covid
 	from colorama import Fore, Style
 	from bs4 import BeautifulSoup
