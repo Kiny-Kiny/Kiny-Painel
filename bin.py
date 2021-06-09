@@ -26,7 +26,7 @@ def bin():
         req_data = req.json()
     except:
         print(f'{C}[{R}ERROR{C}] Ocorreu um erro,tente novamente.')
-    clear()
+    os.system('clear')
     print(result)
     print('Bandeira: {}'.format(req_data['scheme']))
     print('Marca: {}'.format(req_data['brand']))
