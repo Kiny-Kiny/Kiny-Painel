@@ -4,14 +4,14 @@ from data import ui
 def consultar():
 	Sair = False
 	while(Sair == False):
-				numero_input = ui.input_dialog()
-				if len(numero_input) < 1:
+				numero = ui.input_dialog()
+				if len(numero) < 1:
 					ui.error_dialog('Digite algo para consultar')
 					
-				if '55' not in numero_input:
+				if '55' not in numero:
 					ui.error_dialog('Digite o numero no formato 55219××××××××')
 				
-				pm = phonenumbers.parse(numero_input)
+				pm = phonenumbers.parse(numero)
 				op = carrier.name_for_number(pm, 'pt-br')
 				es = geocoder.description_for_number(pm, 'pt-br')
 				
