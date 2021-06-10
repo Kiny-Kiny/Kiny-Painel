@@ -16,10 +16,10 @@ def consultar():
 				es = geocoder.description_for_number(pm, 'pt-br')
 				
 				msg = f'''
-			Numero: {pm}
-			Estado: {es}
-			Operadora: {op}
-			'''
+Numero: {pm}
+Estado: {es}
+Operadora: {op}
+'''
 				
 				choice = int(ui.dialog_choice(msg))
 				if choice == 1:
