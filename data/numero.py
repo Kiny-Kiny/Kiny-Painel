@@ -8,7 +8,7 @@ def consultar():
 				if len(numero_input) < 1:
 					ui.error_dialog('Digite algo para consultar')
 					
-				if '55' not in number_input:
+				if '55' not in numero_input:
 					ui.error_dialog('Digite o numero no formato 55219××××××××')
 				
 				pm = phonenumbers.parse(numero_input)
