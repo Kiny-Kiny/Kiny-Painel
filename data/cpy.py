@@ -14,7 +14,7 @@ Data de Nascimento: {data['dtNascimento']}
 Idade: {data['idade']}
 Data da Consulta: {data['dtConsulta']}"""
         except:
-        	ui.error_dialog("CPF INVÁLIDO OU SERVIDOR FORA DO AR.")
+            msg = "CPF INVÁLIDO OU SERVIDOR FORA DO AR."
         choice = ui.dialog_choice(msg)
         if choice == '1':
             pass
