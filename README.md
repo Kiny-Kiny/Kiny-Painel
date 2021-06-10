@@ -40,9 +40,8 @@ Os que não estão, é porque ainda estão em desenvolvimento.
 - [ ] Consulta de Nome
 - [ ] Consulta de Nome da mãe
 - [ ] Consulta de Número
-- [x] Consulta de Número **[(PhoneInfoga)](https://github.com/sundowndev/phoneinfoga)**
+- [ ] Consulta de Email
 - [x] Consulta de Placa
-- [x] Consulta de Site **(WHOIS)**
 - [x] Geolocalizador de IP
 
 
