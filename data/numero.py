@@ -1,13 +1,10 @@
 import requests, phonenumbers
 from phonenumbers import geocoder, carrier
 from data import ui
-def consultar():
+def numero():
 	Sair = False
 	while(Sair == False):
-				if self == 1:
-					numero_input = ''
-				else:
-					numero_input = ui.input.dialog()
+				numero_input = ui.input.dialog()
 				if len(numero_input) < 1:
 					ui.error_dialog('Digite algo para consultar')
 					
