@@ -4,7 +4,7 @@ from data import ui
 def consultar():
 	Sair = False
 	while(Sair == False):
-				numero_input = ui.input.dialog()
+				numero_input = ui.input_dialog()
 				if len(numero_input) < 1:
 					ui.error_dialog('Digite algo para consultar')
 					
