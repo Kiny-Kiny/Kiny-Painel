@@ -22,7 +22,7 @@ except:
     restart()
 
 try:
-    from data import cpf,ui,ip,cnpj,placa,crm,cep, numero
+    from data import cpf,ui,ip,cnpj,placa,crm,cep,numero
     from data import covid as covid19
     from data import bin as bina
     from data import cpf_2 as cpf2
@@ -91,7 +91,7 @@ while(Sair == False):
     elif op == 7:
         crm.consultar()
     elif op == 8:
-        numero.consultar # TELEFONE
+        numero.consultar() # TELEFONE
     elif op == 9:
         bina.consultar()
     elif op == 10:
