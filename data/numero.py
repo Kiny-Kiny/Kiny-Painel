@@ -15,7 +15,7 @@ def consultar():
 				op = carrier.name_for_number(pm, 'pt-br')
 				es = geocoder.description_for_number(pm, 'pt-br')
 				
-				numero = f'''
+				msg = f'''
 			Numero: {pm}
 			Estado: {es}
 			Operadora: {op}
