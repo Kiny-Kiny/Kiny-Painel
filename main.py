@@ -16,7 +16,7 @@ except:
     if choice:
         os.system("apt install figlet -y")
         os.system('python3 -m pip install --upgrade pip')
-        os.system('pip3 install requests pytube')
+        os.system('pip3 install requests pytube phonenumbers')
     else:
         print(f'Ok,instale por si ou isso é um adeus.');exit()
     restart()
