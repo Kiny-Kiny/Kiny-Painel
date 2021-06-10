@@ -1,7 +1,7 @@
 import requests, phonenumbers
 from phonenumbers import geocoder, carrier
 from data import ui
-def numero():
+def consultar():
 	Sair = False:
 		while(Sair == False):
 			if self == 1:
