@@ -8,8 +8,8 @@ def consultar():
 				if len(numero) < 1:
 					ui.error_dialog('Digite algo para consultar')
 					
-				if '55' not in numero:
-					ui.error_dialog('Digite o numero no formato 55219××××××××')
+				if '+55' not in numero:
+					ui.error_dialog('Digite o numero no formato +55219××××××××')
 				
 				pm = phonenumbers.parse(numero)
 				op = carrier.name_for_number(pm, 'pt-br')
