@@ -63,7 +63,7 @@ $ python3 main.py
 
 <p align="center" >
   <h2 align="center">🚀 Running</h2>
-  <img alt="Kiny-Painel" src="https://i.imgur.com/V2jmvAJ.png">
+  <img alt="Kiny-Painel" src="https://github.com/oporadokrl/Kiny-Painel/blob/master/screenshot.png">
 </p>
 
 
