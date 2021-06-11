@@ -8,7 +8,7 @@ def consultar():
             bank_data = requests.get('https://brasilapi.com.br/api/banks/v1/{}'.format(bank_input)).json()
             if 'message' not in bank_data:
                 msg= f'''
-C?digo banc?rio: {bank_data['code']}
+Codigo bancário: {bank_data['code']}
 Nome: {bank_data['name']}
 Nome completo: {bank_data['fullName']}
 ISPB: {bank_data['ispb']}
