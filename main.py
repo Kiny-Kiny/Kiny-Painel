@@ -108,9 +108,11 @@ while(Sair == False):
         ui.error_dialog('A consulta está desativada por falta de API.') # EMAIL
     elif op == 16: #Ferramentas
         ui.dialog('Em construção,\n  Aguardem.')
-    elif op == 17: #Atualizar painel
+    elif op == 17:
+        license.license()
+    elif op == 18: #Atualizar painel
         os.popen('cd data && bash update.sh');ui.dialog('Reiniciando o painel...');ui.restart()
-    elif op == 18:
+    elif op == 19:
         Sair = True
     elif op == None:
         pass
