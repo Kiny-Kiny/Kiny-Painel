@@ -1,6 +1,6 @@
 from data import ui
 def license():
-	cu = 'LICENSE.txt'
+	cu = 'eminel.txt'
 	file = open(f'{cu}', 'r')
 	file.seek(0, 0)
 	print(file.read())
