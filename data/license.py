@@ -1,5 +1,5 @@
 from data import ui
-cu = 'LICENSE'
+cu = 'LICENSE.txt'
 
 file = open(f'{cu}', 'r')
 file.seek(0, 0)
