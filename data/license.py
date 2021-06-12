@@ -1,5 +1,4 @@
 from data import ui
-from data import LICENSE.txt
 def license():
 	cu = 'LICENSE.txt'
 	file = open(f'{cu}', 'r')
