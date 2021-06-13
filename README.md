@@ -10,7 +10,7 @@
   <img alt="Latest version" src="https://img.shields.io/github/v/release/Kiny-Kiny/Kiny-Painel.svg" alt="Latest version">
 
   <p align="center">
-    Este painel de consulta tem o objetivo de retornar dados pessoais através do Nome, Número ou CPF. De forma que não precise pagar por isso...
+    Este painel de consulta tem o objetivo de retornar dados pessoais através do Nome, Número ou CPF. De forma que não precise pagar por isso.
   </p>
 </p> 
 
