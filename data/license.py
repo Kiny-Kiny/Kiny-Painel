@@ -1,9 +1,6 @@
 from data import ui
-def license():
-	cu = 'eminel.txt'
-	file = open(f'{cu}', 'r')
-	file.seek(0, 0)
-	print(file.read())
+def show():
+	file = open('eminel.txt','r')
+	print(file.read());
 	file.close()
-	pause = input('   PRESS ENTER')
-	pass
+	pause = ui.input_dialog('pressione enter para retornar')
