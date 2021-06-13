@@ -50,11 +50,6 @@ except:
         pass
     else:
         ui.error_dialog('Falta de repositório GIT local')
-'''
-Atualização por git pull falhou.tentando por método antigo.
-os.popen('git clone http://github.com/oporadokrl/Kiny-Painel.git').read()
-os.popen('cd Kiny-Painel && mv * ../').read()
-'''
 
 try:
     subprocess.check_output('apt update -y', shell=True)
@@ -109,7 +104,7 @@ while(Sair == False):
     elif op == 16: #Ferramentas
         ui.dialog('Em construção,\n  Aguardem.')
     elif op == 17:
-        license.license()
+        license.show()
     elif op == 18: #Atualizar painel
         os.popen('cd data && bash update.sh');ui.dialog('Reiniciando o painel...');ui.restart()
     elif op == 19:
