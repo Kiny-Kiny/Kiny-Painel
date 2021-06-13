@@ -66,6 +66,18 @@ $ python3 main.py
   <img alt="Kiny-Painel" src="https://github.com/oporadokrl/Kiny-Painel/blob/master/screenshot.png">
 </p>
 
+<p align="center" >
+  <h2 align="center">📧 Whatsapp Groups</h2>
+<a href="https://chat.whatsapp.com/CWUSrKYeJG67kVTQmt0ZGo" alt="WhatsApp">
+  <img src = "https://img.shields.io/badge/-WhatsApp-25d366?style=flat-square&labelColor=25d366&logo=whatsapp&logoColor=white&link=API-DO-SEU-WHATSAPP" /> </a>
+
+<a href="https://chat.whatsapp.com/G1IBFwwbI75EBIhUUS17sp" alt="WhatsApp">
+  <img src = "https://img.shields.io/badge/-WhatsApp-25d366?style=flat-square&labelColor=25d366&logo=whatsapp&logoColor=white&link=API-DO-SEU-WHATSAPP" /> </a>
+
+<a href="https://chat.whatsapp.com/KAN3t1iVBrhK0dVW8RCpUR" alt="WhatsApp">
+  <img src = "https://img.shields.io/badge/-WhatsApp-25d366?style=flat-square&labelColor=25d366&logo=whatsapp&logoColor=white&link=API-DO-SEU-WHATSAPP" /> </a>
+
+
 
 <h2 align="center">🙏  Credits</h2>
 
