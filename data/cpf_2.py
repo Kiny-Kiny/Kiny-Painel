@@ -1,6 +1,5 @@
 import requests,time
 from data import ui
-# Veio aqui pq? Sinto muito, mas essa API vai ficar OFF depois.
 def consultar():
     Sair = False
     while(Sair == False):
