@@ -108,7 +108,7 @@ $ python3 main.py
 | Snuking        | Algumas ajudas no próprio script           |
 | Douglas/Josuke | Patrocinador                               |
 | Margarina      | Patrocinador                               |
-| N 3 X 0        | Patrocinador                               |
+| N 3 X 0        | Patrocinador/Consulta de CPF               |
 
  
  <h2 align="center">💰 Donate</h2>
