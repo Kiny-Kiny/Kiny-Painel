@@ -28,7 +28,7 @@ try:
     from data import cpf_2 as cpf2
     from data import banco as banks
 except:
-	print('Arquivos corrompidos.');exit()
+	print(f'{C}{R}[*]{C}Arquivos Corrompidos.');exit()
 
 def clear():
 	os.system('cls');os.system('clear')
