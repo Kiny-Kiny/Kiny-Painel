@@ -7,7 +7,7 @@ def consultar():
         if len(cpf) != 11 or len(cpf) < 1:
             msg = "error"
         else:
-            api = requests.get('45.56.74.86:9547/'+cpf).json() # 00000000272
+            api = requests.get('http://45.56.74.86:9547/'+cpf).json() # 00000000272
             try:
                 msg=f"""
 Nome : {api['nomeCompleto']}
