@@ -88,7 +88,7 @@ $ python3 main.py
 </p>
 
 <p align="center" >
-  <h2 align="center">📧 Whatsapp Groups</h2>
+  <h2 align="center">📧 Groups</h2>
 <a href="https://chat.whatsapp.com/CWUSrKYeJG67kVTQmt0ZGo" alt="WhatsApp">
   <img src = "https://img.shields.io/badge/-WhatsApp-25d366?style=flat-square&labelColor=25d366&logo=whatsapp&logoColor=white&link=API-DO-SEU-WHATSAPP" /> </a>
 
@@ -98,6 +98,8 @@ $ python3 main.py
 <a href="https://chat.whatsapp.com/KAN3t1iVBrhK0dVW8RCpUR" alt="WhatsApp">
   <img src = "https://img.shields.io/badge/-WhatsApp-25d366?style=flat-square&labelColor=25d366&logo=whatsapp&logoColor=white&link=API-DO-SEU-WHATSAPP" /> </a>
 
+<a href="http://t.me/kinycrimson" alt="Telegram">
+  <img src = "https://img.shields.io/badge/-WhatsApp-25d366?style=flat-square&labelColor=25d366&logo=whatsapp&logoColor=white&link=API-DO-SEU-WHATSAPP" /> </a>
 
 
 <h2 align="center">🙏  Credits</h2>
