@@ -1,5 +1,6 @@
 import requests,os
 from data import ui
+# Pq tá olhando aqui? Veio roubar a API?
 def consultar():
     Sair = False
     while(Sair==False):
