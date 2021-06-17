@@ -7,7 +7,7 @@ def consultar():
         if len(cpf) != 11 or len(cpf) < 1:
             msg = "error"
         else:
-            api = requests.get('https://api.isaaclock.site/data/v1/'+cpf).json() # 00000000272
+            api = requests.get('https://api.isaaclock.site:9547/data/v1/'+cpf).json() # 00000000272
             try:
                 msg=f"""
 Nome : {api['fullName']}
