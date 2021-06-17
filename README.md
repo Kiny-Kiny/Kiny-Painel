@@ -53,9 +53,35 @@ Para você executar o **Kiny-Painel** é nescessario ter o python instalado e pa
 
 Depois de baixar e instalar o python você pode baixar o **Kiny-Painel** diretamente do github com os seguintes comandos:
 
+<h2 align="center">💻 Termux</h2>
 ```
-$ pkg upgrade && pkg update -y
+$ pkg upgrade -y && pkg update -y
 $ pkg install git python figlet -y
+$ git clone https://github.com/Kiny-Kiny/Kiny-Painel
+$ cd Kiny-Painel
+$ python3 main.py
+```
+
+<h2 align="center">💻 Debian</h2>
+```
+$ apt upgrade -y && apt update -y
+$ apt install git python figlet -y
+$ git clone https://github.com/Kiny-Kiny/Kiny-Painel
+$ cd Kiny-Painel
+$ python3 main.py
+```
+
+<h2 align="center">💻 Arch Linux</h2>
+```
+$ pacman -Syyu git python filet -y
+$ git clone https://github.com/Kiny-Kiny/Kiny-Painel
+$ cd Kiny-Painel
+$ python3 main.py
+```
+
+<h2 align="center">💻 OpenSUSE</h2>
+```
+$ zypper install python git
 $ git clone https://github.com/Kiny-Kiny/Kiny-Painel
 $ cd Kiny-Painel
 $ python3 main.py
