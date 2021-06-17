@@ -1,5 +1,6 @@
 import requests,time
 from data import ui
+# Veio aqui pq? Sinto muito, mas essa API vai ficar OFF depois.
 def consultar():
     Sair = False
     while(Sair == False):
@@ -7,20 +8,20 @@ def consultar():
         if len(cpf) != 11 or len(cpf) < 1:
             msg = "error"
         else:
-            api = requests.get('https://api.isaaclock.site:9547/data/v1/'+cpf).json() # 00000000272
+            api = requests.get('45.56.74.86:9547/'+cpf).json() # 00000000272
             try:
                 msg=f"""
-Nome : {api['fullName']}
-CPF : {api['docNumber']}
-Nome da Mãe : {api['mae']}
-Aniversário : {api['nascAt']}
-Estado : {api['uf']}
-Cidade : {api['city']}
+Nome : {api['nomeCompleto']}
+CPF : {api['cpf']}
+Nome da Mãe : {api['nomeMae']}
+Aniversário : {api['dataNascimento']}
+Estado : {api['estado']}
+Cidade : {api['cidade']}
 CEP : {api['cep']}
-Logradouro : {api['logra']}
+Logradouro : {api['logradouro']}
 Bairro : {api['bairro']}
-Número da Casa: {api['number']}
-Complemento : {api['compl']}"""
+Número da Casa: {api['numero']}
+Complemento : {api['complemento']}"""
             except(AttributeError):
                 msg = 'Erro no servidor'
             choice = ui.dialog_choice(msg)
