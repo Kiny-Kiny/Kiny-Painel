@@ -4,25 +4,27 @@ from data import ui
 def consultar():
 	Sair = False
 	while(Sair == False):
-		numero = ui.input_dialog()
-		if len(numero) < 1:
+		msg=''
+		numero = str(ui.input_dialog())
+		if len(str(numero)) < 1:
 			ui.error_dialog('Digite algo para consultar')
-		if len(numero) > 1 and len(numero) < 12:
+		elif len(str(numero)) > 1 and	len(str(numero)) <= 12:
 			ui.error_dialog('Formato incorreto')
-		if '+55' not in numero:
+		elif '+55' not in str(numero):
 			ui.error_dialog('Digite o numero no formato +55219××××××××')
-			pass
-		try:
-			pm = phonenumbers.parse(numero)
-			op = carrier.name_for_number(pm, 'pt-br')
-			es = geocoder.description_for_number(pm, 'pt-br')
-		except Exception as e:
-			ui.error_dialog('Ocorreu um erro: ',e)
-		msg = f'''
+			Sair = True
+		else:
+			try:
+				pm = phonenumbers.parse(numero)
+				op = carrier.name_for_number(pm, 'pt-br')
+				es = geocoder.description_for_number(pm, 'pt-br')
+				msg = f'''
 Numero: {pm}
 Estado: {es}
 Operadora: {op}
 '''
+			except Exception as e:
+				ui.error_dialog('Ocorreu um erro: ',e)
 		choice = int(ui.dialog_choice(msg))
 		if choice == 1:
 			pass
