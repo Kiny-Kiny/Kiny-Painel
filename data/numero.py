@@ -11,7 +11,7 @@ def consultar():
 			ui.error_dialog('Formato incorreto')
 		if '+55' not in numero:
 			ui.error_dialog('Digite o numero no formato +55219××××××××')
-			Sair = True
+			pass
 		try:
 			pm = phonenumbers.parse(numero)
 			op = carrier.name_for_number(pm, 'pt-br')
