@@ -11,18 +11,17 @@ def consultar():
 				if '+55' not in numero:
 					ui.error_dialog('Digite o numero no formato +55219××××××××')
 					pass
-
-				try:
-					pm = phonenumbers.parse(numero)
-					op = carrier.name_for_number(pm, 'pt-br')
-					es = geocoder.description_for_number(pm, 'pt-br')
-					msg = f'''
+				
+				pm = phonenumbers.parse(numero)
+				op = carrier.name_for_number(pm, 'pt-br')
+				es = geocoder.description_for_number(pm, 'pt-br')
+				
+				msg = f'''
 Numero: {pm}
 Estado: {es}
 Operadora: {op}
 '''
-				except:
-					ui.error_dialog('Digite o numero no formato +55219××××××××')
+				
 				choice = int(ui.dialog_choice(msg))
 				if choice == 1:
 					pass
