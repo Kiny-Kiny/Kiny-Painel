@@ -27,8 +27,8 @@ try:
     from data import bin as bina
     from data import cpf_2 as cpf2
     from data import banco as banks
-except:
-	print(f'{C}{R}[*]{C}Arquivos Corrompidos.');exit()
+except Exception as error:
+	print(f'{C}{R}[*]{C} Erro: ' + error);exit()
 
 def clear():
 	os.system('cls');os.system('clear')
