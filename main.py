@@ -10,7 +10,7 @@ def restart():
 
 import os,sys,time,json,subprocess,platform
 try:
-	import requests,random,json
+	import requests,random,json,phonenumbers
 except:
     choice = input(f'{C}{G}[i]{C} Vejo que é sua primeira vez aqui,\n Deseja instalar o software necessário?\n1-Sim\n2-Não\n_')
     if choice:
