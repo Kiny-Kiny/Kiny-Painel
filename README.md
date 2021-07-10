@@ -68,14 +68,13 @@ $ git clone https://github.com/Kiny-Kiny/Kiny-Painel
 $ cd Kiny-Painel
 $ python3 main.py
 
-💻Arch Linux
+💻 Arch Linux
 $ pacman -Syyu git python figlet -y
 $ git clone https://github.com/Kiny-Kiny/Kiny-Painel
 $ cd Kiny-Painel
 $ python3 main.py
 
-
-💻OpenSUSE
+💻 OpenSUSE
 $ zypper install python git figlet -y
 $ git clone https://github.com/Kiny-Kiny/Kiny-Painel
 $ cd Kiny-Painel
