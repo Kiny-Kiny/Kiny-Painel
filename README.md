@@ -37,12 +37,13 @@ Os que não estão, é porque ainda estão em desenvolvimento.
 - [x] Consulta de CNS
 - [x] Consulta de CPF
 - [x] Consulta de BIN
-- [ ] Consulta de Nome
+- [x] Consulta de Nome
 - [ ] Consulta de Nome da mãe
 - [x] Consulta de Número
-- [ ] Consulta de Email
+- [x] Consulta de Email
 - [x] Consulta de Placa
 - [x] Geolocalizador de IP
+- [x] Consulta RG
 
 
 <h2 align="center">🖥 Install</h2>
