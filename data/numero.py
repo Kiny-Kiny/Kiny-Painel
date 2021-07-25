@@ -1,5 +1,5 @@
 import requests
-#from data import ui
+from data import ui
 #Api - https://github.com/gav1x/FullP
 def consultar():
 	Sair = False
