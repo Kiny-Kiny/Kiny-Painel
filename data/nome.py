@@ -4,7 +4,7 @@ from data import ui
 def consultar():
     Sair = False
     while(Sair==False):
-        email = ui.input_dialog()
+        nome = ui.input_dialog()
         url: str = 'https://consulta-nome1.p.rapidapi.com/apis/astrahvhdeus/Consultas%20Privadas/HTML/nome.php'
         params: str = {'consulta': nome}
         headers: str = {
