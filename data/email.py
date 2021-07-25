@@ -20,7 +20,7 @@ def consultar():
         	arquivo = open(f'ConsultaEmail_{email}.html', 'w', encoding='utf-8')
         	arquivo.writelines(ret)
         	arquivo.close()
-        	msg='Sua consulta foi salvo em um arquivo HTML'
+        	msg='Sua consulta foi salva em um arquivo HTML'
         choice = ui.dialog_choice(msg)
         if choice == '1':
         	pass
