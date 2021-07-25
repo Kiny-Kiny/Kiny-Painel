@@ -16,7 +16,7 @@ def consultar():
 		req: str = requests.get(url=url, headers=headers, params=params)
 		ret = req.text
 		if 'A Consulta Esta Funcionando Normalmente' in ret:
-		      msg='A Consulta Esta Funcionando Normalmente, Porem O Telefone Inserido Nao Foi Encontrado.'
+		      msg='A consulta está funcionando normalmente, porém, o Telefone inserido não foi encontrado.'
 		else:
 		      	arquivo = open(f'numero {numero}.html', 'w', encoding='utf-8')
 		      	arquivo.writelines(ret)
