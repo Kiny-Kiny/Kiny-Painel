@@ -15,9 +15,9 @@ def consultar():
         req: str = requests.get(url=url, headers=headers, params=params)
         ret = req.text
         if 'A Consulta Esta Funcionando Normalmente' in ret:
-        	msg='A Consulta Esta Funcionando Normalmente, Porem O email Inserido Nao Foi Encontrado.'
+        	msg='A consulta está funcionando normalmente, porém, o Email inserido não foi encontrado.'
         else:
-        	arquivo = open(f'email {email}.html', 'w', encoding='utf-8')
+        	arquivo = open(f'ConsultaEmail_{email}.html', 'w', encoding='utf-8')
         	arquivo.writelines(ret)
         	arquivo.close()
         	msg='Sua consulta foi salvo em um arquivo HTML'
