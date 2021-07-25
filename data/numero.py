@@ -5,7 +5,7 @@ def consultar():
 	Sair = False
 	while(Sair == False):
 		msg=''
-		numero = str(ui.input_dialog())
+		numero = str(ui.input_dialog('Digite o número[Formato: DDD+Numero]: '))
 		url: str = 'https://consulta-numero.p.rapidapi.com/apis/astrahvhdeus/Consultas%20Privadas/HTML/numero.php'
 		params: str = {'consulta': numero}
 		headers: str = {
