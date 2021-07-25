@@ -39,7 +39,7 @@ Os que não estão, é porque ainda estão em desenvolvimento.
 - [x] Consulta de BIN
 - [ ] Consulta de Nome
 - [ ] Consulta de Nome da mãe
-- [ ] Consulta de Número
+- [x] Consulta de Número
 - [ ] Consulta de Email
 - [x] Consulta de Placa
 - [x] Geolocalizador de IP
