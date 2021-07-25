@@ -22,7 +22,7 @@ except:
     restart()
 
 try:
-    from data import cpf,ui,ip,cnpj,placa,crm,cep,numero, license
+    from data import cpf,ui,ip,cnpj,placa,crm,cep,numero, license, nome, email
     from data import covid as covid19
     from data import bin as bina
     from data import cpf_2 as cpf2
@@ -60,7 +60,7 @@ except:
 Sair = False
 while(Sair == False):
     try:
-        op = int(ui.menu(f'BUSCADOR DE CEP\nCONSULTAR IP\nCONSULTA DE CNPJ\nCONSULTA BANCARIA\nCONSULTA CPF {C}[{G}ON{C}]\nCONSULTA PLACA\nCONSULTA CRM\nCONSULTA DE NUMERO\nCONSULTA BIN\nGERAR PESSOA\nMOSTRAR MEU IP\nCOVID19\nCONSULTAR MÃE {C}[{R}OFF{C}]\nCONSULTAR NOME {C}[{R}OFF{C}]\nCONSULTA DE EMAIL \nFERRAMENTAS::LICENSE\nAtualizar\nSair'))
+        op = int(ui.menu(f'BUSCADOR DE CEP\nCONSULTAR IP\nCONSULTA DE CNPJ\nCONSULTA BANCARIA\nCONSULTA CPF {C}[{G}ON{C}]\nCONSULTA PLACA\nCONSULTA CRM\nCONSULTA DE NUMERO\nCONSULTA BIN\nGERAR PESSOA\nMOSTRAR MEU IP\nCOVID19\nCONSULTAR MÃE {C}[{R}OFF{C}]\nCONSULTAR NOME {C}[{G}ON{C}]\nCONSULTA DE EMAIL {C}[{G}ON{C}]\nFERRAMENTAS::LICENSE\nAtualizar\nSair'))
     except:
         ui.error_dialog('Caracteres não reconhecidos');op=None
     ui.clear()
@@ -98,7 +98,7 @@ while(Sair == False):
     elif op == 13:
         ui.error_dialog('A consulta está desativada por falta de API.') # MAE
     elif op == 14:
-        ui.error_dialog('A consulta está desativada por falta de API.') # NOME
+        nome.consultar()# NOME
     elif op == 15:
         email.consultar() # EMAIL
     elif op == 16: #Ferramentas
