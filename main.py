@@ -22,7 +22,7 @@ except:
     restart()
 
 try:
-    from data import cpf,ui,ip,cnpj,placa,crm,cep,numero, license, nome, email
+    from data import cpf,ui,ip,cnpj,placa,crm,cep,numero, license, nome, email, rg
     from data import covid as covid19
     from data import bin as bina
     from data import cpf_2 as cpf2
@@ -60,7 +60,7 @@ except:
 Sair = False
 while(Sair == False):
     try:
-        op = int(ui.menu(f'BUSCADOR DE CEP\nCONSULTAR IP\nCONSULTA DE CNPJ\nCONSULTA BANCARIA\nCONSULTA CPF {C}[{G}ON{C}]\nCONSULTA PLACA\nCONSULTA CRM\nCONSULTA DE NUMERO\nCONSULTA BIN\nGERAR PESSOA\nMOSTRAR MEU IP\nCOVID19\nCONSULTAR MÃE {C}[{R}OFF{C}]\nCONSULTAR NOME {C}[{G}ON{C}]\nCONSULTA DE EMAIL {C}[{G}ON{C}]\nFERRAMENTAS::LICENSE\nAtualizar\nSair'))
+        op = int(ui.menu(f'BUSCADOR DE CEP\nCONSULTAR IP\nCONSULTA DE CNPJ\nCONSULTA BANCARIA\nCONSULTA CPF {C}[{G}ON{C}]\nCONSULTA PLACA\nCONSULTA CRM\nCONSULTA DE NUMERO\nCONSULTA BIN\nGERAR PESSOA\nMOSTRAR MEU IP\nCOVID19\nCONSULTAR MÃE {C}[{R}OFF{C}]\nCONSULTAR NOME {C}[{G}ON{C}]\nCONSULTA DE EMAIL {C}[{G}ON{C}]\CnCONSULTAR RG{C}[{G}ON{C}]\nFERRAMENTAS::LICENSE\nAtualizar\nSair'))
     except:
         ui.error_dialog('Caracteres não reconhecidos');op=None
     ui.clear()
@@ -101,13 +101,15 @@ while(Sair == False):
         nome.consultar()# NOME
     elif op == 15:
         email.consultar() # EMAIL
-    elif op == 16: #Ferramentas
+    elif op == 16:
+    	rg.consultar()
+    elif op == 17: #Ferramentas
         ui.dialog('Em construção,\n  Aguardem.')
-    elif op == 17:
+    elif op == 18:
         license.show()
-    elif op == 18: #Atualizar painel
+    elif op == 19: #Atualizar painel
         os.popen('cd data && bash update.sh');ui.dialog('Reiniciando o painel...');ui.restart()
-    elif op == 19:
+    elif op == 20:
         Sair = True
     elif op == None:
         pass
