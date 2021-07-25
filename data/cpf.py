@@ -1,19 +1,18 @@
-import requests,os
+import requests,re
 from data import ui
-# Pq tá olhando aqui? Veio roubar a API?
+# Api - https://github.com/p0isonBR/ConsultaCPF
 def consultar():
     Sair = False
     while(Sair==False):
-        cpf_input = ui.input_dialog()
-        data = requests.get('http://api.trackear.com.br/basepv/cpf/{}/noip'.format(cpf_input)).json()
+        cpf = ui.input_dialog()
+        cpf = re.sub("[^0-9]+", "", cpf)
+        if len(cpf)!=11:
+        	ui.error_dialog('CPF INVÁLIDO')
+        	Sair=True
         try:
-        	msg = f"""
-CPF: {data['cpf']}
-Nome: {data['nome']}
-Sexo: {data['sexo']}
-Data de Nascimento: {data['dtNascimento']}
-Idade: {data['idade']}
-Data da Consulta: {data['dtConsulta']}"""
+        	r = json.loads(requests.get("https://sherlockconsulta.herokuapp.com/cpf/" + cpf).content.decode())
+        	for k, v in r["result"].items():
+        		msg=k.replace("_", " ").title() + ": " + v.title()
         except:
             msg = "CPF INVÁLIDO OU SERVIDOR FORA DO AR."
         choice = ui.dialog_choice(msg)
