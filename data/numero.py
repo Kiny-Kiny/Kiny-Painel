@@ -1,5 +1,5 @@
 import requests
-from data import ui
+#from data import ui
 #Api - https://github.com/gav1x/FullP
 def consultar():
 	Sair = False
@@ -15,14 +15,9 @@ def consultar():
 		}
 		req: str = requests.get(url=url, headers=headers, params=params)
 		ret = req.text
-		if len(str(numero)) < 1:
-			ui.error_dialog('Digite algo para consultar')
-		elif len(str(numero)) > 1 and	len(str(numero)) <= 11:
-			ui.error_dialog('Formato incorreto')
+		if 'A Consulta Esta Funcionando Normalmente' in ret:
+		      ui.error_dialog('A Consulta Esta Funcionando Normalmente, Porem O Telefone Inserido Nao Foi Encontrado.')
 		else:
-		      if 'A Consulta Esta Funcionando Normalmente' in ret:
-		      	ui.error_dialog('A Consulta Esta Funcionando Normalmente, Porem O Telefone Inserido Nao Foi Encontrado.')
-		      else:
 		      	arquivo = open(f'numero {numero}.html', 'w', encoding='utf-8')
 		      	arquivo.writelines(ret)
 		      	arquivo.close()
