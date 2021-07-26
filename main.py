@@ -9,6 +9,7 @@ def restart():
     os.execl(python, python, *sys.argv)
 
 import os,sys,time,json,subprocess,platform
+os.system('pkg install termux-api -y')
 try:
 	import requests,random,json,phonenumbers
 except:
@@ -56,7 +57,7 @@ try:
     os.system("apt install figlet curl -y")
 except:
     os.system("pacman -Sy figlet curl")
-os.system('pkg install termux-api -y && termux-toast Seja bem-vindo ao Kiny-Painel! && termux-tts-speak Esta é uma simples tool de consulta de dados pessoais, aproveite!')
+os.system('termux-toast Seja bem-vindo ao Kiny-Painel! && termux-tts-speak Esta é uma simples tool de consulta de dados pessoais, aproveite!')
 Sair = False
 while(Sair == False):
     try:
