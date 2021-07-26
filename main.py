@@ -9,7 +9,6 @@ def restart():
     os.execl(python, python, *sys.argv)
 
 import os,sys,time,json,subprocess,platform
-os.system('pkg install termux-api -y')
 try:
 	import requests,random,json,phonenumbers
 except:
@@ -18,6 +17,7 @@ except:
         os.system("apt install figlet -y")
         os.system('python3 -m pip install --upgrade pip')
         os.system('pip3 install requests pytube phonenumbers')
+        os.system('pkg install termux-api -y')
     else:
         print(f'Ok,instale por si ou isso é um adeus.');exit()
     restart()
@@ -54,7 +54,7 @@ except:
 
 try:
     subprocess.check_output('apt update -y', shell=True)
-    os.system("apt install figlet curl -y")
+    os.system("apt install figlet curl termux-api -y")
 except:
     os.system("pacman -Sy figlet curl")
 os.system('termux-toast Seja bem-vindo ao Kiny-Painel! && termux-tts-speak Esta é uma simples tool de consulta de dados pessoais, aproveite!')
