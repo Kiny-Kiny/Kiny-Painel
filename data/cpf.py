@@ -1,4 +1,4 @@
-import requests,re
+import requests,re,json
 from data import ui
 # Api - https://github.com/p0isonBR/ConsultaCPF
 def consultar():
