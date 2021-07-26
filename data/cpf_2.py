@@ -1,4 +1,4 @@
-import requests,re
+import requests,re,os,sys
 from data import ui
 # Api - https://github.com/gav1x/FullP
 def consultar():
