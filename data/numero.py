@@ -18,9 +18,10 @@ def consultar():
 		if 'A Consulta Esta Funcionando Normalmente' in ret:
 		      msg='A consulta está funcionando normalmente, porém, o Telefone inserido não foi encontrado.'
 		else:
-		      	arquivo = open(f'numero {numero}.html', 'w', encoding='utf-8')
-		      	arquivo.writelines(ret)
+		      	arquivo = open(f'ConsultaNumero{numero}.html', 'w', encoding='utf-8')
+		      	arquivo.writelines(ret, '\nUse CTRL+C para sair')
 		      	arquivo.close()
+		      	os.system(f'nano ConsultaNumero_{numero}.html')
 		      	msg='Sua consulta foi salva em um arquivo HTML'
 		choice = int(ui.dialog_choice(msg))
 		if choice == 1:
