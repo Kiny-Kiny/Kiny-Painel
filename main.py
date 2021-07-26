@@ -14,7 +14,7 @@ try:
 except:
     choice = input(f'{C}{G}[i]{C} Vejo que é sua primeira vez aqui,\n Deseja instalar o software necessário?\n1-Sim\n2-Não\n_')
     if choice:
-        os.system("apt install figlet -y")
+        os.system("apt install figlet curl -y")
         os.system('python3 -m pip install --upgrade pip')
         os.system('pip3 install requests pytube phonenumbers')
         os.system('pkg install termux-api -y')
@@ -29,7 +29,7 @@ try:
     from data import cpf_2 as cpf2
     from data import banco as banks
 except Exception as error:
-	print(f'{C}{R}[*]{C} Erro: ' + error);exit()
+	print(f'{C}{R}[*]{C} Erro: ' + str(error));exit()
 
 def clear():
 	os.system('cls');os.system('clear')
