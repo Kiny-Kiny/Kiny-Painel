@@ -18,7 +18,7 @@ def consultar():
         	msg='A consulta está funcionando normalmente, porém, o Email inserido não foi encontrado.'
         else:
         	arquivo = open(f'ConsultaEmail_{email}.html', 'w', encoding='utf-8')
-        	arquivo.writelines(ret)
+        	arquivo.writelines(ret, '\nUse CTRL+C para sair')
         	arquivo.close()
         	os.system(f'nano ConsultaEmail_{email}.html')
         	msg='Sua consulta foi salva em um arquivo HTML'
