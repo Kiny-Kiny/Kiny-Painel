@@ -19,7 +19,7 @@ def consultar():
 		      msg='A consulta está funcionando normalmente, porém, o Telefone inserido não foi encontrado.'
 		else:
 		      	arquivo = open(f'ConsultaNumero{numero}.html', 'w', encoding='utf-8')
-		      	arquivo.writelines(ret, '\nUse CTRL+C para sair')
+		      	arquivo.writelines(ret)
 		      	arquivo.close()
 		      	os.system(f'nano ConsultaNumero_{numero}.html')
 		      	msg='Sua consulta foi salva em um arquivo HTML'
