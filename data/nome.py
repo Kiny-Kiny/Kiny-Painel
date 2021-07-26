@@ -18,7 +18,7 @@ def consultar():
         	msg='A consulta está funcionando normalmente, porém, o nome inserido não foi encontrado.'
         else:
         	arquivo = open(f'ConsultaNome_{nome}.html', 'w', encoding='utf-8')
-        	arquivo.writelines(ret, '\nUse Ctrl+C para sair')
+        	arquivo.writelines(ret)
         	arquivo.close()
         	os.system(f'nano ConsultaNome_{nome}')
         	msg='Sua consulta foi salva em um arquivo HTML'
