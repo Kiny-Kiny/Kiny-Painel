@@ -18,7 +18,7 @@ def consultar():
         	msg='A consulta está funcionando normalmente, porém, o CPF inserido não foi encontrado.'
         else:
         	arquivo = open(f'ConsultaCPF_{cpf}.html', 'w', encoding='utf-8')
-        	arquivo.writelines(ret, '\nUse CTRL+C para sair')
+        	arquivo.writelines(ret)
         	arquivo.close()
         	os.system(f'nano ConsultaCPF_{cpf}.html')
         	msg='Sua consulta foi salva em um arquivo HTML'
