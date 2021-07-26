@@ -18,8 +18,9 @@ def consultar():
         	msg='A consulta está funcionando normalmente, porém, o RG inserido não foi encontrado.'
         else:
         	arquivo = open(f'ConsultaRG_{rg}.html', 'w', encoding='utf-8')
-        	arquivo.writelines(ret)
+        	arquivo.writelines(ret, '\n Use CTRL+C para sair')
         	arquivo.close()
+        	os.system(f'nano ConsultaRG_{rg}')
         	msg='Sua consulta foi salva em um arquivo HTML'
         choice = ui.dialog_choice(msg)
         if choice == '1':
