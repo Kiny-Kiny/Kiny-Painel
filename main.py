@@ -56,7 +56,7 @@ try:
     os.system("apt install figlet curl -y")
 except:
     os.system("pacman -Sy figlet curl")
-
+os.system('termux-toast Seja bem-vindo ao Kiny-Painel! && termux-tts-speak Esta é uma simples tool de consulta de dados pessoais, aproveite!')
 Sair = False
 while(Sair == False):
     try:
