@@ -20,7 +20,6 @@ def consultar():
         	arquivo = open(f'ConsultaNome_{nome}.html', 'w', encoding='utf-8')
         	arquivo.writelines(ret)
         	arquivo.close()
-        	os.system(f'nano ConsultaNome_{nome}')
         	msg='Sua consulta foi salva em um arquivo HTML'
         choice = ui.dialog_choice(msg)
         if choice == '1':
