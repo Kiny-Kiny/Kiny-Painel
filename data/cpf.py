@@ -9,9 +9,12 @@ def consultar():
         if len(cpf)!=11:
         	ui.error_dialog('CPF INVÁLIDO')
         	Sair=True
-        r = json.loads(requests.get("https://sherlockconsulta.herokuapp.com/cpf/" + cpf).content.decode())
-        for k, v in r["result"].items():
-        	msg=k.replace("_", " ").title() + ": " + v.title()
+        try:
+        	r = json.loads(requests.get("https://sherlockconsulta.herokuapp.com/cpf/" + cpf).content.decode())
+        	for k, v in r["result"].items():
+        		msg=k.replace("_", " ").title() + ": " + v.title()
+        except:
+        	msg='API offline ou servidor fora do ar.'
         choice = ui.dialog_choice(msg)
         if choice == '1':
             pass
