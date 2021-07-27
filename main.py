@@ -55,7 +55,7 @@ except:
 
 try:
     subprocess.check_output('apt update -y', shell=True)
-    os.system("apt install figlet curl termux-api -y")
+    os.system("apt install figlet curl -y")
 except:
     os.system("pacman -Sy figlet curl")
 Sair = False
