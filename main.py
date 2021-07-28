@@ -87,7 +87,13 @@ while(Sair == False):
     elif op == 7:
         crm.consultar()
     elif op == 8:
-        numero.consultar() # TELEFONE
+        choice = uimenu('Numero 1\nNumero 2')
+        if choice == '1':
+        	numero.consultar()
+        elif choice =='2':
+        	numero2.consultar()
+        else:
+        	ui.error_dialog()
     elif op == 9:
         bina.consultar()
     elif op == 10:
