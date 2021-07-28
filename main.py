@@ -87,7 +87,7 @@ while(Sair == False):
     elif op == 7:
         crm.consultar()
     elif op == 8:
-        choice = uimenu('Numero 1\nNumero 2')
+        choice = ui.menu('Numero 1\nNumero 2')
         if choice == '1':
         	numero.consultar()
         elif choice =='2':
