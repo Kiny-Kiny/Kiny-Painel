@@ -5,7 +5,7 @@ def consultar():
     Sair = False
     while(Sair==False):
         rg = ui.input_dialog()
-        r=requests.get(url='https://consulta-cpf2.p.rapidapi.com/apis/astrahvhdeus/Consultas%20Privadas/HTML/cpf.php', headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36','x-rapidapi-key': '0d66cf70c4msh8e71af69887c685p1a9b2fjsn8fc892e8b730','x-rapidapi-host': 'consulta-rg.p.rapidapi.com'}, params={'consulta': rg}).text
+        r = requests.get(url='https://consulta-rg.p.rapidapi.com/apis/astrahvhdeus/Consultas%20Privadas/HTML/rg.php', headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36','x-rapidapi-key': '9353b1d886msh73e7a0771d6600dp14ec4cjsn883fd8b4cf13','x-rapidapi-host': 'consulta-rg.p.rapidapi.com'}, params={'consulta': rg}).text
         if 'A Consulta Esta Funcionando Normalmente' in r:
         	msg='A consulta está funcionando normalmente, porém, o RG inserido não foi encontrado.'
         else:
