@@ -110,7 +110,7 @@ $ python3 main.py
  
  Chave **Pix** para quem quiser contribuir e ajudar o painel a se manter ativo:
  ```
-  228463d7-0bec-44bd-bddd-a780d9530f27
+  (61) 9603-5417
  ```
 
 <p>
