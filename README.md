@@ -40,10 +40,10 @@ Os que não estão, é porque ainda estão em desenvolvimento.
 - [x] Consulta de Nome
 - [ ] Consulta de Nome da mãe
 - [x] Consulta de Número
-- [x] Consulta de Email
+- [ ] Consulta de Email
 - [x] Consulta de Placa
 - [x] Geolocalizador de IP
-- [x] Consulta RG
+- [ ] Consulta RG
 
 
 <h2 align="center">🖥 Install</h2>
