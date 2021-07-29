@@ -5,7 +5,7 @@ def consultar():
 	Sair = False
 	while(Sair == False):
 		msg=''
-		numero = int(ui.input_dialog('Digite o número[Formato: DDD+Numero]: '))
+		numero = ui.input_dialog('Digite o número[Formato: DDD+Numero]: ')
 		data =requests.get(url='https://consulta-numero.p.rapidapi.com/apis/astrahvhdeus/Consultas%20Privadas/HTML/numero.php', headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36','x-rapidapi-key':'9353b1d886msh73e7a0771d6600dp14ec4cjsn883fd8b4cf13','x-rapidapi-host': 'consulta-numero.p.rapidapi.com'}, params={'consulta': numero}).text
 		if 'A Consulta Esta Funcionando Normalmente' in data:
 		      msg='A consulta está funcionando normalmente, porém, o Telefone inserido não foi encontrado.'
