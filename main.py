@@ -4,7 +4,7 @@ CO='\033[m';R='\033[1;31m';B='\033[1;34m';C='\033[1;37m';CY='\033[1;36m';Y='\033
 ## RECODADO POR YATO ##
 #######################
 
-# Chave PIX: 228463d7-0bec-44bd-bddd-a780d9530f27
+# Chave PIX: (61) 9603-5417
 
 def restart():
     python = sys.executable
