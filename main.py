@@ -61,7 +61,7 @@ except:
 Sair = False
 while(Sair == False):
     try:
-        op = int(ui.menu(f'BUSCADOR DE CEP\nCONSULTAR IP\nCONSULTA DE CNPJ\nCONSULTA BANCARIA\nCONSULTA CPF {C}[{G}ON{C}]\nCONSULTA PLACA\nCONSULTA CRM\nCONSULTA DE NUMERO\nCONSULTA BIN\nGERAR PESSOA\nMOSTRAR MEU IP\nCOVID19\nCONSULTAR MÃE {C}[{R}OFF{C}]\nCONSULTAR NOME {C}[{R}OFF{C}]\nCONSULTA DE EMAIL {C}[{R}OFF{C}]\nCCONSULTAR RG{C}[{R}OFF{C}]\nFERRAMENTAS::LICENSE\nAtualizar\nSair'))
+        op = int(ui.menu(f'BUSCADOR DE CEP\nCONSULTAR IP\nCONSULTA DE CNPJ\nCONSULTA BANCARIA\nCONSULTA CPF {C}[{G}ON{C}]\nCONSULTA PLACA\nCONSULTA CRM\nCONSULTA DE NUMERO\nCONSULTA BIN\nGERAR PESSOA\nMOSTRAR MEU IP\nCOVID19\nCONSULTAR MÃE {C}[{R}OFF{C}]\nCONSULTAR NOME {C}[{G}ON{C}]\nCONSULTA DE EMAIL {C}[{G}ON{C}]\nCCONSULTAR RG{C}[{G}ON{C}]\nFERRAMENTAS::LICENSE\nAtualizar\nSair'))
     except:
         ui.error_dialog('Caracteres não reconhecidos');op=None
     ui.clear()
@@ -87,7 +87,7 @@ while(Sair == False):
     elif op == 7:
         crm.consultar()
     elif op == 8:
-        choice = ui.menu('Numero 1{C}[{R}OFF{C}]\nNumero 2{C}[{R}OFF{C}]')
+        choice = ui.menu('Numero 1{C}[{G}ON{C}]\nNumero 2{C}[{R}OFF{C}]')
         if choice == '1':
         	numero.consultar()
         elif choice =='2':
@@ -105,7 +105,7 @@ while(Sair == False):
     elif op == 13:
         ui.error_dialog('A consulta está desativada por falta de API.') # MAE
     elif op == 14:
-        choice = ui.menu('Nome 1{C}[{R}OFF{C}]\nNome 2{C}[{R}OFF{C}]')
+        choice = ui.menu('Nome 1{C}[{G}ON{C}]\nNome 2{C}[{R}OFF{C}]')
         if choice == '1':
         	nome.consultar()# NOME
         elif choice == '2':
