@@ -24,7 +24,7 @@ except:
     restart()
 
 try:
-    from data import cpf,ui,ip,cnpj,placa,crm,cep,numero, license, nome, email, rg, numero2#, nome2
+    from data import cpf,ui,ip,cnpj,placa,crm,cep,numero, license, nome, email, rg, numero2, nome2
     from data import covid as covid19
     from data import bin as bina
     from data import cpf_2 as cpf2
