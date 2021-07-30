@@ -24,7 +24,7 @@ except:
     restart()
 
 try:
-    from data import cpf,ui,ip,cnpj,placa,crm,cep,numero, license, nome, email, rg, numero2
+    from data import cpf,ui,ip,cnpj,placa,crm,cep,numero, license, nome, email, rg, numero2, nome2
     from data import covid as covid19
     from data import bin as bina
     from data import cpf_2 as cpf2
@@ -105,7 +105,13 @@ while(Sair == False):
     elif op == 13:
         ui.error_dialog('A consulta está desativada por falta de API.') # MAE
     elif op == 14:
-        nome.consultar()# NOME
+        choice = ui.menu('Nome 1{C}[{R}OFF{C}]\nNome 2{C}[{G}ON{C}]')
+        if choice == '1':
+        	nome.consultar()# NOME
+        elif choice == '2':
+        	nome2.consultar()
+        else:
+        	ui.error_dialog()
     elif op == 15:
         email.consultar() # EMAIL
     elif op == 16:
