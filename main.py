@@ -87,7 +87,7 @@ while(Sair == False):
     elif op == 7:
         crm.consultar()
     elif op == 8:
-        choice = ui.menu('Numero 1{C}[{R}OFF{C}]\nNumero 2{C}[{G}ON{C}]')
+        choice = ui.menu('Numero 1{C}[{R}OFF{C}]\nNumero 2{C}[{R}OFF{C}]')
         if choice == '1':
         	numero.consultar()
         elif choice =='2':
