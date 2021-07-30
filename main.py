@@ -105,7 +105,8 @@ while(Sair == False):
     elif op == 13:
         ui.error_dialog('A consulta está desativada por falta de API.') # MAE
     elif op == 14:
-        choice = ui.menu('Nome 1{C}[{R}OFF{C}]\nNome 2{C}[{G}ON{C}]')
+        choice = ui.menu('Nome 1{C}[{R}OFF{C}]\nNome 2{C}[{R}OFF{C}]')
+C}]')
         if choice == '1':
         	nome.consultar()# NOME
         elif choice == '2':
