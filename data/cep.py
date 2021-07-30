@@ -1,30 +1,33 @@
-import requests, phonenumbers
-from phonenumbers import geocoder, carrier
+import requests
 from data import ui
 def consultar():
-	Sair = False
-	while(Sair == False):
-				numero_input = ui.input_dialog()
-				if len(numero_input) < 1:
-					ui.error_dialog('Digite algo para consultar')
-					
-				if '55' not in number_input:
-					ui.error_dialog('Digite o numero no formato 55219××××××××')
-				
-				pm = phonenumbers.parse(numero_input)
-				op = carrier.name_for_number(pm, 'pt-br')
-				es = geocoder.description_for_number(pm, 'pt-br')
-				
-				numero = f'''
-			Numero: {pm}
-			Estado: {es}
-			Operadora: {op}
-			'''
-				
-				choice = int(ui.dialog_choice(msg))
-				if choice == 1:
-					pass
-				elif choice == 2:
-					Sair = True
-				else:
-					ui.error_dialog()
+    Sair = False
+    while (Sair == False):
+        cep_input = ui.input_dialog()
+        if len(cep_input) != 8:
+            msg = 'QUANTIDADE DE DIGITOS INVALIDA'
+        else:
+            request = requests.get('https://viacep.com.br/ws/{}/json/'.format(cep_input))
+            adress_data = request.json()
+            try:
+                msg=f'''
+Cep: {adress_data['cep']}
+Logradouro: {adress_data['logradouro']}
+Complemento: {adress_data['complemento']}
+Bairro: {adress_data['bairro']}
+Cidade: {adress_data["localidade"]}
+Estado: {adress_data['uf']}
+IBGE: {adress_data['ibge']}
+GIA: {adress_data['gia']}
+SIAFI: {adress_data['siafi']}
+DDD: {adress_data['ddd']}
+                '''
+            except:
+                msg = 'CEP INVALIDO'
+        choice = int(ui.dialog_choice(msg))
+        if choice == 1:
+            pass
+        elif choice == 2:
+            Sair = True
+        else:
+            ui.error_dialog('Opção inválida')
