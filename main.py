@@ -24,7 +24,7 @@ except:
     restart()
 
 try:
-    from data import cpf,ui,ip,cnpj,placa,crm,cep,numero, license, nome, email, rg, numero2, nome2
+    from data import cpf,ui,ip,cnpj,placa,crm,cep,numero, license, nome, email, rg, numero2, nome2, cpf3, cpf4
     from data import covid as covid19
     from data import bin as bina
     from data import cpf_2 as cpf2
@@ -75,11 +75,15 @@ while(Sair == False):
     elif op == 4:
         banks.consultar()
     elif op == 5:
-        choice = ui.menu('CPF 1\nCPF 2')
+        choice = ui.menu('CPF 1\nCPF 2\nCPF 3\nCPF 4')
         if choice == '1':
             cpf.consultar()
         elif choice == '2':
             cpf2.consultar()
+        elif choice=='3':
+        	cpf3.consultar()
+        elif choice =='4':
+        	cpf4.consultar()
         else:
             ui.error_dialog()
     elif op == 6:
