@@ -10,7 +10,7 @@ def consultar():
         	msg='CPF INVÁLIDO!'
         else:
         	# A preguiça ainda vai me matar
-        	msg=a.replace('''"''', '').replace(',','\n').replace('}', '').replace('{', '')
+        	msg=r.replace('''"''', '').replace(',','\n').replace('}', '').replace('{', '')
         choice = ui.dialog_choice(msg)
         if choice == '1':
         	pass
