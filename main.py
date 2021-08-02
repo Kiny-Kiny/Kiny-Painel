@@ -91,7 +91,7 @@ while(Sair == False):
     elif op == 7:
         crm.consultar()
     elif op == 8:
-        choice = ui.menu('Numero 1{C}[{G}ON{C}]\nNumero 2{C}[{R}OFF{C}]')
+        choice = ui.menu(f'Numero 1{C}[{G}ON{C}]\nNumero 2{C}[{R}OFF{C}]')
         if choice == '1':
         	numero.consultar()
         elif choice =='2':
@@ -109,7 +109,7 @@ while(Sair == False):
     elif op == 13:
         ui.error_dialog('A consulta está desativada por falta de API.') # MAE
     elif op == 14:
-        choice = ui.menu('Nome 1{C}[{G}ON{C}]\nNome 2{C}[{R}OFF{C}]')
+        choice = ui.menu(f'Nome 1{C}[{G}ON{C}]\nNome 2{C}[{R}OFF{C}]')
         if choice == '1':
         	nome.consultar()# NOME
         elif choice == '2':
