@@ -11,8 +11,9 @@ def banner():
 	print(f'''
 {result}
 -- P  A  I  N  E  L --
-{info} Recodado por YATO com a API Thanatos {info}
+{info} Recodado por YATO com a API Thanatos
 {info} Twitter: {G}@KinyBruno
+{info} Pix: {G}(61) 9603-5417
 {warning} Este painel foi disponibilizado gratuitamente. Se pagou por isso, foi enganado. {warning}
        ''')
 
