@@ -12,6 +12,7 @@ def banner():
 {result}
 -- P  A  I  N  E  L --
 {info} Recodado por YATO com a API Thanatos {info}
+{info} Twitter: {G}@KinyBruno
 {warning} Este painel foi disponibilizado gratuitamente. Se pagou por isso, foi enganado. {warning}
        ''')
 
