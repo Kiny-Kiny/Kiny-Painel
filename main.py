@@ -81,7 +81,7 @@ while(Sair == False):
     elif op == 4:
         banks.consultar()
     elif op == 5:
-        choice = ui.menu('CPF 1\nCPF 2\nCPF 3\nCPF 4')
+        choice = ui.menu(f'CPF 1{C}[{G}ON{C}]\nCPF 2{C}[{G}ON{C}]\nCPF 3{C}[{R}OFF{C}]\nCPF 4{C}[{R}OFF{C}]')
         if choice == '1':
             cpf.consultar()
         elif choice == '2':
