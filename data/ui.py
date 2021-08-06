@@ -13,6 +13,7 @@ def banner():
 -- P  A  I  N  E  L --
 {info} Recodado por YATO com a API Thanatos
 {info} Twitter: {G}@KinyBruno
+{info} Contato: {G}+55 (21) 7918-0533
 {info} Pix: {G}(61) 9603-5417
 {warning} Este painel foi disponibilizado gratuitamente. Se pagou por isso, foi enganado. {warning}
        ''')
