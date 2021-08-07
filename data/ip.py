@@ -43,8 +43,8 @@ CODIGO DA MOEDA: {api['currency_code']}
 SIMBOLO DA MOEDA: {api['currency_symbol']}
             '''
             #TEMPERATURA: {api2["weather"][0]["main"]}
-        except Exception as error:
-            msg = error
+        except:
+            msg = 'IP NÃO ENCONTRADO'
         choice = int(ui.dialog_choice(msg))
         if choice == 1:
             pass
