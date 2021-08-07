@@ -135,6 +135,6 @@ while(Sair == False):
     elif op == 20:
         Sair = True
     elif op == None:
-        pass
+        ui.easter_egg()
     else:
         ui.error_dialog('Opção incorreta')
