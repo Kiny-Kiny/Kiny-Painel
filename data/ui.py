@@ -99,3 +99,15 @@ def error_dialog(text='',tiled='='):
     print(str(error)+' '+txt+' '+str(error))
   print(str(C)+str(R)+tiled*8+tiled*maior+tiled*8+str(C))
   time.sleep(3)
+
+def easter_egg():
+	print(f'{C}Parabéns! Você encontrou um {G}easter-egg{C}.')
+	url = 'https://youtu.be/YzJcBq0xufI'
+	import time, webbrowser, os, sys, platform
+	time.sleep(3)
+	if platform.system() == 'Windows':
+		webbrowser.open(url)
+	elif platform.system() == 'Linux':
+		webbrowser.open(url)
+	else:
+		os.system(f'termux open {url}')
