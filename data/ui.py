@@ -101,7 +101,7 @@ def error_dialog(text='',tiled='='):
   time.sleep(3)
 
 def easter_egg():
-	print(f'{C}Parabéns! Você encontrou um {G}easter-egg{C}.')
+	clear();banner();print(f'\n{C}Parabéns! Você encontrou um {G}easter-egg{C}.')
 	url = 'https://youtu.be/YzJcBq0xufI'
 	import time, webbrowser, os, sys, platform
 	time.sleep(3)
