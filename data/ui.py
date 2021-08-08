@@ -17,6 +17,7 @@ def banner():
 {info} Twitter: {G}@KinyBruno
 {info} Contato: {G}+55 (21) 7918-0533
 {info} Pix: {G}(61) 9603-5417
+{info} Certas consultas não estão funcionando. Por favor, agurde até resolvermos. {warning}
 {warning} Este painel foi disponibilizado gratuitamente. Se pagou por isso, foi enganado. {warning}
        ''')
 
