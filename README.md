@@ -99,6 +99,7 @@ $ python3 main.py
 
 | Autor          | Ajuda                                      |
 | -------------- |:-------------:|
+| Gav1x          | Api's 
 | P0isonBR       | Consulta de CPF/Atualização Automática     |
 | Snuking        | Algumas ajudas no próprio script           |
 | Douglas/Josuke | Patrocinador                               |
