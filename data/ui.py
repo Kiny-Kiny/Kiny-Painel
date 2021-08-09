@@ -104,7 +104,7 @@ def error_dialog(text='',tiled='='):
 def easter_egg():
 	clear();banner();print(f'{C}Parabéns! Você encontrou um {G}easter-egg{C}.')
 	url = 'https://youtu.be/YzJcBq0xufI'
-	import platform
+	import platform, webbrowser
 	time.sleep(3)
 	if platform.system() == 'Windows':
 		webbrowser.open(url)
