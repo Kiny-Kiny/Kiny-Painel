@@ -17,7 +17,7 @@ def banner():
 {info} Twitter: {G}@KinyBruno
 {info} Contato: {G}+55 (21) 7918-0533
 {info} Pix: {G}(61) 9603-5417
-{info} Certas consultas não estão funcionando. Por favor, agurde até resolvermos. {warning}
+{warning} Certas consultas não estão funcionando. Por favor, aguarde até resolvermos. {warning}
 {warning} Este painel foi disponibilizado gratuitamente. Se pagou por isso, foi enganado. {warning}
        ''')
 
@@ -102,9 +102,9 @@ def error_dialog(text='',tiled='='):
   time.sleep(3)
 
 def easter_egg():
-	clear();banner();print(f'\n{C}Parabéns! Você encontrou um {G}easter-egg{C}.')
+	clear();banner();print(f'{C}Parabéns! Você encontrou um {G}easter-egg{C}.')
 	url = 'https://youtu.be/YzJcBq0xufI'
-	import time, webbrowser, os, sys, platform
+	import platform
 	time.sleep(3)
 	if platform.system() == 'Windows':
 		webbrowser.open(url)
