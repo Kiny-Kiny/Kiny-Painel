@@ -7,7 +7,7 @@ def consultar():
         if len(cep_input) != 8:
             msg = 'QUANTIDADE DE DIGITOS INVALIDA'
         else:
-            request = requests.get('https://viacep.com.br/ws/{}/json/'.format(cep_input))
+            request = requests.get(f'https://viacep.com.br/ws/{cep_input}/json/')
             adress_data = request.json()
             try:
                 msg=f'''
