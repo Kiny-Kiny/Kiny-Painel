@@ -14,6 +14,7 @@ def banner():
 {info} Recodado por YATO com a API Thanatos
 {info} Grupo do WhatsApp: {G}https://chat.whatsapp.com/JFQmQ4QJtXR8VenQ2fIaAi
 {info} Grupo do Telegram: {G}https://t.me/kinycrimson
+{info} Grupo de Avisos: {G}https://t.me/kinycrimsonXD
 {info} Twitter: {G}@KinyBruno
 {info} Contato: {G}+55 (21) 7918-0533
 {info} Discord: {G}https://discord.gg/3EJTadHAFR
