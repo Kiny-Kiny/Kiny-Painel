@@ -112,7 +112,7 @@ while Sair==False:
 		else:
 			msg1=req+r
 		try:
-			msg= get(msg1).text.replace('<br>', '\n').replace('<p>', '').replace('{', '').replace('}', '').replace(',', '\n').replace(':', '')
+			msg= get(msg1).text.replace('<br>', '\n').replace('<p>', '').replace('{', '').replace('}', '').replace(',', '\n').replace(':', ' ')
 		except:
 			msg=f'{R}- ! -{C} API OFFLINE OU SERVIDOR FORA DO AR{R}- ! -{C}'
 		clear();sub=int(input(f'{banner}\n{msg}\n{B}- ! -{C} Deseja fazer uma nova consulta? {B}- ! -{C}\n[{B}1{C}] Sim\n[{B}2{C}] Nao\n{B}===> {C}'))
