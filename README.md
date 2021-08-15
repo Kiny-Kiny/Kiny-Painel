@@ -106,7 +106,7 @@ $ python3 main.py
 | Margarina      | Patrocinador                               |
 | N 3 X 0        | Patrocinador/Consulta de CPF               |
 | Yato           | Antigo Recode                              |
-| Peticalli      | Ajudas no próprio script                   |
+| Peticali      | Ajudas no próprio script                   |
 
 <div align="center">
   <h2>👤 Perfis:</h2>
@@ -114,6 +114,7 @@ $ python3 main.py
   <table>
     <tr>
       <td align="center"><a href="https://github.com/Kiny-Kiny"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/70079144?s=60&v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a>    </tr>
+      <td align="center"><a href="https://github.com/Peticali"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/34588988?v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a>    </tr>
   </table>
 </div>
  
