@@ -13,7 +13,7 @@ from sys import argv
 from os import name
 from time import sleep
 #---------------------------------------#
-sys('git pull')
+system('git pull')
 #---------------------------------------#
 def clear():
 	system('cls' if name == 'nt' else 'clear')
