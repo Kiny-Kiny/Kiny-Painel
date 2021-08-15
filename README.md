@@ -113,11 +113,11 @@ $ python3 main.py
 
   <table>
     <tr>
-      <td align="center"><a href="https://github.com/Kiny-Kiny"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/70079144?s=60&v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/Peticali"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/34588988?v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/gav1x"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86944760?v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/P0isonBR"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/65384918?v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/oporadokrl"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/71855447?v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/Kiny-Kiny"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/70079144?s=60&v=4" width="100px;" alt=""/><br /><sub><b>@Kiny</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/Peticali"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/34588988?v=4" width="100px;" alt=""/><br /><sub><b>@Peticali</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/gav1x"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86944760?v=4" width="100px;" alt=""/><br /><sub><b>@Gav1x</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/P0isonBR"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/65384918?v=4" width="100px;" alt=""/><br /><sub><b>@P0isonBR</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/oporadokrl"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/71855447?v=4" width="100px;" alt=""/><br /><sub><b>@Yato</b></sub></a><br /></td>
   </table>
 </div>
  
