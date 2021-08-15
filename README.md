@@ -99,13 +99,14 @@ $ python3 main.py
 
 | Autor          | Ajuda                                      |
 | -------------- |:-------------:|
-| Gav1x          | Api's 
+| Gav1x          | Api's                                      |
 | P0isonBR       | Consulta de CPF/Atualização Automática     |
 | Snuking        | Algumas ajudas no próprio script           |
 | Douglas/Josuke | Patrocinador                               |
 | Margarina      | Patrocinador                               |
 | N 3 X 0        | Patrocinador/Consulta de CPF               |
-| Yato           | Antigo Recode                                     |
+| Yato           | Antigo Recode                              |
+| Peticalli      | Ajudas no próprio script                   |
 
  
  <h2 align="center">💰 Donate</h2>
