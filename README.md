@@ -84,7 +84,7 @@ $ python3 main.py
 
 <p align="center" >
   <h2 align="center">🚀 Running</h2>
-  <img alt="Kiny-Painel" src="https://github.com/oporadokrl/Kiny-Painel/blob/master/screenshot.png">
+  <img alt="Kiny-Painel" src="https://github.com/Kiny-Kiny/Kiny-Painel/blob/main/IMG_20210815_155210_616.jpg">
 </p>
 
 <p align="center" >
