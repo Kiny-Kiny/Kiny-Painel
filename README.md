@@ -105,7 +105,7 @@ $ python3 main.py
 | Douglas/Josuke | Patrocinador                               |
 | Margarina      | Patrocinador                               |
 | N 3 X 0        | Patrocinador/Consulta de CPF               |
-| Yato           | Recode                                     |
+| Yato           | Antigo Recode                                     |
 
  
  <h2 align="center">💰 Donate</h2>
