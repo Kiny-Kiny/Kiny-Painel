@@ -108,6 +108,14 @@ $ python3 main.py
 | Yato           | Antigo Recode                              |
 | Peticalli      | Ajudas no próprio script                   |
 
+<div align="center">
+  <h2>👤 Perfis:</h2>
+
+  <table>
+    <tr>
+      <td align="center"><a href="https://github.com/Kiny-Kiny"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a>    </tr>
+  </table>
+</div>
  
  <h2 align="center">💰 Donate</h2>
  
