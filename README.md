@@ -113,7 +113,7 @@ $ python3 main.py
 
   <table>
     <tr>
-      <td align="center"><a href="https://github.com/Kiny-Kiny"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a>    </tr>
+      <td align="center"><a href="https://github.com/Kiny-Kiny"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/70079144?s=60&v=4" width="100px;" alt=""/><br /><sub><b>GitHub💻</b></sub></a>    </tr>
   </table>
 </div>
  
