@@ -107,7 +107,7 @@ while Sair==False:
 		else:
 			print(f'{R}- ! -{C} Opção Inválida {R}- ! -{C}');sleep(2);restart()
 		clear();r=input(f'{banner}{C}{r_msg}{B}>>>{C} ')
-		if 'placa' in req or 'placa' in req:
+		if 'placa' in req or 'placa' in req or 'cep' in req:
 			msg1=req+r+'/json'
 		else:
 			msg1=req+r
