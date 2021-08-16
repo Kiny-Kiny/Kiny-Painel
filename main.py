@@ -1,12 +1,6 @@
 #---------------------------------------#
 global R,B,C,G
-R='\033[1;31m';
-B='\033[1;34m';
-C='\033[1;37m';
-G='\033[1;32m';
-Format="\033[0m";
-Letra="\033[38;5;15m";
-Fundo="\033[48;5;19m"
+R='\033[1;31m';B='\033[1;34m';C='\033[1;37m';G='\033[1;32m';Format="\033[0m";Letra="\033[38;5;15m";Fundo="\033[48;5;19m"
 from os import system
 from os import execl
 from sys import executable
