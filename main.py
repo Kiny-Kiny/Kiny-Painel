@@ -46,11 +46,11 @@ except:
 user=user2
 #---------------------------------------#
 banner=f'''{B}
- __  __     __     __   __     __  __    
-/\ \/ /    /\ \   /\ "-.\ \   /\ \_\ \   
-\ \  _"-.  \ \ \  \ \ \-.  \  \ \____ \  
- \ \_\ \_\  \ \_\  \ \_\\"\_\  \/\_____\ 
-  \/_/\/_/   \/_/   \/_/ \/_/   \/_____/ 
+  __  __     __     __   __     __  __    
+ /\ \/ /    /\ \   /\ "-.\ \   /\ \_\ \   
+ \ \  _"-.  \ \ \  \ \ \-.  \  \ \____ \  
+  \ \_\ \_\  \ \_\  \ \_\\"\_\  \/\_____\ 
+   \/_/\/_/   \/_/   \/_/ \/_/   \/_____/ 
                                          {C}Coded By: {B}Kiny{C}\n{Fundo}{Letra}Hello, {user}!{Format}   {Fundo}{C}{Letra}Version: 4.0{Format}{C}   {Fundo}{C}{Letra} PIX: (61) 9603-5417{Format}{C}\n\n'''
 #---------------------------------------#
 v = get('https://pastebin.com/raw/JRSu4jNW').json()
@@ -121,7 +121,7 @@ while Sair==False:
 		else: pass
 #---------------------------------------#
 	try:
-		clear();op=int(input(f'{banner}[{B}1{C}] Número [{num_status}]\n[{B}2{C}] CPF    [{cpf_status}]\n[{B}3{C}] Nome   [{nome_status}]\n[{B}4{C}] CNPJ   [{cnpj_status}]\n[{B}5{C}] Placa  [{placa_status}]\n[{B}6{C}] IP     [{ip_status}]\n[{B}7{C}] CEP    [{cep_status}]\n[{B}8{C}] COVID  [{covid_status}]\n[{B}9{C}] BIN    [{bin_status}]\n[{B}10{C}] Banco [{banco_status}]\n\n[{B}97{C}] LICENSE\n[{B}98{C}] Redes Sociais\n[{B}99{C}] Trocar nome\n[{R}0{C}] Sair\n{B}===>{C} '))
+		clear();op=int(input(f'{banner}              [{B}1{C}] Número [{num_status}]\n              [{B}2{C}] CPF    [{cpf_status}]\n              [{B}3{C}] Nome   [{nome_status}]\n              [{B}4{C}] CNPJ   [{cnpj_status}]\n              [{B}5{C}] Placa  [{placa_status}]\n              [{B}6{C}] IP     [{ip_status}]\n              [{B}7{C}] CEP    [{cep_status}]\n              [{B}8{C}] COVID  [{covid_status}]\n              [{B}9{C}] BIN    [{bin_status}]\n              [{B}10{C}] Banco [{banco_status}]\n\n              [{B}97{C}] LICENSE\n              [{B}98{C}] Redes Sociais\n              [{B}99{C}] Trocar nome\n              [{R}0{C}] Sair\n{B}              ===>{C} '))
 		if op == 0: Sair=True
 		elif op == 97: show()
 		elif op == 98: rds()
