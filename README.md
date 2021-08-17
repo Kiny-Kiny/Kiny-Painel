@@ -33,12 +33,9 @@ Os que não estão, é porque ainda estão em desenvolvimento.
 
 - [x] Consulta de CEP
 - [x] Consulta de CNPJ
-- [x] Consulta de CRM
-- [x] Consulta de CNS
 - [x] Consulta de CPF
 - [x] Consulta de BIN
-- [x] Consulta de Nome
-- [ ] Consulta de Nome da mãe
+- [ ] Consulta de Nome
 - [x] Consulta de Número
 - [ ] Consulta de Email
 - [x] Consulta de Placa
@@ -57,26 +54,26 @@ Depois de baixar e instalar o python você pode baixar o **Kiny-Painel** diretam
 ```
 💻 Termux
 $ pkg upgrade && pkg update -y
-$ pkg install git python figlet -y
+$ pkg install git python -y
 $ git clone https://github.com/Kiny-Kiny/Kiny-Painel
 $ cd Kiny-Painel
 $ python3 main.py
 
 💻 Debian
 $ apt upgrade && apt update -y
-$ apt install git python figlet -y
+$ apt install git python -y
 $ git clone https://github.com/Kiny-Kiny/Kiny-Painel
 $ cd Kiny-Painel
 $ python3 main.py
 
 💻 Arch Linux
-$ pacman -Syyu git python figlet -y
+$ pacman -Syyu git python -y
 $ git clone https://github.com/Kiny-Kiny/Kiny-Painel
 $ cd Kiny-Painel
 $ python3 main.py
 
 💻 OpenSUSE
-$ zypper install python git figlet -y
+$ zypper install python git -y
 $ git clone https://github.com/Kiny-Kiny/Kiny-Painel
 $ cd Kiny-Painel
 $ python3 main.py
