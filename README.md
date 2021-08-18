@@ -103,7 +103,8 @@ $ python3 main.py
 | Margarina      | Patrocinador                               |
 | N 3 X 0        | Patrocinador/Consulta de CPF               |
 | Yato           | Antigo Recode                              |
-| Peticali      | Ajudas no próprio script                    |
+| Peticali       | Ajudas no próprio script                   |
+| Johan          | Ajudas no próprio script e APIs            |
 
 <div align="center">
   <h2>👤 Perfis:</h2>
@@ -115,6 +116,7 @@ $ python3 main.py
       <td align="center"><a href="https://github.com/gav1x"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86944760?v=4" width="100px;" alt=""/><br /><sub><b>@Gav1x</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/P0isonBR"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/65384918?v=4" width="100px;" alt=""/><br /><sub><b>@P0isonBR</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/oporadokrl"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/71855447?v=4" width="100px;" alt=""/><br /><sub><b>@Yato</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/mipsu"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/88400387?v=4" width="100px;" alt=""/><br /><sub><b>@Johan</b></sub></a><br /></td>
   </table>
 </div>
  
