@@ -41,7 +41,7 @@ banner=f'''{B}
    \/_/\/_/   \/_/   \/_/ \/_/   \/_____/ 
                                          {C}Coded By: {B}Kiny{C}\n{Fundo}{Letra}Hello, {user}!{Format}   {Fundo}{C}{Letra}Version: 4.0{Format}{C}   {Fundo}{C}{Letra} PIX: (61) 9603-5417{Format}{C}\n\n{Fundo}{C}{Letra}_ ! _ Esse programa foi disponiblizado gratuitamente, se você pagou, foi enganado._ ! _{Format}{C}\n\n'''
 #---------------------------------------#
-try: api=get('http://pubproxy.com/api/proxy').json();ip=api['data'][0]['ip']+':'+api['data'][0]['port'];v=get(url='https://pastebin.com/raw/JRSu4jNW', proxies={'http': ip}).json()
+try: api=get('http://pubproxy.com/api/proxy').json();ip=api['data'][0]['ip']+':'+api['data'][0]['port'];v=get(url='https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/apis.json', proxies={'http': ip}).json()
 except: restart()
 #---------------------------------------#
 num_status = (f'{G}ON{C}' if "ON" in v['numero'][1] else f'{R}OFF{C}')
