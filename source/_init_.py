@@ -16,7 +16,7 @@ try: from requests import get
 except: system('python3 -m pip install --upgrade pip && pip3 install -r requirements.txt');restart()
 #---------------------------------------#
 def show():
-	file = open('eminel.txt','r')
+	file = open('LICENSE','r')
 	print(file.read());
 	file.close()
 	input(f'\n{B}<{C} Aperte Enter para retornar ao menu {B}>{C}')
