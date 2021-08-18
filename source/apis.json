@@ -1,0 +1,13 @@
+{
+"numero":["https://dualityapi.xyz/apis/flex_7/Consultas%20Privadas/HTML/numero.php?consulta=", "ON"],
+"nome":["https://dualityapi.xyz/apis/flex_7/Consultas%20Privadas/HTML/nome.php?consulta=", "OFF"],
+"cpf":["https://netinnbapi.000webhostapp.com/clientesnetin/api.php?cpf=", "ON"],
+"cnpj":["https://www.receitaws.com.br/v1/cnpj/", "ON"],
+"placa":["https://apicarros.com/v1/consulta/", "ON"],
+"ip":["http://ipwhois.app/json/", "ON"],
+"cep":["https://viacep.com.br/ws/", "ON"],
+"covid":["https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/", "ON"],
+"bin":["https://lookup.binlist.net/", "ON"],
+"banco":["https://brasilapi.com.br/api/banks/v1/", "ON"],
+"r_social":["Grupo do WhatsApp: https://chat.whatsapp.com/JFQmQ4QJtXR8VenQ2fIaAi", "Grupo do Telegram: https://t.me/kinycrimson", "Grupo de Avisos: https://t.me/kinycrimsonXD", "Twitter: @KinyBruno", "Contato: +55 (21) 7918-0533", "Discord: https://discord.gg/3EJTadHAFR"]
+}
