@@ -1,3 +1,4 @@
+# Para AkTr Team: Parem de utilizar minhas APIs sem minha permissão, agradeço.
 from os import execl; from sys import executable; from os import system
 try: from requests import get
 except: system('python3 -m pip install --upgrade pip && pip3 install requests');execl(executable, executable, *argv)
