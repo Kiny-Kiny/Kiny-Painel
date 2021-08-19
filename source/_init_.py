@@ -103,6 +103,11 @@ while Sair==False:
 		clear();r=input(str(banner)+str(C)+str(r_msg)+str(B)+'>>> '+str(C))
 		if 'placa' in req or 'cep' in req:
 			msg1=str(req)+str(r)+'/json'
+		elif 'numero' in req:
+			if len(r) !=11:
+				msg1=str(req)+str(r[:2])+'9'+str(r[2:])
+			else:
+				msg1=str(req)+str(r)
 		else:
 			msg1=str(req)+str(r)
 		try:
