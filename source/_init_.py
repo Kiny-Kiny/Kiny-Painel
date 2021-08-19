@@ -37,15 +37,10 @@ except:
 	restart()
 user=user2
 #---------------------------------------#
-banner=str(B)+'''
-  __  __     __     __   __     __  __    
- /\ \/ /    /\ \   /\ "-.\ \   /\ \_\ \   
- \ \  _"-.  \ \ \  \ \ \-.  \  \ \____ \  
-  \ \_\ \_\  \ \_\  \ \_\\"\_\  \/\_____\ 
-   \/_/\/_/   \/_/   \/_/ \/_/   \/_____/ 
-                                         '''+str(C)+'Coded By: '+str(B)+'Kiny'+str(C)+'\n'+str(Fundo)+str(Letra)+'Hello, '+str(user)+'!'+str(Format)+'   '+str(Fundo)+str(C)+str(Letra)+'Version: 4.0'+str(Format)+str(C)+'   '+str(Fundo)+str(C)+str(Letra)+' PIX: (61) 9603-5417'+str(Format)+str(C)+'\n\n'+str(Fundo)+str(C)+str(Letra)+'_ ! _ Esse programa foi disponiblizado gratuitamente, se você pagou, foi enganado._ ! _'+str(Format)+str(C)+'\n\n'
+logo=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/banner/logo').text
+banner=str(B)+str(logo)+str(C)+'Coded By: '+str(B)+'Kiny'+str(C)+'\n'+str(Fundo)+str(Letra)+'Hello, '+str(user)+'!'+str(Format)+'   '+str(Fundo)+str(C)+str(Letra)+'Version: 4.0'+str(Format)+str(C)+'   '+str(Fundo)+str(C)+str(Letra)+' PIX: (61) 9603-5417'+str(Format)+str(C)+'\n\n'+str(Fundo)+str(C)+str(Letra)+'_ ! _ Esse programa foi disponiblizado gratuitamente, se você pagou, foi enganado._ ! _'+str(Format)+str(C)+'\n\n'
 #---------------------------------------#
-try: v=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/apis.json').json()
+try: v=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/apis/apis.json').json()
 except: restart()
 #---------------------------------------#
 num_status = (str(G)+'ON'+str(C) if "ON" in v['numero'][1] else str(R)+'OFF'+str(C))
