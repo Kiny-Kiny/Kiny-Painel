@@ -24,7 +24,7 @@
   <a href="https://github.com/Kiny-Kiny">Author</a>
 </p>
 
-<h3><p align="center">Version: 3.9 Beta</p></h3>
+<h3><p align="center">Version: 4.0</p></h3>
  
 <h2 align="center">📆  Features</h2>
 
