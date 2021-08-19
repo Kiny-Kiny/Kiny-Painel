@@ -1,2 +1,2 @@
 from os import system
-def clear(): system('cls||clear')
+def run(): system('cls||clear')
