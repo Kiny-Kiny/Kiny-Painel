@@ -1,16 +1,20 @@
 #---------------------------------------#
+#Don't need reason, don't need rhyme
+#Ain't nothin' that I’d rather do
+#Going down, party time
+#My friends are gonna be there too
+#I'm on the highway to hell
+#On the highway to hell
+#Highway to hell
+#I'm on the highway to hell
+#---------------------------------------#
 global R,B,C,G
 R='\033[1;31m';B='\033[1;34m';C='\033[1;37m';G='\033[1;32m';Format="\033[0m";Letra="\033[38;5;15m";Fundo="\033[48;5;19m"
-from os import system
-from os import execl
-from sys import executable
-from sys import argv
-from os import name
-from time import sleep
+from os import system;from os import execl; from sys import executable; from sys import argv; from os import name; from time import sleep
 #---------------------------------------#
 def clear(): system('cls' if name == 'nt' else 'clear')
 def restart(): execl(executable, executable, *argv)
-def sair(): system('rm -rf __pycache__ && clear');print(f'{banner}{G}_ ! _ {C}Até logo. {G} _ ! _{C}');Sair=True
+def sair(): system('rm -rf __pycache__ && clear');print(str(banner)+str(G)+'_ ! _ '+str(C)+'Até logo. '+str(G)+' _ ! _'+str(C));Sair=True
 #---------------------------------------#
 try: from requests import get
 except: system('python3 -m pip install --upgrade pip && pip3 install -r requirements.txt');restart()
@@ -19,103 +23,104 @@ def show():
 	file = open('LICENSE','r')
 	print(file.read());
 	file.close()
-	input(f'\n{B}<{C} Aperte Enter para retornar ao menu {B}>{C}')
+	input(str(B)+'\n<'+str(C)+' Aperte Enter para retornar ao menu '+str(B)+'>'+str(C))
 #---------------------------------------#
 try:
 	user = open('username','r')
 	user2 = str(user.read())
 	user.close()
 except:
-	clear();user1=input(f'{C}Digite seu nome de usuário{B} >>>{C} ')
+	clear();user1=input(str(C)+'Digite seu nome de usuário'+str(B)+' >>> '+str(C))
 	user=open('username','w+')
 	user.write(user1)
 	user.close()
 	restart()
 user=user2
 #---------------------------------------#
-banner=f'''{B}
+banner=str(B)+'''
   __  __     __     __   __     __  __    
  /\ \/ /    /\ \   /\ "-.\ \   /\ \_\ \   
  \ \  _"-.  \ \ \  \ \ \-.  \  \ \____ \  
   \ \_\ \_\  \ \_\  \ \_\\"\_\  \/\_____\ 
    \/_/\/_/   \/_/   \/_/ \/_/   \/_____/ 
-                                         {C}Coded By: {B}Kiny{C}\n{Fundo}{Letra}Hello, {user}!{Format}   {Fundo}{C}{Letra}Version: 4.0{Format}{C}   {Fundo}{C}{Letra} PIX: (61) 9603-5417{Format}{C}\n\n{Fundo}{C}{Letra}_ ! _ Esse programa foi disponiblizado gratuitamente, se você pagou, foi enganado._ ! _{Format}{C}\n\n'''
+                                         '''+str(C)+'Coded By: '+str(B)+'Kiny'+str(C)+'\n'+str(Fundo)+str(Letra)+'Hello, '+str(user)+'!'+str(Format)+'   '+str(Fundo)+str(C)+str(Letra)+'Version: 4.0'+str(Format)+str(C)+'   '+str(Fundo)+str(C)+str(Letra)+' PIX: (61) 9603-5417'+str(Format)+str(C)+'\n\n'+str(Fundo)+str(C)+str(Letra)+'_ ! _ Esse programa foi disponiblizado gratuitamente, se você pagou, foi enganado._ ! _'+str(Format)+str(C)+'\n\n'
 #---------------------------------------#
-try: api=get('http://pubproxy.com/api/proxy').json();ip=api['data'][0]['ip']+':'+api['data'][0]['port'];v=get(url='https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/apis.json', proxies={'http': ip}).json()
+try: v=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/apis.json').json()
 except: restart()
 #---------------------------------------#
-num_status = (f'{G}ON{C}' if "ON" in v['numero'][1] else f'{R}OFF{C}')
-cpf_status = (f'{G}ON{C}' if "ON" in v['cpf'][1] else f'{R}OFF{C}')
-nome_status = (f'{G}ON{C}' if "ON" in v['nome'][1] else f'{R}OFF{C}')
-cnpj_status = (f'{G}ON{C}' if "ON" in v['cnpj'][1] else f"{R}OFF{C}")
-placa_status = (f'{G}ON{C}' if "ON" in v['placa'][1] else f"{R}OFF{C}")
-ip_status = (f'{G}ON{C}' if "ON" in v['ip'][1] else '{R}OFF{C}')
-cep_status = (f'{G}ON{C}' if "ON" in v['cep'][1] else '{R}OFF{C}')
-covid_status = (f'{G}ON{C}' if "ON" in v['covid'][1] else '{R}OFF{C}')
-bin_status = (f'{G}ON{C}' if "ON" in v['bin'][1] else '{R}OFF{C}')
-banco_status = (f'{G}ON{C}' if "ON" in v['banco'][1] else '{R}OFF{C}')
+num_status = (str(G)+'ON'+str(C) if "ON" in v['numero'][1] else str(R)+'OFF'+str(C))
+cpf_status = (str(G)+'ON'+str(C) if "ON" in v['cpf'][1] else str(R)+'OFF'+str(C))
+nome_status = (str(G)+'ON'+str(C) if "ON" in v['nome'][1] else str(R)+'OFF'+str(C))
+cnpj_status = (str(G)+'ON'+str(C) if "ON" in v['cnpj'][1] else str(R)+'OFF'+str(C))
+placa_status = (str(G)+'ON'+str(C) if "ON" in v['placa'][1] else str(R)+'OFF'+str(C))
+ip_status = (str(G)+'ON'+str(C) if "ON" in v['ip'][1] else str(R)+'OFF'+str(C))
+cep_status = (str(G)+'ON'+str(C) if "ON" in v['cep'][1] else str(R)+'OFF'+str(C))
+covid_status = (str(G)+'ON'+str(C) if "ON" in v['covid'][1] else str(R)+'OFF'+str(C))
+bin_status = (str(G)+'ON'+str(C) if "ON" in v['bin'][1] else str(R)+'OFF'+str(C))
+banco_status = (str(G)+'ON'+str(C) if "ON" in v['banco'][1] else str(R)+'OFF'+str(C))
 #---------------------------------------#
 def rds():
-	clear();print(f'{banner}');r_social=v['r_social']
+	clear();print(str(banner));r_social=v['r_social']
 	for i in r_social:
-		print(f'{B}_ ! _{C} ',i)
-	input(f'\n{B}<{C} Aperte Enter para retornar ao menu {B}>{C}')
+		print(str(B)+'_ ! _ '+str(C)+str(i))
+	input(str(B)+'\n<'+str(C)+' Aperte Enter para retornar ao menu '+str(B)+'>'+str(C))
 #---------------------------------------#
 Sair=False
 while Sair==False:
 	def init():
 		if op == 1:
-			r_msg = f'{B}_ ! _{C} Exemplo: 18996166070{B}_ ! _{C}\nDigite o número que irá consultar'
+			r_msg = str(B)+'_ ! _'+str(C)+' Exemplo: 18996166070'+str(B)+'_ ! _'+str(C)+'\nDigite o número que irá consultar'
 			req= v['numero'][0]
 		elif op == 2:
-			r_msg=f'{B}_ ! _{C} Exemplo: 00000000272{B}_ ! _{C}\nDigite o CPF que irá consultar '
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: 00000000272'+str(B)+'_ ! _'+str(C)+'\nDigite o CPF que irá consultar '
 			req= v['cpf'][0]
 		elif op == 3:
-			r_msg=f'{B}_ ! _{C} Exemplo: Jair Messias Bolsonaro{B}_ ! _{C}\nDigite o nome que irá consultar '
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: Jair Messias Bolsonaro'+str(B)+'_ ! _'+str(C)+'\nDigite o nome que irá consultar '
 			req= v['nome'][0]
 		elif op == 4:
-			r_msg=f'{B}_ ! _{C} Exemplo: 01944765000142{B}_ ! _{C}\nDigite o CNPJ que irá consultar '
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: 01944765000142'+str(B)+'_ ! _'+(C)+'\nDigite o CNPJ que irá consultar '
 			req=v['cnpj'][0]
 		elif op == 5:
-			r_msg=f'{B}_ ! _{C} Exemplo: bpm9099{B}_ ! _{C}\nDigite a placa que irá consultar '
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: bpm9099'+str(B)+'_ ! _'+str(C)+'\nDigite a placa que irá consultar '
 			req=v['placa'][0]
 		elif op == 6:
-			r_msg=f'{B}_ ! _{C} Exemplo: 183.181.164.210{B}_ ! _{C}\nDigite o IP que irá consultar '
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: 183.181.164.210'+str(B)+'_ ! _'+str(C)+'\nDigite o IP que irá consultar '
 			req=v['ip'][0]
 		elif op ==7:
-			r_msg=f'{B}_ ! _{C} Exemplo:  13218840{B}_ ! _{C}\nDigite o CEP que irá consultar '
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo:  13218840'+str(B)+'_ ! _'+str(C)+'\nDigite o CEP que irá consultar '
 			req=v['cep'][0]
 		elif op ==8:
-			r_msg=f'{B}_ ! _{C} Exemplo:  RJ{B}_ ! _{C}\nDigite o UF que irá consultar '
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo:  RJ'+str(B)+'_ ! _'+str(C)+'\nDigite o UF que irá consultar '
 			req=v['covid'][0]
 		elif op ==9:
-			r_msg=f'{B}_ ! _{C} Exemplo:  45717360{B}_ ! _{C}\nDigite a BIN que irá consultar '
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo:  45717360'+str(B)+'_ ! _'+str(C)+'\nDigite a BIN que irá consultar '
 			req=v['bin'][0]
 		elif op ==10:
-			r_msg=f'{B}_ ! _{C} Exemplo:  237{B}_ ! _{C}\nDigite o código bancario que irá consultar '
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo:  237'+str(B)+'_ ! _'+str(C)+'\nDigite o código bancario que irá consultar '
 			req=v['banco'][0]
 		else:
-			print(f'{R}- ! -{C} Opção Inválida {R}- ! -{C}');sleep(2);restart()
-		clear();r=input(f'{banner}{C}{r_msg}{B}>>>{C} ')
-		if 'placa' in req or 'placa' in req or 'cep' in req:
-			msg1=req+r+'/json'
+			print(str(R)+'- ! -'+str(C)+' Opção Inválida '+str(R)+'- ! -'+str(C));sleep(2);restart()
+		clear();r=input(str(banner)+str(C)+str(r_msg)+str(B)+'>>> '+str(C))
+		if 'placa' in req or 'cep' in req:
+			msg1=str(req)+str(r)+'/json'
 		else:
-			msg1=req+r
+			msg1=str(req)+str(r)
 		try:
-			msg= get(msg1, proxies={'http': ip}, verify=False).text.replace('<br>', '\n').replace('<p>', '').replace('{', '').replace('}', '').replace(',', '\n').replace(':', ' ')
+			msg= get(str(msg1), verify=False).text.replace('<br>', '\n').replace('<p>', '').replace('{', '').replace('}', '').replace(',', '\n').replace(':', ' ')
 		except:
-			msg=f'{R}- ! -{C} API OFFLINE OU SERVIDOR FORA DO AR{R}- ! -{C}'
-		clear();sub=int(input(f'{banner}\n{msg}\n{B}- ! -{C} Deseja fazer uma nova consulta? {B}- ! -{C}\n[{B}1{C}] Sim\n[{B}2{C}] Nao\n{B}===> {C}'))
+			msg=str(R)+'- ! -'+str(C)+' API OFFLINE OU SERVIDOR FORA DO AR'+str(R)+'- ! -'+str(C)
+		clear();sub=int(input(str(banner)+'\n'+str(msg)+'\n'+str(B)+'- ! -'+str(C)+' Deseja fazer uma nova consulta? '+str(B)+'- ! -'+str(C)+'\n['+str(B)+'1'+str(C)+'] Sim\n['+str(B)+'2'+str(C)+'] Nao\n'+str(B)+'===> '+str(C)))
 		if sub == 1: init()
 		elif sub == 2: sair()
 		else: pass
 #---------------------------------------#
 	try:
-		clear();op=int(input(f'{banner}              [{B}1{C}] Número [{num_status}]\n              [{B}2{C}] CPF    [{cpf_status}]\n              [{B}3{C}] Nome   [{nome_status}]\n              [{B}4{C}] CNPJ   [{cnpj_status}]\n              [{B}5{C}] Placa  [{placa_status}]\n              [{B}6{C}] IP     [{ip_status}]\n              [{B}7{C}] CEP    [{cep_status}]\n              [{B}8{C}] COVID  [{covid_status}]\n              [{B}9{C}] BIN    [{bin_status}]\n              [{B}10{C}] Banco [{banco_status}]\n\n              [{B}97{C}] LICENSE\n              [{B}98{C}] Redes Sociais\n              [{B}99{C}] Trocar nome\n              [{R}0{C}] Sair\n{B}              ===>{C} '))
+		clear();op=int(input(str(banner)+'              ['+str(B)+'1'+str(C)+'] Número ['+str(num_status)+']\n              ['+str(B)+'2'+str(C)+'] CPF    ['+str(cpf_status)+']\n              ['+str(B)+'3'+str(C)+'] Nome   ['+str(nome_status)+']\n              ['+str(B)+'4'+str(C)+'] CNPJ   ['+str(cnpj_status)+']\n              ['+str(B)+'5'+str(C)+'] Placa  ['+str(placa_status)+']\n              ['+str(B)+'6'+str(C)+'] IP     ['+str(ip_status)+']\n              ['+str(B)+'7'+str(C)+'] CEP    ['+str(cep_status)+']\n              ['+str(B)+'8'+str(C)+'] COVID  ['+str(covid_status)+']\n              ['+str(B)+'9'+str(C)+'] BIN    ['+str(bin_status)+']\n              ['+str(B)+'10'+str(C)+'] Banco ['+str(banco_status)+']\n\n              ['+str(B)+'97'+str(C)+'] LICENSE\n              ['+str(B)+'98'+str(C)+'] Redes Sociais\n              ['+str(B)+'99'+str(C)+'] Trocar nome\n              ['+str(R)+'0'+str(C)+'] Sair\n'+str(B)+'              ===> '+str(C)))
 		if op == 0: Sair=True
 		elif op == 97: show()
 		elif op == 98: rds()
 		elif op == 99: system('rm -rf username');restart()
+		elif op == None: pass
 		else: init()
 	except: pass
 sair()
