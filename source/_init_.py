@@ -86,7 +86,7 @@ while Sair==False:
 			msg= get(str(msg1), verify=False).text.replace('<br>', '\n').replace('<p>', '').replace('{', '').replace('}', '').replace(',', '\n').replace(':', ' ')
 		except:
 			msg=str(R)+'- ! -'+str(C)+' API OFFLINE OU SERVIDOR FORA DO AR'+str(R)+'- ! -'+str(C)
-		clear();sub=int(input(str(banner)+'\n'+str(msg)+'\n'+str(B)+'- ! -'+str(C)+' Deseja fazer uma nova consulta? '+str(B)+'- ! -'+str(C)+'\n['+str(B)+'1'+str(C)+'] Sim\n['+str(B)+'2'+str(C)+'] Nao\n'+str(B)+'===> '+str(C)))
+		clear();sub=int(input(str(banner)+str(msg)+'\n'+str(B)+'- ! -'+str(C)+' Deseja fazer uma nova consulta? '+str(B)+'- ! -'+str(C)+'\n['+str(B)+'1'+str(C)+'] Sim\n['+str(B)+'2'+str(C)+'] Nao\n'+str(B)+'===> '+str(C)))
 		if sub == 1: init()
 		elif sub == 2: sair()
 		else: pass
