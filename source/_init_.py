@@ -43,17 +43,6 @@ banner=str(B)+str(logo)+str(C)+'Coded By: '+str(B)+'Kiny'+str(C)+'\n'+str(Fundo)
 try: v=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/apis/apis.json').json()
 except: restart()
 #---------------------------------------#
-num_status = (str(G)+'ON'+str(C) if "ON" in v['numero'][1] else str(R)+'OFF'+str(C))
-cpf_status = (str(G)+'ON'+str(C) if "ON" in v['cpf'][1] else str(R)+'OFF'+str(C))
-nome_status = (str(G)+'ON'+str(C) if "ON" in v['nome'][1] else str(R)+'OFF'+str(C))
-cnpj_status = (str(G)+'ON'+str(C) if "ON" in v['cnpj'][1] else str(R)+'OFF'+str(C))
-placa_status = (str(G)+'ON'+str(C) if "ON" in v['placa'][1] else str(R)+'OFF'+str(C))
-ip_status = (str(G)+'ON'+str(C) if "ON" in v['ip'][1] else str(R)+'OFF'+str(C))
-cep_status = (str(G)+'ON'+str(C) if "ON" in v['cep'][1] else str(R)+'OFF'+str(C))
-covid_status = (str(G)+'ON'+str(C) if "ON" in v['covid'][1] else str(R)+'OFF'+str(C))
-bin_status = (str(G)+'ON'+str(C) if "ON" in v['bin'][1] else str(R)+'OFF'+str(C))
-banco_status = (str(G)+'ON'+str(C) if "ON" in v['banco'][1] else str(R)+'OFF'+str(C))
-#---------------------------------------#
 def rds():
 	clear();print(str(banner));r_social=v['r_social']
 	for i in r_social:
@@ -115,13 +104,18 @@ while Sair==False:
 		else: pass
 #---------------------------------------#
 	try:
-		clear();op=int(input(str(banner)+'              ['+str(B)+'1'+str(C)+'] Número ['+str(num_status)+']\n              ['+str(B)+'2'+str(C)+'] CPF    ['+str(cpf_status)+']\n              ['+str(B)+'3'+str(C)+'] Nome   ['+str(nome_status)+']\n              ['+str(B)+'4'+str(C)+'] CNPJ   ['+str(cnpj_status)+']\n              ['+str(B)+'5'+str(C)+'] Placa  ['+str(placa_status)+']\n              ['+str(B)+'6'+str(C)+'] IP     ['+str(ip_status)+']\n              ['+str(B)+'7'+str(C)+'] CEP    ['+str(cep_status)+']\n              ['+str(B)+'8'+str(C)+'] COVID  ['+str(covid_status)+']\n              ['+str(B)+'9'+str(C)+'] BIN    ['+str(bin_status)+']\n              ['+str(B)+'10'+str(C)+'] Banco ['+str(banco_status)+']\n\n              ['+str(B)+'97'+str(C)+'] LICENSE\n              ['+str(B)+'98'+str(C)+'] Redes Sociais\n              ['+str(B)+'99'+str(C)+'] Trocar nome\n              ['+str(R)+'0'+str(C)+'] Sair\n'+str(B)+'              ===> '+str(C)))
+		clear()
+		menu=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/functions/menu.json').json();number=0
+		print(str(banner))
+		for i in menu['menu']: print('              ['+str(B)+str(number+1)+str(C)+'] '+str(i), '['+str(G)+'ON'+str(C)+']' if "ON" in menu['status'][number] else '['+str(R)+'OFF'+str(C)+']');number=number+1
+		op=int(input('\n              ['+str(B)+'98'+str(C)+'] Redes Sociais\n              ['+str(B)+'99'+str(C)+'] Trocar nome\n              ['+str(R)+'0'+str(C)+'] Sair\n'+str(B)+'              ===> '+str(C)))
 		if op == 0: Sair=True
 		elif op == 97: show()
 		elif op == 98: rds()
 		elif op == 99: system('rm -rf username');restart()
 		elif op == None: pass
 		else: init()
-	except: pass
+	except Exception as error:
+		print(str(error))
 sair()
 #---------------------------------------#
