@@ -1,4 +1,4 @@
 {
-'status':['ON', 'ON', 'OFF', 'ON', 'ON', 'ON', 'ON', 'ON', 'ON', 'ON'],
-'menu':['Número', 'CPF', 'Nome', 'CNPJ', 'Placa', 'IP', 'CEP', 'COVID', 'BIN', 'Banco']
+"status":["ON", "ON", "OFF", "ON", "ON", "ON", "ON", "ON", "ON", "ON"],
+"menu":["Número", "CPF", "Nome", "CNPJ", "Placa", "IP", "CEP", "COVID', "BIN", "Banco"]
 }
