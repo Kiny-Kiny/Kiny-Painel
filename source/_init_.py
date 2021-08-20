@@ -113,7 +113,7 @@ while Sair==False:
 		elif op == 99: system('rm -rf username');restart()
 		elif op == None: pass
 		else: init()
-	except Exception as error:
-		print(str(error))
+	except:
+		pass
 sair()
 #---------------------------------------#
