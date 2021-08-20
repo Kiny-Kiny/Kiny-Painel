@@ -35,10 +35,8 @@ except:
 	user.write(user1)
 	user.close()
 	restart()
-user=user2
 #---------------------------------------#
-logo=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/banner/logo').text
-banner=str(B)+str(logo)+str(C)+'Coded By: '+str(B)+'Kiny'+str(C)+'\n'+str(Fundo)+str(Letra)+'Hello, '+str(user)+'!'+str(Format)+'   '+str(Fundo)+str(C)+str(Letra)+'Version: 4.0'+str(Format)+str(C)+'   '+str(Fundo)+str(C)+str(Letra)+' PIX: (61) 9603-5417'+str(Format)+str(C)+'\n\n'+str(Fundo)+str(C)+str(Letra)+'_ ! _ Esse programa foi disponiblizado gratuitamente, se você pagou, foi enganado._ ! _'+str(Format)+str(C)+'\n\n'
+user=user2;logo=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/banner/logo').text;banner=str(B)+str(logo)+str(C)+'Coded By: '+str(B)+'Kiny'+str(C)+'\n'+str(Fundo)+str(Letra)+'Hello, '+str(user)+'!'+str(Format)+'   '+str(Fundo)+str(C)+str(Letra)+'Version: 4.0'+str(Format)+str(C)+'   '+str(Fundo)+str(C)+str(Letra)+' PIX: (61) 9603-5417'+str(Format)+str(C)+'\n\n'+str(Fundo)+str(C)+str(Letra)+'_ ! _ Esse programa foi disponiblizado gratuitamente, se você pagou, foi enganado._ ! _'+str(Format)+str(C)+'\n\n'
 #---------------------------------------#
 try: v=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/apis/apis.json').json();menu=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/functions/menu/menu.json').json()
 except: restart()
@@ -53,35 +51,25 @@ Sair=False
 while Sair==False:
 	def init():
 		if op == 1:
-			r_msg = str(B)+'_ ! _'+str(C)+' Exemplo: 18996166070'+str(B)+'_ ! _'+str(C)+'\nDigite o número que irá consultar'
-			req= v['numero'][0]
+			r_msg = str(B)+'_ ! _'+str(C)+' Exemplo: 18996166070'+str(B)+'_ ! _'+str(C)+'\nDigite o número que irá consultar';req= v['numero'][0]
 		elif op == 2:
-			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: 00000000272'+str(B)+'_ ! _'+str(C)+'\nDigite o CPF que irá consultar '
-			req= v['cpf'][0]
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: 00000000272'+str(B)+'_ ! _'+str(C)+'\nDigite o CPF que irá consultar ';req= v['cpf'][0]
 		elif op == 3:
-			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: Jair Messias Bolsonaro'+str(B)+'_ ! _'+str(C)+'\nDigite o nome que irá consultar '
-			req= v['nome'][0]
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: Jair Messias Bolsonaro'+str(B)+'_ ! _'+str(C)+'\nDigite o nome que irá consultar ';req= v['nome'][0]
 		elif op == 4:
-			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: 01944765000142'+str(B)+'_ ! _'+(C)+'\nDigite o CNPJ que irá consultar '
-			req=v['cnpj'][0]
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: 01944765000142'+str(B)+'_ ! _'+(C)+'\nDigite o CNPJ que irá consultar ';req=v['cnpj'][0]
 		elif op == 5:
-			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: bpm9099'+str(B)+'_ ! _'+str(C)+'\nDigite a placa que irá consultar '
-			req=v['placa'][0]
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: bpm9099'+str(B)+'_ ! _'+str(C)+'\nDigite a placa que irá consultar ';req=v['placa'][0]
 		elif op == 6:
-			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: 183.181.164.210'+str(B)+'_ ! _'+str(C)+'\nDigite o IP que irá consultar '
-			req=v['ip'][0]
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo: 183.181.164.210'+str(B)+'_ ! _'+str(C)+'\nDigite o IP que irá consultar ';req=v['ip'][0]
 		elif op ==7:
-			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo:  13218840'+str(B)+'_ ! _'+str(C)+'\nDigite o CEP que irá consultar '
-			req=v['cep'][0]
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo:  13218840'+str(B)+'_ ! _'+str(C)+'\nDigite o CEP que irá consultar ';req=v['cep'][0]
 		elif op ==8:
-			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo:  RJ'+str(B)+'_ ! _'+str(C)+'\nDigite o UF que irá consultar '
-			req=v['covid'][0]
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo:  RJ'+str(B)+'_ ! _'+str(C)+'\nDigite o UF que irá consultar ';req=v['covid'][0]
 		elif op ==9:
-			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo:  45717360'+str(B)+'_ ! _'+str(C)+'\nDigite a BIN que irá consultar '
-			req=v['bin'][0]
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo:  45717360'+str(B)+'_ ! _'+str(C)+'\nDigite a BIN que irá consultar ';req=v['bin'][0]
 		elif op ==10:
-			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo:  237'+str(B)+'_ ! _'+str(C)+'\nDigite o código bancario que irá consultar '
-			req=v['banco'][0]
+			r_msg=str(B)+'_ ! _'+str(C)+' Exemplo:  237'+str(B)+'_ ! _'+str(C)+'\nDigite o código bancario que irá consultar ';req=v['banco'][0]
 		else:
 			print(str(R)+'- ! -'+str(C)+' Opção Inválida '+str(R)+'- ! -'+str(C));sleep(2);restart()
 		clear();r=input(str(banner)+str(C)+str(r_msg)+str(B)+'>>> '+str(C))
