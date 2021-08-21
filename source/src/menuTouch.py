@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import sys,os,logging,json
-#para d robar meu codigo karaikjkjkj
+#Pedro gordola
 #Necessários
 try:import requests;from TerminalButtons import *
 except:
