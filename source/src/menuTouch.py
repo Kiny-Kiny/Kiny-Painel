@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-import sys,os,logging
-
+import sys,os,logging,json
+#para d robar meu codigo karaikjkjkj
 #Necessários
 try:import requests;from TerminalButtons import *
 except:
@@ -24,10 +24,15 @@ class PainelClicavel:
 
     def EfetuarRequest(self,api,requested):
         self.Tb.ClearScreen()
-        self.Tb.CreateButton(text='Realizando Consulta...' + APIS[api][0] + requested)
-        a = requests.get(APIS[api][0] + requested).text.replace('<br>','\n')
-        self.Tb.ClearScreen()
-        a = a.split('\n')
+        
+        if len(APIS[api]) > 2:
+            a = APIS[api]
+        else:
+            self.Tb.CreateButton(text='Realizando Consulta...' + APIS[api][0] + requested)
+            a = requests.get(APIS[api][0] + requested).text.replace('<br>','\n')
+            self.Tb.ClearScreen()
+            a = a.split('\n')
+            
         count = 0
         self.Tb.CreateButton(text='Voltar',row=count,commmand=lambda:self.Reiniciar(),fg=curses.COLOR_RED)
         
@@ -36,11 +41,13 @@ class PainelClicavel:
             count = count + 1
 
     def reqInputCon(self,api):
-        self.Tb.ClearScreen()
-        self.Tb.CreateButton(text='Digite o %s :' % api ,fg=curses.COLOR_GREEN)
-        req = self.Tb.ReqInput(1,0)
+        req = None
+        if len(APIS[api]) < 3:
+            self.Tb.ClearScreen()
+            self.Tb.CreateButton(text='Digite o %s :' % api ,fg=curses.COLOR_GREEN)
+            self.Tb.CreateButton(text='>' ,fg=curses.COLOR_BLUE,row=1)
+            req = self.Tb.ReqInput(1,1)
         self.EfetuarRequest(api,req)
-
 
     def CreateConsultasButton(self,text,row,bg):
         self.Tb.CreateButton(text=text.capitalize(),row=row,commmand=lambda:self.reqInputCon(text),positionx=CENTER,fg=bg)
@@ -65,24 +72,23 @@ class PainelClicavel:
             count = count + 1
         
         self.Tb.CreateButton(text='Coded By:',row=count-1)
-        self.Tb.CreateButton(text='Kiny',row=count-1,col=10,fg=curses.COLOR_BLUE)
+        self.Tb.CreateButton(text='None',row=count-1,col=10,fg=curses.COLOR_BLUE)
         self.Tb.CreateButton(text='Versão Touch 1',bg=curses.COLOR_BLUE,row=count,col=10)
-
         self.Tb.CreateButton(text='Esse programa foi disponibilizado gratuitamente, se você pagou, foi enganado.',bg=curses.COLOR_RED,row=count+2)
-
+        self.Tb.CreateButton(text='Sair',row=count,commmand=self.Tb.Exit,fg=curses.COLOR_RED)
         self.CreateConsultas(count)
-            
-            
+
+
     def IniciarGUI(self,std):
         self.Tb = TerminalButtons(std)
         self.Iniciar()
         self.Tb.mainLoop()
-        
+
     def __init__(self):
         curses.wrapper(self.IniciarGUI)
 
-
-
+logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 PainelClicavel()
+
 
 
