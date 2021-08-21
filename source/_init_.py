@@ -10,6 +10,7 @@
 #---------------------------------------#
 B='\033[1;34m';C='\033[1;37m'
 from requests import get;from os import execl; from sys import executable; from sys import argv;from os import system
+system('clear||cls')
 def restart(): execl(executable, executable, *argv)
 try: config=open('config', 'r');config_1=str(config.read());config.close()
 except:
