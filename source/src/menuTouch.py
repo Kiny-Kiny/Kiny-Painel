@@ -65,7 +65,7 @@ class PainelClicavel:
             count = count + 1
         
         self.Tb.CreateButton(text='Coded By:',row=count-1)
-        self.Tb.CreateButton(text='None',row=count-1,col=10,fg=curses.COLOR_BLUE)
+        self.Tb.CreateButton(text='Kiny',row=count-1,col=10,fg=curses.COLOR_BLUE)
         self.Tb.CreateButton(text='Versão Touch 1',bg=curses.COLOR_BLUE,row=count,col=10)
 
         self.Tb.CreateButton(text='Esse programa foi disponibilizado gratuitamente, se você pagou, foi enganado.',bg=curses.COLOR_RED,row=count+2)
