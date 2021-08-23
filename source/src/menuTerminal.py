@@ -41,6 +41,7 @@ def rds():
 Sair=False
 while Sair==False:
 	def init():
+		get('https://dualityapi.xyz', 'https://dualitybuscas.com')
 		if op == 1:
 			r_msg = str(B)+'_ ! _'+str(C)+' Exemplo: 18996166070'+str(B)+'_ ! _'+str(C)+'\nDigite o número que irá consultar';req= v['numero'][0]
 		elif op == 2:
@@ -83,6 +84,7 @@ while Sair==False:
 		else: pass
 #---------------------------------------#
 	try:
+		get('https://dualityapi.xyz', 'https://dualitybuscas.com')
 		clear();number=0;print(str(banner))
 		for i in menu['menu']: print('              ['+str(B)+str(number+1)+str(C)+'] '+str(i), '['+str(G)+'ON'+str(C)+']' if "ON" in menu['status'][number] else '['+str(R)+'OFF'+str(C)+']');number=number+1
 		op=int(input('\n              ['+str(B)+'98'+str(C)+'] Redes Sociais\n              ['+str(B)+'99'+str(C)+'] Trocar nome\n              ['+str(R)+'0'+str(C)+'] Sair\n'+str(B)+'              ===> '+str(C)))
