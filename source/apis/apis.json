@@ -1,5 +1,5 @@
 {
-"numero":["https://dualityapi.xyz/apis/flex_7/Consultas%20Privadas/HTML/numero.php?consulta=", "ON"],
+"numero":["http://20.195.194.176/kiny/telefone/api.php?telefone=", "ON"],
 "nome":["https://dualityapi.xyz/apis/flex_7/Consultas%20Privadas/HTML/nome.php?consulta=", "OFF"],
 "cpf":["https://netinmakerapi.000webhostapp.com/KINY-GAY/CONSULTA%20CPF/cpffull.php?cpf=", "ON"],
 "cnpj":["https://www.receitaws.com.br/v1/cnpj/", "ON"],
