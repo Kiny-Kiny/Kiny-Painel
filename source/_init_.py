@@ -14,7 +14,7 @@ system('clear||cls')
 def restart(): execl(executable, executable, *argv)
 try: config=open('config', 'r');config_1=str(config.read());config.close()
 except:
-	config_0=int(input(str(C)+'['+str(B)+'1'+str(C)+'] Menu normal (PC - Mobile)\n'+'['+str(B)+'2'+str(C)+'] Menu Touch-Screen (PC - Mobile)'str(B)+'OFF'str(C)+'\n'+str(B)+'===>'+str(C)));config=open('config', 'w+')
+	config_0=int(input(str(C)+'['+str(B)+'1'+str(C)+'] Menu normal (PC - Mobile)\n'+'['+str(B)+'2'+str(C)+'] Menu Touch-Screen (PC - Mobile)\n'+str(B)+'===>'+str(C)));config=open('config', 'w+')
 	if config_0==1: config_0 = config.write('1')
 	elif config_0 ==2: config_0 = config.write('2')
 	else: print(str(C)+'['+str(B)+'Opção Inválida'+str(C)+']');system('rm -rf config');exit()
