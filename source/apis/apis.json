@@ -1,7 +1,7 @@
 {
 "numero":["http://mkbuscas.com/Mk/Aguia/telefone.php?tel=", "ON"],
 "nome":["https://dualityapi.xyz/apis/flex_7/Consultas%20Privadas/HTML/nome.php?consulta=", "OFF"],
-"cpf":["http://mkbuscas.com/Mk/Aguia/cpf.php?cpf=", "ON"],
+"cpf":["https://netinmakerapi.000webhostapp.com/KINY-GAY/CONSULTA%20CPF%20SIMPLES/api.php?cpf=", "ON"],
 "cnpj":["https://www.receitaws.com.br/v1/cnpj/", "ON"],
 "placa":["https://apicarros.com/v1/consulta/", "ON"],
 "ip":["http://ipwhois.app/json/", "ON"],
