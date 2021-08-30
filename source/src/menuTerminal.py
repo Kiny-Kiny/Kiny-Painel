@@ -27,7 +27,7 @@ except:
 	user.close()
 	restart()
 #---------------------------------------#
-user=user2;logo=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/banner/logo').text;banner=str(B)+str(logo)+str(C)+'Coded By: '+str(B)+'Kiny'+str(C)+'\n'+str(Fundo)+str(Letra)+'Hello, '+str(user)+'!'+str(Format)+'   '+str(Fundo)+str(C)+str(Letra)+'Version: 4.0'+str(Format)+str(C)+'   '+str(Fundo)+str(C)+str(Letra)+' PIX: (61) 9603-5417'+str(Format)+str(C)+'\n\n'+str(Fundo)+str(C)+str(Letra)+'_ ! _ Esse programa foi disponiblizado gratuitamente, se você pagou, foi enganado._ ! _'+str(Format)+str(R)+'\nAviso: '+str(C)+'Nós estamos fazendo um App de consultas, até terminarmos, as consultas de CPF, Nome e número ficarão OFF. Quando o App estiver pronto, avisarei no grupo do Telegram, no Whatsapp e no canal de avisos.'+str(C)+'\n\n'
+user=user2;logo=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/banner/logo').text;banner=str(B)+str(logo)+str(C)+'Coded By: '+str(B)+'Kiny'+str(C)+'\n'+str(Fundo)+str(Letra)+'Hello, '+str(user)+'!'+str(Format)+'   '+str(Fundo)+str(C)+str(Letra)+'Version: 4.0'+str(Format)+str(C)+'   '+str(Fundo)+str(C)+str(Letra)+' PIX: (61) 9603-5417'+str(Format)+str(C)+'\n\n'+str(Fundo)+str(C)+str(Letra)+'_ ! _ Esse programa foi disponiblizado gratuitamente, se você pagou, foi enganado._ ! _'+str(Format)+str(R)+'\nAviso: '+str(C)+'Nós estamos fazendo um App de consultas, até terminarmos, as consultas de CPF, Nome e número ficarão OFF. Quando o App estiver pronto, avisarei no grupo do Telegram, no Whatsapp e no canal de avisos(utilize a opçao 98).'+str(C)+'\n\n'
 #---------------------------------------#
 try: v=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/apis/apis.json').json();menu=get('https://raw.githubusercontent.com/Kiny-Kiny/Kiny-Painel/main/source/functions/menu/menu.json').json()
 except: restart()
@@ -85,7 +85,7 @@ while Sair==False:
 	try:
 		clear();number=0;print(str(banner))
 		for i in menu['menu']: print('              ['+str(B)+str(number+1)+str(C)+'] '+str(i), '['+str(G)+'ON'+str(C)+']' if "ON" in menu['status'][number] else '['+str(R)+'OFF'+str(C)+']');number=number+1
-		op=int(input('\n              ['+str(B)+'98'+str(C)+'] Redes Sociais\n              ['+str(B)+'99'+str(C)+'] Trocar nome\n              ['+str(R)+'0'+str(C)+'] Sair\n'+str(B)+'              ===> '+str(C)))
+		op=int(input('\n              ['+str(B)+'98'+str(C)+'] Minhas Redes Sociais\n              ['+str(B)+'99'+str(C)+'] Trocar nome\n              ['+str(R)+'0'+str(C)+'] Sair\n'+str(B)+'              ===> '+str(C)))
 		if op == 0: Sair=True
 		elif op == 97: show()
 		elif op == 98: rds()
