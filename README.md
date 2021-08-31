@@ -21,7 +21,8 @@
   <a href="https://github.com/Kiny-Kiny/Kiny-Painel/blob/master/README.md#-install">Install & Run</a> •
   <a href="https://youtube.com/channel/UC1aTvkvmTVO7OJ6oixtJo8w">Youtube Channel</a> •
   <a href="https://github.com/Kiny-Kiny/Kiny-Painel/blob/master/README.md#-credits">Credits</a> •
-  <a href="https://github.com/Kiny-Kiny">Author</a>
+  <a href="https://github.com/Kiny-Kiny">Author</a> •
+  <a href="http://int-search.xyz/">Site do Painel</a>
 </p>
 
 <h3><p align="center">Version: 4.0</p></h3>
