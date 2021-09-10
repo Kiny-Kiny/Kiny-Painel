@@ -1,7 +1,7 @@
 {
-"numero":["http://mkbuscas.com/Mk/Aguia/telefone.php?tel=", "ON"],
-"nome":["https://netinmakerapi.000webhostapp.com/netinadmf/CONSULTA%20NOME/nome.php?nome=", "OFF"],
-"cpf":["http://www.netinapi.space/KINY-GAY/CONSULTA%20CPF%20SIMPLES/api.php?cpf=", "ON"],
+"numero":["http://ifind.chapada.com.br:7777/?token=20491c06-5675-4e06-b2ae-4e3fcda2abdd&tel=", "ON"],
+"nome":["http://ifind.chapada.com.br:7777/?token=20491c06-5675-4e06-b2ae-4e3fcda2abdd&nome=", "ON"],
+"cpf":["http://ifind.chapada.com.br:7777/?token=20491c06-5675-4e06-b2ae-4e3fcda2abdd&cpf=", "ON"],
 "cnpj":["https://www.receitaws.com.br/v1/cnpj/", "ON"],
 "placa":["https://apicarros.com/v1/consulta/", "ON"],
 "ip":["http://ipwhois.app/json/", "ON"],
