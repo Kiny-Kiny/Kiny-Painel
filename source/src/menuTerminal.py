@@ -9,7 +9,6 @@ R='\033[1;31m';B='\033[1;34m';C='\033[1;37m';G='\033[1;32m'
 # Vou recodar em JavaScript ou em Ruby quando eu tiver tempo.
 #############
 try:
-#	import phonenumbers
 	from requests import get
 except:
 	try:
@@ -76,12 +75,7 @@ def ddd() -> str:
 	clear(clean)
 	try:
 		msg='%s%s%s[ %sEstado%s: %s ]\n[ %sCidades%s:'%(B,logo,C,G,C,api_req['state'],G,C)
-		for i in api_req['cities']:
-			msg+=str(' '+G+i+','+C)
-		
-		#sep=int(len(msg.split(',')))-1
-		#msg=msg.split[sep]+']'
-		
+		for i in api_req['cities']: msg+=str(' '+G+i+','+C)
 		return msg
 	except Exception:
 		#print(r)
