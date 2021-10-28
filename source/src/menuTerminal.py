@@ -5,8 +5,7 @@ from time import sleep
 global R,B,C,G
 R='\033[1;31m';B='\033[1;34m';C='\033[1;37m';G='\033[1;32m'
 #############
-# O código pode não estar limpo, mas tá rápido.
-#############
+# O código pode não estar limpo, mas tá rápido. Ps: quando eu tiver mais tempo, faço Recode em outra lang
 try:
 #	import phonenumbers
 	from requests import get
