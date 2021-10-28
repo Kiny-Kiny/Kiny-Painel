@@ -5,7 +5,9 @@ from time import sleep
 global R,B,C,G
 R='\033[1;31m';B='\033[1;34m';C='\033[1;37m';G='\033[1;32m'
 #############
-# O código pode não estar limpo, mas tá rápido. Ps: quando eu tiver mais tempo, faço Recode em outra lang
+# O código pode não estar limpo, mas tá rápido.
+# Vou recodar em JavaScript ou em Ruby quando eu tiver tempo.
+#############
 try:
 #	import phonenumbers
 	from requests import get
@@ -39,9 +41,6 @@ api={
 '9':'https://www.consultacrm.com.br/api/',
 '10':'http://ghostcenter.xyz/api/nome/'
 }
-
-#07480221479
-#'teste':'http://api.harddiskbrasil.rocks/basico?token=MO3-cFzPmhur6lf4DhSyewVoQxKdV5GlH-Ih87l26pU&datasus='}
 
 '''
 http://cnes.datasus.gov.br/pages/profissionais/consulta.jsp
@@ -146,7 +145,10 @@ grupo_dict={
 'Grupo do WhatsApp': 'https://chat.whatsapp.com/Dnjs8guT97wAJgcZSI6e3c',
 'Grupo do Telegram':'https://t.me/kinycrimson',
 'Grupo de Consultas - Telegram':'https://t.me/kinycrimsonconsultas',
-'Grupo de Consultas - WhatsApp':'https://chat.whatsapp.com/Clfx2AcM7QY8pa5UznUQib'}
+'Grupo de Consultas - WhatsApp':'https://chat.whatsapp.com/Clfx2AcM7QY8pa5UznUQib',
+'Instagram' : '@parziovanni',
+'Twitter': 'KinyBruno',
+'Youtube': 'https://youtube.com/c/reKINYCRIMSONLOL'}
 
 def grupo() -> str:
 	msg=''
@@ -206,7 +208,7 @@ ____________________________
 |{ %s10%s } Consulta de Nome    |
 |___________________________|
 |{ %s99%s } APIs                |
-|{ %s98%s } Grupos              |
+|{ %s98%s } Redes Sociais       |
 |{ %s00%s } Sair                |
 |___________________________|
 >>> %s'''%(B,logo,C,B,C,B,ipmenu,C,C,C,B,C,B,C,B,C,B,C,B,C,B,C,B,C,B,C,B,C,B,C,B,C,B,C,B,C,B,C,B,C,R,C,G)))
