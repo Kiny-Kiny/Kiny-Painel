@@ -16,7 +16,6 @@ except:
 		from sys import executable
 		from os import system
 		system(executable+' -m pip install requests')
-	#	import phonenumbers
 		from requests import get
 	except:
 		print('%s[ %s!%s ] Instale manualmente o(s) módulo(s) requests.'%(C,R,C));exit()
@@ -99,8 +98,6 @@ def placa() -> str:
 def nome() -> str:
 	result='http://ghostcenter.xyz/api/nome/%s'%input('%s%s%s\n%s>%s Digite o nome: '%(B,logo,C,G,C))
 	result=req(result)
-#	print(result)
-#	result=str(result)
 	msg=''
 	try:
 		for i in range(0, int(len(result['dados']))):
@@ -128,8 +125,6 @@ def bank() -> str:
 	except Exception: return '[ %s!%s ] Código bancário inválido.'%(R,C)
 
 def bin() -> str:
-	#45717360
-#	print(result)
 	try: result=req('https://lookup.binlist.net/%s'%input('%s%s%s\n%s>%s Digite a BIN : '%(B,logo,C,G,C)));return '[ %sTipo%s : %s ]\n[ %sMarca%s : %s ]\n[ %sPré-Pago%s : %s ]\n[ %sPaís%s : %s ]\n[ %sNome do Banco%s : %s ]\n[ %sTelefone%s : %s ]\n[ %sCidade%s : %s ]'%(G,C,result['type'],G,C,result['brand'],G,C,str(result['prepaid']),G,C,result['country']['name'],G,C,result['bank']['name'],G,C,result['bank']['phone'],G,C,result['bank']['city'])
 	except: return '[ %s!%s ] BIN Inválida.'%(R,C)
 
@@ -187,7 +182,6 @@ MatchCase_Function={
 def menu() -> None:
 	while Exit==False:
 		clear(clean)
-	#	try:
 		option=str(input('''%s%s%s
 Bem-Vindo(a) ao %sKinyPainel|Free%s
 Seu Endereço de IP : %s%s%s
