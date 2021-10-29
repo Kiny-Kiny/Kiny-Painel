@@ -13,7 +13,6 @@ try:
 except:
 	try:
 		from sys import executable
-		from os import system
 		system(executable+' -m pip install requests')
 		from requests import get
 	except:
