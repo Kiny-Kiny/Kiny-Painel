@@ -210,5 +210,5 @@ ____________________________
 				pass
 if __name__=='__main__':
 	global clean
-	clean = 'cls' if name=='nt' else 'clear'
+	clean ={'nt':'cls','posix':'clear'}[name]
 	menu()
