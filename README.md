@@ -87,7 +87,7 @@ $ python3 main.py
 
 <p align="center" >
   <h2 align="center">📧 Groups</h2>
-<a href="https://chat.whatsapp.com/JFQmQ4QJtXR8VenQ2fIaAi" alt="WhatsApp">
+<a href="https://chat.whatsapp.com/Dnjs8guT97wAJgcZSI6e3c" alt="WhatsApp">
   <img src = "https://img.shields.io/badge/-WhatsApp-25d366?style=flat-square&labelColor=25d366&logo=whatsapp&logoColor=white&link=API-DO-SEU-WHATSAPP" /> </a>
 
 <a href="http://t.me/kinycrimson" alt="Telegram">
