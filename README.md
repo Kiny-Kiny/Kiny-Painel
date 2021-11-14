@@ -125,7 +125,7 @@ $ python3 main.py
  
  Chave **Pix** para quem quiser contribuir e ajudar o painel a se manter ativo:
  ```
-  (61) 9603-5417
+  (21) 97918-0533
  ```
 
 <p>
