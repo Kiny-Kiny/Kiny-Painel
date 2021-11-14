@@ -179,7 +179,7 @@ def menu() -> None:
 Bem-Vindo(a) ao %sKinyPainel|Free%s
 Seu Endereço de IP : %s%s%s
 
-%s[%s PIX : %s(61) 9603-5417 %s]
+%s[%s PIX : %s(21) 97918-0533 %s]
 
 [Telegram : %s@K_iny%s | WhatsApp : %s+55 21 7918-0533%s]
 ____________________________
