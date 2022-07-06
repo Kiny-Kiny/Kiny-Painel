@@ -89,13 +89,13 @@ def placa() -> str:
 	return msg
 
 def nome() -> str:
-	result='http://ghostcenter.xyz/api/nome/%s'%input('%s%s%s\n%s>%s Digite o nome: '%(B,logo,C,G,C))
+	result='http://api.lkzn.tk/api/nome.php?token=9c06b7c4-627e-4b66-8837-f1b82c2c3854&nome=%s'%input('%s%s%s\n%s>%s Digite o nome: '%(B,logo,C,G,C))
 	result=req(result)
 	msg=''
 	try:
-		for i in range(0, int(len(result['dados']))):
+		for i in result['msg']:
 			msg+='''\n[ %sCPF%s : %s ]\n[ %sNome%s : %s ]\n[ %sNascimento%s : %s ]\n[ %sGênero%s : %s ]
-'''%(G,C,result['dados'][i]['cpf'],G,C,result['dados'][i]['nome'],G,C,result['dados'][i]['nasc'],G,C,result['dados'][i]['sexo'])
+'''%(G,C,i['cpf'],G,C,i['nome'],G,C,i['nascimento'],G,C,i['sexo'])
 	except Exception as e:
 			msg='[ %s!%s ] Nome inválido ou pequeno demais.'%(R,C)
 	return msg
