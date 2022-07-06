@@ -1,7 +1,5 @@
 from os import execl, path, system
-from sys import executable
-from os import system
-from sys import argv
+from sys import executable, argv
 
 if path.exists("aviso_read?") == False:
     with open('aviso_read?', 'w+') as f:
