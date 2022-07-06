@@ -58,7 +58,7 @@ def cpf() -> str:
 	result=loads(get(r'http://api.lkzn.tk/api/cpfSimples.php?token=9c06b7c4-627e-4b66-8837-f1b82c2c3854&cpf='+input('%s%s%s\n%s>%s Digite o CPF : '%(B,logo,C,G,C)),verify=False).text)
 	clear(clean)
 	ban='%s%s%s\n'%(B,logo,C)
-	try: return ban+'[ %sNome%s : %s ]\n[ %sCPF%s : %s ]\n[ %sAno de Nascimento%s : %s ]\n[ %sSexo %s: %s ]'%(G,C,result['retorno']['Nome'],G,C,result['retorno']['CPF'],G,C,result['retorno']['AnoNascimento'],G,C,result['retorno']['Sexo'])
+	try: return ban+'[ %sNome%s : %s ]\n[ %sCPF%s : %s ]\n[ %sAno de Nascimento%s : %s ]\n[ %sSexo %s: %s ]'%(G,C,result['msg']['nome'],G,C,result['msg']['cpf'],G,C,result['msg']['nascimento'],G,C,result['msg']['sexo'])
 	except: return ban+'[ %s!%s ] CPF não encontrado.'%(R,C)
 
 def ip() -> str:
