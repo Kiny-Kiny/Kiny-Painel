@@ -131,8 +131,8 @@ def cnpj() -> str:
 
 grupo_dict={
 'Grupo do WhatsApp': 'https://chat.whatsapp.com/Dnjs8guT97wAJgcZSI6e3c',
-'Grupo do Telegram':'https://t.me/kinycrimson',
-'Grupo de Consultas - Telegram':'https://t.me/kinycrimsonconsultas',
+'Grupo do Telegram':'https://t.me/luarsearch',
+'Grupo de Consultas - Telegram':'https://t.me/luarsearch',
 'Grupo de Consultas - WhatsApp':'https://chat.whatsapp.com/Clfx2AcM7QY8pa5UznUQib',
 'Instagram' : '@parziovanni',
 'Twitter': 'KinyBruno',
