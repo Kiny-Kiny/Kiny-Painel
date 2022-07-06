@@ -55,7 +55,7 @@ def req(api_req) -> str: return loads(get(api_req).text)
 def clear(clean) -> None: return system(clean)
 #######################
 def cpf() -> str:
-	result=loads(get(r'https://netinapi.space/Pkinyyp/Api%20json/Cpf.php?cpf='+input('%s%s%s\n%s>%s Digite o CPF : '%(B,logo,C,G,C)),verify=False).text)
+	result=loads(get(r'http://api.lkzn.tk/api/cpfSimples.php?token=9c06b7c4-627e-4b66-8837-f1b82c2c3854&cpf='+input('%s%s%s\n%s>%s Digite o CPF : '%(B,logo,C,G,C)),verify=False).text)
 	clear(clean)
 	ban='%s%s%s\n'%(B,logo,C)
 	try: return ban+'[ %sNome%s : %s ]\n[ %sCPF%s : %s ]\n[ %sAno de Nascimento%s : %s ]\n[ %sSexo %s: %s ]'%(G,C,result['retorno']['Nome'],G,C,result['retorno']['CPF'],G,C,result['retorno']['AnoNascimento'],G,C,result['retorno']['Sexo'])
