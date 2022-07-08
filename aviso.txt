@@ -1,14 +1,6 @@
 ---------------------------
-° Bem, criei este arquivo de aviso para informar que o projeto Kiny-Painel foi descontinuado.
+Apenas consultas de bases Basic estão disponíveis neste painel, caso queira algumas APIs que retornem mais informações, entre em contato:
 
-- O motivo é que muitos utilizavam o mesmo e não contribuíam com APIs ou algo do tipo, então criei esta nota para deixar bem claro:
-° NÂO HAVERÁ MAIS ATUALIZAÇÕES
-
-- Estou focando em dois projetos agora, um é o meu bot de consultas e outro é um script que serve como "scrapper" no Telegram.
-° LuarSearch: https://t.me/Luarsearch | https://discord.gg/aPTaxVXgS2
-° TelegramBrazilianDoxxing: https://github.com/Kiny-Kiny/TelegramBrazilianDoxxing
-
-- Ps: Estou realizando venda de bases de dados, caso tenha interesse em alugar o meu bot ou comprar alguma base, entre em contato comigo:
 ° Telegram: @K_iny | https://t.me/K_iny
 ° WhatsApp: +55 21 7918-0533 | https://wa.me/552179180533
 ° Discord: kine azul#3189
